@@ -1,0 +1,38 @@
+# Site navigation: sections and pages in reading order.  The rail, the pager and the
+# masthead highlight are all built from this file (see _includes/rail.html, _includes/pager.html).
+- id: story
+  title: The case
+  pages:
+    - {url: /story/, n: "0", title: "The case in brief"}
+    - {url: /story/pressure.html, n: "1", title: "Four gigapascals"}
+    - {url: /story/machine.html, n: "2", title: "The machine"}
+    - {url: /story/power.html, n: "3", title: "The pulse"}
+    - {url: /story/forging.html, n: "4", title: "Forging without a die"}
+    - {url: /story/refractory.html, n: "5", title: "Tungsten, cold"}
+    - {url: /story/welding.html, n: "6", title: "Welding by impact"}
+    - {url: /story/synthesis.html, n: "7", title: "Diamond by the tonne"}
+    - {url: /story/porosity.html, n: "8", title: "Zero porosity"}
+    - {url: /story/containment.html, n: "9", title: "The inverted magnet"}
+    - {url: /story/verdict.html, n: "10", title: "Verdict and roadmap"}
+    - {url: /story/magnetar.html, n: "11", title: "The magnetar mode"}
+- id: tools
+  title: Tools
+  pages:
+    - {url: /ledger.html, title: "Claims ledger"}
+    - {url: /explorer.html, title: "Explorer"}
+- id: guide
+  title: Guide
+  pages:
+    - {url: /guide/getting-started.html, title: "Getting started"}
+    - {url: /guide/cli.html, title: "Command line"}
+    - {url: /guide/worked-design.html, title: "A worked press design"}
+    - {url: /guide/api.html, title: "API map"}
+- id: reference
+  title: Reference
+  pages:
+    - {url: /reference/methods.html, title: "Models and validity"}
+    - {url: /reference/materials.html, title: "Materials"}
+    - {url: /reference/benchmarks.html, title: "Benchmarks"}
+    - {url: /reference/references.html, title: "References"}
+    - {url: /reference/roadmap.html, title: "Project roadmap"}
+    - {url: /original-concept.html, title: "Original concept note"}

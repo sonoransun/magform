@@ -1,0 +1,839 @@
+{
+ "count": 34,
+ "ladders": [
+  {
+   "key": "field",
+   "title": "Magnetic field records",
+   "unit": "T",
+   "intro": "The strongest field made by each kind of magnet, from steady superconducting magnets to explosive flux compression, which destroys the experiment.",
+   "count": 10,
+   "rows": [
+    {
+     "key": "nhmfl_32t_all_sc",
+     "description": "All-superconducting user magnet (LTS outsert + REBCO insert), NHMFL",
+     "value": "32",
+     "unit": "T",
+     "text": "32 T",
+     "si": 32.0,
+     "si_unit": "T",
+     "year": 2017,
+     "citation": "National High Magnetic Field Laboratory news release, 12 Dec 2017: 32 T reached on 8 Dec 2017.",
+     "confidence": "handbook",
+     "note": null
+    },
+    {
+     "key": "secuf_35p6t_all_sc",
+     "description": "All-superconducting user magnet, 35 mm usable aperture, CAS SECUF (Beijing)",
+     "value": "35.6",
+     "unit": "T",
+     "text": "35.6 T",
+     "si": 35.6,
+     "si_unit": "T",
+     "year": 2026,
+     "citation": "Institute of Physics, Chinese Academy of Sciences, release on the Synergetic Extreme Condition User Facility: 35.6 T with a usable aperture of 35 mm on 24 Jan 2026 (built with the Institute of Electrical Engineering, CAS).",
+     "confidence": "reported",
+     "note": "Institutional announcement. Record for all-superconducting user magnets; between it and the 32 T NHMFL magnet lie 32.35 T (Institute of Electrical Engineering, CAS, announced Dec 2019) and 35.1 T (Institute of Plasma Physics, Hefei, announced Sep 2025)."
+    },
+    {
+     "key": "chmfl_resistive_42t",
+     "description": "All-resistive DC magnet, CHMFL Hefei (32.3 MW)",
+     "value": "42.02",
+     "unit": "T",
+     "text": "42.02 T",
+     "si": 42.02,
+     "si_unit": "T",
+     "year": 2024,
+     "citation": "Hefei Institutes of Physical Science, CAS, release: 42.02 T on 22 Sep 2024 at 32.3 MW.",
+     "confidence": "reported",
+     "note": null
+    },
+    {
+     "key": "chmfl_hybrid_45t",
+     "description": "Hybrid DC magnet (superconducting outsert + resistive insert), CHMFL",
+     "value": "45.22",
+     "unit": "T",
+     "text": "45.22 T",
+     "si": 45.22,
+     "si_unit": "T",
+     "year": 2022,
+     "citation": "Chinese Academy of Sciences release, 15 Aug 2022: 45.22 T on 12 Aug 2022 in a 32 mm bore.",
+     "confidence": "reported",
+     "note": null
+    },
+    {
+     "key": "rebco_insert_45p5t",
+     "description": "REBCO test coil (14.4 T) operated inside a 31.1 T resistive background, NHMFL",
+     "value": "45.5",
+     "unit": "T",
+     "text": "45.5 T",
+     "si": 45.5,
+     "si_unit": "T",
+     "year": 2019,
+     "citation": "Hahn et al., Nature 570, 496-499 (2019).",
+     "confidence": "handbook",
+     "note": "The peer-reviewed record; DC, small test coil. Exceeded in 2025 (see lbc9_48p7t)."
+    },
+    {
+     "key": "lbc9_48p7t",
+     "description": "REBCO test coil (Little Big Coil 9) operated inside a 31 T resistive background, NHMFL",
+     "value": "48.7",
+     "unit": "T",
+     "text": "48.7 T",
+     "si": 48.7,
+     "si_unit": "T",
+     "year": 2025,
+     "citation": "National High Magnetic Field Laboratory news release, 11 Sep 2025, and research highlight, Jan 2026: 48.7 T in August 2025, the test coil adding 17.6-17.7 T to a 31 T resistive magnet.",
+     "confidence": "reported",
+     "note": "Highest field produced (in part) by a superconductor; a DC test coil, not a user magnet; no journal paper found as of November 2026."
+    },
+    {
+     "key": "lanl_100t_nondestructive",
+     "description": "Non-destructive pulsed magnet (generator-driven outsert + capacitor-driven insert), LANL",
+     "value": "100.75",
+     "unit": "T",
+     "text": "100.75 T",
+     "si": 100.75,
+     "si_unit": "T",
+     "year": 2012,
+     "citation": "NHMFL Pulsed Field Facility, Los Alamos: 100.75 T multi-shot magnet, 22 March 2012 (LANL and US Department of Energy releases).",
+     "confidence": "handbook",
+     "note": "User bore about 10 mm as operated (10 mm at 77 K, MagLab user page; 10.5 mm, IEEE Trans. Appl. Supercond., doi:10.1109/TASC.2023.3338580; the design figure was 15 mm). Outsert coils in a 225 mm bore driven by a 1.4 GW motor-generator supply 40-44 T and store 120 MJ; the insert (55-60 T, 1.4 MJ) is fired from a 2-2.2 MJ capacitor bank and takes the field from 40 T to 100 T in 8 ms; the field lasts about 15 ms inside an outsert pulse of 2.5-3 s, as often as once an hour (MagLab; Battesti et al., arXiv:1803.07547). Offline since 2019 while the generator rotor is replaced. No later record found (Toulouse 98.8 T, Dresden 95.6 T, Wuhan 94.8 T)."
+    },
+    {
+     "key": "single_turn_300t",
+     "description": "Destructive single-turn coil (microsecond pulses)",
+     "value": "300",
+     "unit": "T",
+     "text": "300 T",
+     "si": 300.0,
+     "si_unit": "T",
+     "year": 2000,
+     "citation": "ISSP Tokyo / LNCMI single-turn coil systems, of order 300 T (Herlach & Miura, High Magnetic Fields, 2003).",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "emfc_1200t",
+     "description": "Electromagnetic flux compression (destructive), ISSP Tokyo",
+     "value": "1,200",
+     "unit": "T",
+     "text": "1,200 T",
+     "si": 1200.0,
+     "si_unit": "T",
+     "year": 2018,
+     "citation": "Nakamura et al., Rev. Sci. Instrum. 89, 095106 (2018).",
+     "confidence": "handbook",
+     "note": null
+    },
+    {
+     "key": "explosive_fc_2800t",
+     "description": "Explosive-driven flux compression (destructive), VNIIEF",
+     "value": "2,800",
+     "unit": "T",
+     "text": "2,800 T",
+     "si": 2800.0,
+     "si_unit": "T",
+     "year": 1999,
+     "citation": "Boyko et al., Proc. 12th IEEE Int. Pulsed Power Conf., Monterey (1999), p. 746; reviewed in Boriskov et al., Phys.-Usp. 54, 421 (2011): about 28 MG.",
+     "confidence": "representative",
+     "note": "Year of the report; the date of the shot itself is not established in the sources consulted."
+    }
+   ]
+  },
+  {
+   "key": "current",
+   "title": "Pulsed currents",
+   "unit": "MA",
+   "intro": "Peak currents delivered to a single load.",
+   "count": 2,
+   "rows": [
+    {
+     "key": "emf_industrial_current",
+     "description": "Industrial electromagnetic-forming machines (peak coil current)",
+     "value": "1",
+     "unit": "MA",
+     "text": "1 MA",
+     "si": 1000000.0,
+     "si_unit": "A",
+     "year": 2011,
+     "citation": "Psyk et al., J. Mater. Process. Technol. 211, 787 (2011): 10⁵-10⁶ A class machines.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "z_machine_current",
+     "description": "Sandia Z machine (refurbished), peak load current",
+     "value": "26",
+     "unit": "MA",
+     "text": "26 MA",
+     "si": 26000000.0,
+     "si_unit": "A",
+     "year": 2007,
+     "citation": "Sandia National Laboratories, Z machine overview (OSTI 1429410): 22 MJ stored, 26 MA peak current, 80 TW; Hutsel et al., Phys. Rev. Accel. Beams 21, 030401 (2018).",
+     "confidence": "representative",
+     "note": null
+    }
+   ]
+  },
+  {
+   "key": "ramp_rate",
+   "title": "Sweep rates of superconducting magnets",
+   "unit": "T/s",
+   "intro": "How fast a superconducting winding has been ramped in routine operation.",
+   "count": 1,
+   "rows": [
+    {
+     "key": "sis100_superferric",
+     "description": "Fast-ramped superconducting accelerator dipoles (FAIR SIS100, Nuclotron type)",
+     "value": "4",
+     "unit": "T/s",
+     "text": "4 T/s",
+     "si": 4.0,
+     "si_unit": "T/s",
+     "year": 2019,
+     "citation": "Fischer et al., Proc. IPAC2019, paper THPTS010: the SIS100 main dipoles ramp at 4 T/s up to 1.9 T.",
+     "confidence": "representative",
+     "note": null
+    }
+   ]
+  },
+  {
+   "key": "energy",
+   "title": "Pulsed energy stores",
+   "unit": "MJ",
+   "intro": "The largest stores that deliver their energy in one pulse.",
+   "count": 7,
+   "rows": [
+    {
+     "key": "lanl_insert_bank_2mj",
+     "description": "Capacitor bank firing the insert coil of the LANL 100 T magnet",
+     "value": "2.2",
+     "unit": "MJ",
+     "text": "2.2 MJ",
+     "si": 2200000.0,
+     "si_unit": "J",
+     "year": 2012,
+     "citation": "Battesti et al., arXiv:1803.07547 (2018): 2.2 MJ; National High Magnetic Field Laboratory, 'Meet the 100 tesla pulsed magnet': 2 MJ.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "hld_50mj_bank",
+     "description": "Capacitor bank driving pulsed magnets, HZDR Dresden High Magnetic Field Lab",
+     "value": "50",
+     "unit": "MJ",
+     "text": "50 MJ",
+     "si": 50000000.0,
+     "si_unit": "J",
+     "year": 2007,
+     "citation": "Helmholtz-Zentrum Dresden-Rossendorf publication records 13017 and 17042: 50 MJ modular capacitor bank, 24 kV maximum charging voltage, up to 500 kA and about 5 GW.",
+     "confidence": "handbook",
+     "note": null
+    },
+    {
+     "key": "balcones_60mj_hpg",
+     "description": "Homopolar generator supply (6 x 10 MJ), UT Center for Electromechanics",
+     "value": "60",
+     "unit": "MJ",
+     "text": "60 MJ",
+     "si": 60000000.0,
+     "si_unit": "J",
+     "year": 1985,
+     "citation": "UT-CEM Balcones homopolar generator power supply, 60 MJ, 1.5 MA at 600 V.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "lanl_outsert_120mj",
+     "description": "Field energy of the outsert coils of the LANL 100 T magnet at full field (225 mm bore)",
+     "value": "120",
+     "unit": "MJ",
+     "text": "120 MJ",
+     "si": 120000000.0,
+     "si_unit": "J",
+     "year": 2012,
+     "citation": "National High Magnetic Field Laboratory, 'Meet the 100 tesla pulsed magnet': stored magnetic energy at 100 T, 120 MJ in the outsert and 1.4 MJ in the insert.",
+     "confidence": "representative",
+     "note": "Charged over about a second by the 1.4 GW motor-generator, not by a capacitor bank."
+    },
+    {
+     "key": "nif_400mj_bank",
+     "description": "Capacitor bank energy, National Ignition Facility power conditioning system",
+     "value": "400",
+     "unit": "MJ",
+     "text": "400 MJ",
+     "si": 400000000.0,
+     "si_unit": "J",
+     "year": 2009,
+     "citation": "LLNL National Ignition Facility power conditioning system (~400 MJ).",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "anu_500mj_hpg",
+     "description": "Homopolar generator, Australian National University",
+     "value": "500",
+     "unit": "MJ",
+     "text": "500 MJ",
+     "si": 500000000.0,
+     "si_unit": "J",
+     "year": 1962,
+     "citation": "ANU homopolar generator (1962-1986), 500 MJ stored rotational energy.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "lanl_mg_1200mj",
+     "description": "Motor-generator rotational energy, NHMFL Pulsed Field Facility (1.4 GW)",
+     "value": "1,200",
+     "unit": "MJ",
+     "text": "1,200 MJ",
+     "si": 1200000000.0,
+     "si_unit": "J",
+     "year": 2012,
+     "citation": "LANL release (2012): a 1,200 MJ motor-generator powers the 100 T outsert; LANL's 2024 paper (doi:10.1109/TASC.2023.3338580) calls it a 1 GJ, 1.4 GW generator.",
+     "confidence": "reported",
+     "note": "Battesti et al. (arXiv:1803.07547) say the same 1.4 GW machine stores up to 600 MJ of rotational energy in a 300-ton shaft; the sources disagree by a factor of two."
+    }
+   ]
+  },
+  {
+   "key": "pressure",
+   "title": "Working pressures",
+   "unit": "GPa",
+   "intro": "Pressures that manufacturing and high-pressure science already use.",
+   "count": 10,
+   "rows": [
+    {
+     "key": "hip",
+     "description": "Hot isostatic pressing (industrial, gas)",
+     "value": "0.2",
+     "unit": "GPa",
+     "text": "0.2 GPa",
+     "si": 200000000.0,
+     "si_unit": "Pa",
+     "year": 2020,
+     "citation": "Atkinson & Davies, Metall. Mater. Trans. A 31, 2981 (2000): HIP at 100-200 MPa.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "mpw_typical",
+     "description": "Magnetic pulse welding/forming, typical interface/working pressures",
+     "value": "0.5",
+     "unit": "GPa",
+     "text": "0.5 GPa",
+     "si": 500000000.0,
+     "si_unit": "Pa",
+     "year": 2011,
+     "citation": "Psyk et al., J. Mater. Process. Technol. 211, 787 (2011).",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "emf_50t",
+     "description": "Magnetic pressure of a 50 T forming coil (upper end of industrial EMF)",
+     "value": "0.995",
+     "unit": "GPa",
+     "text": "0.995 GPa",
+     "si": 994718000.0,
+     "si_unit": "Pa",
+     "year": 2011,
+     "citation": "B²/(2 μ₀) at 50 T.",
+     "confidence": "estimated",
+     "note": null
+    },
+    {
+     "key": "cold_forging_die",
+     "description": "Contact pressure on cold-forging dies (steels)",
+     "value": "2.5",
+     "unit": "GPa",
+     "text": "2.5 GPa",
+     "si": 2500000000.0,
+     "si_unit": "Pa",
+     "year": 2005,
+     "citation": "Lange (ed.), Handbook of Metal Forming (1985): cold-forging punch pressures up to ~2.5 GPa.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "lanl_100t_pressure",
+     "description": "Magnetic pressure at 100.75 T (LANL record)",
+     "value": "4.04",
+     "unit": "GPa",
+     "text": "4.04 GPa",
+     "si": 4038780000.0,
+     "si_unit": "Pa",
+     "year": 2012,
+     "citation": "B²/(2 μ₀) at 100.75 T.",
+     "confidence": "estimated",
+     "note": null
+    },
+    {
+     "key": "hpht_cubic",
+     "description": "Industrial HPHT diamond/cBN synthesis (cubic and belt presses)",
+     "value": "6",
+     "unit": "GPa",
+     "text": "6 GPa",
+     "si": 6000000000.0,
+     "si_unit": "Pa",
+     "year": 1955,
+     "citation": "Bundy et al., Nature 176, 51 (1955); industrial cubic presses 5-6.5 GPa.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "npd_multianvil",
+     "description": "Nano-polycrystalline diamond, Kawai multi-anvil (15 GPa)",
+     "value": "15",
+     "unit": "GPa",
+     "text": "15 GPa",
+     "si": 15000000000.0,
+     "si_unit": "Pa",
+     "year": 2003,
+     "citation": "Irifune et al., Nature 421, 599 (2003).",
+     "confidence": "handbook",
+     "note": null
+    },
+    {
+     "key": "dupont_shock",
+     "description": "Shock synthesis of diamond powder (DuPont process)",
+     "value": "30",
+     "unit": "GPa",
+     "text": "30 GPa",
+     "si": 30000000000.0,
+     "si_unit": "Pa",
+     "year": 1961,
+     "citation": "DeCarli & Jamieson, Science 133, 1821 (1961).",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "carbon_nitride_dac",
+     "description": "Carbon nitride synthesis, laser-heated diamond anvil cell",
+     "value": "124",
+     "unit": "GPa",
+     "text": "124 GPa",
+     "si": 124000000000.0,
+     "si_unit": "Pa",
+     "year": 2024,
+     "citation": "Laniel et al., Adv. Mater. 36, 2308030 (2024): 72-134 GPa, ~2500 K.",
+     "confidence": "handbook",
+     "note": null
+    },
+    {
+     "key": "dac_static",
+     "description": "Static diamond-anvil-cell pressures (routine upper range)",
+     "value": "400",
+     "unit": "GPa",
+     "text": "400 GPa",
+     "si": 400000000000.0,
+     "si_unit": "Pa",
+     "year": 2020,
+     "citation": "Dubrovinsky et al., Nat. Commun. 3, 1163 (2012) and later toroidal-anvil work.",
+     "confidence": "representative",
+     "note": null
+    }
+   ]
+  },
+  {
+   "key": "static_press",
+   "title": "Static presses",
+   "unit": "GPa",
+   "intro": "The highest pressure each anvil technology holds. Sample volume falls by about seven orders of magnitude from the first row to the last.",
+   "count": 4,
+   "rows": [
+    {
+     "key": "belt_cubic_wc",
+     "description": "Belt/cubic presses with tungsten-carbide anvils; cm³ samples, industrial",
+     "value": "7",
+     "unit": "GPa",
+     "text": "7 GPa",
+     "si": 7000000000.0,
+     "si_unit": "Pa",
+     "year": 1960,
+     "citation": "Hall, Rev. Sci. Instrum. 31, 125 (1960); industrial practice.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "kawai_wc",
+     "description": "Kawai multi-anvil with WC cubes; mm³ samples",
+     "value": "28",
+     "unit": "GPa",
+     "text": "28 GPa",
+     "si": 28000000000.0,
+     "si_unit": "Pa",
+     "year": 2003,
+     "citation": "Ito, Treatise on Geophysics 2 (2007): WC-anvil multi-anvil to ~28 GPa.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "kawai_sintered_diamond",
+     "description": "Kawai multi-anvil with sintered-diamond cubes; ~0.1 mm³",
+     "value": "100",
+     "unit": "GPa",
+     "text": "100 GPa",
+     "si": 100000000000.0,
+     "si_unit": "Pa",
+     "year": 2014,
+     "citation": "Yamazaki et al., Phys. Earth Planet. Inter. 228, 262 (2014): ~100 GPa class.",
+     "confidence": "representative",
+     "note": null
+    },
+    {
+     "key": "dac",
+     "description": "Diamond anvil cell; microgram samples",
+     "value": "400",
+     "unit": "GPa",
+     "text": "400 GPa",
+     "si": 400000000000.0,
+     "si_unit": "Pa",
+     "year": 2012,
+     "citation": "Dubrovinsky et al., Nat. Commun. 3, 1163 (2012).",
+     "confidence": "representative",
+     "note": null
+    }
+   ]
+  }
+ ],
+ "thresholds": [
+  {
+   "name": "SC_FIELD_ESTABLISHED",
+   "value": "32 T",
+   "si": 32.0,
+   "si_unit": "T",
+   "meaning": "All-superconducting user magnets established (NHMFL, December 2017)."
+  },
+  {
+   "name": "SC_FIELD_RECORD",
+   "value": "35.6 T",
+   "si": 35.6,
+   "si_unit": "T",
+   "meaning": "All-superconducting record (CAS SECUF, January 2026, reported)."
+  },
+  {
+   "name": "SC_CONDUCTOR_RECORD",
+   "value": "48.7 T",
+   "si": 48.7,
+   "si_unit": "T",
+   "meaning": "Highest field at which a superconducting coil has operated, inside a resistive background (NHMFL Little Big Coil 9, August 2025, reported; the peer-reviewed predecessor is 45.5 T, Hahn et al. 2019)."
+  },
+  {
+   "name": "PULSED_NONDESTRUCTIVE_RECORD",
+   "value": "100.75 T",
+   "si": 100.75,
+   "si_unit": "T",
+   "meaning": "Non-destructive pulsed record (LANL, 22 March 2012, about 10 mm bore)."
+  },
+  {
+   "name": "PULSED_NONDESTRUCTIVE_BORE",
+   "value": "10 mm",
+   "si": 0.01,
+   "si_unit": "m",
+   "meaning": "User bore of the 100 T LANL magnet as operated (10 mm at 77 K per the MagLab user page; 10.5 mm in LANL's 2024 paper; the design figure, still quoted on MagLab's overview page, was 15 mm)."
+  },
+  {
+   "name": "PULSED_ROUTINE_FIELD",
+   "value": "60 T",
+   "si": 60.0,
+   "si_unit": "T",
+   "meaning": "Field class of routine non-destructive pulsed user magnets (many laboratories run 60-75 T)."
+  },
+  {
+   "name": "PULSED_ROUTINE_BORE",
+   "value": "25 mm",
+   "si": 0.025,
+   "si_unit": "m",
+   "meaning": "Largest bore treated as routine for that class (10-20 mm is typical; judgement)."
+  },
+  {
+   "name": "PULSED_RECORD_INSERT_BANK",
+   "value": "2.2 MJ",
+   "si": 2200000.0,
+   "si_unit": "J",
+   "meaning": "Capacitor bank that fires the insert coil of the LANL 100 T magnet (2 MJ per MagLab; 2.2 MJ per Battesti et al., arXiv:1803.07547)."
+  },
+  {
+   "name": "PULSED_RECORD_GENERATOR_POWER",
+   "value": "1.4 GW",
+   "si": 1400000000.0,
+   "si_unit": "W",
+   "meaning": "Motor-generator that drives the outsert coils of the LANL 100 T magnet for 2.5-3 s."
+  },
+  {
+   "name": "PULSED_RECORD_OUTSERT_ENERGY",
+   "value": "120 MJ",
+   "si": 120000000.0,
+   "si_unit": "J",
+   "meaning": "Magnetic energy stored in the outsert coils of the LANL 100 T magnet at full field (MagLab); the insert stores 1.4 MJ."
+  },
+  {
+   "name": "EMF_CONVENTIONAL_FIELD",
+   "value": "20 to 50 T",
+   "si": [
+    20.0,
+    50.0
+   ],
+   "si_unit": "T",
+   "meaning": "Field range of conventional industrial electromagnetic (magnetic-pulse) forming coils."
+  },
+  {
+   "name": "SC_RAMP_RATE_SOTA",
+   "value": "4 T/s",
+   "si": 4.0,
+   "si_unit": "T/s",
+   "meaning": "Fastest routinely operated superconducting magnet ramps."
+  },
+  {
+   "name": "SC_RAMP_RATE_EXTRAPOLATION",
+   "value": "100 T/s",
+   "si": 100.0,
+   "si_unit": "T/s",
+   "meaning": "Boundary beyond which pulsed superconducting operation is treated as aspirational (order-of-magnitude judgement; small HTS test coils; confidence estimated)."
+  },
+  {
+   "name": "ENERGY_MAGNET_DRIVER_SOTA",
+   "value": "50 MJ",
+   "si": 50000000.0,
+   "si_unit": "J",
+   "meaning": "Largest capacitor bank built as a pulsed-magnet driver (HZDR)."
+  },
+  {
+   "name": "ENERGY_ANY_STORE_RECORD",
+   "value": "1.2 GJ",
+   "si": 1200000000.0,
+   "si_unit": "J",
+   "meaning": "Largest pulsed rotating store in a magnet facility (LANL motor-generator)."
+  },
+  {
+   "name": "PULSED_CURRENT_SOTA",
+   "value": "5 MA",
+   "si": 5000000.0,
+   "si_unit": "A",
+   "meaning": "Peak currents routinely delivered by large capacitor-bank facilities to a single load."
+  },
+  {
+   "name": "PULSED_CURRENT_RECORD",
+   "value": "26 MA",
+   "si": 26000000.0,
+   "si_unit": "A",
+   "meaning": "Z machine peak load current."
+  },
+  {
+   "name": "PEAK_POWER_SOTA",
+   "value": "1 TW",
+   "si": 1000000000000.0,
+   "si_unit": "W",
+   "meaning": "Order of magnitude of the peak electrical power of the largest capacitor-bank installations (hundreds of megajoules released in under a millisecond; an estimated boundary). Pulsed-magnet banks are far below it: the 50 MJ Dresden bank delivers about 5 GW."
+  },
+  {
+   "name": "PEAK_POWER_RECORD",
+   "value": "80 TW",
+   "si": 80000000000000.0,
+   "si_unit": "W",
+   "meaning": "Sandia Z machine electrical power (~80 TW)."
+  },
+  {
+   "name": "SC_VOLTAGE_SOTA",
+   "value": "5 kV",
+   "si": 5000.0,
+   "si_unit": "V",
+   "meaning": "Upper end of terminal/quench-protection voltages of large superconducting magnets (ITER-class coils are designed for a few kV inside the cryostat)."
+  },
+  {
+   "name": "SC_VOLTAGE_EXTRAPOLATION",
+   "value": "20 kV",
+   "si": 20000.0,
+   "si_unit": "V",
+   "meaning": "Beyond this, insulation inside a cryostat is treated as aspirational (estimated boundary)."
+  },
+  {
+   "name": "PULSED_VOLTAGE_SOTA",
+   "value": "25 kV",
+   "si": 25000.0,
+   "si_unit": "V",
+   "meaning": "Capacitor-bank charging voltages of pulsed-magnet facilities (LANL/HZDR 10-24 kV)."
+  },
+  {
+   "name": "PULSED_VOLTAGE_EXTRAPOLATION",
+   "value": "100 kV",
+   "si": 100000.0,
+   "si_unit": "V",
+   "meaning": "Marx-generator class; beyond this, coil insulation is aspirational (estimated boundary)."
+  },
+  {
+   "name": "TNT_ENERGY_DENSITY",
+   "value": "6.9 GJ/m³",
+   "si": 6900000000.0,
+   "si_unit": "J/m^3",
+   "meaning": "Detonation energy of TNT per unit volume (4.184 MJ/kg x 1654 kg/m³), for scale."
+  }
+ ],
+ "rules": [
+  {
+   "function": "superconducting_field_status",
+   "what": "Field from a superconducting magnet",
+   "summary": "Status of a field produced by a superconducting (DC) magnet.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "35.6 T"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "48.7 T"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "pulsed_field_status",
+   "what": "Field from a pulsed magnet that survives, 10 mm bore",
+   "summary": "Status of a field produced by a pulsed resistive (non-destructive) magnet.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "100.75 T"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "pulsed_field_status",
+   "what": "Field from a pulsed magnet that survives, 100 mm bore",
+   "summary": "Status of a field produced by a pulsed resistive (non-destructive) magnet.",
+   "bands": [
+    {
+     "status": "extrapolation",
+     "upto": "100.75 T"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "ramp_rate_status",
+   "what": "Sweep rate of a superconducting winding",
+   "summary": "Status of sweeping a superconducting winding at ramp_rate (T/s).",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "4 T/s"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "100 T/s"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "energy_status",
+   "what": "Energy drawn from a pulsed store in one shot",
+   "summary": "Status of the energy a single shot must draw from a pulsed store.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "50 MJ"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "1,200 MJ"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "pulsed_current_status",
+   "what": "Peak current into one load",
+   "summary": "Status of a peak current delivered to a single load by a pulsed source.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "5 MA"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "26 MA"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "peak_power_status",
+   "what": "Peak electrical power",
+   "summary": "Status of the peak electrical power a pulsed source must deliver.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "1 TW"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "80 TW"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "sc_voltage_status",
+   "what": "Terminal voltage across a superconducting winding",
+   "summary": "Status of a terminal voltage across a superconducting winding.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "5 kV"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "20 kV"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  },
+  {
+   "function": "pulsed_voltage_status",
+   "what": "Charging voltage of a capacitor bank",
+   "summary": "Status of a capacitor-bank / pulsed-coil terminal voltage.",
+   "bands": [
+    {
+     "status": "state_of_the_art",
+     "upto": "25 kV"
+    },
+    {
+     "status": "extrapolation",
+     "upto": "100 kV"
+    },
+    {
+     "status": "aspirational",
+     "upto": null
+    }
+   ]
+  }
+ ]
+}

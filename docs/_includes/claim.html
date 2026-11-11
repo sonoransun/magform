@@ -1,0 +1,18 @@
+{% assign c = site.data.claims.by_id[include.id] %}
+{% if c %}
+<article class="claim" id="claim-{{ c.id }}" data-verdict="{{ c.verdict }}" data-section="{{ c.section_key }}">
+  <div class="claim__head">
+    <span class="claim__id">{{ c.id }}</span>
+    {% include stamp.html v=c.verdict %}
+    {% unless include.compact %}<span class="claim__id">{{ c.section }}</span>{% endunless %}
+  </div>
+  <p class="claim__quote">&ldquo;{{ c.quote }}&rdquo;</p>
+  <p class="claim__finding">{{ c.finding }}</p>
+  {% unless include.compact %}
+  {% if c.evidence.size > 0 %}<ul class="claim__evidence">{% for e in c.evidence %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+  <p class="claim__models">{{ c.models | join: " &middot; " }}{% if c.chapter %} &middot; <a href="{{ c.chapter | relative_url }}">read the case</a>{% endif %}</p>
+  {% endunless %}
+</article>
+{% else %}
+<p class="note" data-label="Missing">Claim {{ include.id }} is not in the ledger data; run <code>python tools/build_docs.py</code>.</p>
+{% endif %}

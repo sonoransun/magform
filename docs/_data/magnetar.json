@@ -1,0 +1,208 @@
+{
+ "premise": "A magnetar-class field is available on demand at a space-based source. This is assumed, not assessed.",
+ "columns": [
+  {
+   "field": "300 T",
+   "tier": "molten or boiling skin"
+  },
+  {
+   "field": "3,000 T",
+   "tier": "megabar compression"
+  },
+  {
+   "field": "10⁶ T",
+   "tier": "needle atoms"
+  },
+  {
+   "field": "10¹⁰ T",
+   "tier": "white-dwarf matter"
+  }
+ ],
+ "processes": [
+  {
+   "name": "Forging",
+   "cells": [
+    "The driven surface melts or boils within the pulse, so the part is shaped through a liquid-metal skin and a shock: 'magnetohydrodynamic' finally describes it, and surface finish and dimensions are lost.",
+    "The pressure exceeds the bulk modulus: the metal is shock-compressed to a fraction of its volume and comes back as hot liquid or vapour. No forged shape survives.",
+    "The piston pressure makes degenerate matter and the field, where it gets in, squeezes atoms into needles. Forging has no meaning.",
+    "The sample becomes white-dwarf matter and explodes when the field lets go. Forging has no meaning."
+   ]
+  },
+  {
+   "name": "Refractory metals",
+   "cells": [
+    "Strength stops mattering: the pressure is several to hundreds of times any flow stress, and tungsten fails the same way copper does, by losing its skin.",
+    "Refractory and soft metals behave alike: neither strength nor melting point registers against megabar pressure.",
+    "Only nuclear charge and mass number distinguish materials.",
+    "Only nuclear charge and mass number distinguish materials, and above the capture threshold not even the charge is conserved."
+   ]
+  },
+  {
+   "name": "Welding",
+   "cells": [
+    "Flyers leave at several to tens of kilometres per second, far beyond any weld window: the joint is a hypervelocity impact crater.",
+    "Flyers reach tens of kilometres per second and both parts vaporise on impact. Nothing is joined.",
+    "Both parts are plasma before they meet.",
+    "Both parts are degenerate plasma before they meet."
+   ]
+  },
+  {
+   "name": "Synthesis",
+   "cells": [
+    "Shock and ramp compression to tens and hundreds of gigapascals: diamond, lonsdaleite and other dense phases form in nanoseconds, as in flux-compression and Z-pinch experiments today. Recovering the product is the hard part.",
+    "Planetary-core pressures, megabars and up: metallic hydrogen and other dense phases exist while the pulse lasts and not after.",
+    "'Magnetic chemistry': where the field threads matter, atoms bind into chains along it with tens to hundreds of electronvolts per atom, but only while the field is on. As a piston it makes degenerate matter.",
+    "Nuclear, not chemical, synthesis: degenerate electrons are forced into nuclei above each capture threshold and light elements fuse. The product is neutron-rich isotopes and a thermonuclear yield."
+   ]
+  },
+  {
+   "name": "Densification",
+   "cells": [
+    "Every pore is crushed, together with the surface of the part.",
+    "Every pore is crushed, and so is the part.",
+    "Porosity has no meaning in degenerate matter.",
+    "Porosity has no meaning in degenerate matter."
+   ]
+  },
+  {
+   "name": "Containment",
+   "cells": [
+    "No structure contains the field statically: the pressure exceeds every material strength, so the source is destroyed each shot, as single-turn coils and flux-compression generators are.",
+    "No structure contains the field: it is held only by the inertia of an imploding liner, for microseconds.",
+    "Nothing material holds the field; unheld it disperses in the light-crossing time. Nature's only static holder is a neutron star.",
+    "Nothing material holds the field; unheld it disperses in the light-crossing time. Nature's only static holder is a neutron star."
+   ]
+  }
+ ],
+ "thresholds": [
+  {
+   "label": "pressure reaches the static yield strength",
+   "iron": "21 T",
+   "copper": "13.3 T",
+   "state": "solid, flowing plastically wherever the load is uneven (the regime of the rest of magform)",
+   "kind": "strength"
+  },
+  {
+   "label": "eddy-current skin starts to melt",
+   "iron": "116 T",
+   "copper": "96 T",
+   "state": "solid inside a molten eddy-current skin: the driven surface is a conducting liquid",
+   "kind": "heating"
+  },
+  {
+   "label": "skin reaches its boiling point",
+   "iron": "159 T",
+   "copper": "148 T",
+   "state": "the skin reaches its boiling point within the pulse and starts to blow off as vapour",
+   "kind": "heating"
+  },
+  {
+   "label": "skin completely vaporised",
+   "iron": "388 T",
+   "copper": "365 T",
+   "state": "the whole skin depth is vaporised and expands as a conducting plasma",
+   "kind": "heating"
+  },
+  {
+   "label": "pressure equals the bulk modulus",
+   "iron": "649 T",
+   "copper": "553 T",
+   "state": "compressed to a fraction of its volume (megabar dynamic compression) and released as hot liquid or vapour",
+   "kind": "pressure"
+  },
+  {
+   "label": "pressure equals the atomic unit E_h/a0^3",
+   "iron": "8,600 T",
+   "copper": "8,600 T",
+   "state": "pressure-ionised: electron shells are crushed and the workpiece is a dense plasma, degenerate like the outer layers of a white dwarf as the pressure rises",
+   "kind": "pressure"
+  },
+  {
+   "label": "field equals the atomic unit B0",
+   "iron": "2.4 × 10⁵ T",
+   "copper": "2.4 × 10⁵ T",
+   "state": "where the field threads the matter, atoms are squeezed into needles along it and ordinary chemistry stops",
+   "kind": "field"
+  },
+  {
+   "label": "degenerate electrons turn relativistic (x = 1)",
+   "iron": "1.4 × 10⁸ T",
+   "copper": "1.4 × 10⁸ T",
+   "state": "white-dwarf matter: a relativistically degenerate electron gas denser than 1e9 kg/m^3",
+   "kind": "pressure"
+  },
+  {
+   "label": "field equals the QED critical field",
+   "iron": "4.4 × 10⁹ T",
+   "copper": "4.4 × 10⁹ T",
+   "state": "the field is beyond the quantum-electrodynamic critical value: an electron's cyclotron energy exceeds its rest energy and the vacuum itself is birefringent",
+   "kind": "field"
+  },
+  {
+   "label": "degenerate electrons reach the capture threshold",
+   "iron": "1.1 × 10¹⁰ T",
+   "copper": "2.8 × 10⁷ T",
+   "state": "degenerate electrons are forced into nuclei: 56Fe starts turning into 56Mn and the workpiece is being transmuted",
+   "kind": "pressure"
+  },
+  {
+   "label": "pressure equals the neutron-drip pressure",
+   "iron": "4.4 × 10¹¹ T",
+   "copper": "4.4 × 10¹¹ T",
+   "state": "neutrons drip out of the nuclei: the matter of a neutron star's inner crust",
+   "kind": "pressure"
+  }
+ ],
+ "standoff": [
+  {
+   "label": "Field falls to the Earth's own",
+   "metres": "585"
+  },
+  {
+   "label": "Pacemaker line (0.5 mT)",
+   "metres": "271"
+  },
+  {
+   "label": "Public exposure limit (0.4 T)",
+   "metres": "29.2"
+  },
+  {
+   "label": "Occupational limit (2 T)",
+   "metres": "17.1"
+  },
+  {
+   "label": "Limb exposure limit (8 T)",
+   "metres": "10.8"
+  },
+  {
+   "label": "Chemistry stops (235,000 T)",
+   "metres": "0.3"
+  }
+ ],
+ "gaps": [
+  {
+   "label": "field over nondestructive record",
+   "value": "9.9 × 10^7"
+  },
+  {
+   "label": "field over destructive record",
+   "value": "3.6 × 10^6"
+  },
+  {
+   "label": "pressure over concept note",
+   "value": "9.9 × 10^15"
+  },
+  {
+   "label": "energy over largest pulsed store",
+   "value": "2.1 × 10^11"
+  },
+  {
+   "label": "power over pulsed record",
+   "value": "9.4 × 10^16"
+  },
+  {
+   "label": "power over largest laser",
+   "value": "7.5 × 10^14"
+  }
+ ]
+}

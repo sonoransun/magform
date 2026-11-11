@@ -1,0 +1,3117 @@
+{
+ "statuses": [
+  {
+   "key": "state_of_the_art",
+   "label": "state of the art",
+   "meaning": "Demonstrated today at the stated scale (cited benchmark)."
+  },
+  {
+   "key": "extrapolation",
+   "label": "extrapolation",
+   "meaning": "Beyond demonstrated values but no known physical barrier; requires scaling of an existing technology."
+  },
+  {
+   "key": "aspirational",
+   "label": "aspirational",
+   "meaning": "Requires materials or technology that do not exist (e.g. carbon-nanosheet laminates beyond any measured value)."
+  },
+  {
+   "key": "infeasible",
+   "label": "infeasible",
+   "meaning": "Violates a physical limit within the model (e.g. no finite elastic wall exists, superconductor quenches every pulse, dwell time cannot be met by a pulse)."
+  },
+  {
+   "key": "not_applicable",
+   "label": "not applicable",
+   "meaning": "The subsystem was not evaluated for this input."
+  },
+  {
+   "key": "assumed",
+   "label": "assumed",
+   "meaning": "Granted by an explicit premise of the analysis and not assessed against today's technology (the thought-experiment label of magform.magnetar); ignored by worst/best."
+  }
+ ],
+ "verdicts": [
+  {
+   "key": "state_of_the_art",
+   "label": "state of the art",
+   "meaning": "True with today's technology."
+  },
+  {
+   "key": "extrapolation",
+   "label": "extrapolation",
+   "meaning": "Plausible by scaling known technology."
+  },
+  {
+   "key": "aspirational",
+   "label": "aspirational",
+   "meaning": "Needs materials/technology that do not exist."
+  },
+  {
+   "key": "infeasible",
+   "label": "infeasible",
+   "meaning": "Conflicts with physics as modelled."
+  },
+  {
+   "key": "contradicted",
+   "label": "contradicted",
+   "meaning": "A factual statement that is false."
+  },
+  {
+   "key": "not_modelled",
+   "label": "not modelled",
+   "meaning": "Outside what this toolkit can compute."
+  }
+ ],
+ "count": 16,
+ "callable_count": 327,
+ "modules": [
+  {
+   "module": "magnetics",
+   "title": "Magnetic pressure, thick-solenoid fields, stored energy and winding stresses",
+   "answers": "What field a pressure needs, and what that field does to the coil that makes it.",
+   "relations": [
+    "Magnetic pressure: P = B²/(2μ₀); with field on both sides of a wall, P = (B_out² − B_in²)/(2μ₀)",
+    "Central field of a uniform-current thick solenoid (Montgomery): B₀ = μ₀ J a₁ β ln[(α + √(α² + β²)) / (1 + √(1 + β²))], α = a₂/a₁, β = L/(2a₁)",
+    "Stored energy of a long coil: E = (B₀²/2μ₀) π L [a₁² + 2Δ(a₂/3 − Δ/4)]",
+    "Hoop stress of a free turn: σ(r) = r J B(r); its maximum never falls below P/2, however thick the winding",
+    "Virial bound on structural mass: M ≥ ρE/σ"
+   ],
+   "limits": [
+    "Non-magnetic media. The on-axis field is exact for a uniform current density.",
+    "The field profile in the winding, the stored energy and the stresses use the long-coil approximation, good to about 10 % for β ≥ 3.",
+    "Each turn carries its own Lorentz load (no radial load sharing), which is an upper bound on the peak stress of a bonded winding."
+   ],
+   "chapter": "/story/pressure.html",
+   "entry_points": [
+    {
+     "name": "magnetic_pressure",
+     "kind": "function",
+     "signature": "magnetic_pressure(field)",
+     "summary": "Magnetic pressure of a field, P = B² / (2 μ₀) [Pa]."
+    },
+    {
+     "name": "field_for_pressure",
+     "kind": "function",
+     "signature": "field_for_pressure(pressure)",
+     "summary": "Field whose magnetic pressure is pressure: B = sqrt(2 μ₀ P) [T]."
+    },
+    {
+     "name": "pressure_with_background",
+     "kind": "function",
+     "signature": "pressure_with_background(background_field, pulse_outside, pulse_inside=0)",
+     "summary": "Net magnetic pressure on a conducting shell in a DC background with a pulsed increment [Pa]."
+    },
+    {
+     "name": "max_hoop_stress_ratio",
+     "kind": "function",
+     "signature": "max_hoop_stress_ratio(alpha)",
+     "summary": "Maximum non-interacting-turn hoop stress of a long coil in units of the bore pressure."
+    },
+    {
+     "name": "virial_minimum_mass",
+     "kind": "function",
+     "signature": "virial_minimum_mass(stored_energy, density, allowable_stress)",
+     "summary": "Virial-theorem lower bound on the structural mass of a magnet, M = rho E / sigma [kg]."
+    },
+    {
+     "name": "Solenoid",
+     "kind": "class",
+     "signature": "Solenoid(inner_radius, outer_radius, length)",
+     "summary": "Uniform-current-density thick solenoid (geometry only)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "magnetic_pressure",
+     "kind": "function",
+     "signature": "magnetic_pressure(field)",
+     "summary": "Magnetic pressure of a field, P = B² / (2 μ₀) [Pa]."
+    },
+    {
+     "name": "field_for_pressure",
+     "kind": "function",
+     "signature": "field_for_pressure(pressure)",
+     "summary": "Field whose magnetic pressure is pressure: B = sqrt(2 μ₀ P) [T]."
+    },
+    {
+     "name": "energy_density",
+     "kind": "function",
+     "signature": "energy_density(field)",
+     "summary": "Magnetic energy density u = B²/(2 μ₀) [J/m³], numerically equal to the pressure."
+    },
+    {
+     "name": "pressure_with_background",
+     "kind": "function",
+     "signature": "pressure_with_background(background_field, pulse_outside, pulse_inside=0)",
+     "summary": "Net magnetic pressure on a conducting shell in a DC background with a pulsed increment [Pa]."
+    },
+    {
+     "name": "pulse_increment_for_pressure",
+     "kind": "function",
+     "signature": "pulse_increment_for_pressure(pressure, background_field)",
+     "summary": "Pulsed field increment that yields pressure on a fully screening shell in a DC background [T]."
+    },
+    {
+     "name": "current_sheet_pressure",
+     "kind": "function",
+     "signature": "current_sheet_pressure(surface_current_density, field)",
+     "summary": "Lorentz (J x B) pressure on a current sheet, P = K B [Pa]."
+    },
+    {
+     "name": "surface_current_for_pressure",
+     "kind": "function",
+     "signature": "surface_current_for_pressure(pressure, field)",
+     "summary": "Surface current density needed for a J x B pressure in a given field, K = P / B [A/m]."
+    },
+    {
+     "name": "max_hoop_stress_ratio",
+     "kind": "function",
+     "signature": "max_hoop_stress_ratio(alpha)",
+     "summary": "Maximum non-interacting-turn hoop stress of a long coil in units of the bore pressure."
+    },
+    {
+     "name": "thin_shell_hoop_stress",
+     "kind": "function",
+     "signature": "thin_shell_hoop_stress(pressure, radius, thickness)",
+     "summary": "Hoop stress of a thin cylindrical shell under internal pressure, sigma = P a / t [Pa]."
+    },
+    {
+     "name": "virial_minimum_mass",
+     "kind": "function",
+     "signature": "virial_minimum_mass(stored_energy, density, allowable_stress)",
+     "summary": "Virial-theorem lower bound on the structural mass of a magnet, M = rho E / sigma [kg]."
+    },
+    {
+     "name": "virial_mean_stress",
+     "kind": "function",
+     "signature": "virial_mean_stress(stored_energy, structure_volume)",
+     "summary": "Virial mean tensile stress of a load-bearing structure, sigma = E / V [Pa]."
+    },
+    {
+     "name": "graded_winding_thickness",
+     "kind": "function",
+     "signature": "graded_winding_thickness(central_field, current_density_of_field, n=2000)",
+     "summary": "Minimum winding thickness of an ideally graded long solenoid [m]."
+    },
+    {
+     "name": "dipole_field_on_equator",
+     "kind": "function",
+     "signature": "dipole_field_on_equator(moment, distance)",
+     "summary": "Far field of a magnetic dipole in its equatorial plane, B = μ₀ m / (4 pi r³) [T]."
+    },
+    {
+     "name": "PressureUniformity",
+     "kind": "class",
+     "signature": "PressureUniformity(*, workpiece_length, end_ratio, mean_ratio, max_deviation, z, ratio)",
+     "summary": "On-axis magnetic-pressure uniformity over a workpiece centred in a solenoid."
+    },
+    {
+     "name": "HoopProfile",
+     "kind": "class",
+     "signature": "HoopProfile(*, r, sigma, max, r_at)",
+     "summary": "Non-interacting-turn hoop stress across a winding, sigma(r) = r J B(r)."
+    },
+    {
+     "name": "Solenoid",
+     "kind": "class",
+     "signature": "Solenoid(inner_radius, outer_radius, length)",
+     "summary": "Uniform-current-density thick solenoid (geometry only)."
+    }
+   ],
+   "public_count": 19,
+   "callable_count": 16,
+   "constant_count": 3,
+   "reference_count": 10,
+   "has_tests": true
+  },
+  {
+   "module": "fieldmap",
+   "title": "Off-axis field of a thick solenoid and the pressure it really puts on a workpiece",
+   "answers": "What the field is away from the axis, and how the pressure is really spread over a workpiece.",
+   "relations": [
+    "Field of a circular loop from the complete elliptic integrals K and E (arithmetic-geometric mean)",
+    "Winding field: B(r, z) = J ∬ b_loop dA over the winding cross-section, with a mesh that grades towards the field point",
+    "Radial field, reduced exactly to one dimension: B_r = J ∫ [a_φ(a; r, z − L/2) − a_φ(a; r, z + L/2)] da",
+    "Perfectly conducting workpiece: ψ_coil + Σ G_ij I_j = 0 on every surface panel; then B_surface = μ₀|K| and P = B²/(2μ₀)"
+   ],
+   "limits": [
+    "Axisymmetric, non-magnetic and quasi-static, with a uniform winding current density.",
+    "The workpiece is a perfect conductor that was field-free before the pulse: skin depth much smaller than the part and the gap, pulse much shorter than the flux-diffusion time.",
+    "A sharp edge gives a mesh-dependent pressure peak. Give real parts their corner radius.",
+    "Checked against two closed forms: Montgomery's on-axis field, and the 3/2 B₀ equatorial field of a conducting sphere in a uniform field."
+   ],
+   "chapter": "/story/forging.html",
+   "entry_points": [
+    {
+     "name": "solenoid_field",
+     "kind": "function",
+     "signature": "solenoid_field(solenoid, current_density, r, z)",
+     "summary": "Field of a uniform-J thick solenoid at any point (r, z), inside the winding included."
+    },
+    {
+     "name": "end_field",
+     "kind": "function",
+     "signature": "end_field(solenoid, n_scan=48)",
+     "summary": "Largest radial field in the winding and the peak field on the conductor, relative to B0."
+    },
+    {
+     "name": "surface_pressure",
+     "kind": "function",
+     "signature": "surface_pressure(solenoid, current_density, profile, central_fraction=0.8)",
+     "summary": "Magnetic pressure on a perfectly conducting body of revolution centred in a solenoid."
+    },
+    {
+     "name": "workpiece_pressure",
+     "kind": "function",
+     "signature": "workpiece_pressure(solenoid, radius, length, corner_radius=None, central_fraction=0.8, n_side=60)",
+     "summary": "Pressure distribution on a solid cylindrical workpiece centred in the coil (unit central field)."
+    },
+    {
+     "name": "cylinder_profile",
+     "kind": "function",
+     "signature": "cylinder_profile(radius, length, corner_radius=0, n_side=60, n_cap=14, n_corner=8)",
+     "summary": "Outline ((r, z), ...) of a solid cylinder, from the axis at +L/2 to the axis at -L/2."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "ellipke",
+     "kind": "function",
+     "signature": "ellipke(m)",
+     "summary": "Complete elliptic integrals (K(m), E(m)) of the first and second kind."
+    },
+    {
+     "name": "loop_field",
+     "kind": "function",
+     "signature": "loop_field(loop_radius, r, z, current=1)",
+     "summary": "Field (B_r, B_z) [T] of a circular current loop at the point (r, z)."
+    },
+    {
+     "name": "loop_flux_function",
+     "kind": "function",
+     "signature": "loop_flux_function(loop_radius, r, z, current=1)",
+     "summary": "Flux function psi = r A_phi [Wb/rad] of a circular loop at the point (r, z)."
+    },
+    {
+     "name": "FieldPoint",
+     "kind": "class",
+     "signature": "FieldPoint(*, r, z, br, bz, magnitude, angle)",
+     "summary": "Field of a solenoid at one point: components, magnitude and angle to the axis."
+    },
+    {
+     "name": "solenoid_radial_field",
+     "kind": "function",
+     "signature": "solenoid_radial_field(solenoid, current_density, r, z)",
+     "summary": "Radial field B_r [T] of a uniform-J thick solenoid at the point (r, z)."
+    },
+    {
+     "name": "solenoid_field",
+     "kind": "function",
+     "signature": "solenoid_field(solenoid, current_density, r, z)",
+     "summary": "Field of a uniform-J thick solenoid at any point (r, z), inside the winding included."
+    },
+    {
+     "name": "solenoid_flux_function",
+     "kind": "function",
+     "signature": "solenoid_flux_function(solenoid, current_density, r, z)",
+     "summary": "Flux function psi = r A_phi [Wb/rad] of a uniform-J thick solenoid at (r, z)."
+    },
+    {
+     "name": "EndField",
+     "kind": "class",
+     "signature": "EndField(*, fraction, radius, z, peak_field_ratio, field_factor, alpha, beta)",
+     "summary": "Radial (tape-perpendicular) and peak fields in a solenoid winding, as fractions of B0."
+    },
+    {
+     "name": "end_field",
+     "kind": "function",
+     "signature": "end_field(solenoid, n_scan=48)",
+     "summary": "Largest radial field in the winding and the peak field on the conductor, relative to B0."
+    },
+    {
+     "name": "cylinder_profile",
+     "kind": "function",
+     "signature": "cylinder_profile(radius, length, corner_radius=0, n_side=60, n_cap=14, n_corner=8)",
+     "summary": "Outline ((r, z), ...) of a solid cylinder, from the axis at +L/2 to the axis at -L/2."
+    },
+    {
+     "name": "sphere_profile",
+     "kind": "function",
+     "signature": "sphere_profile(radius, n=64)",
+     "summary": "Outline of a sphere of radius [m] as n equal-angle panels from pole to pole."
+    },
+    {
+     "name": "SurfacePressure",
+     "kind": "class",
+     "signature": "",
+     "summary": "Magnetic pressure along the outline of a perfectly conducting workpiece in a solenoid."
+    },
+    {
+     "name": "surface_pressure",
+     "kind": "function",
+     "signature": "surface_pressure(solenoid, current_density, profile, central_fraction=0.8)",
+     "summary": "Magnetic pressure on a perfectly conducting body of revolution centred in a solenoid."
+    },
+    {
+     "name": "workpiece_pressure",
+     "kind": "function",
+     "signature": "workpiece_pressure(solenoid, radius, length, corner_radius=None, central_fraction=0.8, n_side=60)",
+     "summary": "Pressure distribution on a solid cylindrical workpiece centred in the coil (unit central field)."
+    },
+    {
+     "name": "flux_function_with_workpiece",
+     "kind": "function",
+     "signature": "flux_function_with_workpiece(solenoid, current_density, solution, r, z)",
+     "summary": "Total flux function psi [Wb/rad] at (r, z): coil plus the workpiece's induced currents."
+    }
+   ],
+   "public_count": 24,
+   "callable_count": 15,
+   "constant_count": 9,
+   "reference_count": 8,
+   "has_tests": true
+  },
+  {
+   "module": "conductor",
+   "title": "REBCO conductor, carbon-nanosheet (CNS) reinforced winding, and pulsed-operation limits",
+   "answers": "Whether a REBCO winding can carry the current, hold the load and survive being pulsed.",
+   "relations": [
+    "Engineering critical current density: J_e = J_e,sf g(T) (1 + B/B₀)^(−α) max(0, 1 − B/B_irr(T))",
+    "Iso-strain winding composite: E_c = Σ f_i E_i, allowed stress = E_c ε_lim with ε_lim = 0.4 % (REBCO)",
+    "Required modulus: E ≥ SF σ/ε_lim, which is 1 TPa at 4 GPa and 0.4 %",
+    "Loss per pulse: critical-state hysteresis (thin strip and Bean slab) plus copper eddy loss (dB/dt)² d² 2t/(12ρ)",
+    "Quench test: loss per pulse against the enthalpy from the operating temperature to the current-sharing temperature"
+   ],
+   "limits": [
+    "J_e is a parametric fit representative of 2020s commercial tape, calibrated at 4.2 K on data to 31 T. Above 31 T it is an extrapolation.",
+    "The rule of mixtures assumes continuous constituents aligned with the hoop direction and no thermal pre-strain.",
+    "Pulse losses are adiabatic and leave out the transport current, so they are lower estimates."
+   ],
+   "chapter": "/story/machine.html",
+   "entry_points": [
+    {
+     "name": "REBCOTape",
+     "kind": "class",
+     "signature": "",
+     "summary": "REBCO coated-conductor tape with a parametric Je(B, T, orientation) model."
+    },
+    {
+     "name": "CNSComposite",
+     "kind": "class",
+     "signature": "CNSComposite(f_cns=0.5, f_hts=0.3, f_cu=0.1, f_insulation=0.1, cns_material='cns_engineering_target', insulation_modulus=5e9, tape=…)",
+     "summary": "Winding composite of CNS reinforcement, REBCO tape, extra copper and insulation (volume fractions)."
+    },
+    {
+     "name": "assess_conductor",
+     "kind": "function",
+     "signature": "assess_conductor(field, temperature, winding_current_density, composite=None, safety_factor=1, end_field_fraction=0.4)",
+     "summary": "Assess whether the composite's REBCO fraction carries the winding current at field."
+    },
+    {
+     "name": "assess_structure",
+     "kind": "function",
+     "signature": "assess_structure(hoop_stress, composite=None, safety_factor=1.5)",
+     "summary": "Can any reinforcement keep a REBCO winding below its strain limit at hoop_stress?"
+    },
+    {
+     "name": "assess_pulsed_operation",
+     "kind": "function",
+     "signature": "assess_pulsed_operation(field_swing, rise_time, j_operating, temperature=4.2, composite=None, perpendicular_fraction=0.4)",
+     "summary": "Can a REBCO winding be pulsed 0 -> dB -> 0 without quenching?"
+    },
+    {
+     "name": "tape_pulse_losses",
+     "kind": "function",
+     "signature": "tape_pulse_losses(field_swing, rise_time, temperature=4.2, tape=None, perpendicular_fraction=0.4)",
+     "summary": "Energy dissipated per unit tape volume by one unipolar pulse 0 -> dB -> 0 [J/m³]."
+    },
+    {
+     "name": "enthalpy_margin",
+     "kind": "function",
+     "signature": "enthalpy_margin(temperature_from, temperature_to, tape=None)",
+     "summary": "Heat per unit tape volume to warm the tape from temperature_from to temperature_to [J/m³]."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "REBCOTape",
+     "kind": "class",
+     "signature": "",
+     "summary": "REBCO coated-conductor tape with a parametric Je(B, T, orientation) model."
+    },
+    {
+     "name": "je_data_status",
+     "kind": "function",
+     "signature": "je_data_status(field)",
+     "summary": "Status of the *data* behind the Je model at field [T] (>= 0)."
+    },
+    {
+     "name": "CNSComposite",
+     "kind": "class",
+     "signature": "CNSComposite(f_cns=0.5, f_hts=0.3, f_cu=0.1, f_insulation=0.1, cns_material='cns_engineering_target', insulation_modulus=5e9, tape=…)",
+     "summary": "Winding composite of CNS reinforcement, REBCO tape, extra copper and insulation (volume fractions)."
+    },
+    {
+     "name": "required_composite_modulus",
+     "kind": "function",
+     "signature": "required_composite_modulus(hoop_stress, eps_allow=0.004, safety_factor=1)",
+     "summary": "Composite modulus that keeps the hoop strain at the allowed value, E = SF sigma / eps [Pa]."
+    },
+    {
+     "name": "required_cns_fraction",
+     "kind": "function",
+     "signature": "required_cns_fraction(hoop_stress, e_cns, e_other, eps_allow=0.004, safety_factor=1)",
+     "summary": "Reinforcement volume fraction needed to reach the required modulus (not clipped)."
+    },
+    {
+     "name": "ConductorAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Je margin of a REBCO winding: body (B in the tape plane) and coil ends (B perpendicular)."
+    },
+    {
+     "name": "assess_conductor",
+     "kind": "function",
+     "signature": "assess_conductor(field, temperature, winding_current_density, composite=None, safety_factor=1, end_field_fraction=0.4)",
+     "summary": "Assess whether the composite's REBCO fraction carries the winding current at field."
+    },
+    {
+     "name": "StructureAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Strain-limited structural check of a CNS-reinforced winding at a given hoop stress."
+    },
+    {
+     "name": "assess_structure",
+     "kind": "function",
+     "signature": "assess_structure(hoop_stress, composite=None, safety_factor=1.5)",
+     "summary": "Can any reinforcement keep a REBCO winding below its strain limit at hoop_stress?"
+    },
+    {
+     "name": "je_limited_graded_thickness",
+     "kind": "function",
+     "signature": "je_limited_graded_thickness(central_field, temperature=4.2, composite=None, orientation='parallel', n=2000)",
+     "summary": "Minimum (current-limited) winding thickness of an ideally graded REBCO solenoid [m]."
+    },
+    {
+     "name": "PulseLoss",
+     "kind": "class",
+     "signature": "",
+     "summary": "Per-pulse dissipation in a REBCO tape for a unipolar field pulse 0 -> dB -> 0."
+    },
+    {
+     "name": "tape_pulse_losses",
+     "kind": "function",
+     "signature": "tape_pulse_losses(field_swing, rise_time, temperature=4.2, tape=None, perpendicular_fraction=0.4)",
+     "summary": "Energy dissipated per unit tape volume by one unipolar pulse 0 -> dB -> 0 [J/m³]."
+    },
+    {
+     "name": "enthalpy_margin",
+     "kind": "function",
+     "signature": "enthalpy_margin(temperature_from, temperature_to, tape=None)",
+     "summary": "Heat per unit tape volume to warm the tape from temperature_from to temperature_to [J/m³]."
+    },
+    {
+     "name": "QuenchAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Per-pulse AC loss of a pulsed REBCO winding against its adiabatic enthalpy margin."
+    },
+    {
+     "name": "assess_pulsed_operation",
+     "kind": "function",
+     "signature": "assess_pulsed_operation(field_swing, rise_time, j_operating, temperature=4.2, composite=None, perpendicular_fraction=0.4)",
+     "summary": "Can a REBCO winding be pulsed 0 -> dB -> 0 without quenching?"
+    },
+    {
+     "name": "terminal_voltage",
+     "kind": "function",
+     "signature": "terminal_voltage(stored_energy, peak_current, rise_time)",
+     "summary": "Inductive terminal voltage to ramp a magnet to stored_energy in rise_time, V = 2E/(I t) [V]."
+    },
+    {
+     "name": "ReinforcementEddy",
+     "kind": "class",
+     "signature": "ReinforcementEddy(*, material, frequency, skin_depth, lamina_thickness, thick, loss_per_pulse_density)",
+     "summary": "Eddy-current heating of the (electrically conducting) carbon reinforcement during a pulse."
+    },
+    {
+     "name": "cns_eddy_check",
+     "kind": "function",
+     "signature": "cns_eddy_check(composite, field_swing, rise_time, lamina_thickness=0.001)",
+     "summary": "Eddy loss in the carbon reinforcement, which is itself a conductor."
+    }
+   ],
+   "public_count": 33,
+   "callable_count": 18,
+   "constant_count": 15,
+   "reference_count": 21,
+   "has_tests": true
+  },
+  {
+   "module": "pulse",
+   "title": "Pulse-power network: capacitor banks, rotating machines and the coil they drive",
+   "answers": "What power supply the pulse needs: voltage, current, power, bank size and coil heating.",
+   "relations": [
+    "Quarter-period law: ω₀ = π/(2 t_rise), V₀ I_pk = πE/t_rise, peak power = πE/(2 t_rise)",
+    "Turns trade current against voltage: L ∝ N², I ∝ 1/N, V₀ ∝ N",
+    "Series RLC discharge in all three damping regimes; the bank must hold E_field exp(R t_rise/L)",
+    "A homopolar rotor is a capacitor: C_eq = J/k² with k = V/ω",
+    "Conductor heating from the action integral ∫J² dt, starting at 77 K",
+    "Energy transfer between uncoupled inductors: at most 25 %"
+   ],
+   "limits": [
+    "A lumped circuit: no transmission-line effects, switch physics or coupling to the workpiece.",
+    "Coil stresses are handled by magnetics, conductor and containment.",
+    "Heating uses a linear resistivity law and a constant specific heat without magnetoresistance, so it is a lower estimate."
+   ],
+   "chapter": "/story/power.html",
+   "entry_points": [
+    {
+     "name": "assess_pulse_network",
+     "kind": "function",
+     "signature": "assess_pulse_network(solenoid, field, rise_time, turns=None, max_voltage=25000, conductor='cuag_conductor', fill_factor=0.5, initial_temperature=77, waveform='crowbar', dump_fraction=0, stray_inductance=0, switch_current=100000, temperature_limit=400, transposed=False)",
+     "summary": "Size and grade the pulse-discharge network for a coil, a field and a rise time."
+    },
+    {
+     "name": "size_capacitor_bank",
+     "kind": "function",
+     "signature": "size_capacitor_bank(inductance, peak_current, rise_time, resistance=0, stray_inductance=0, switch_current=100000, specific_energy=1000, energy_density=1e6)",
+     "summary": "Size the capacitor bank for a peak current, a rise time and an R-L load."
+    },
+    {
+     "name": "rlc_discharge",
+     "kind": "function",
+     "signature": "rlc_discharge(capacitance, voltage, inductance, resistance=0)",
+     "summary": "Peak current, time to peak, losses and regime of a series RLC capacitor discharge."
+    },
+    {
+     "name": "coil_electrical",
+     "kind": "function",
+     "signature": "coil_electrical(solenoid, turns, conductor='cuag_conductor', fill_factor=0.5, temperature=77)",
+     "summary": "Inductance, resistance and L/R time of a solenoid wound with turns turns of conductor."
+    },
+    {
+     "name": "conductor_heating",
+     "kind": "function",
+     "signature": "conductor_heating(solenoid, field, rise_time, waveform='crowbar', conductor='cuag_conductor', fill_factor=0.5, initial_temperature=77, dump_fraction=0, temperature_limit=400)",
+     "summary": "Adiabatic heating of the coil conductor by one pulse to field (uniform current density)."
+    },
+    {
+     "name": "HomopolarGenerator",
+     "kind": "class",
+     "signature": "HomopolarGenerator(rotor_radius, rotor_length, tip_speed=200, field=2, inner_radius=0, density=7850, internal_resistance=0)",
+     "summary": "Homopolar (Faraday-disk / drum) generator as a pulsed source."
+    },
+    {
+     "name": "source_comparison",
+     "kind": "function",
+     "signature": "source_comparison(energy, rise_time)",
+     "summary": "Grade the four classes of pulsed source for delivering energy with a rise_time."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "angular_frequency_for_rise",
+     "kind": "function",
+     "signature": "angular_frequency_for_rise(rise_time)",
+     "summary": "Natural angular frequency of a discharge that peaks after rise_time, omega0 = pi/(2 t) [rad/s]."
+    },
+    {
+     "name": "voltage_current_product",
+     "kind": "function",
+     "signature": "voltage_current_product(energy, rise_time)",
+     "summary": "Charge voltage times peak current of a quarter-period discharge, V0 I_pk = pi E / t_rise [W]."
+    },
+    {
+     "name": "discharge_peak_power",
+     "kind": "function",
+     "signature": "discharge_peak_power(energy, rise_time)",
+     "summary": "Peak power flowing from the bank into the coil, P_pk = pi E / (2 t_rise) [W]."
+    },
+    {
+     "name": "rise_time_for_product",
+     "kind": "function",
+     "signature": "rise_time_for_product(energy, voltage, current)",
+     "summary": "Rise time a source of given voltage and current can achieve, t_rise = pi E / (V0 I_pk) [s]."
+    },
+    {
+     "name": "inductive_transfer_efficiency",
+     "kind": "function",
+     "signature": "inductive_transfer_efficiency(store_inductance, load_inductance)",
+     "summary": "Fraction of a storage inductor's energy that reaches an uncoupled load inductor, L1 L2/(L1+L2)²."
+    },
+    {
+     "name": "RLCDischarge",
+     "kind": "class",
+     "signature": "",
+     "summary": "Analytic summary of a capacitor discharging through a series inductance and resistance."
+    },
+    {
+     "name": "rlc_current",
+     "kind": "function",
+     "signature": "rlc_current(capacitance, voltage, inductance, resistance=0, crowbar=False)",
+     "summary": "Current waveform I(t) [A] of a capacitor discharged into a series R-L load."
+    },
+    {
+     "name": "rlc_capacitor_voltage",
+     "kind": "function",
+     "signature": "rlc_capacitor_voltage(capacitance, voltage, inductance, resistance=0)",
+     "summary": "Capacitor voltage V_C(t) [V] during the series RLC discharge of rlc_current."
+    },
+    {
+     "name": "rlc_discharge",
+     "kind": "function",
+     "signature": "rlc_discharge(capacitance, voltage, inductance, resistance=0)",
+     "summary": "Peak current, time to peak, losses and regime of a series RLC capacitor discharge."
+    },
+    {
+     "name": "capacitance_for_rise_time",
+     "kind": "function",
+     "signature": "capacitance_for_rise_time(inductance, rise_time, resistance=0)",
+     "summary": "Capacitance that makes a series RLC discharge peak after rise_time [F]."
+    },
+    {
+     "name": "voltage_for_peak_current",
+     "kind": "function",
+     "signature": "voltage_for_peak_current(capacitance, inductance, peak_current, resistance=0)",
+     "summary": "Charge voltage that drives peak_current through a series R-L load [V]."
+    },
+    {
+     "name": "CoilElectrical",
+     "kind": "class",
+     "signature": "",
+     "summary": "Lumped electrical parameters of a uniform-current-density solenoid wound with turns turns."
+    },
+    {
+     "name": "coil_electrical",
+     "kind": "function",
+     "signature": "coil_electrical(solenoid, turns, conductor='cuag_conductor', fill_factor=0.5, temperature=77)",
+     "summary": "Inductance, resistance and L/R time of a solenoid wound with turns turns of conductor."
+    },
+    {
+     "name": "turns_for_voltage",
+     "kind": "function",
+     "signature": "turns_for_voltage(solenoid, field, rise_time, max_voltage=25000, conductor='cuag_conductor', fill_factor=0.5, temperature=77, stray_inductance=0)",
+     "summary": "Largest whole number of turns whose capacitor-bank charge voltage stays within max_voltage."
+    },
+    {
+     "name": "BankDesign",
+     "kind": "class",
+     "signature": "",
+     "summary": "Capacitor bank that drives peak_current into an R-L load in rise_time."
+    },
+    {
+     "name": "size_capacitor_bank",
+     "kind": "function",
+     "signature": "size_capacitor_bank(inductance, peak_current, rise_time, resistance=0, stray_inductance=0, switch_current=100000, specific_energy=1000, energy_density=1e6)",
+     "summary": "Size the capacitor bank for a peak current, a rise time and an R-L load."
+    },
+    {
+     "name": "ConductorHeating",
+     "kind": "class",
+     "signature": "",
+     "summary": "Adiabatic temperature of a pulsed-coil conductor after one pulse."
+    },
+    {
+     "name": "conductor_heating",
+     "kind": "function",
+     "signature": "conductor_heating(solenoid, field, rise_time, waveform='crowbar', conductor='cuag_conductor', fill_factor=0.5, initial_temperature=77, dump_fraction=0, temperature_limit=400)",
+     "summary": "Adiabatic heating of the coil conductor by one pulse to field (uniform current density)."
+    },
+    {
+     "name": "HomopolarGenerator",
+     "kind": "class",
+     "signature": "HomopolarGenerator(rotor_radius, rotor_length, tip_speed=200, field=2, inner_radius=0, density=7850, internal_resistance=0)",
+     "summary": "Homopolar (Faraday-disk / drum) generator as a pulsed source."
+    },
+    {
+     "name": "rotor_tip_speed_limit",
+     "kind": "function",
+     "signature": "rotor_tip_speed_limit(allowable_stress, density=7850)",
+     "summary": "Surface speed at which a solid rotating disk reaches allowable_stress at its centre [m/s]."
+    },
+    {
+     "name": "homopolar_for_energy",
+     "kind": "function",
+     "signature": "homopolar_for_energy(energy, tip_speed=200, field=2, aspect_ratio=1, density=7850)",
+     "summary": "Solid-rotor homopolar generator that stores energy at tip_speed."
+    },
+    {
+     "name": "SourceOption",
+     "kind": "class",
+     "signature": "",
+     "summary": "One class of pulsed energy source graded for an (energy, rise time) requirement."
+    },
+    {
+     "name": "source_comparison",
+     "kind": "function",
+     "signature": "source_comparison(energy, rise_time)",
+     "summary": "Grade the four classes of pulsed source for delivering energy with a rise_time."
+    },
+    {
+     "name": "PulseNetworkAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Capacitor-bank network that drives a solenoid to field in rise_time, with its limits."
+    },
+    {
+     "name": "assess_pulse_network",
+     "kind": "function",
+     "signature": "assess_pulse_network(solenoid, field, rise_time, turns=None, max_voltage=25000, conductor='cuag_conductor', fill_factor=0.5, initial_temperature=77, waveform='crowbar', dump_fraction=0, stray_inductance=0, switch_current=100000, temperature_limit=400, transposed=False)",
+     "summary": "Size and grade the pulse-discharge network for a coil, a field and a rise time."
+    }
+   ],
+   "public_count": 55,
+   "callable_count": 25,
+   "constant_count": 30,
+   "reference_count": 10,
+   "has_tests": true
+  },
+  {
+   "module": "eddy",
+   "title": "Electromagnetic (magnetic-pulse) forming: eddy currents, field diffusion, skin heating and rigid-plastic tube compression",
+   "answers": "How a pulsed field loads, heats and moves a metal workpiece.",
+   "relations": [
+    "Skin depth: δ = √(ρ/(π f μ₀))",
+    "Interior field of a shell: dB_in/dt = (B_out − B_in)/τ, τ = μ₀ a h/(2ρ); pressure P = (B_out² − B_in²)/(2μ₀)",
+    "Skin heating: ΔT = κ B²/(2μ₀ ρ_m c_p), whatever the pulse length (κ = 1 is the lower estimate, up to 2.4 at the surface)",
+    "Magnetic diffusion into a heating slab: ∂B/∂t = ∂/∂z[(ρ(T)/μ₀) ∂B/∂z], Crank-Nicolson",
+    "Rigid-plastic tube: m dv/dt = −(P_net − k σ h/r), with the trapped flux compressed as B_in r² = const"
+   ],
+   "limits": [
+    "A solid, non-magnetic (saturated) workpiece: a long thin shell in a uniform axial field.",
+    "The lumped shell model assumes the current is uniform through the wall. For a wall thicker than the skin depth the skin estimate applies to the surface.",
+    "Adiabatic. Solid-phase properties are extrapolated above the melting point and latent heat is ignored.",
+    "The tube model has no elastic rebound and no buckling."
+   ],
+   "chapter": "/story/forging.html",
+   "entry_points": [
+    {
+     "name": "skin_depth",
+     "kind": "function",
+     "signature": "skin_depth(resistivity, frequency, relative_permeability=1)",
+     "summary": "Electromagnetic skin depth delta = sqrt(rho / (pi f μ₀ mu_r)), m."
+    },
+    {
+     "name": "skin_temperature_rise",
+     "kind": "function",
+     "signature": "skin_temperature_rise(material, peak_field, kappa=1)",
+     "summary": "Skin-layer temperature rise dT = kappa B² / (2 μ₀ rho_m c_p), K."
+    },
+    {
+     "name": "skin_melting_field",
+     "kind": "function",
+     "signature": "skin_melting_field(material, initial_temperature=293.15, kappa=1, include_latent=False)",
+     "summary": "Peak field at which the eddy-current skin reaches (or completes) melting, B = sqrt(2 μ₀ H / kappa), T."
+    },
+    {
+     "name": "slab_field_diffusion",
+     "kind": "function",
+     "signature": "slab_field_diffusion(material, surface_field, thickness, t_end, n_nodes=60, n_steps=None, initial_temperature=293.15)",
+     "summary": "Nonlinear 1-D magnetic diffusion into a heating slab, dB/dt = d/dz((rho_e(T)/μ₀) dB/dz)."
+    },
+    {
+     "name": "pulse_frequency_recommendation",
+     "kind": "function",
+     "signature": "pulse_frequency_recommendation(material, wall, depth_ratio=3, temperature=293.15)",
+     "summary": "Drive frequency f = rho_e(T) / (pi μ₀ delta²) with delta = wall/depth_ratio."
+    },
+    {
+     "name": "TubeCompression",
+     "kind": "class",
+     "signature": "",
+     "summary": "Electromagnetic compression of a long conducting tube (rigid-plastic thin shell)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "skin_depth",
+     "kind": "function",
+     "signature": "skin_depth(resistivity, frequency, relative_permeability=1)",
+     "summary": "Electromagnetic skin depth delta = sqrt(rho / (pi f μ₀ mu_r)), m."
+    },
+    {
+     "name": "skin_depth_for_material",
+     "kind": "function",
+     "signature": "skin_depth_for_material(material, frequency, temperature=293.15)",
+     "summary": "Skin depth (m) of a registry material at temperature (K)."
+    },
+    {
+     "name": "frequency_for_skin_depth",
+     "kind": "function",
+     "signature": "frequency_for_skin_depth(resistivity, depth)",
+     "summary": "Frequency (Hz) at which the skin depth equals depth: f = rho/(pi μ₀ delta²)."
+    },
+    {
+     "name": "shell_time_constant",
+     "kind": "function",
+     "signature": "shell_time_constant(resistivity, radius, thickness)",
+     "summary": "Flux-diffusion time constant of a long thin cylindrical shell, tau = μ₀ a h / (2 rho), s."
+    },
+    {
+     "name": "diffusion_time",
+     "kind": "function",
+     "signature": "diffusion_time(resistivity, thickness)",
+     "summary": "Magnetic diffusion time through a wall, tau_d = μ₀ h² / rho, s."
+    },
+    {
+     "name": "shell_regime",
+     "kind": "function",
+     "signature": "shell_regime(resistivity, thickness, frequency)",
+     "summary": "\"thin\" if the wall is no thicker than the skin depth (h <= delta), else \"thick\"."
+    },
+    {
+     "name": "pressure_on_shell",
+     "kind": "function",
+     "signature": "pressure_on_shell(b_out, b_in)",
+     "summary": "Net magnetic pressure on a conducting shell, P = (B_out² - B_in²) / (2 μ₀), Pa."
+    },
+    {
+     "name": "sheet_shielding_factor",
+     "kind": "function",
+     "signature": "sheet_shielding_factor(thickness, skin_depth)",
+     "summary": "Quasi-steady pressure-transfer factor of a conducting sheet, 1 - exp(-2h/delta)."
+    },
+    {
+     "name": "transmitted_pressure",
+     "kind": "function",
+     "signature": "transmitted_pressure(pressure, thickness, skin_depth)",
+     "summary": "Pressure delivered to a sheet of thickness h: P (1 - exp(-2h/delta)), Pa."
+    },
+    {
+     "name": "effective_current_depth",
+     "kind": "function",
+     "signature": "effective_current_depth(thickness, skin_depth)",
+     "summary": "Depth that carries the shielding current, min(h, delta), m."
+    },
+    {
+     "name": "surface_heating_energy_density",
+     "kind": "function",
+     "signature": "surface_heating_energy_density(peak_field, kappa=1)",
+     "summary": "Joule heat per unit volume deposited in the eddy-current skin, q = kappa B² / (2 μ₀), J/m³."
+    },
+    {
+     "name": "skin_temperature_rise",
+     "kind": "function",
+     "signature": "skin_temperature_rise(material, peak_field, kappa=1)",
+     "summary": "Skin-layer temperature rise dT = kappa B² / (2 μ₀ rho_m c_p), K."
+    },
+    {
+     "name": "skin_melting_field",
+     "kind": "function",
+     "signature": "skin_melting_field(material, initial_temperature=293.15, kappa=1, include_latent=False)",
+     "summary": "Peak field at which the eddy-current skin reaches (or completes) melting, B = sqrt(2 μ₀ H / kappa), T."
+    },
+    {
+     "name": "interior_field",
+     "kind": "function",
+     "signature": "interior_field(b_out, tau, t_end, n_steps)",
+     "summary": "Field inside a thin shell, dB_in/dt = (B_out(t) - B_in)/tau, sampled on n_steps+1 times."
+    },
+    {
+     "name": "action_integral",
+     "kind": "function",
+     "signature": "action_integral(current, t)",
+     "summary": "Action integral G = integral of I² dt (trapezoid rule), A² s."
+    },
+    {
+     "name": "JouleResult",
+     "kind": "class",
+     "signature": "JouleResult(*, material, initial_temperature, final_temperature, delta_t, action, melted, time_to_melt)",
+     "summary": "Adiabatic Joule heating of a conductor carrying a current-density waveform."
+    },
+    {
+     "name": "adiabatic_joule_heating",
+     "kind": "function",
+     "signature": "adiabatic_joule_heating(current_density, t, material, initial_temperature=293.15)",
+     "summary": "Adiabatic heating of a conductor by a current-density waveform, dT = rho_e(T) J² dt / (rho_m c_p)."
+    },
+    {
+     "name": "specific_action_to_temperature",
+     "kind": "function",
+     "signature": "specific_action_to_temperature(material, temperature_from, temperature_to, n=400)",
+     "summary": "Specific action needed to heat a conductor adiabatically, integral rho_m c_p / rho_e(T) dT, A² s/m⁴."
+    },
+    {
+     "name": "DiffusionResult",
+     "kind": "class",
+     "signature": "",
+     "summary": "Result of slab_field_diffusion."
+    },
+    {
+     "name": "slab_field_diffusion",
+     "kind": "function",
+     "signature": "slab_field_diffusion(material, surface_field, thickness, t_end, n_nodes=60, n_steps=None, initial_temperature=293.15)",
+     "summary": "Nonlinear 1-D magnetic diffusion into a heating slab, dB/dt = d/dz((rho_e(T)/μ₀) dB/dz)."
+    },
+    {
+     "name": "damped_sine_field",
+     "kind": "function",
+     "signature": "damped_sine_field(peak_field, frequency, damping_time=None)",
+     "summary": "Damped-sine drive normalised so that max_t B(t) = peak_field (T)."
+    },
+    {
+     "name": "half_sine_field",
+     "kind": "function",
+     "signature": "half_sine_field(peak_field, half_period)",
+     "summary": "Single half-sine pulse B(t) = B_pk sin(pi t / T_half) for 0 <= t <= T_half, else 0 (T)."
+    },
+    {
+     "name": "PulseRecommendation",
+     "kind": "class",
+     "signature": "",
+     "summary": "Drive frequency that places the skin depth at wall/depth_ratio."
+    },
+    {
+     "name": "pulse_frequency_recommendation",
+     "kind": "function",
+     "signature": "pulse_frequency_recommendation(material, wall, depth_ratio=3, temperature=293.15)",
+     "summary": "Drive frequency f = rho_e(T) / (pi μ₀ delta²) with delta = wall/depth_ratio."
+    },
+    {
+     "name": "TubeSummary",
+     "kind": "class",
+     "signature": "",
+     "summary": "Scalar outcome of simulate."
+    },
+    {
+     "name": "TubeHistory",
+     "kind": "class",
+     "signature": "",
+     "summary": "Columnar time history (<= 2000 samples) of simulate."
+    },
+    {
+     "name": "TubeResult",
+     "kind": "class",
+     "signature": "TubeResult(*, material, summary, history)",
+     "summary": "Summary and history of a tube-compression simulation."
+    },
+    {
+     "name": "TubeCompression",
+     "kind": "class",
+     "signature": "",
+     "summary": "Electromagnetic compression of a long conducting tube (rigid-plastic thin shell)."
+    }
+   ],
+   "public_count": 36,
+   "callable_count": 28,
+   "constant_count": 8,
+   "reference_count": 13,
+   "has_tests": true
+  },
+  {
+   "module": "plasticity",
+   "title": "Flow stress, forging pressure, adiabatic heating and forgeability of metals",
+   "answers": "Whether a given pressure can deform a given metal, and what limits the deformation.",
+   "relations": [
+    "Johnson-Cook: σ = (A + B εⁿ)(1 + C ln(ε̇/ε̇₀))(1 − T*ᵐ)",
+    "Zerilli-Armstrong (bcc): σ = c₀ + c₁ exp(−c₃T + c₄T ln ε̇) + c₅ εⁿ",
+    "Forging pressure: p = Q σ (1 + μ d/(3h)), with Q from 1 (uniaxial) to about 3 (indentation)",
+    "Adiabatic heating: dT = f β σ dε/(ρ c_p), β = 0.9",
+    "Culver instability: dσ/dε = 0 along the adiabatic path"
+   ],
+   "limits": [
+    "Each published fit holds only inside its recorded strain-rate and temperature window. The assessment says when it is extrapolating.",
+    "Materials without a published fit use a Hollomon power law from tensile data with an assumed rate sensitivity.",
+    "Bulk, uniform deformation. Hydrostatic pressure alone changes no shape, so a die, a mandrel or a free surface is assumed.",
+    "The recorded ductile-brittle transition temperatures are quasi-static values."
+   ],
+   "chapter": "/story/refractory.html",
+   "entry_points": [
+    {
+     "name": "flow_stress",
+     "kind": "function",
+     "signature": "flow_stress(material, strain, strain_rate=0.001, temperature=293.15)",
+     "summary": "Equivalent (von Mises) flow stress in Pa: the constitutive backbone of magform."
+    },
+    {
+     "name": "flow_stress_band",
+     "kind": "function",
+     "signature": "flow_stress_band(material, strain, strain_rate=0.001, temperature=293.15)",
+     "summary": "Flow stress (Pa) of every recorded model at one state, as an uncertainty band."
+    },
+    {
+     "name": "forging_pressure",
+     "kind": "function",
+     "signature": "forging_pressure(material, strain, strain_rate=0.001, temperature=293.15, constraint_factor=1, friction=0, diameter_to_height=0)",
+     "summary": "Average die pressure (Pa) needed to keep the workpiece flowing."
+    },
+    {
+     "name": "adiabatic_temperature_rise",
+     "kind": "function",
+     "signature": "adiabatic_temperature_rise(material, strain, strain_rate, temperature=293.15, taylor_quinney=0.9, length_scale=0.001, n_steps=200)",
+     "summary": "Bulk temperature rise (K) from plastic work up to strain."
+    },
+    {
+     "name": "adiabatic_shear_critical_strain",
+     "kind": "function",
+     "signature": "adiabatic_shear_critical_strain(material, strain_rate, temperature=293.15, taylor_quinney=0.9, max_strain=5, d_eps=0.001)",
+     "summary": "Culver (1973) adiabatic-instability strain, or None if none occurs before max_strain."
+    },
+    {
+     "name": "warm_forming_temperature",
+     "kind": "function",
+     "signature": "warm_forming_temperature(material, pressure, strain, strain_rate, constraint_factor=1, *, conservative=False)",
+     "summary": "Lowest temperature (K) in [T_ROOM, 0.9 T_melt] at which Q sigma(strain, rate, T) <= P."
+    },
+    {
+     "name": "forging_practice_gap",
+     "kind": "function",
+     "signature": "forging_practice_gap(material, temperature=293.15)",
+     "summary": "Compare a proposed forming temperature with conventional working practice."
+    },
+    {
+     "name": "assess_forgeability",
+     "kind": "function",
+     "signature": "assess_forgeability(material, pressure, target_strain=0.3, strain_rate=10000, temperature=293.15, constraint_factor=1.2, hydrostatic_pressure=None)",
+     "summary": "Assess whether a delivered pressure can forge material to target_strain."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "FlowStressBand",
+     "kind": "class",
+     "signature": "",
+     "summary": "Flow stress of every model recorded for a material at one (strain, rate, T) state."
+    },
+    {
+     "name": "PracticeGap",
+     "kind": "class",
+     "signature": "",
+     "summary": "Where a proposed forming temperature sits relative to conventional working practice."
+    },
+    {
+     "name": "ForgeAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Can the delivered pressure plastically forge this material at this state?"
+    },
+    {
+     "name": "fallback_rate_sensitivity",
+     "kind": "function",
+     "signature": "fallback_rate_sensitivity(material)",
+     "summary": "Rate coefficient C used by the Hollomon fallback for this material's crystal structure."
+    },
+    {
+     "name": "fallback_flow_stress",
+     "kind": "function",
+     "signature": "fallback_flow_stress(material, strain, strain_rate=0.001, temperature=293.15)",
+     "summary": "Hollomon fallback flow stress (Pa) from tensile data."
+    },
+    {
+     "name": "flow_stress",
+     "kind": "function",
+     "signature": "flow_stress(material, strain, strain_rate=0.001, temperature=293.15)",
+     "summary": "Equivalent (von Mises) flow stress in Pa: the constitutive backbone of magform."
+    },
+    {
+     "name": "flow_stress_band",
+     "kind": "function",
+     "signature": "flow_stress_band(material, strain, strain_rate=0.001, temperature=293.15)",
+     "summary": "Flow stress (Pa) of every recorded model at one state, as an uncertainty band."
+    },
+    {
+     "name": "forging_pressure",
+     "kind": "function",
+     "signature": "forging_pressure(material, strain, strain_rate=0.001, temperature=293.15, constraint_factor=1, friction=0, diameter_to_height=0)",
+     "summary": "Average die pressure (Pa) needed to keep the workpiece flowing."
+    },
+    {
+     "name": "adiabatic_fraction",
+     "kind": "function",
+     "signature": "adiabatic_fraction(material, strain, strain_rate, length_scale=0.001)",
+     "summary": "Fraction of the plastic heat retained in the deforming region (0 = isothermal, 1 = adiabatic)."
+    },
+    {
+     "name": "adiabatic_temperature_rise",
+     "kind": "function",
+     "signature": "adiabatic_temperature_rise(material, strain, strain_rate, temperature=293.15, taylor_quinney=0.9, length_scale=0.001, n_steps=200)",
+     "summary": "Bulk temperature rise (K) from plastic work up to strain."
+    },
+    {
+     "name": "adiabatic_shear_critical_strain",
+     "kind": "function",
+     "signature": "adiabatic_shear_critical_strain(material, strain_rate, temperature=293.15, taylor_quinney=0.9, max_strain=5, d_eps=0.001)",
+     "summary": "Culver (1973) adiabatic-instability strain, or None if none occurs before max_strain."
+    },
+    {
+     "name": "max_strain_at_pressure",
+     "kind": "function",
+     "signature": "max_strain_at_pressure(material, pressure, strain_rate=10000, temperature=293.15, constraint_factor=1, max_strain=3)",
+     "summary": "Largest strain whose flow stress the pressure can still overcome: Q sigma(eps) = P."
+    },
+    {
+     "name": "warm_forming_temperature",
+     "kind": "function",
+     "signature": "warm_forming_temperature(material, pressure, strain, strain_rate, constraint_factor=1, *, conservative=False)",
+     "summary": "Lowest temperature (K) in [T_ROOM, 0.9 T_melt] at which Q sigma(strain, rate, T) <= P."
+    },
+    {
+     "name": "forging_practice_gap",
+     "kind": "function",
+     "signature": "forging_practice_gap(material, temperature=293.15)",
+     "summary": "Compare a proposed forming temperature with conventional working practice."
+    },
+    {
+     "name": "assess_forgeability",
+     "kind": "function",
+     "signature": "assess_forgeability(material, pressure, target_strain=0.3, strain_rate=10000, temperature=293.15, constraint_factor=1.2, hydrostatic_pressure=None)",
+     "summary": "Assess whether a delivered pressure can forge material to target_strain."
+    }
+   ],
+   "public_count": 31,
+   "callable_count": 15,
+   "constant_count": 16,
+   "reference_count": 20,
+   "has_tests": true
+  },
+  {
+   "module": "microstructure",
+   "title": "Microstructure after a cold, fast magnetic forming pulse: dislocations, grains and heat",
+   "answers": "What a cold, fast forming pulse leaves behind in the grains.",
+   "relations": [
+    "Taylor hardening: Δσ = M α G b (√ρ − √ρ₀)",
+    "Dislocation cell size: d = K/√ρ, K about 10",
+    "Hall-Petch: σ_y = σ₀ + k d^(−1/2)",
+    "Grain refinement with strain: d = d_sat + (d₀ − d_sat) exp(−ε)",
+    "Recrystallisation (JMAK, n = 2): X = 1 − exp[−ln 20 (t/t₉₅)²], t₉₅ = 1 h × exp[(Q/R)(1/T − 1/(0.4 T_m))]",
+    "Skin exposure: ΔT = κ B²/(2μ₀ ρ c_p), held for about (δ/2)²/α_thermal"
+   ],
+   "limits": [
+    "Scaling laws with estimated constants (Taylor α 0.2 to 0.5, cell constant 10 to 20, recrystallisation anchor 0.3 to 0.5 T_m). Results are order-of-magnitude estimates.",
+    "Fracture toughness and fatigue life are not modelled.",
+    "Twinning, texture, recovery, grain growth and phase transformations are not modelled."
+   ],
+   "chapter": "/story/refractory.html",
+   "entry_points": [
+    {
+     "name": "dislocation_density",
+     "kind": "function",
+     "signature": "dislocation_density(material, strain, strain_rate=0.001, temperature=293.15, initial_density=1e12, alpha=0.3)",
+     "summary": "Dislocation density after a plastic strain, from the package's own flow stress [1/m²]."
+    },
+    {
+     "name": "dislocation_cell_size",
+     "kind": "function",
+     "signature": "dislocation_cell_size(density, k=10)",
+     "summary": "Dislocation cell (subgrain) size from similitude, d = K / sqrt(rho) [m]."
+    },
+    {
+     "name": "hall_petch_strength",
+     "kind": "function",
+     "signature": "hall_petch_strength(material, grain_size)",
+     "summary": "Yield strength at a grain size, sigma_y = sigma_0 + k d^(-1/2) [Pa]."
+    },
+    {
+     "name": "grain_size_after_strain",
+     "kind": "function",
+     "signature": "grain_size_after_strain(material, strain, initial_grain_size=None, saturation_grain_size=None)",
+     "summary": "High-angle-boundary spacing along the compression direction after a strain [m]."
+    },
+    {
+     "name": "grain_refinement_strain",
+     "kind": "function",
+     "signature": "grain_refinement_strain(material, target_grain_size=None, initial_grain_size=None, saturation_grain_size=None)",
+     "summary": "Equivalent strain needed to refine the grain size to a target (dimensionless)."
+    },
+    {
+     "name": "recrystallised_fraction",
+     "kind": "function",
+     "signature": "recrystallised_fraction(material, temperature, time, *, anchor=0.4)",
+     "summary": "Fraction recrystallised after holding a cold-worked metal at a temperature (0-1)."
+    },
+    {
+     "name": "skin_thermal_exposure",
+     "kind": "function",
+     "signature": "skin_thermal_exposure(material, peak_field, frequency=10000, initial_temperature=293.15, kappa=1)",
+     "summary": "How hot the eddy-current skin gets, for how long, and what that does to its grains."
+    },
+    {
+     "name": "assess_microstructure",
+     "kind": "function",
+     "signature": "assess_microstructure(material, strain=0.3, strain_rate=10000, temperature=293.15, peak_field=None, frequency=None, initial_grain_size=None, *, kappa=1, bulk_hold_time=60, initial_density=1e12)",
+     "summary": "What one cold, fast forming pulse does to the grains and dislocations of material."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "taylor_factor",
+     "kind": "function",
+     "signature": "taylor_factor(material)",
+     "summary": "Taylor factor M of the material's crystal structure (dimensionless)."
+    },
+    {
+     "name": "taylor_hardening",
+     "kind": "function",
+     "signature": "taylor_hardening(material, density, initial_density=1e12, alpha=0.3)",
+     "summary": "Flow-stress increment of a dislocation density, d sigma = M alpha G b (sqrt(rho) - sqrt(rho0)) [Pa]."
+    },
+    {
+     "name": "dislocation_density",
+     "kind": "function",
+     "signature": "dislocation_density(material, strain, strain_rate=0.001, temperature=293.15, initial_density=1e12, alpha=0.3)",
+     "summary": "Dislocation density after a plastic strain, from the package's own flow stress [1/m²]."
+    },
+    {
+     "name": "dislocation_density_band",
+     "kind": "function",
+     "signature": "dislocation_density_band(material, strain, strain_rate=0.001, temperature=293.15, initial_density=1e12, alpha=0.3)",
+     "summary": "(minimum, maximum) dislocation density over every published flow-stress fit [1/m²]."
+    },
+    {
+     "name": "dislocation_cell_size",
+     "kind": "function",
+     "signature": "dislocation_cell_size(density, k=10)",
+     "summary": "Dislocation cell (subgrain) size from similitude, d = K / sqrt(rho) [m]."
+    },
+    {
+     "name": "stored_energy_density",
+     "kind": "function",
+     "signature": "stored_energy_density(material, density)",
+     "summary": "Stored energy of cold work carried by the dislocations, E = (1/2) G b² rho [J/m³]."
+    },
+    {
+     "name": "hall_petch_friction_stress",
+     "kind": "function",
+     "signature": "hall_petch_friction_stress(material)",
+     "summary": "Friction stress sigma_0 of the Hall-Petch relation [Pa]."
+    },
+    {
+     "name": "hall_petch_strength",
+     "kind": "function",
+     "signature": "hall_petch_strength(material, grain_size)",
+     "summary": "Yield strength at a grain size, sigma_y = sigma_0 + k d^(-1/2) [Pa]."
+    },
+    {
+     "name": "grain_size_for_strength",
+     "kind": "function",
+     "signature": "grain_size_for_strength(material, strength)",
+     "summary": "Grain size that gives a target yield strength, d = (k / (sigma - sigma_0))² [m]."
+    },
+    {
+     "name": "grain_size_after_strain",
+     "kind": "function",
+     "signature": "grain_size_after_strain(material, strain, initial_grain_size=None, saturation_grain_size=None)",
+     "summary": "High-angle-boundary spacing along the compression direction after a strain [m]."
+    },
+    {
+     "name": "grain_refinement_strain",
+     "kind": "function",
+     "signature": "grain_refinement_strain(material, target_grain_size=None, initial_grain_size=None, saturation_grain_size=None)",
+     "summary": "Equivalent strain needed to refine the grain size to a target (dimensionless)."
+    },
+    {
+     "name": "hardness_after_strain",
+     "kind": "function",
+     "signature": "hardness_after_strain(material, strain=0, temperature=293.15)",
+     "summary": "Vickers-type hardness of the worked state, H = 3 sigma(eps + 0.08) [Pa]."
+    },
+    {
+     "name": "recrystallisation_time",
+     "kind": "function",
+     "signature": "recrystallisation_time(material, temperature, fraction=0.5, *, anchor=0.4)",
+     "summary": "Time for a cold-worked metal to recrystallise to a given fraction at a temperature [s]."
+    },
+    {
+     "name": "recrystallised_fraction",
+     "kind": "function",
+     "signature": "recrystallised_fraction(material, temperature, time, *, anchor=0.4)",
+     "summary": "Fraction recrystallised after holding a cold-worked metal at a temperature (0-1)."
+    },
+    {
+     "name": "zener_hollomon",
+     "kind": "function",
+     "signature": "zener_hollomon(material, strain_rate, temperature)",
+     "summary": "Zener-Hollomon parameter (temperature-compensated strain rate), Z = rate * exp(Q/(R T)) [1/s]."
+    },
+    {
+     "name": "log10_zener_hollomon",
+     "kind": "function",
+     "signature": "log10_zener_hollomon(material, strain_rate, temperature)",
+     "summary": "Decimal logarithm of the Zener-Hollomon parameter, log10 Z = log10(rate) + Q/(R T ln 10)."
+    },
+    {
+     "name": "equivalent_temperature",
+     "kind": "function",
+     "signature": "equivalent_temperature(material, strain_rate, temperature, reference_rate=1)",
+     "summary": "Temperature at the reference rate that has the same Zener-Hollomon parameter [K]."
+    },
+    {
+     "name": "deformation_regime",
+     "kind": "function",
+     "signature": "deformation_regime(material, strain_rate, temperature)",
+     "summary": "Working regime of a deformation: \"cold\", \"warm\" or \"hot\"."
+    },
+    {
+     "name": "derby_grain_size",
+     "kind": "function",
+     "signature": "derby_grain_size(material, stress, k)",
+     "summary": "Dynamically recrystallised grain size at a flow stress, d = b (K G / sigma)^(3/2) [m]."
+    },
+    {
+     "name": "SkinExposure",
+     "kind": "class",
+     "signature": "",
+     "summary": "Thermal exposure of the eddy-current skin of a bare workpiece during a field pulse."
+    },
+    {
+     "name": "skin_thermal_exposure",
+     "kind": "function",
+     "signature": "skin_thermal_exposure(material, peak_field, frequency=10000, initial_temperature=293.15, kappa=1)",
+     "summary": "How hot the eddy-current skin gets, for how long, and what that does to its grains."
+    },
+    {
+     "name": "MicrostructureAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Predicted microstructure of a part after one cold forming pulse."
+    },
+    {
+     "name": "assess_microstructure",
+     "kind": "function",
+     "signature": "assess_microstructure(material, strain=0.3, strain_rate=10000, temperature=293.15, peak_field=None, frequency=None, initial_grain_size=None, *, kappa=1, bulk_hold_time=60, initial_density=1e12)",
+     "summary": "What one cold, fast forming pulse does to the grains and dislocations of material."
+    }
+   ],
+   "public_count": 52,
+   "callable_count": 23,
+   "constant_count": 29,
+   "reference_count": 26,
+   "has_tests": true
+  },
+  {
+   "module": "shock",
+   "title": "Planar shock physics: impedance matching and magnetically driven flyer kinematics",
+   "answers": "How fast a magnetically driven flyer goes and what pressure its impact makes.",
+   "relations": [
+    "Linear Hugoniot: U_s = c₀ + s u_p, with the momentum jump P = ρ₀ U_s u_p",
+    "Impedance match at the contact: ρ_f (c_f + s_f (v − u))(v − u) = ρ_t (c_t + s_t u) u",
+    "Flyer velocity across a gap: v = √(2 η P g/(ρ h))",
+    "Pressure pulse at the contact: t ≈ 2h/U_s"
+   ],
+   "limits": [
+    "One-dimensional planar impact. Material strength and the elastic precursor are neglected.",
+    "Linear fits are used inside their recorded pressure range. A phase transition is a low branch, a mixed-phase plateau and a high branch.",
+    "The drive pressure is constant during the flight, so flyer velocities are upper bounds."
+   ],
+   "chapter": "/story/welding.html",
+   "entry_points": [
+    {
+     "name": "impedance_match",
+     "kind": "function",
+     "signature": "impedance_match(flyer, target, impact_velocity)",
+     "summary": "Pressure and particle velocity produced by a flyer hitting a stationary target."
+    },
+    {
+     "name": "flyer_velocity",
+     "kind": "function",
+     "signature": "flyer_velocity(pressure, gap, flyer, thickness, efficiency=1)",
+     "summary": "Velocity of a flyer sheet accelerated across a gap by a constant pressure."
+    },
+    {
+     "name": "flyer_transit_time",
+     "kind": "function",
+     "signature": "flyer_transit_time(gap, pressure, flyer, thickness, efficiency=1)",
+     "summary": "Time for a flyer to cross the gap under constant pressure (uniform acceleration)."
+    },
+    {
+     "name": "required_pressure_for_velocity",
+     "kind": "function",
+     "signature": "required_pressure_for_velocity(velocity, gap, flyer, thickness, efficiency=1)",
+     "summary": "Constant drive pressure that brings a flyer to velocity within gap."
+    },
+    {
+     "name": "shock_duration",
+     "kind": "function",
+     "signature": "shock_duration(flyer_thickness, shock_speed_flyer)",
+     "summary": "Duration of the impact pressure pulse at the contact (estimate)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "ShockState",
+     "kind": "class",
+     "signature": "",
+     "summary": "Shocked state at the flyer/target contact after a planar impact."
+    },
+    {
+     "name": "impedance_match",
+     "kind": "function",
+     "signature": "impedance_match(flyer, target, impact_velocity)",
+     "summary": "Pressure and particle velocity produced by a flyer hitting a stationary target."
+    },
+    {
+     "name": "shock_state_from_pressure",
+     "kind": "function",
+     "signature": "shock_state_from_pressure(material, pressure)",
+     "summary": "Particle velocity and shock speed (u_p, Us) of a material shocked to pressure."
+    },
+    {
+     "name": "flyer_velocity",
+     "kind": "function",
+     "signature": "flyer_velocity(pressure, gap, flyer, thickness, efficiency=1)",
+     "summary": "Velocity of a flyer sheet accelerated across a gap by a constant pressure."
+    },
+    {
+     "name": "flyer_transit_time",
+     "kind": "function",
+     "signature": "flyer_transit_time(gap, pressure, flyer, thickness, efficiency=1)",
+     "summary": "Time for a flyer to cross the gap under constant pressure (uniform acceleration)."
+    },
+    {
+     "name": "required_standoff",
+     "kind": "function",
+     "signature": "required_standoff(target_velocity, pressure, flyer, thickness, efficiency=1)",
+     "summary": "Gap needed for a constant pressure to accelerate a flyer to target_velocity."
+    },
+    {
+     "name": "required_pressure_for_velocity",
+     "kind": "function",
+     "signature": "required_pressure_for_velocity(velocity, gap, flyer, thickness, efficiency=1)",
+     "summary": "Constant drive pressure that brings a flyer to velocity within gap."
+    },
+    {
+     "name": "shock_duration",
+     "kind": "function",
+     "signature": "shock_duration(flyer_thickness, shock_speed_flyer)",
+     "summary": "Duration of the impact pressure pulse at the contact (estimate)."
+    },
+    {
+     "name": "shock_temperature_rise",
+     "kind": "function",
+     "signature": "shock_temperature_rise(particle_velocity, material)",
+     "summary": "Upper-bound order estimate of the shock heating of a material."
+    }
+   ],
+   "public_count": 11,
+   "callable_count": 9,
+   "constant_count": 2,
+   "reference_count": 7,
+   "has_tests": true
+  },
+  {
+   "module": "welding",
+   "title": "Impact (magnetic-pulse) welding of dissimilar metals: the weldability window",
+   "answers": "Which impact conditions weld two metals, and what drive pressure reaches them.",
+   "relations": [
+    "Collision point: V_c = V_p/sin β",
+    "Lower (bonding) limit: V_p,min = k √(HV/ρ), k from 0.6 to 1.2",
+    "Jetting limit: V_c below the bulk sound speed of both metals",
+    "Upper (melting) limit, Wittman: V_p,max = (1/N) √(T_m c₀) (κ c_p c₀/(ρ h))^(1/4) / V_c",
+    "Wavy interface above a collision Reynolds number (ρ_f + ρ_t) V_c²/(2(HV_f + HV_t)) of about 10.6",
+    "Interdiffusion: x = √(2Dt), D = D₀ exp(−Q/RT)"
+   ],
+   "limits": [
+    "The window limits are empirical correlations calibrated on explosive welding of similar metals. For dissimilar pairs their constants are uncertain by tens of per cent.",
+    "The collision angle is an input. It is not solved from the flyer's deformation.",
+    "Interface heating, melt layer and diffusion figures are order-of-magnitude estimates."
+   ],
+   "chapter": "/story/welding.html",
+   "entry_points": [
+    {
+     "name": "weld_window",
+     "kind": "function",
+     "signature": "weld_window(flyer, target, flyer_thickness, collision_angle=0.174533, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Weldability window of a pair at a fixed collision angle (impact-velocity limits)."
+    },
+    {
+     "name": "drive_pressure_window",
+     "kind": "function",
+     "signature": "drive_pressure_window(flyer, target, flyer_thickness, gap, collision_angle=0.174533, efficiency=1, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Drive-pressure (and field) window that welds a joint: what a coil must deliver."
+    },
+    {
+     "name": "standoff_window",
+     "kind": "function",
+     "signature": "standoff_window(flyer, target, flyer_thickness, drive_pressure, collision_angle=0.174533, efficiency=1, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Standoff-gap window for a given constant drive pressure (inverse of drive_pressure_window)."
+    },
+    {
+     "name": "flyer_impact",
+     "kind": "function",
+     "signature": "flyer_impact(pressure, gap, flyer, thickness, efficiency=1, pulse_duration=None, pulse_shape='constant')",
+     "summary": "Impact velocity of a flyer driven across a gap by a pressure pulse of given shape."
+    },
+    {
+     "name": "assess_weld",
+     "kind": "function",
+     "signature": "assess_weld(flyer, target, flyer_thickness, gap, drive_pressure, collision_angle=0.174533, efficiency=1, pulse_duration=None, pulse_shape='constant', target_thickness=None, lower_coefficient=0.6, wittman_n=0.11, initial_temperature=293.15)",
+     "summary": "Assess a magnetically driven impact weld of flyer onto target."
+    },
+    {
+     "name": "interdiffusion_length",
+     "kind": "function",
+     "signature": "interdiffusion_length(material, temperature, time, prefactor=0.0001)",
+     "summary": "Solid-state interdiffusion length sqrt(2 D(T) t) [m] (estimate)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "WeldPair",
+     "kind": "class",
+     "signature": "WeldPair(elements, intermetallics, processes, citation, note='')",
+     "summary": "A base-element pair that has been impact welded, with the intermetallics it can form."
+    },
+    {
+     "name": "pair_key",
+     "kind": "function",
+     "signature": "pair_key(flyer, target)",
+     "summary": "Base-element key of a flyer/target pair, e.g. \"Al-Fe\" (alphabetical, order-independent)."
+    },
+    {
+     "name": "demonstrated_pair",
+     "kind": "function",
+     "signature": "demonstrated_pair(flyer, target)",
+     "summary": "The WeldPair record of a flyer/target pair, or None if none is recorded."
+    },
+    {
+     "name": "collision_point_velocity",
+     "kind": "function",
+     "signature": "collision_point_velocity(impact_velocity, collision_angle)",
+     "summary": "Velocity of the collision point along the target, Vc = Vp / sin(beta) [m/s]."
+    },
+    {
+     "name": "impact_velocity_for_collision",
+     "kind": "function",
+     "signature": "impact_velocity_for_collision(collision_velocity, collision_angle)",
+     "summary": "Impact velocity that gives a collision-point velocity, Vp = Vc sin(beta) [m/s]."
+    },
+    {
+     "name": "jetting_sonic_limit",
+     "kind": "function",
+     "signature": "jetting_sonic_limit(flyer, target)",
+     "summary": "Largest collision-point velocity that still forms a jet: the smaller bulk sound speed [m/s]."
+    },
+    {
+     "name": "critical_collision_angle",
+     "kind": "function",
+     "signature": "critical_collision_angle(flyer, target, impact_velocity)",
+     "summary": "Smallest collision angle with a subsonic collision point, beta = asin(Vp / c_min) [rad]."
+    },
+    {
+     "name": "lower_limit_velocity",
+     "kind": "function",
+     "signature": "lower_limit_velocity(flyer, target, coefficient=0.6)",
+     "summary": "Smallest impact velocity that bonds, Vp,min = k max_i sqrt(HV_i / rho_i) [m/s]."
+    },
+    {
+     "name": "collision_reynolds_number",
+     "kind": "function",
+     "signature": "collision_reynolds_number(flyer, target, collision_velocity)",
+     "summary": "Cowan's collision Reynolds number Re = (rho_f + rho_t) Vc² / (2 (HV_f + HV_t)) [-]."
+    },
+    {
+     "name": "wavy_transition_velocity",
+     "kind": "function",
+     "signature": "wavy_transition_velocity(flyer, target, reynolds=10.6)",
+     "summary": "Collision-point velocity at which the bond line turns wavy [m/s]."
+    },
+    {
+     "name": "upper_limit_velocity",
+     "kind": "function",
+     "signature": "upper_limit_velocity(flyer, target, flyer_thickness, collision_velocity, n=0.11)",
+     "summary": "Largest impact velocity before the interface stays molten (Wittman's upper limit) [m/s]."
+    },
+    {
+     "name": "WeldWindow",
+     "kind": "class",
+     "signature": "",
+     "summary": "Weldability window of a flyer/target pair at one collision angle, as impact velocities."
+    },
+    {
+     "name": "weld_window",
+     "kind": "function",
+     "signature": "weld_window(flyer, target, flyer_thickness, collision_angle=0.174533, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Weldability window of a pair at a fixed collision angle (impact-velocity limits)."
+    },
+    {
+     "name": "FlyerImpact",
+     "kind": "class",
+     "signature": "",
+     "summary": "Flight of a flyer sheet across the standoff gap under a drive-pressure pulse."
+    },
+    {
+     "name": "flyer_impact",
+     "kind": "function",
+     "signature": "flyer_impact(pressure, gap, flyer, thickness, efficiency=1, pulse_duration=None, pulse_shape='constant')",
+     "summary": "Impact velocity of a flyer driven across a gap by a pressure pulse of given shape."
+    },
+    {
+     "name": "DriveWindow",
+     "kind": "class",
+     "signature": "",
+     "summary": "Constant drive pressures (and fields) that land a flyer inside the weldability window."
+    },
+    {
+     "name": "drive_pressure_window",
+     "kind": "function",
+     "signature": "drive_pressure_window(flyer, target, flyer_thickness, gap, collision_angle=0.174533, efficiency=1, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Drive-pressure (and field) window that welds a joint: what a coil must deliver."
+    },
+    {
+     "name": "StandoffWindow",
+     "kind": "class",
+     "signature": "",
+     "summary": "Standoff gaps that land a flyer inside the weldability window at a fixed drive pressure."
+    },
+    {
+     "name": "standoff_window",
+     "kind": "function",
+     "signature": "standoff_window(flyer, target, flyer_thickness, drive_pressure, collision_angle=0.174533, efficiency=1, lower_coefficient=0.6, wittman_n=0.11)",
+     "summary": "Standoff-gap window for a given constant drive pressure (inverse of drive_pressure_window)."
+    },
+    {
+     "name": "interface_energy",
+     "kind": "function",
+     "signature": "interface_energy(flyer, flyer_thickness, impact_velocity, target=None, target_thickness=None)",
+     "summary": "Kinetic energy per unit area dissipated when the flyer sticks to the target [J/m²]."
+    },
+    {
+     "name": "equivalent_melt_layer",
+     "kind": "function",
+     "signature": "equivalent_melt_layer(material, energy_per_area, fraction=0.1, initial_temperature=293.15)",
+     "summary": "Thickness of material that a fraction of the collision energy would melt [m] (estimate)."
+    },
+    {
+     "name": "thermal_quench_time",
+     "kind": "function",
+     "signature": "thermal_quench_time(material, layer_thickness)",
+     "summary": "Time for a heated layer to cool by conduction into the cold metal, t = delta² / alpha [s]."
+    },
+    {
+     "name": "solid_diffusivity",
+     "kind": "function",
+     "signature": "solid_diffusivity(material, temperature, prefactor=0.0001)",
+     "summary": "Lattice diffusivity D = D0 exp(-Q / (R T)) [m²/s] (estimate)."
+    },
+    {
+     "name": "diffusion_length",
+     "kind": "function",
+     "signature": "diffusion_length(diffusivity, time)",
+     "summary": "Diffusion length x = sqrt(2 D t) [m]."
+    },
+    {
+     "name": "interdiffusion_length",
+     "kind": "function",
+     "signature": "interdiffusion_length(material, temperature, time, prefactor=0.0001)",
+     "summary": "Solid-state interdiffusion length sqrt(2 D(T) t) [m] (estimate)."
+    },
+    {
+     "name": "WeldAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Does this flyer, gap and drive pressure produce an impact weld?"
+    },
+    {
+     "name": "assess_weld",
+     "kind": "function",
+     "signature": "assess_weld(flyer, target, flyer_thickness, gap, drive_pressure, collision_angle=0.174533, efficiency=1, pulse_duration=None, pulse_shape='constant', target_thickness=None, lower_coefficient=0.6, wittman_n=0.11, initial_temperature=293.15)",
+     "summary": "Assess a magnetically driven impact weld of flyer onto target."
+    }
+   ],
+   "public_count": 45,
+   "callable_count": 27,
+   "constant_count": 18,
+   "reference_count": 23,
+   "has_tests": true
+  },
+  {
+   "module": "synthesis",
+   "title": "High-pressure synthesis of superhard phases: phase boundaries, routes and pulse compatibility",
+   "answers": "Whether a pressure pulse can run any known route to diamond, cubic boron nitride or carbon nitrides.",
+   "relations": [
+    "Graphite-diamond equilibrium (Kennedy and Kennedy): P = 1.94 GPa + 0.0025 GPa/K × (T − 273 K)",
+    "hBN-cBN equilibrium (Solozhenko): P = max(0, 0.00324 GPa/K × (T − 1660 K))",
+    "A static route runs only if the pulse outlasts the minimum dwell, the sample pressure reaches the route minimum, the temperature is inside the route window and the product is the stable phase",
+    "Shock route: flyer velocity, then impedance match, then sample pressure",
+    "Volume bookkeeping: W = P ΔV with ΔV/V = 1 − ρ_graphite/ρ_diamond = 0.357"
+   ],
+   "limits": [
+    "Route windows are representative of practice. They are not sharp limits.",
+    "An equilibrium line says where a phase is stable. Conversion is set by kinetics: catalyst, temperature and time.",
+    "The shock path inherits the limits of the planar impedance match."
+   ],
+   "chapter": "/story/synthesis.html",
+   "entry_points": [
+    {
+     "name": "graphite_diamond_boundary",
+     "kind": "function",
+     "signature": "graphite_diamond_boundary(temperature, model='kennedy_1976')",
+     "summary": "Graphite-diamond equilibrium pressure (Pa) at temperature (K)."
+    },
+    {
+     "name": "hbn_cbn_boundary",
+     "kind": "function",
+     "signature": "hbn_cbn_boundary(temperature, model='solozhenko_1999')",
+     "summary": "hBN-cBN equilibrium pressure (Pa) at temperature (K)."
+    },
+    {
+     "name": "assess_route",
+     "kind": "function",
+     "signature": "assess_route(route, pressure, temperature=293.15, pulse_duration=0.0001, intensification=1, flyer=None)",
+     "summary": "Assess whether a magnetic pressure pulse can execute one synthesis route."
+    },
+    {
+     "name": "assess_all",
+     "kind": "function",
+     "signature": "assess_all(pressure, temperature=293.15, pulse_duration=0.0001, intensification=1, flyer=None)",
+     "summary": "assess_route for every route in SYNTHESIS_ROUTES (table order)."
+    },
+    {
+     "name": "anvil_feasibility",
+     "kind": "function",
+     "signature": "anvil_feasibility(sample_pressure)",
+     "summary": "Smallest demonstrated static-press class that reaches sample_pressure."
+    },
+    {
+     "name": "FlyerSpec",
+     "kind": "class",
+     "signature": "FlyerSpec(material, thickness, gap, sample='graphite_crystal', efficiency=1)",
+     "summary": "A magnetically driven flyer plate for shock synthesis."
+    },
+    {
+     "name": "volume_scaling",
+     "kind": "function",
+     "signature": "volume_scaling(bore_radius, length, pressure, fill_fraction=0.5)",
+     "summary": "What a large-bore press would hold if it could convert its charge."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "graphite_diamond_boundary",
+     "kind": "function",
+     "signature": "graphite_diamond_boundary(temperature, model='kennedy_1976')",
+     "summary": "Graphite-diamond equilibrium pressure (Pa) at temperature (K)."
+    },
+    {
+     "name": "diamond_stable",
+     "kind": "function",
+     "signature": "diamond_stable(pressure, temperature, model='kennedy_1976')",
+     "summary": "True if diamond (not graphite) is the stable carbon phase at (P, T)."
+    },
+    {
+     "name": "hbn_cbn_boundary",
+     "kind": "function",
+     "signature": "hbn_cbn_boundary(temperature, model='solozhenko_1999')",
+     "summary": "hBN-cBN equilibrium pressure (Pa) at temperature (K)."
+    },
+    {
+     "name": "cbn_stable",
+     "kind": "function",
+     "signature": "cbn_stable(pressure, temperature, model='solozhenko_1999')",
+     "summary": "True if cubic BN (not hexagonal) is the stable boron-nitride phase at (P, T)."
+    },
+    {
+     "name": "SynthesisRoute",
+     "kind": "class",
+     "signature": "",
+     "summary": "One established synthesis route and the conditions it needs."
+    },
+    {
+     "name": "AnvilClass",
+     "kind": "class",
+     "signature": "AnvilClass(*, sample_pressure, technology, max_pressure, sample_volume_class, status, reference='', note='')",
+     "summary": "Static-press technology needed to hold a sample at sample_pressure."
+    },
+    {
+     "name": "anvil_feasibility",
+     "kind": "function",
+     "signature": "anvil_feasibility(sample_pressure)",
+     "summary": "Smallest demonstrated static-press class that reaches sample_pressure."
+    },
+    {
+     "name": "FlyerSpec",
+     "kind": "class",
+     "signature": "FlyerSpec(material, thickness, gap, sample='graphite_crystal', efficiency=1)",
+     "summary": "A magnetically driven flyer plate for shock synthesis."
+    },
+    {
+     "name": "SynthesisAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Can a magnetic pressure pulse execute a synthesis route?"
+    },
+    {
+     "name": "assess_route",
+     "kind": "function",
+     "signature": "assess_route(route, pressure, temperature=293.15, pulse_duration=0.0001, intensification=1, flyer=None)",
+     "summary": "Assess whether a magnetic pressure pulse can execute one synthesis route."
+    },
+    {
+     "name": "assess_all",
+     "kind": "function",
+     "signature": "assess_all(pressure, temperature=293.15, pulse_duration=0.0001, intensification=1, flyer=None)",
+     "summary": "assess_route for every route in SYNTHESIS_ROUTES (table order)."
+    },
+    {
+     "name": "VolumeScaling",
+     "kind": "class",
+     "signature": "",
+     "summary": "Masses and energies of a hypothetical graphite charge filling a magnet bore."
+    },
+    {
+     "name": "volume_scaling",
+     "kind": "function",
+     "signature": "volume_scaling(bore_radius, length, pressure, fill_fraction=0.5)",
+     "summary": "What a large-bore press would hold if it could convert its charge."
+    },
+    {
+     "name": "phase_boundary_curves",
+     "kind": "function",
+     "signature": "phase_boundary_curves(t_min=300, t_max=3500, n=50)",
+     "summary": "Equilibrium lines sampled for plotting: {name: (temperatures [K], pressures [Pa])}."
+    }
+   ],
+   "public_count": 25,
+   "callable_count": 14,
+   "constant_count": 11,
+   "reference_count": 20,
+   "has_tests": true
+  },
+  {
+   "module": "porosity",
+   "title": "Pore closure and densification: can a magnetic pressure pulse make \"zero-porosity\" parts?",
+   "answers": "Whether pressure alone closes internal pores, and whether closing them heals them.",
+   "relations": [
+    "Collapse threshold of an isolated pore: P = (2/3) σ ln(1/f)",
+    "Residual porosity: f = min(f₀, exp(−3P/(2σ)))",
+    "Trapped gas: f = f₀ p₀/P",
+    "Inertial collapse time (Rayleigh): t = 0.915 a √(ρ/ΔP)",
+    "Diffusion bonding: t ≈ L²/D, D = D₀ exp(−Q/RT)",
+    "Powder yielding (Helle, Easterling and Ashby): P = 3D²(D − D₀)/(1 − D₀) σ_y below 90 % density, (2/3) σ_y ln(1/(1 − D)) above"
+   ],
+   "limits": [
+    "Isolated spherical pores in a rigid, perfectly plastic matrix at its yield stress, so the thresholds are lower bounds on the pressure for full closure.",
+    "Creep is not modelled. Hot isostatic pressing enters as a cited benchmark, not as a model result.",
+    "Pressures are mechanical pressures already delivered to the part. There is no field solver for complex shapes here.",
+    "Bonding uses volume self-diffusion with an estimated prefactor."
+   ],
+   "chapter": "/story/porosity.html",
+   "entry_points": [
+    {
+     "name": "collapse_pressure",
+     "kind": "function",
+     "signature": "collapse_pressure(material, porosity, strain_rate=0.001, temperature=293.15)",
+     "summary": "Plastic collapse pressure of a pore in material [Pa]."
+    },
+    {
+     "name": "residual_porosity",
+     "kind": "function",
+     "signature": "residual_porosity(material, pressure, initial_porosity, strain_rate=0.001, temperature=293.15, gas_pressure=0)",
+     "summary": "Porosity left in material after a hydrostatic pressure, by plastic collapse alone."
+    },
+    {
+     "name": "rayleigh_collapse_time",
+     "kind": "function",
+     "signature": "rayleigh_collapse_time(pore_radius, material, overpressure)",
+     "summary": "Inertial collapse time of a pore under a constant net pressure [s]."
+    },
+    {
+     "name": "diffusion_bonding_time",
+     "kind": "function",
+     "signature": "diffusion_bonding_time(material, temperature, length_scale=1e-7)",
+     "summary": "Time for collapsed pore surfaces to interdiffuse, t = L² / D [s]."
+    },
+    {
+     "name": "hip_cycle",
+     "kind": "function",
+     "signature": "hip_cycle(material)",
+     "summary": "The tabulated industrial HIP cycle of material, or None if none is recorded."
+    },
+    {
+     "name": "assess_pore_closure",
+     "kind": "function",
+     "signature": "assess_pore_closure(material, pressure, initial_porosity=0.01, pore_radius=5e-5, temperature=293.15, pulse_duration=0.0001, strain_rate=None, gas_pressure=0, section_thickness=None, drive_frequency=None, *, bond_length=1e-7)",
+     "summary": "Assess whether a pressure pulse closes and heals internal porosity."
+    },
+    {
+     "name": "assess_powder_compaction",
+     "kind": "function",
+     "signature": "assess_powder_compaction(material, pressure, initial_density=0.64, temperature=293.15, pulse_duration=0.0001, strain_rate=None, target_density=0.95)",
+     "summary": "Assess compacting a metal powder with a pressure pulse (dynamic magnetic compaction)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "plastic_collapse_pressure",
+     "kind": "function",
+     "signature": "plastic_collapse_pressure(flow_stress, porosity)",
+     "summary": "Hydrostatic pressure at which an isolated spherical pore collapses plastically [Pa]."
+    },
+    {
+     "name": "gas_limited_porosity",
+     "kind": "function",
+     "signature": "gas_limited_porosity(initial_porosity, gas_pressure, pressure)",
+     "summary": "Porosity at which the gas trapped in a pore alone balances the applied pressure."
+    },
+    {
+     "name": "porosity_under_pressure",
+     "kind": "function",
+     "signature": "porosity_under_pressure(flow_stress, pressure, initial_porosity, gas_pressure=0)",
+     "summary": "Residual porosity of a perfectly plastic matrix under hydrostatic pressure."
+    },
+    {
+     "name": "pore_wall_strain",
+     "kind": "function",
+     "signature": "pore_wall_strain(initial_porosity, final_porosity)",
+     "summary": "Equivalent plastic strain at the wall of a pore that shrinks from f0 to f."
+    },
+    {
+     "name": "rayleigh_collapse_time",
+     "kind": "function",
+     "signature": "rayleigh_collapse_time(pore_radius, material, overpressure)",
+     "summary": "Inertial collapse time of a pore under a constant net pressure [s]."
+    },
+    {
+     "name": "MatrixStrength",
+     "kind": "class",
+     "signature": "",
+     "summary": "The two matrix flow stresses between which pore collapse is bracketed."
+    },
+    {
+     "name": "matrix_strength",
+     "kind": "function",
+     "signature": "matrix_strength(material, strain_rate=10000, temperature=293.15)",
+     "summary": "Optimistic and conservative yield stress of the matrix around a pore."
+    },
+    {
+     "name": "collapse_pressure",
+     "kind": "function",
+     "signature": "collapse_pressure(material, porosity, strain_rate=0.001, temperature=293.15)",
+     "summary": "Plastic collapse pressure of a pore in material [Pa]."
+    },
+    {
+     "name": "residual_porosity",
+     "kind": "function",
+     "signature": "residual_porosity(material, pressure, initial_porosity, strain_rate=0.001, temperature=293.15, gas_pressure=0)",
+     "summary": "Porosity left in material after a hydrostatic pressure, by plastic collapse alone."
+    },
+    {
+     "name": "self_diffusivity",
+     "kind": "function",
+     "signature": "self_diffusivity(material, temperature, prefactor=0.0001)",
+     "summary": "Lattice self-diffusivity D = D0 exp(-Q / (R T)) [m²/s]."
+    },
+    {
+     "name": "diffusion_length",
+     "kind": "function",
+     "signature": "diffusion_length(material, temperature, time)",
+     "summary": "Distance atoms diffuse in time, x = sqrt(D t) [m]."
+    },
+    {
+     "name": "diffusion_bonding_time",
+     "kind": "function",
+     "signature": "diffusion_bonding_time(material, temperature, length_scale=1e-7)",
+     "summary": "Time for collapsed pore surfaces to interdiffuse, t = L² / D [s]."
+    },
+    {
+     "name": "HipCycle",
+     "kind": "class",
+     "signature": "",
+     "summary": "A representative industrial hot-isostatic-pressing cycle."
+    },
+    {
+     "name": "hip_cycle",
+     "kind": "function",
+     "signature": "hip_cycle(material)",
+     "summary": "The tabulated industrial HIP cycle of material, or None if none is recorded."
+    },
+    {
+     "name": "matches_hip_practice",
+     "kind": "function",
+     "signature": "matches_hip_practice(material, pressure, temperature, dwell)",
+     "summary": "True if (pressure, temperature, dwell) is at least an industrial HIP cycle for material."
+    },
+    {
+     "name": "PoreClosureAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Can a pressure pulse close *and heal* the internal porosity of a part?"
+    },
+    {
+     "name": "assess_pore_closure",
+     "kind": "function",
+     "signature": "assess_pore_closure(material, pressure, initial_porosity=0.01, pore_radius=5e-5, temperature=293.15, pulse_duration=0.0001, strain_rate=None, gas_pressure=0, section_thickness=None, drive_frequency=None, *, bond_length=1e-7)",
+     "summary": "Assess whether a pressure pulse closes and heals internal porosity."
+    },
+    {
+     "name": "powder_yield_pressure",
+     "kind": "function",
+     "signature": "powder_yield_pressure(relative_density, flow_stress, initial_density=0.64)",
+     "summary": "Pressure that densifies a powder to relative_density by plastic yielding alone [Pa]."
+    },
+    {
+     "name": "powder_density_at_pressure",
+     "kind": "function",
+     "signature": "powder_density_at_pressure(pressure, flow_stress, initial_density=0.64)",
+     "summary": "Relative density a powder reaches under pressure by plastic yielding."
+    },
+    {
+     "name": "PowderCompactionAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Green density of a metal powder compacted by a pressure pulse."
+    },
+    {
+     "name": "assess_powder_compaction",
+     "kind": "function",
+     "signature": "assess_powder_compaction(material, pressure, initial_density=0.64, temperature=293.15, pulse_duration=0.0001, strain_rate=None, target_density=0.95)",
+     "summary": "Assess compacting a metal powder with a pressure pulse (dynamic magnetic compaction)."
+    }
+   ],
+   "public_count": 42,
+   "callable_count": 21,
+   "constant_count": 21,
+   "reference_count": 20,
+   "has_tests": true
+  },
+  {
+   "module": "containment",
+   "title": "Containment: the magnet architecture inverted into a structural housing",
+   "answers": "What wall contains a given pressure, and what launchers and fusion coils actually ask of it.",
+   "relations": [
+    "Lamé thick wall: σ_θ(a) = p (b² + a²)/(b² − a²); von Mises stress at the bore √3 p b²/(b² − a²)",
+    "No finite monolithic elastic wall exists unless σ_allow > √3 p (von Mises) or 2p (Tresca)",
+    "Fully plastic or compound wall: p = (2/√3) σ_y ln(b/a)",
+    "Rail launcher: F = L′I²/2. Coil launcher and fusion coil: P = B²/(2μ₀)",
+    "Mass driver: a = P/(ρL), length = v²/(2a), with P capped by the strength of the payload"
+   ],
+   "limits": [
+    "A static, long, homogeneous cylinder with isotropic yield criteria. Fibre laminates are only screened for transverse compression at the bore.",
+    "Lamé statics holds when the pulse is longer than about three hoop acoustic transits. Shorter pulses are flagged as inertial.",
+    "No thermal, fatigue or end effects."
+   ],
+   "chapter": "/story/containment.html",
+   "entry_points": [
+    {
+     "name": "required_radius_ratio",
+     "kind": "function",
+     "signature": "required_radius_ratio(p, sigma_allow, criterion='von_mises')",
+     "summary": "Wall ratio k = b/a at which the bore stress reaches sigma_allow (monolithic, elastic)."
+    },
+    {
+     "name": "autofrettage_ratio",
+     "kind": "function",
+     "signature": "autofrettage_ratio(p, sigma_y, safety_factor=1, criterion='von_mises')",
+     "summary": "Wall ratio k = b/a whose fully plastic (compound) capacity equals SF * p."
+    },
+    {
+     "name": "shakedown_pressure",
+     "kind": "function",
+     "signature": "shakedown_pressure(sigma_y, k, criterion='von_mises')",
+     "summary": "Largest cyclic working pressure [Pa] of a single autofrettaged tube of ratio k."
+    },
+    {
+     "name": "rail_launcher_load",
+     "kind": "function",
+     "signature": "rail_launcher_load(current, bore_height, bore_width, inductance_gradient=5e-7)",
+     "summary": "Rail-launcher (railgun) structural loads at peak current."
+    },
+    {
+     "name": "fusion_magnet_load",
+     "kind": "function",
+     "signature": "fusion_magnet_load(field_on_coil, field_on_axis, plasma_beta=0.05)",
+     "summary": "Structural load of a fusion TF magnet compared with the plasma it confines."
+    },
+    {
+     "name": "mass_driver",
+     "kind": "function",
+     "signature": "mass_driver(exit_velocity, payload_material, payload_length, bore_radius, bore_pressure=None, safety_factor=1.5, acceleration_limit=None)",
+     "summary": "Space-launch kinematics of an electromagnetic mass driver (coilgun / railgun)."
+    },
+    {
+     "name": "assess_containment",
+     "kind": "function",
+     "signature": "assess_containment(pressure, material, inner_radius, safety_factor=1.5, criterion='von_mises', pulse_duration=None)",
+     "summary": "Assess containing pressure in a cylindrical housing of material."
+    },
+    {
+     "name": "containment_survey",
+     "kind": "function",
+     "signature": "containment_survey(pressure, inner_radius, safety_factor=1.5, candidates=…, criterion='von_mises', pulse_duration=None)",
+     "summary": "Run assess_containment for each candidate wall material (input order kept)."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "lame_stresses",
+     "kind": "function",
+     "signature": "lame_stresses(internal_pressure, inner_radius, outer_radius, r, external_pressure=0, closed_ends=True)",
+     "summary": "Lame stresses (sigma_r, sigma_theta, sigma_z) [Pa] at radius r of a thick cylinder."
+    },
+    {
+     "name": "max_hoop_stress",
+     "kind": "function",
+     "signature": "max_hoop_stress(p, a, b)",
+     "summary": "Bore hoop stress of a thick cylinder under internal pressure [Pa]."
+    },
+    {
+     "name": "von_mises_bore",
+     "kind": "function",
+     "signature": "von_mises_bore(p, a, b, closed_ends=True)",
+     "summary": "von Mises equivalent stress at the bore of a thick cylinder [Pa]."
+    },
+    {
+     "name": "tresca_bore",
+     "kind": "function",
+     "signature": "tresca_bore(p, a, b)",
+     "summary": "Tresca (maximum shear) stress intensity at the bore [Pa]."
+    },
+    {
+     "name": "required_monolithic_strength",
+     "kind": "function",
+     "signature": "required_monolithic_strength(p, safety_factor=1, criterion='von_mises')",
+     "summary": "Minimum strength [Pa] for which ANY finite monolithic elastic wall contains p."
+    },
+    {
+     "name": "required_radius_ratio",
+     "kind": "function",
+     "signature": "required_radius_ratio(p, sigma_allow, criterion='von_mises')",
+     "summary": "Wall ratio k = b/a at which the bore stress reaches sigma_allow (monolithic, elastic)."
+    },
+    {
+     "name": "elastic_limit_pressure",
+     "kind": "function",
+     "signature": "elastic_limit_pressure(sigma_y, k, criterion='von_mises')",
+     "summary": "Internal pressure [Pa] at which a monolithic wall of ratio k = b/a first yields at the bore."
+    },
+    {
+     "name": "fully_plastic_pressure",
+     "kind": "function",
+     "signature": "fully_plastic_pressure(sigma_y, k, criterion='von_mises')",
+     "summary": "Plastic-collapse pressure [Pa] of a wall of ratio k: the autofrettaged / compound limit."
+    },
+    {
+     "name": "shakedown_pressure",
+     "kind": "function",
+     "signature": "shakedown_pressure(sigma_y, k, criterion='von_mises')",
+     "summary": "Largest cyclic working pressure [Pa] of a single autofrettaged tube of ratio k."
+    },
+    {
+     "name": "autofrettage_ratio",
+     "kind": "function",
+     "signature": "autofrettage_ratio(p, sigma_y, safety_factor=1, criterion='von_mises')",
+     "summary": "Wall ratio k = b/a whose fully plastic (compound) capacity equals SF * p."
+    },
+    {
+     "name": "hoop_transit_time",
+     "kind": "function",
+     "signature": "hoop_transit_time(inner_radius, material)",
+     "summary": "Hoop acoustic transit time 2 pi a / c_L [s] around the bore."
+    },
+    {
+     "name": "dynamic_regime",
+     "kind": "function",
+     "signature": "dynamic_regime(inner_radius, material, pulse_duration)",
+     "summary": "Classify the wall response to a pressure pulse: \"quasi_static\" or \"inertial\"."
+    },
+    {
+     "name": "RailLoad",
+     "kind": "class",
+     "signature": "",
+     "summary": "Structural load case of a rail launcher (railgun) firing at constant current."
+    },
+    {
+     "name": "ideal_inductance_gradient",
+     "kind": "function",
+     "signature": "ideal_inductance_gradient(bore_height, bore_width)",
+     "summary": "Inductance gradient [H/m] of ideal parallel-plate rails: L' = μ₀ w / h."
+    },
+    {
+     "name": "rail_launcher_load",
+     "kind": "function",
+     "signature": "rail_launcher_load(current, bore_height, bore_width, inductance_gradient=5e-7)",
+     "summary": "Rail-launcher (railgun) structural loads at peak current."
+    },
+    {
+     "name": "coil_launcher_bore_pressure",
+     "kind": "function",
+     "signature": "coil_launcher_bore_pressure(field)",
+     "summary": "Magnetic pressure [Pa] on a coil-launcher (coilgun) armature: P = B²/(2 μ₀)."
+    },
+    {
+     "name": "FusionMagnetLoad",
+     "kind": "class",
+     "signature": "FusionMagnetLoad(*, field_on_coil, coil_pressure, plasma_beta, field_on_axis, plasma_pressure, ratio, field_status, notes=())",
+     "summary": "Fusion-magnet load case: magnetic pressure on the TF coil vs the plasma pressure."
+    },
+    {
+     "name": "fusion_magnet_load",
+     "kind": "function",
+     "signature": "fusion_magnet_load(field_on_coil, field_on_axis, plasma_beta=0.05)",
+     "summary": "Structural load of a fusion TF magnet compared with the plasma it confines."
+    },
+    {
+     "name": "MassDriverResult",
+     "kind": "class",
+     "signature": "",
+     "summary": "Kinematics of an electromagnetic mass driver accelerating a rigid payload."
+    },
+    {
+     "name": "mass_driver",
+     "kind": "function",
+     "signature": "mass_driver(exit_velocity, payload_material, payload_length, bore_radius, bore_pressure=None, safety_factor=1.5, acceleration_limit=None)",
+     "summary": "Space-launch kinematics of an electromagnetic mass driver (coilgun / railgun)."
+    },
+    {
+     "name": "ContainmentAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Feasibility of containing an internal pressure in a cylindrical wall of one material."
+    },
+    {
+     "name": "assess_containment",
+     "kind": "function",
+     "signature": "assess_containment(pressure, material, inner_radius, safety_factor=1.5, criterion='von_mises', pulse_duration=None)",
+     "summary": "Assess containing pressure in a cylindrical housing of material."
+    },
+    {
+     "name": "containment_survey",
+     "kind": "function",
+     "signature": "containment_survey(pressure, inner_radius, safety_factor=1.5, candidates=…, criterion='von_mises', pulse_duration=None)",
+     "summary": "Run assess_containment for each candidate wall material (input order kept)."
+    }
+   ],
+   "public_count": 38,
+   "callable_count": 23,
+   "constant_count": 15,
+   "reference_count": 19,
+   "has_tests": true
+  },
+  {
+   "module": "press",
+   "title": "The press as a system: field, coil, conductor, structure, power supply and workpiece",
+   "answers": "What a complete press looks like for a given pressure and workpiece, and which way of building it is closest to possible.",
+   "relations": [
+    "Field from the pressure, P = B²/(2μ₀), then coil current density, energy and hoop stress from magnetics",
+    "Rise time from the workpiece: skin depth equal to a third of the wall, t_rise = 1/(4f)",
+    "Delivered pressure = nominal × (1 − e^(−2h/δ)) × surface ratio from the field solver",
+    "Hybrid coupling: a pulsed insert of radius a inside a shorted superconducting loop of radius b changes its field by −ΔB (a/b)² unless the loop quenches",
+    "Each architecture takes the worst status of its components; the best architecture is the least bad, preferring coils that survive"
+   ],
+   "limits": [
+    "Six architectures on one specification: a ranking of options, not a design of any of them.",
+    "The workpiece is a cylinder on the axis, treated as a perfect conductor for the surface pressure and as a diffusing wall for the transfer.",
+    "Thresholds for what counts as demonstrated come from the benchmark ladders and move when records do."
+   ],
+   "chapter": "/story/machine.html",
+   "entry_points": [
+    {
+     "name": "PressSpec",
+     "kind": "class",
+     "signature": "",
+     "summary": "What the press must do and the envelope of its coil."
+    },
+    {
+     "name": "design_press",
+     "kind": "function",
+     "signature": "design_press(spec)",
+     "summary": "Size the press of spec and grade the concept note's architecture for it."
+    },
+    {
+     "name": "compare_architectures",
+     "kind": "function",
+     "signature": "compare_architectures(spec)",
+     "summary": "Grade six ways of building the press of spec (order: ARCHITECTURES)."
+    },
+    {
+     "name": "workpiece_load",
+     "kind": "function",
+     "signature": "workpiece_load(spec, rise_time=None)",
+     "summary": "Pressure delivered to the workpiece of spec and the heating of its skin."
+    },
+    {
+     "name": "background_coupling",
+     "kind": "function",
+     "signature": "background_coupling(insert, pulse_increment, background_field, rise_time, temperature=4.2, composite=None, background_radius=None)",
+     "summary": "Can a superconducting background coil sit around a pulsed insert?"
+    },
+    {
+     "name": "reference_spec",
+     "kind": "function",
+     "signature": "reference_spec(pressure=4e9, **changes)",
+     "summary": "The reference press used throughout the documentation: 100 mm bore, 0.5 m long, 0.2 m build."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "PressSpec",
+     "kind": "class",
+     "signature": "",
+     "summary": "What the press must do and the envelope of its coil."
+    },
+    {
+     "name": "WorkpieceLoad",
+     "kind": "class",
+     "signature": "",
+     "summary": "What the pulse does to the workpiece."
+    },
+    {
+     "name": "workpiece_load",
+     "kind": "function",
+     "signature": "workpiece_load(spec, rise_time=None)",
+     "summary": "Pressure delivered to the workpiece of spec and the heating of its skin."
+    },
+    {
+     "name": "BackgroundCoupling",
+     "kind": "class",
+     "signature": "",
+     "summary": "Flux coupling between a pulsed insert and a superconducting background coil around it."
+    },
+    {
+     "name": "background_coupling",
+     "kind": "function",
+     "signature": "background_coupling(insert, pulse_increment, background_field, rise_time, temperature=4.2, composite=None, background_radius=None)",
+     "summary": "Can a superconducting background coil sit around a pulsed insert?"
+    },
+    {
+     "name": "background_magnet_status",
+     "kind": "function",
+     "signature": "background_magnet_status(field, bore_diameter)",
+     "summary": "Status of a DC superconducting background magnet of a given field and bore."
+    },
+    {
+     "name": "ArchitectureAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "One way of building the press, graded."
+    },
+    {
+     "name": "compare_architectures",
+     "kind": "function",
+     "signature": "compare_architectures(spec)",
+     "summary": "Grade six ways of building the press of spec (order: ARCHITECTURES)."
+    },
+    {
+     "name": "PressDesign",
+     "kind": "class",
+     "signature": "",
+     "summary": "A sized press and the verdict on the concept note's way of building it."
+    },
+    {
+     "name": "design_press",
+     "kind": "function",
+     "signature": "design_press(spec)",
+     "summary": "Size the press of spec and grade the concept note's architecture for it."
+    },
+    {
+     "name": "reference_spec",
+     "kind": "function",
+     "signature": "reference_spec(pressure=4e9, **changes)",
+     "summary": "The reference press used throughout the documentation: 100 mm bore, 0.5 m long, 0.2 m build."
+    }
+   ],
+   "public_count": 28,
+   "callable_count": 11,
+   "constant_count": 17,
+   "reference_count": 10,
+   "has_tests": true
+  },
+  {
+   "module": "magnetar",
+   "title": "Magnetar-class fields on demand: a thought experiment granted by premise",
+   "answers": "What would follow if a magnetar-strength field were available on demand in space. The source is assumed, never graded.",
+   "relations": [
+    "Energy density and pressure B²/(2μ₀); mass equivalent B²/(2μ₀c²); source energy 1.5 × interior for a uniformly magnetised sphere",
+    "Free-expansion time R/c; virial mass M ≥ ρE/σ for any structure that holds the field",
+    "Atomic unit of field B₀ = 2.35 × 10⁵ T; QED critical field m²c²/(eħ) = 4.41 × 10⁹ T",
+    "Cold degenerate matter under a magnetic piston: Chandrasekhar's equation of state with the ion-lattice correction; electron capture where the Fermi energy reaches the threshold",
+    "Dipole stand-off: r = R (B_s/B_th)^(1/3)"
+   ],
+   "limits": [
+    "A thought experiment. The status of every result is 'assumed' and never enters the ledger.",
+    "The degenerate equation of state is for cold matter above about 2.5 million tesla of piston field; below it the tabulated thresholds apply.",
+    "Sizes and durations of laboratory entries on the field ladder are order-of-magnitude estimates."
+   ],
+   "chapter": "/story/magnetar.html",
+   "entry_points": [
+    {
+     "name": "assess_magnetar_mode",
+     "kind": "function",
+     "signature": "assess_magnetar_mode(field, radius, material='iron_armco', pulse_duration=None)",
+     "summary": "Work out what follows if a field of field tesla could be applied on demand in space."
+    },
+    {
+     "name": "MagnetarSource",
+     "kind": "class",
+     "signature": "MagnetarSource(field, radius, pulse_duration=None)",
+     "summary": "The assumed source: a uniformly magnetised sphere with a magnetar-class field inside."
+    },
+    {
+     "name": "regime_thresholds",
+     "kind": "function",
+     "signature": "regime_thresholds(material='iron_armco', field=None)",
+     "summary": "Ordered boundaries a workpiece crosses as the field rises from tens of tesla to 1e11 T and beyond."
+    },
+    {
+     "name": "classify_regime",
+     "kind": "function",
+     "signature": "classify_regime(material, field)",
+     "summary": "State of a workpiece of material exposed to field (as a piston pressure B²/(2 μ₀))."
+    },
+    {
+     "name": "process_outcomes",
+     "kind": "function",
+     "signature": "process_outcomes(material, field)",
+     "summary": "What each of the concept note's six applications becomes at field, one sentence each."
+    },
+    {
+     "name": "electron_capture_threshold",
+     "kind": "function",
+     "signature": "electron_capture_threshold(nuclide)",
+     "summary": "Density, pressure and piston field at which a nuclide starts capturing electrons."
+    },
+    {
+     "name": "standoff_radius",
+     "kind": "function",
+     "signature": "standoff_radius(surface_field, radius, threshold_field)",
+     "summary": "Distance at which the axial dipole field falls to threshold_field, r = R (B_s/B_th)^(1/3) [m]."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "Nuclide",
+     "kind": "class",
+     "signature": "Nuclide(key, mass_number, charge, daughter, threshold_energy, confidence=handbook, note='')",
+     "summary": "A nuclide and the electron kinetic energy at which it starts capturing electrons."
+    },
+    {
+     "name": "FieldRecord",
+     "kind": "class",
+     "signature": "",
+     "summary": "One rung of the field ladder: how strong, how large, how long."
+    },
+    {
+     "name": "EnergyScale",
+     "kind": "class",
+     "signature": "EnergyScale(key, description, energy, citation='', confidence=representative)",
+     "summary": "A reference energy for placing the cost of a shot."
+    },
+    {
+     "name": "FieldThreshold",
+     "kind": "class",
+     "signature": "FieldThreshold(key, description, field, citation='', confidence=handbook)",
+     "summary": "A field level that matters to people and hardware near the source."
+    },
+    {
+     "name": "atomic_field_ratio",
+     "kind": "function",
+     "signature": "atomic_field_ratio(field)",
+     "summary": "Field in atomic units, b = B/B0 with B0 = hbar/(e a0²) = 2.3505e5 T."
+    },
+    {
+     "name": "qed_field_ratio",
+     "kind": "function",
+     "signature": "qed_field_ratio(field)",
+     "summary": "Field in units of the QED critical field, B/B_Q with B_Q = m_e² c²/(e hbar) = 4.414e9 T."
+    },
+    {
+     "name": "cyclotron_energy",
+     "kind": "function",
+     "signature": "cyclotron_energy(field)",
+     "summary": "Electron cyclotron energy hbar omega_c = hbar e B/m_e [J] (non-relativistic)."
+    },
+    {
+     "name": "landau_excitation_energy",
+     "kind": "function",
+     "signature": "landau_excitation_energy(field)",
+     "summary": "Energy of the first excited Landau level above the ground level [J], relativistically exact."
+    },
+    {
+     "name": "magnetic_length",
+     "kind": "function",
+     "signature": "magnetic_length(field)",
+     "summary": "Magnetic length lambda_B = sqrt(hbar/(e B)) [m]: the cyclotron radius of the lowest Landau level."
+    },
+    {
+     "name": "laboratory_record",
+     "kind": "function",
+     "signature": "laboratory_record(min_volume=0, min_duration=0)",
+     "summary": "Strongest laboratory field that fills at least min_volume for at least min_duration."
+    },
+    {
+     "name": "mass_equivalent_density",
+     "kind": "function",
+     "signature": "mass_equivalent_density(field)",
+     "summary": "Mass-equivalent density of the field energy, u/c² = B²/(2 μ₀ c²) [kg/m³]."
+    },
+    {
+     "name": "field_energy",
+     "kind": "function",
+     "signature": "field_energy(field, volume)",
+     "summary": "Energy of a uniform field filling a volume, E = (B²/(2 μ₀)) V [J]."
+    },
+    {
+     "name": "tnt_megatons",
+     "kind": "function",
+     "signature": "tnt_megatons(energy)",
+     "summary": "Energy in megatons of TNT, E / 4.184e15 J."
+    },
+    {
+     "name": "energy_ratios",
+     "kind": "function",
+     "signature": "energy_ratios(energy)",
+     "summary": "Ratio of an energy to each entry of ENERGY_SCALES, keyed by the entry's key."
+    },
+    {
+     "name": "degeneracy_pressure",
+     "kind": "function",
+     "signature": "degeneracy_pressure(fermi_parameter, charge=None)",
+     "summary": "Pressure of cold degenerate matter at relativity parameter x = p_F/(m_e c) [Pa]."
+    },
+    {
+     "name": "degenerate_density",
+     "kind": "function",
+     "signature": "degenerate_density(fermi_parameter, mu_e=2)",
+     "summary": "Mass density of cold matter at relativity parameter x, rho = B mu_e x³ [kg/m³]."
+    },
+    {
+     "name": "fermi_parameter_for_density",
+     "kind": "function",
+     "signature": "fermi_parameter_for_density(density, mu_e=2)",
+     "summary": "Relativity parameter x = (rho/(B mu_e))^(1/3) of cold matter at a mass density."
+    },
+    {
+     "name": "fermi_kinetic_energy",
+     "kind": "function",
+     "signature": "fermi_kinetic_energy(fermi_parameter)",
+     "summary": "Electron Fermi kinetic energy m_e c² (sqrt(1 + x²) - 1) [J]."
+    },
+    {
+     "name": "lattice_pressure_fraction",
+     "kind": "function",
+     "signature": "lattice_pressure_fraction(fermi_parameter, charge)",
+     "summary": "Fraction of the ideal degeneracy pressure cancelled by the ion lattice."
+    },
+    {
+     "name": "fermi_parameter_for_pressure",
+     "kind": "function",
+     "signature": "fermi_parameter_for_pressure(pressure, charge=None)",
+     "summary": "Relativity parameter x at which cold degenerate matter supports pressure."
+    },
+    {
+     "name": "PistonState",
+     "kind": "class",
+     "signature": "",
+     "summary": "Cold matter held against a magnetic piston: the degenerate state that balances B²/(2 μ₀)."
+    },
+    {
+     "name": "eos_floor_field",
+     "kind": "function",
+     "signature": "eos_floor_field(charge=None)",
+     "summary": "Field below which piston_state declines to answer [T]."
+    },
+    {
+     "name": "piston_state",
+     "kind": "function",
+     "signature": "piston_state(field, mu_e=2, charge=None)",
+     "summary": "Cold degenerate state that balances the magnetic pressure of field, or None where the equation of state should not be used."
+    },
+    {
+     "name": "piston_density",
+     "kind": "function",
+     "signature": "piston_density(field, mu_e=2, charge=None)",
+     "summary": "Density of cold matter held by a magnetic piston at field [kg/m³], or None below the floor."
+    },
+    {
+     "name": "CaptureThreshold",
+     "kind": "class",
+     "signature": "",
+     "summary": "Where cold compression starts forcing electrons into a nuclide."
+    },
+    {
+     "name": "electron_capture_threshold",
+     "kind": "function",
+     "signature": "electron_capture_threshold(nuclide)",
+     "summary": "Density, pressure and piston field at which a nuclide starts capturing electrons."
+    },
+    {
+     "name": "Composition",
+     "kind": "class",
+     "signature": "Composition(*, material, element, charge, mass_number, mu_e, nuclide)",
+     "summary": "Nuclear make-up assumed for a registry material: Z, A, mu_e and its capture nuclide."
+    },
+    {
+     "name": "composition",
+     "kind": "function",
+     "signature": "composition(material)",
+     "summary": "Atomic number, atomic weight, mu_e = A/Z and capture nuclide for a registry material."
+    },
+    {
+     "name": "hydrogen_binding_energy",
+     "kind": "function",
+     "signature": "hydrogen_binding_energy(field)",
+     "summary": "Ground-state binding energy of hydrogen in a superstrong field [J], or None below validity."
+    },
+    {
+     "name": "AtomShape",
+     "kind": "class",
+     "signature": "AtomShape(*, field, atomic_field_ratio, transverse_radius, length, aspect_ratio)",
+     "summary": "Size and shape of an atom threaded by a strong field."
+    },
+    {
+     "name": "atom_shape",
+     "kind": "function",
+     "signature": "atom_shape(field)",
+     "summary": "Order-of-magnitude shape of a hydrogen-like atom in a field: a sphere below B0, a needle above."
+    },
+    {
+     "name": "condensed_density_valid",
+     "kind": "function",
+     "signature": "condensed_density_valid(field, charge)",
+     "summary": "True where condensed_density applies: B/B0 >= Z^(4/3) (ground Landau level only)."
+    },
+    {
+     "name": "condensed_density",
+     "kind": "function",
+     "signature": "condensed_density(field, mass_number, charge)",
+     "summary": "Zero-pressure density of magnetically condensed matter [kg/m³]."
+    },
+    {
+     "name": "synchrotron_cooling_time",
+     "kind": "function",
+     "signature": "synchrotron_cooling_time(field, gamma=1)",
+     "summary": "Classical synchrotron cooling time of an electron gyrating in a field [s]."
+    },
+    {
+     "name": "skin_boiling_field",
+     "kind": "function",
+     "signature": "skin_boiling_field(material, initial_temperature=293.15, kappa=1, include_latent=False)",
+     "summary": "Peak field at which the eddy-current skin of a metal reaches its boiling point [T]."
+    },
+    {
+     "name": "skin_vaporisation_field",
+     "kind": "function",
+     "signature": "skin_vaporisation_field(material, initial_temperature=293.15, kappa=1)",
+     "summary": "Peak field at which the eddy-current skin is completely vaporised [T]."
+    },
+    {
+     "name": "bulk_modulus_field",
+     "kind": "function",
+     "signature": "bulk_modulus_field(material)",
+     "summary": "Field whose magnetic pressure equals the bulk modulus, B = sqrt(2 μ₀ K) [T]."
+    },
+    {
+     "name": "yield_field",
+     "kind": "function",
+     "signature": "yield_field(material)",
+     "summary": "Field whose magnetic pressure equals the static yield strength, B = sqrt(2 μ₀ sigma_y) [T]."
+    },
+    {
+     "name": "Threshold",
+     "kind": "class",
+     "signature": "Threshold(*, key, kind, label, field, pressure, crossed, state)",
+     "summary": "One boundary on the way from a formed part to neutron-star matter."
+    },
+    {
+     "name": "regime_thresholds",
+     "kind": "function",
+     "signature": "regime_thresholds(material='iron_armco', field=None)",
+     "summary": "Ordered boundaries a workpiece crosses as the field rises from tens of tesla to 1e11 T and beyond."
+    },
+    {
+     "name": "Regime",
+     "kind": "class",
+     "signature": "",
+     "summary": "Where a workpiece stands on the ladder at a given field."
+    },
+    {
+     "name": "classify_regime",
+     "kind": "function",
+     "signature": "classify_regime(material, field)",
+     "summary": "State of a workpiece of material exposed to field (as a piston pressure B²/(2 μ₀))."
+    },
+    {
+     "name": "process_outcomes",
+     "kind": "function",
+     "signature": "process_outcomes(material, field)",
+     "summary": "What each of the concept note's six applications becomes at field, one sentence each."
+    },
+    {
+     "name": "chandrasekhar_fermi_field",
+     "kind": "function",
+     "signature": "chandrasekhar_fermi_field(mass, radius)",
+     "summary": "Largest field a self-gravitating body can hold, from the virial theorem [T]."
+    },
+    {
+     "name": "GravitationalHolder",
+     "kind": "class",
+     "signature": "GravitationalHolder(*, field, density, virial_radius, virial_mass, self_bound, holder_mass, holder_solar_masses, neutron_star_limit)",
+     "summary": "The smallest self-gravitating body that could hold a field statically."
+    },
+    {
+     "name": "gravitational_holder",
+     "kind": "function",
+     "signature": "gravitational_holder(field, density=2.3e17)",
+     "summary": "The body gravity would need to hold field statically: in practice, a neutron star."
+    },
+    {
+     "name": "solar_collection_time",
+     "kind": "function",
+     "signature": "solar_collection_time(energy, area=1e6, efficiency=1)",
+     "summary": "Time for a solar collector at 1 au to bank an energy, t = E/(S A eta) [s]."
+    },
+    {
+     "name": "dipole_axial_field",
+     "kind": "function",
+     "signature": "dipole_axial_field(surface_field, radius, distance)",
+     "summary": "Field on the axis of a dipole source at distance from its centre, B = B_s (R/r)³ [T]."
+    },
+    {
+     "name": "standoff_radius",
+     "kind": "function",
+     "signature": "standoff_radius(surface_field, radius, threshold_field)",
+     "summary": "Distance at which the axial dipole field falls to threshold_field, r = R (B_s/B_th)^(1/3) [m]."
+    },
+    {
+     "name": "standoff_radii",
+     "kind": "function",
+     "signature": "standoff_radii(surface_field, radius)",
+     "summary": "Stand-off distance for every entry of FIELD_THRESHOLDS, keyed by its key [m]."
+    },
+    {
+     "name": "levitation_gradient",
+     "kind": "function",
+     "signature": "levitation_gradient(susceptibility=-9.04e-6, density=1000)",
+     "summary": "Field-gradient product that balances Earth gravity on a weakly magnetic body [T²/m]."
+    },
+    {
+     "name": "diamagnetic_acceleration",
+     "kind": "function",
+     "signature": "diamagnetic_acceleration(surface_field, radius, distance, susceptibility=-9.04e-6, density=1000)",
+     "summary": "Acceleration of a weakly magnetic body on the axis of a dipole source [m/s²]."
+    },
+    {
+     "name": "levitation_radius",
+     "kind": "function",
+     "signature": "levitation_radius(surface_field, radius, gradient=1400)",
+     "summary": "Distance inside which B |dB/dr| on the dipole axis exceeds gradient [m]."
+    },
+    {
+     "name": "radiant_fluence",
+     "kind": "function",
+     "signature": "radiant_fluence(energy, distance)",
+     "summary": "Energy per unit area at distance if energy is released isotropically, E/(4 pi d²) [J/m²]."
+    },
+    {
+     "name": "fluence_radius",
+     "kind": "function",
+     "signature": "fluence_radius(energy, fluence=1e6)",
+     "summary": "Distance at which an isotropic release of energy falls to fluence, sqrt(E/(4 pi F)) [m]."
+    },
+    {
+     "name": "MagnetarSource",
+     "kind": "class",
+     "signature": "MagnetarSource(field, radius, pulse_duration=None)",
+     "summary": "The assumed source: a uniformly magnetised sphere with a magnetar-class field inside."
+    },
+    {
+     "name": "MagnetarAssessment",
+     "kind": "class",
+     "signature": "",
+     "summary": "Consequences of an assumed on-demand magnetar-class field (status is always ASSUMED)."
+    },
+    {
+     "name": "assess_magnetar_mode",
+     "kind": "function",
+     "signature": "assess_magnetar_mode(field, radius, material='iron_armco', pulse_duration=None)",
+     "summary": "Work out what follows if a field of field tesla could be applied on demand in space."
+    },
+    {
+     "name": "FieldSweep",
+     "kind": "class",
+     "signature": "",
+     "summary": "Columnar data across a range of fields, for one material."
+    },
+    {
+     "name": "decade_fields",
+     "kind": "function",
+     "signature": "decade_fields(lowest=10, highest=1e11, per_decade=4)",
+     "summary": "Log-spaced fields from lowest to highest inclusive, per_decade points per decade [T]."
+    },
+    {
+     "name": "field_sweep",
+     "kind": "function",
+     "signature": "field_sweep(fields=None, material='iron_armco')",
+     "summary": "Field scales and the state of material across a list of fields, as columns for plotting."
+    }
+   ],
+   "public_count": 116,
+   "callable_count": 61,
+   "constant_count": 55,
+   "reference_count": 24,
+   "has_tests": true
+  },
+  {
+   "module": "materials",
+   "title": "Materials database: properties, constitutive models and Hugoniots",
+   "answers": "The property data every model draws on, with its provenance.",
+   "relations": [
+    "Derived moduli: G = E/(2(1 + ν)), K = E/(3(1 − 2ν))",
+    "Resistivity: ρ(T) = ρ₂₉₃ [1 + α(T − 293 K)], floored at 2 % of ρ₂₉₃",
+    "Hollomon power law through the yield point and the necking point: σ = K εⁿ",
+    "Where no Hugoniot is measured: c₀ = √(K/ρ), s = 1.4, tagged as estimated"
+   ],
+   "limits": [
+    "Representative engineering data with a provenance tag on every entry. They are not datasheet guarantees.",
+    "Strength depends on condition. The recorded condition is listed with each material."
+   ],
+   "chapter": "/reference/materials.html",
+   "entry_points": [
+    {
+     "name": "get",
+     "kind": "function",
+     "signature": "get(key_or_alias)",
+     "summary": "Case-insensitive lookup by key or alias."
+    },
+    {
+     "name": "list_materials",
+     "kind": "function",
+     "signature": "list_materials(category=None)",
+     "summary": "All materials, optionally filtered by category."
+    },
+    {
+     "name": "search",
+     "kind": "function",
+     "signature": "search(text)",
+     "summary": "Materials whose key, name, notes or condition contain text (case-insensitive)."
+    },
+    {
+     "name": "Material",
+     "kind": "class",
+     "signature": "",
+     "summary": "A material record."
+    },
+    {
+     "name": "JohnsonCook",
+     "kind": "class",
+     "signature": "",
+     "summary": "Johnson-Cook flow stress."
+    },
+    {
+     "name": "ZerilliArmstrongBCC",
+     "kind": "class",
+     "signature": "",
+     "summary": "Zerilli-Armstrong BCC flow stress (rate in 1/s, T in K)."
+    },
+    {
+     "name": "Hugoniot",
+     "kind": "class",
+     "signature": "Hugoniot(c0, s, p_max=None, source='', confidence=handbook)",
+     "summary": "Linear shock-velocity/particle-velocity Hugoniot Us = c0 + s * up."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "Hugoniot",
+     "kind": "class",
+     "signature": "Hugoniot(c0, s, p_max=None, source='', confidence=handbook)",
+     "summary": "Linear shock-velocity/particle-velocity Hugoniot Us = c0 + s * up."
+    },
+    {
+     "name": "JohnsonCook",
+     "kind": "class",
+     "signature": "",
+     "summary": "Johnson-Cook flow stress."
+    },
+    {
+     "name": "ZerilliArmstrongBCC",
+     "kind": "class",
+     "signature": "",
+     "summary": "Zerilli-Armstrong BCC flow stress (rate in 1/s, T in K)."
+    },
+    {
+     "name": "HallPetch",
+     "kind": "class",
+     "signature": "HallPetch(k, sigma0=None, reference_grain_size=5e-5, confidence=representative)",
+     "summary": "Hall-Petch parameters. sigma0 None -> calibrated so that the yield strength is reproduced at reference_grain_size."
+    },
+    {
+     "name": "Material",
+     "kind": "class",
+     "signature": "",
+     "summary": "A material record."
+    },
+    {
+     "name": "keys",
+     "kind": "function",
+     "signature": "keys()",
+     "summary": "All registry keys in definition order."
+    },
+    {
+     "name": "get",
+     "kind": "function",
+     "signature": "get(key_or_alias)",
+     "summary": "Case-insensitive lookup by key or alias."
+    },
+    {
+     "name": "as_material",
+     "kind": "function",
+     "signature": "as_material(material)",
+     "summary": "Accept a Material or a registry key/alias."
+    },
+    {
+     "name": "list_materials",
+     "kind": "function",
+     "signature": "list_materials(category=None)",
+     "summary": "All materials, optionally filtered by category."
+    },
+    {
+     "name": "search",
+     "kind": "function",
+     "signature": "search(text)",
+     "summary": "Materials whose key, name, notes or condition contain text (case-insensitive)."
+    }
+   ],
+   "public_count": 18,
+   "callable_count": 10,
+   "constant_count": 8,
+   "reference_count": 0,
+   "has_tests": false
+  },
+  {
+   "module": "benchmarks",
+   "title": "Cited benchmark ladders: what has actually been demonstrated",
+   "answers": "What has been demonstrated, with citations, so that every status label can be traced.",
+   "relations": [
+    "A status is the position of a computed quantity on a cited ladder: demonstrated, beyond demonstration, or beyond the record",
+    "Magnetic pressure of a record field: P = B²/(2μ₀)",
+    "Placement of a pressure: the benchmarks below and above it, the nearest one on a log scale, and its fraction of the energy density of TNT"
+   ],
+   "limits": [
+    "Institutional announcements are tagged as reported until they are published.",
+    "Where the line between extrapolation and aspirational rests on judgement, the source marks it as estimated."
+   ],
+   "chapter": "/reference/benchmarks.html",
+   "entry_points": [
+    {
+     "name": "superconducting_field_status",
+     "kind": "function",
+     "signature": "superconducting_field_status(field)",
+     "summary": "Status of a field produced by a superconducting (DC) magnet."
+    },
+    {
+     "name": "pulsed_field_status",
+     "kind": "function",
+     "signature": "pulsed_field_status(field, bore_diameter=None)",
+     "summary": "Status of a field produced by a pulsed resistive (non-destructive) magnet."
+    },
+    {
+     "name": "energy_status",
+     "kind": "function",
+     "signature": "energy_status(energy)",
+     "summary": "Status of the energy a single shot must draw from a pulsed store."
+    },
+    {
+     "name": "where_does_it_sit",
+     "kind": "function",
+     "signature": "where_does_it_sit(pressure)",
+     "summary": "Place a pressure (Pa) among PRESSURE_BENCHMARKS."
+    }
+   ],
+   "all_entry_points": [
+    {
+     "name": "Benchmark",
+     "kind": "class",
+     "signature": "Benchmark(key, description, value, unit, year, citation, confidence=handbook, note='')",
+     "summary": "One demonstrated (or reported) achievement with its citation."
+    },
+    {
+     "name": "superconducting_field_status",
+     "kind": "function",
+     "signature": "superconducting_field_status(field)",
+     "summary": "Status of a field produced by a superconducting (DC) magnet."
+    },
+    {
+     "name": "pulsed_field_status",
+     "kind": "function",
+     "signature": "pulsed_field_status(field, bore_diameter=None)",
+     "summary": "Status of a field produced by a pulsed resistive (non-destructive) magnet."
+    },
+    {
+     "name": "ramp_rate_status",
+     "kind": "function",
+     "signature": "ramp_rate_status(ramp_rate)",
+     "summary": "Status of sweeping a superconducting winding at ramp_rate (T/s)."
+    },
+    {
+     "name": "energy_status",
+     "kind": "function",
+     "signature": "energy_status(energy)",
+     "summary": "Status of the energy a single shot must draw from a pulsed store."
+    },
+    {
+     "name": "sc_voltage_status",
+     "kind": "function",
+     "signature": "sc_voltage_status(voltage)",
+     "summary": "Status of a terminal voltage across a superconducting winding."
+    },
+    {
+     "name": "pulsed_voltage_status",
+     "kind": "function",
+     "signature": "pulsed_voltage_status(voltage)",
+     "summary": "Status of a capacitor-bank / pulsed-coil terminal voltage."
+    },
+    {
+     "name": "pulsed_current_status",
+     "kind": "function",
+     "signature": "pulsed_current_status(current)",
+     "summary": "Status of a peak current delivered to a single load by a pulsed source."
+    },
+    {
+     "name": "peak_power_status",
+     "kind": "function",
+     "signature": "peak_power_status(power)",
+     "summary": "Status of the peak electrical power a pulsed source must deliver."
+    },
+    {
+     "name": "Placement",
+     "kind": "class",
+     "signature": "Placement(pressure, field_equivalent, energy_density, below, above, nearest, tnt_fraction)",
+     "summary": "Where a pressure sits relative to the cited benchmarks."
+    },
+    {
+     "name": "where_does_it_sit",
+     "kind": "function",
+     "signature": "where_does_it_sit(pressure)",
+     "summary": "Place a pressure (Pa) among PRESSURE_BENCHMARKS."
+    }
+   ],
+   "public_count": 42,
+   "callable_count": 11,
+   "constant_count": 31,
+   "reference_count": 0,
+   "has_tests": false
+  }
+ ],
+ "support": [
+  {
+   "module": "constants",
+   "title": "Physical constants and unit helpers (CODATA 2018 values, SI units)",
+   "callable_count": 10
+  },
+  {
+   "module": "errors",
+   "title": "Exception hierarchy shared by every magform module",
+   "callable_count": 4
+  },
+  {
+   "module": "status",
+   "title": "Feasibility status and claim-verdict vocabularies (single source of truth)",
+   "callable_count": 6
+  },
+  {
+   "module": "claims",
+   "title": "The claims ledger: every claim of the concept note, quoted, tested and given a verdict",
+   "callable_count": 7
+  },
+  {
+   "module": "cli",
+   "title": "Command-line interface: magform <command> ... (or python -m magform)",
+   "callable_count": 2
+  }
+ ],
+ "missing_entry_points": []
+}

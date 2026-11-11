@@ -1,0 +1,20 @@
+<div class="table-scroll wide">
+<table class="arch">
+  <thead>
+    <tr><th>Way of making the field</th><th>Verdict</th><th class="r">Field</th><th class="r">Rise</th><th class="r">Reaches the part</th><th>Coil survives</th><th>What limits it</th></tr>
+  </thead>
+  <tbody>
+    {% for a in include.rows %}
+    <tr>
+      <td><strong>{{ a.name }}</strong><br><span class="muted small">{{ a.blurb }}</span></td>
+      <td>{% include stamp.html v=a.status %}</td>
+      <td class="r">{{ a.field }} T</td>
+      <td class="r">{{ a.rise }}</td>
+      <td class="r">{{ a.delivered }} %</td>
+      <td>{% if a.reusable %}yes{% else %}no{% endif %}</td>
+      <td>{{ a.limiting }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

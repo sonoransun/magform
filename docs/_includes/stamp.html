@@ -1,0 +1,1 @@
+<span class="stamp stamp--{{ include.v }}{% if include.lg %} stamp--lg{% endif %}"><span class="stamp__icon"><svg aria-hidden="true"><use href="#i-{{ include.v }}"/></svg></span><span class="stamp__label">{{ include.label | default: include.v | replace: "_", " " }}</span></span>

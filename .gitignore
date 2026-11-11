@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Jekyll (GitHub Pages site built locally)
+docs/_site/
+docs/.jekyll-cache/
+docs/.sass-cache/
+docs/Gemfile.lock
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Local Jekyll preview gems
+docs/vendor/
+docs/.bundle/
+
+# CI site check
+_site_check/

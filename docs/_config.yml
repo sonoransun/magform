@@ -1,0 +1,70 @@
+# GitHub Pages configuration for the magform documentation site.
+#
+# Publish: repository Settings -> Pages -> Source "Deploy from a branch" -> branch main, folder /docs.
+# GitHub Pages builds this directory with Jekyll (the github-pages gem); no build step or Action is needed.
+# Preview locally:  cd docs && bundle install && bundle exec jekyll serve
+#
+# Numbers, tables and figures on the site are generated from the Python package:
+#   python tools/build_docs.py        (writes docs/_data/*.json and docs/_includes/generated/*)
+# and tests/test_docs.py fails when they are stale.
+
+title: magform
+tagline: A feasibility ledger for 63-100 tesla magnetic-pressure processing
+description: >-
+  Engineering models that test the claims made for 1.6-4 GPa magnetic "forging" against
+  physics and cited records: what is established, what is extrapolation, what is not possible.
+lang: en
+
+# Optional: set to the repository URL to show a "Source" link in the footer.
+repo_url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "story"
+    values:
+      layout: chapter
+      section: story
+      math: true
+  - scope:
+      path: "guide"
+    values:
+      section: guide
+  - scope:
+      path: "reference"
+    values:
+      section: reference
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - archive
+  - assets/fonts/README.md
+  - README.md

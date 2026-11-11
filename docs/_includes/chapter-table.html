@@ -1,0 +1,13 @@
+{% comment %} The story's chapters with the verdict and description from each page's front matter. {% endcomment %}
+{% assign story = site.data.nav | where: "id", "story" | first %}
+<div class="table-scroll wide">
+<table class="chapters">
+<thead><tr><th class="r">No.</th><th>Chapter</th><th>Verdict</th><th>In one sentence</th></tr></thead>
+<tbody>
+{% for p in story.pages %}{% unless p.n == "0" %}
+{% assign pg = site.pages | where: "url", p.url | first %}
+<tr><td class="r muted">{{ p.n }}</td><td><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a></td><td>{% if pg.verdict %}{% include stamp.html v=pg.verdict %}{% else %}<span class="muted small">see ledger</span>{% endif %}</td><td class="small">{{ pg.brief | default: pg.description }}</td></tr>
+{% endunless %}{% endfor %}
+</tbody>
+</table>
+</div>

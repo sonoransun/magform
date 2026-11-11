@@ -1,0 +1,797 @@
+{
+ "by_id": {
+  "C01": {
+   "id": "C01",
+   "section": "The premise",
+   "section_key": "premise",
+   "quote": "generating 1,600 to over 4,000 MPa of magnetic pressure",
+   "topic": "The pressure itself",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "The pressures exist. 1.6 GPa is the pressure of a 63.41 T field and 4 GPa of 100.27 T, and a magnet has reached 100.75 T without destroying itself. It did so for milliseconds in a 10 mm bore; the same field over a 100 mm bore is extrapolation and stores 99 MJ.",
+   "evidence": [
+    "field for 1.6 GPa: 63.41 T; for 4 GPa: 100.27 T",
+    "non-destructive pulsed record: 100.75 T = 4.04 GPa, 10 mm bore",
+    "100.3 T in a 10 mm bore: state of the art; in a 100 mm bore: extrapolation",
+    "stored energy of the reference press at 4 GPa: 99.5 MJ"
+   ],
+   "models": [
+    "magform.magnetics.field_for_pressure",
+    "magform.benchmarks.pulsed_field_status",
+    "magform.press.design_press"
+   ],
+   "chapter": "/story/pressure.html"
+  },
+  "C02": {
+   "id": "C02",
+   "section": "The premise",
+   "section_key": "premise",
+   "quote": "using self-supporting, carbon-nanosheet-reinforced superconducting magnets",
+   "topic": "The magnet",
+   "kind": "claim",
+   "verdict": "infeasible",
+   "finding": "No. A superconducting magnet fails on three counts at once. The all-superconducting record is 35.6 T against the 63 to 100 T needed. The winding's 1.46 GPa to 3.66 GPa of hoop stress needs a composite modulus of 549 to 1373 GPa to keep the superconductor within its 0.4 % strain limit. And because a steady field exerts no pressure the magnet must be pulsed, which at the bottom of the window deposits 99 times the winding's thermal margin on every shot; at the top the conductor has no margin left to lose.",
+   "evidence": [
+    "all-superconducting record 35.6 T; highest field any superconductor has carried current in: 48.7 T",
+    "conductor at 1.6 GPa: extrapolation (margin 1.12); at 4 GPa: aspirational (margin 0.50)",
+    "structure at 1.6 GPa: aspirational; at 4 GPa: infeasible (graphene's own modulus is 1000 GPa)",
+    "pulsed operation at 1.6 GPa: loss / enthalpy margin = 99.3 (infeasible)",
+    "steady 100 T field on a workpiece: 0 Pa",
+    "best buildable alternative: pulsed_resistive (extrapolation)"
+   ],
+   "models": [
+    "magform.press.design_press",
+    "magform.conductor.assess_conductor",
+    "magform.conductor.assess_structure",
+    "magform.conductor.assess_pulsed_operation",
+    "magform.magnetics.pressure_with_background"
+   ],
+   "chapter": "/story/machine.html"
+  },
+  "C03": {
+   "id": "C03",
+   "section": "The premise",
+   "section_key": "premise",
+   "quote": "we move entirely out of the realm of traditional manufacturing and into extreme high-pressure materials science",
+   "topic": "How extreme the pressure is",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "The window sits inside ordinary manufacturing. Cold-forging dies already see about 2.5 GPa of contact pressure, and industrial diamond presses hold 6 GPa for hours. 1.6 GPa to 4 GPa lies between them: high for a forming process, low for high-pressure science.",
+   "evidence": [
+    "hot isostatic pressing 0.2 GPa; cold-forging die contact 2.5 GPa; industrial diamond presses 6 GPa",
+    "benchmarks at or below 4 GPa: 4; above: 6",
+    "energy density at 4 GPa: 58 % of that of TNT"
+   ],
+   "models": [
+    "magform.benchmarks.where_does_it_sit",
+    "magform.benchmarks.PRESSURE_BENCHMARKS"
+   ],
+   "chapter": "/story/pressure.html"
+  },
+  "C04": {
+   "id": "C04",
+   "section": "The premise",
+   "section_key": "premise",
+   "quote": "At these energy densities, you can manipulate matter at the atomic level across macro-scale components",
+   "topic": "Atomic-level manipulation",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "At 4 GPa the energy available per atom is 4 % to 8 % of what holds the solid together. Applied evenly it squeezes a metal by one to three per cent, elastically, and the metal springs back. Shaping it takes uneven stress and ordinary plastic flow. Fields change atoms themselves only above about 235,000 T.",
+   "evidence": [
+    "Cu: 4 GPa x atomic volume = 0.29 eV per atom against 3.49 eV cohesive energy; elastic volume change 3.3 %",
+    "W: 4 GPa x atomic volume = 0.40 eV per atom against 8.90 eV cohesive energy; elastic volume change 1.3 %",
+    "the field at which atomic structure itself changes is the atomic unit, 2.35e5 T (magform.magnetar)"
+   ],
+   "models": [
+    "magform.materials.Material.volumetric_strain",
+    "magform.claims.ATOMIC_DATA"
+   ],
+   "chapter": "/story/pressure.html"
+  },
+  "C05": {
+   "id": "C05",
+   "section": "The premise",
+   "section_key": "premise",
+   "quote": "without a single moving mechanical part",
+   "topic": "No moving parts",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "The coil has no moving parts; the process does. In forming, the workpiece wall is the moving part (392 m/s in a 30 T tube compression). Welding needs a flyer (385 m/s), shock synthesis a faster one (2113 m/s), and any static synthesis route needs anvils. Shape still comes from a die or mandrel.",
+   "evidence": [
+    "tube wall velocity at 30 T: 392 m/s",
+    "weld flyer velocity at 0.1 GPa drive: 385 m/s",
+    "shock-synthesis flyer at 4 GPa drive: 2113 m/s",
+    "a static route at 5 GPa needs anvils: belt/cubic presses with tungsten-carbide anvils"
+   ],
+   "models": [
+    "magform.eddy.TubeCompression",
+    "magform.welding.assess_weld",
+    "magform.synthesis.assess_route",
+    "magform.synthesis.anvil_feasibility"
+   ],
+   "chapter": "/story/forging.html"
+  },
+  "C06": {
+   "id": "C06",
+   "section": "Dynamic magneto-hydrodynamic forging",
+   "section_key": "forging",
+   "quote": "Dynamic Magneto-Hydrodynamic (MHD) Forging",
+   "topic": "The name",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "Magnetohydrodynamics is the dynamics of conducting fluids; this workpiece is solid. The process described is electromagnetic forming, in industrial use since the 1960s at 20 to 50 T. The fluid name becomes literally true only where the eddy-current skin melts: above 58 T for aluminium, 96 T for copper and 149 T for tungsten.",
+   "evidence": [
+    "skin of Aluminium 6061-T6 reaches its melting point at 58 T",
+    "skin of Copper, OFHC (annealed) reaches its melting point at 96 T",
+    "skin of Titanium CP grade 2 reaches its melting point at 99 T",
+    "skin of Steel AISI 1018 (hot rolled) reaches its melting point at 117 T",
+    "skin of Tungsten, commercially pure (wrought) reaches its melting point at 149 T",
+    "industrial electromagnetic forming: 20-50 T, 0.159 GPa-0.995 GPa"
+   ],
+   "models": [
+    "magform.eddy.skin_melting_field",
+    "magform.benchmarks.EMF_CONVENTIONAL_FIELD"
+   ],
+   "chapter": "/story/forging.html"
+  },
+  "C07": {
+   "id": "C07",
+   "section": "Dynamic magneto-hydrodynamic forging",
+   "section_key": "forging",
+   "quote": "ultra-high magnetic fields are pulsed to induce massive eddy currents in a metal workpiece. The resulting Lorentz forces create an instantaneous, uniform inward crushing force.",
+   "topic": "The mechanism",
+   "kind": "claim",
+   "verdict": "extrapolation",
+   "finding": "The mechanism is real and routine up to about 50 T. A pulsed field drives eddy currents in the surface of the workpiece and the Lorentz force pushes it inward. Modelled on a 50 mm copper tube with a 2 mm wall, a 30 T pulse closes the bore in 82 microseconds. At 63 T, the bottom of the note's window, it closes in 35 microseconds at 1260 m/s, beyond any industrial coil. The force is fast, not instantaneous, and not uniform (C08).",
+   "evidence": [
+    "matched pulse for a 2 mm copper wall: 9.7 kHz, rise 26 us",
+    "30 T: bore closed at 82 us, peak wall speed 392 m/s, strain rate 4.2e4 1/s",
+    "63.4 T: bore closed at 35 us, 1260 m/s, 3.0e5 1/s",
+    "industrial coils stop at 50 T"
+   ],
+   "models": [
+    "magform.eddy.TubeCompression",
+    "magform.eddy.pulse_frequency_recommendation"
+   ],
+   "chapter": "/story/forging.html"
+  },
+  "C08": {
+   "id": "C08",
+   "section": "Dynamic magneto-hydrodynamic forging",
+   "section_key": "forging",
+   "quote": "Because the pressure is applied purely through a magnetic field, it is perfectly uniform across the entire surface area.",
+   "topic": "Uniform pressure",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "The pressure follows the field, and the field is shaped by the coil and by the workpiece. For a billet in the reference press the pressure is within 3 % of even over the middle 80 % of its length, then departs both ways: it falls to 43 % of nominal at the coil ends when the billet is as long as the coil, and it peaks at 5.7 times nominal on the billet's own corners (2.4 times with a 10 mm corner radius). On a part with features the pressure is highest on convex edges and lowest in recesses.",
+   "evidence": [
+    "40 mm x 300 mm billet: mid-plane 1.064 x nominal, min/max over the central 80 % = 0.970",
+    "corner peak: 5.70 x nominal (2 mm radius), 2.38 x (10 mm radius)",
+    "billet as long as the coil: minimum 0.43 x nominal",
+    "free-space on-axis estimate for the same 300 mm: 0.79 at the ends",
+    "a 2 mm copper wall passes 49 % of the pressure if the field takes 2 ms to rise"
+   ],
+   "models": [
+    "magform.fieldmap.workpiece_pressure",
+    "magform.magnetics.Solenoid.pressure_uniformity",
+    "magform.eddy.sheet_shielding_factor"
+   ],
+   "chapter": "/story/forging.html"
+  },
+  "C09": {
+   "id": "C09",
+   "section": "Dynamic magneto-hydrodynamic forging",
+   "section_key": "forging",
+   "quote": "This completely eliminates surface friction, uneven structural cooling, and the tool wear associated with traditional heavy die forging.",
+   "topic": "Friction, heat and tool wear",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "Friction goes only on the side facing the coil; a die or mandrel still rubs. Heating does not go at all: the eddy currents that carry the force heat the surface layer by 464 K in copper at 63 T and melt it at 100 T, while the interior stays cold. And the tool wear moves to the coil, which carries the same pressure as the workpiece and is the part that fails.",
+   "evidence": [
+    "copper skin temperature rise: +464 K at 63 T, +1160 K at 100 T (melts above 96 T)",
+    "aluminium 6061 skin: +661 K at 63 T (melts above 58 T)",
+    "single-turn coils, the simplest way to these fields, are destroyed by every shot (aspirational at a 100 mm bore)",
+    "reference coil conductor ends each 10 ms pulse at 743 K from 77 K"
+   ],
+   "models": [
+    "magform.eddy.skin_temperature_rise",
+    "magform.eddy.skin_melting_field",
+    "magform.press.design_press",
+    "magform.pulse.assess_pulse_network"
+   ],
+   "chapter": "/story/forging.html"
+  },
+  "C10": {
+   "id": "C10",
+   "section": "Refractory metals",
+   "section_key": "refractory",
+   "quote": "Forging ultra-high-melting-point materials like tungsten, molybdenum, and rhenium typically requires heating them to near-melting temperatures",
+   "topic": "How refractory metals are forged today",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "Tungsten is forged at 1200 to 1600 C and molybdenum at 1000 to 1300 C, about half their melting points; rhenium is rolled cold. Nobody forges them above 2,500 C, a temperature within 123 K of melting molybdenum.",
+   "evidence": [
+    "W: worked at 1200-1600 C (0.40-0.51 of its 3422 C melting point); forged/swaged/rolled at 1200-1600 C",
+    "Mo: worked at 1000-1300 C (0.44-0.54 of its 2623 C melting point); hot worked at 1000-1300 C",
+    "Re: worked at 20 C (0.08 of its 3186 C melting point); cold rolled with intermediate anneals near 1700-2000 C; hot work limited by oxidation"
+   ],
+   "models": [
+    "magform.plasticity.forging_practice_gap",
+    "magform.materials.MATERIALS"
+   ],
+   "chapter": "/story/refractory.html"
+  },
+  "C11": {
+   "id": "C11",
+   "section": "Refractory metals",
+   "section_key": "refractory",
+   "quote": "A 2,000+ MPa magnetic press generates enough force to plastically deform these hyper-hard refractory metals at room temperature or moderate heat.",
+   "topic": "Cold deformation at 2 GPa",
+   "kind": "claim",
+   "verdict": "extrapolation",
+   "finding": "Partly. At 2 GPa and forming rates tungsten's flow stress is 2.05 GPa to 2.57 GPa, so at room temperature the press cannot move it; it can from about 186 C, which is moderate heat. Molybdenum just yields cold. In every case the metal is below or near its ductile-brittle transition, so it flows only if the pressure also confines it, and that has not been shown at this scale. Pressure alone shapes nothing: it needs a die.",
+   "evidence": [
+    "W at room temperature: infeasible (needs 3.09 GPa; flow stress 2.05 GPa-2.57 GPa); at 236 C: extrapolation",
+    "Mo at room temperature: extrapolation (needs 1.89 GPa; flow stress 1.57 GPa-1.57 GPa)",
+    "Re at room temperature: infeasible (needs 2.69 GPa; flow stress 2.24 GPa-2.24 GPa); at 879 C: extrapolation",
+    "tungsten below its 300 C ductile-brittle transition fails at 7 % strain unconfined; localisation strain 0.004",
+    "tungsten at 4 GPa, room temperature: extrapolation (margin 1.29)"
+   ],
+   "models": [
+    "magform.plasticity.assess_forgeability",
+    "magform.plasticity.warm_forming_temperature",
+    "magform.plasticity.adiabatic_shear_critical_strain"
+   ],
+   "chapter": "/story/refractory.html"
+  },
+  "C12": {
+   "id": "C12",
+   "section": "Refractory metals",
+   "section_key": "refractory",
+   "quote": "This preserves a pristine, ultra-fine crystalline grain structure",
+   "topic": "Grain structure",
+   "kind": "claim",
+   "verdict": "extrapolation",
+   "finding": "Half of this holds. A cold pulse leaves the interior far too cool to recrystallise, so the grains the billet started with survive: 20 micrometres, flattened to 15. They are not ultra-fine and one forming strain does not make them so; that takes a strain of about 3.1. Nor is the structure pristine. The dislocation density rises 37-fold, and above about 71 T the eddy-current skin is heated to a large fraction of the melting point.",
+   "evidence": [
+    "bulk temperature rise at strain 0.3: +189 K to 0.13 of the melting point; recrystallised fraction 4e-89",
+    "grain size 20 -> 14.8 um; ultra-fine (< 1 um) needs strain 3.10",
+    "dislocation density 1.0e12 -> 3.7e13 per m^2; cell size 1.65 um",
+    "skin at 71 T: 1068 K (0.29 of melting); at 100 T: 1844 K (0.50) for 5.0 ms"
+   ],
+   "models": [
+    "magform.microstructure.assess_microstructure",
+    "magform.microstructure.grain_refinement_strain",
+    "magform.microstructure.skin_thermal_exposure"
+   ],
+   "chapter": "/story/refractory.html"
+  },
+  "C13": {
+   "id": "C13",
+   "section": "Refractory metals",
+   "section_key": "refractory",
+   "quote": "resulting in parts with unprecedented fracture toughness and fatigue resistance",
+   "topic": "Toughness and fatigue",
+   "kind": "claim",
+   "verdict": "not_modelled",
+   "finding": "The package does not compute fracture toughness or fatigue life, so it cannot confirm this. What it does compute points the other way for a single pulse: cold work raises tungsten's yield strength by 15 % and uses up ductility, and at forming rates the deformation concentrates into shear bands from a strain of 0.004. The low transition temperature of heavily rolled tungsten comes from rolling strains above three, not from one pulse.",
+   "evidence": [
+    "yield strength 1.23 GPa -> 1.42 GPa",
+    "adiabatic shear instability at strain 0.004, target strain 0.3",
+    "strain to reach an ultra-fine structure: 3.10",
+    "fracture toughness and fatigue life: not modelled"
+   ],
+   "models": [
+    "magform.microstructure.assess_microstructure",
+    "magform.plasticity.adiabatic_shear_critical_strain"
+   ],
+   "chapter": "/story/refractory.html"
+  },
+  "C14": {
+   "id": "C14",
+   "section": "Cold welding of dissimilar alloys",
+   "section_key": "welding",
+   "quote": "Room-Temperature Cold Welding of Dissimilar Alloys",
+   "topic": "The capability",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "This exists and is sold as magnetic pulse welding. A 1 mm aluminium sheet thrown across a 2 mm gap at steel bonds at 385 m/s, which takes a 16 T coil. Copper onto titanium takes 32 T. Both sit inside industrial forming fields, a factor of four to forty below the note's pressures.",
+   "evidence": [
+    "Al 6061 onto steel: 100 MPa drive, 15.9 T, 385 m/s, state of the art, wavy interface",
+    "Cu onto Ti: 400 MPa drive, 31.7 T, 423 m/s, state of the art",
+    "recorded pairs: Al-Al, Al-Cu, Al-Fe, Al-Mg, Al-Ti, Cu-Cu, Cu-Fe, Cu-Ti, Fe-Fe, Fe-Ti"
+   ],
+   "models": [
+    "magform.welding.assess_weld",
+    "magform.welding.DEMONSTRATED_PAIRS"
+   ],
+   "chapter": "/story/welding.html"
+  },
+  "C15": {
+   "id": "C15",
+   "section": "Cold welding of dissimilar alloys",
+   "section_key": "welding",
+   "quote": "Driving two completely dissimilar metals (e.g., Titanium to Copper, or Steel to Aluminum) together with such extreme, instantaneous pressure that their atomic lattices are forced to interlock.",
+   "topic": "How the bond forms",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "Pressure does not make the bond; an oblique collision does. The plates must meet at an angle so that a jet strips the surfaces clean, and the impact speed has to fall in a window. For aluminium on steel that window is 374 to 649 m/s, reached with 94.5 MPa to 284 MPa of magnetic pressure. Driven at the note's 1.6 GPa to 4 GPa the sheet arrives at 1540 to 2434 m/s, the collision point outruns sound in both metals, no jet forms and nothing welds. The gap does the amplifying: the working joint sees 4.1 GPa at impact from a 100 MPa drive.",
+   "evidence": [
+    "weld window at 10 degrees: 374-649 m/s; drive 94.5 MPa-284 MPa (15.4-26.7 T)",
+    "at 1.6 GPa: 1540 m/s, collision point 8866 m/s against a 4547 m/s sonic limit: infeasible",
+    "at 4 GPa: 2434 m/s, collision point 14019 m/s: infeasible",
+    "impact pressure in the working joint: 4.1 GPa, 41 times the drive",
+    "below a collision angle of 5.0 degrees at 400 m/s there is no jet: a flat-on impact does not weld"
+   ],
+   "models": [
+    "magform.welding.assess_weld",
+    "magform.welding.drive_pressure_window",
+    "magform.welding.critical_collision_angle",
+    "magform.shock.impedance_match"
+   ],
+   "chapter": "/story/welding.html"
+  },
+  "C16": {
+   "id": "C16",
+   "section": "Cold welding of dissimilar alloys",
+   "section_key": "welding",
+   "quote": "It creates a perfect atomic bond across large, complex geometric interfaces",
+   "topic": "Large, complex interfaces",
+   "kind": "claim",
+   "verdict": "extrapolation",
+   "finding": "The bond forms only where the angle and the speed are both right, and they change along the joint. At 10 degrees the usable speeds span a factor of 1.73; at 5 degrees the window narrows to 1.06. Pulse welds are therefore lap and tube joints a few millimetres wide. Large flat areas are joined by explosive cladding, which works on the same collision physics. Complex interfaces are not within either process.",
+   "evidence": [
+    "window at 10 degrees: 374-649 m/s (ratio 1.73), limited above by melting",
+    "window at 5 degrees: 374-396 m/s",
+    "estimated molten layer at the working point: 8 um"
+   ],
+   "models": [
+    "magform.welding.weld_window",
+    "magform.welding.assess_weld"
+   ],
+   "chapter": "/story/welding.html"
+  },
+  "C17": {
+   "id": "C17",
+   "section": "Cold welding of dissimilar alloys",
+   "section_key": "welding",
+   "quote": "without creating a heat-affected zone (HAZ)",
+   "topic": "No heat-affected zone",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "True in the bulk at the 16 T a weld needs. The flyer's skin warms by 41 K, and the heated interface layer is about 8 micrometres thick and cools in a microsecond. It stops being true at the note's fields: the aluminium flyer's skin melts above 58 T.",
+   "evidence": [
+    "flyer skin temperature rise at 15.9 T: +41 K",
+    "interface layer 8.3 um, quench time 1.0 us",
+    "flyer skin melting field 58.4 T; at 100 T the skin rise would be +1653 K"
+   ],
+   "models": [
+    "magform.welding.assess_weld",
+    "magform.eddy.skin_temperature_rise"
+   ],
+   "chapter": "/story/welding.html"
+  },
+  "C18": {
+   "id": "C18",
+   "section": "Cold welding of dissimilar alloys",
+   "section_key": "welding",
+   "quote": "This bypasses the brittle intermetallic phases that usually ruin traditional thermal welding.",
+   "topic": "Intermetallic phases",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "Largely true, and it is why the process is used. Brittle iron-aluminium phases grow by diffusion, and a pulse weld gives them a microsecond: atoms move about 0.6 nanometres in the solid, against 45 micrometres in a second-long fusion weld. The phases still appear (Fe4Al13, Fe2Al5, FeAl) in the thin pockets where the interface melts, so they are reduced by orders of magnitude and not removed.",
+   "evidence": [
+    "solid-state interdiffusion over the 1.0 us quench: 0.65 nm",
+    "liquid interdiffusion over the same time: 45 nm",
+    "fusion weld, liquid for 1 s: 44.7 um (about 70,000 times more)",
+    "phases recorded for Al-Fe: Fe4Al13, Fe2Al5, FeAl"
+   ],
+   "models": [
+    "magform.welding.assess_weld",
+    "magform.welding.interdiffusion_length"
+   ],
+   "chapter": "/story/welding.html"
+  },
+  "C19": {
+   "id": "C19",
+   "section": "Quantum and superhard materials",
+   "section_key": "synthesis",
+   "quote": "Diamond anvil cells can currently reach pressures to synthesize materials like bulk polycrystalline diamonds, lonsdaleite, and carbon nitrides, but only in microscopic microgram quantities.",
+   "topic": "How superhard materials are made today",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "Only the last of the three examples is right. Diamond grit, single crystals and polycrystalline compacts are made by the tonne in cubic and belt presses at 5 to 7 GPa, and nano-polycrystalline diamond comes out of multi-anvil presses in centimetre pieces at 15 GPa. Carbon nitrides are the exception: they need 72 to 134 GPa, which only a diamond anvil cell reaches.",
+   "evidence": [
+    "diamond (grit and single crystals): 5-6.5 GPa; industrial, tonnes per year (cubic/belt presses)",
+    "diamond (large single crystals): 5-6 GPa; industrial",
+    "polycrystalline diamond (PCD) compacts: 5.5-7 GPa; industrial",
+    "nano-polycrystalline diamond (NPD): 15-25 GPa; laboratory/pilot (Kawai multi-anvil; Irifune 2003, 2019)",
+    "cubic boron nitride (cBN): 4.5-6 GPa; industrial",
+    "cubic boron nitride (cBN), binderless: 7.7-10 GPa; laboratory",
+    "carbon nitrides (C3N4, CN, CN2 polymorphs): 72-134 GPa; laboratory (Laniel et al., Adv. Mater. 36 (2024) 2308030)"
+   ],
+   "models": [
+    "magform.synthesis.SYNTHESIS_ROUTES",
+    "magform.benchmarks.STATIC_PRESS_LADDER"
+   ],
+   "chapter": "/story/synthesis.html"
+  },
+  "C20": {
+   "id": "C20",
+   "section": "Quantum and superhard materials",
+   "section_key": "synthesis",
+   "quote": "A large-bore, carbon-nanosheet HTS press scales these extreme pressures up to massive volumes.",
+   "topic": "Scaling the pressure up",
+   "kind": "claim",
+   "verdict": "infeasible",
+   "finding": "No static route fits, for three independent reasons. The lowest pressure any of them needs is 4.5 GPa, above the top of the note's window. Every one needs that pressure held for at least 1 second and usually minutes to days, and a magnetic pulse lasts microseconds to milliseconds. And every one needs 1,500 to 3,000 K, which the magnet does not supply.",
+   "evidence": [
+    "static routes assessed at 4 GPa, room temperature, 0.1 ms pulse: 7 of 7 infeasible",
+    "lowest route pressure: 4.5 GPa (catalytic cubic boron nitride)",
+    "shortest dwell of any static route: 1 s",
+    "the reference bore would hold 4.4 kg of graphite; the field energy over it is 16 MJ"
+   ],
+   "models": [
+    "magform.synthesis.assess_all",
+    "magform.synthesis.volume_scaling"
+   ],
+   "chapter": "/story/synthesis.html"
+  },
+  "C21": {
+   "id": "C21",
+   "section": "Quantum and superhard materials",
+   "section_key": "synthesis",
+   "quote": "This enables the commercial, industrial-scale production of large-scale diamond semiconductor substrates, ultra-hard armor plating, and next-generation industrial cutting bits.",
+   "topic": "Industrial products",
+   "kind": "claim",
+   "verdict": "infeasible",
+   "finding": "The only route a pulse can run is shock synthesis, and it does not make these products. A 2 mm copper flyer driven at 4 GPa over 10 mm reaches 2113 m/s and puts 22.3 GPa into graphite for under a microsecond. That is at the edge of the diamond window (extrapolation; infeasible with porous feedstock) and yields micrometre powder, as explosive shock synthesis has since 1961. Semiconductor substrates are grown as single crystals; a shock cannot make one.",
+   "evidence": [
+    "flyer velocity 2113 m/s; pressure in crystalline graphite 22.3 GPa (copper on copper would give 52.2 GPa)",
+    "lonsdaleite route (>= 15 GPa): extrapolation, margin 1.49",
+    "shock diamond route (>= 20 GPa): extrapolation, margin 1.12; porous graphite: 15.8 GPa, infeasible",
+    "product form: micrometre-scale grains in shocked graphite"
+   ],
+   "models": [
+    "magform.synthesis.assess_route",
+    "magform.shock.impedance_match",
+    "magform.shock.flyer_velocity"
+   ],
+   "chapter": "/story/synthesis.html"
+  },
+  "C22": {
+   "id": "C22",
+   "section": "Quantum and superhard materials",
+   "section_key": "synthesis",
+   "quote": "Macroscopic Synthesis of Quantum & Superhard Materials",
+   "topic": "Quantum materials",
+   "kind": "claim",
+   "verdict": "infeasible",
+   "finding": "No quantum material is waiting on 1.6 to 4 GPa. Quantum-grade diamond is grown by vapour deposition below atmospheric pressure. The superconducting hydrides need 150 to 170 GPa and do not survive release.",
+   "evidence": [
+    "Quantum-grade diamond (NV centres, isotopically engineered) is grown by chemical vapour deposition (CVD) at < 1 bar (Balasubramanian et al., Nat. Mater. 8 (2009) 383); superconducting hydrides (H3S ~150 GPa, Drozdov et al. 2015; LaH10 ~170 GPa, Drozdov et al. 2019) are not recoverable to ambient; no pressure-limited quantum material is enabled by the 1.6-4 GPa window."
+   ],
+   "models": [
+    "magform.synthesis.QUANTUM_MATERIALS_NOTE"
+   ],
+   "chapter": "/story/synthesis.html"
+  },
+  "C23": {
+   "id": "C23",
+   "section": "Zero-porosity aerospace components",
+   "section_key": "porosity",
+   "quote": "These materials are notoriously difficult to forge without introducing microscopic internal voids or structural micro-cracks.",
+   "topic": "Why TiAl and ODS alloys are hard to forge",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "True. Gamma titanium aluminide stretches 1.5 % before it breaks at room temperature and stays brittle up to about 700 C, so it is forged isothermally at 1100 to 1300 C or cast and then pressed hot. Oxide-dispersion-strengthened alloys cannot be melted without losing their dispersion and are consolidated from powder.",
+   "evidence": [
+    "gamma TiAl: elongation 1.5 %, ductile-brittle transition 700 C, worked at isothermal forging at 1100-1300 C",
+    "ODS FeCrAl: elongation 10 %; oxide-dispersion strengthened; coarse recrystallised grains"
+   ],
+   "models": [
+    "magform.materials.MATERIALS"
+   ],
+   "chapter": "/story/porosity.html"
+  },
+  "C24": {
+   "id": "C24",
+   "section": "Zero-porosity aerospace components",
+   "section_key": "porosity",
+   "quote": "A 4,000 MPa magnetic press can completely close all internal porosities in highly complex geometries",
+   "topic": "Closing every pore",
+   "kind": "claim",
+   "verdict": "infeasible",
+   "finding": "Closing a pore and healing it are different things, and the pulse does neither reliably. A small pore is shielded by the metal around it: at pulse rates titanium aluminide's pores do not even begin to yield below 4.95 GPa. Where a pore does close, its faces only touch. Bonding them takes diffusion, which at room temperature does not happen on any timescale, so the pore is left as a crack. A thin blade section also lets part of the field straight through, and on a shaped part magnetic pressure is not even. Hot isostatic pressing already closes and heals these pores at 172 MPa because it is hot and slow.",
+   "evidence": [
+    "pores of 0.5 % start to collapse at 1.94 GPa (slow) or 4.95 GPa (at pulse rates)",
+    "pressure to close them to 0.01 %: 3.38 GPa (slow), 8.61 GPa (pulse rates)",
+    "collapse takes 64 ns; diffusion bonding of the closed faces at room temperature would take 2.8e43 s",
+    "strain at the pore wall 2.6 against 1.5 % ductility",
+    "skin depth of TiAl at 10 kHz: 4.2 mm, so a bare 2 mm section feels 61 % of the pressure",
+    "hot isostatic pressing does the job at 172 MPa, 1260 C, 4 h"
+   ],
+   "models": [
+    "magform.porosity.assess_pore_closure",
+    "magform.porosity.hip_cycle",
+    "magform.porosity.diffusion_bonding_time"
+   ],
+   "chapter": "/story/porosity.html"
+  },
+  "C25": {
+   "id": "C25",
+   "section": "Zero-porosity aerospace components",
+   "section_key": "porosity",
+   "quote": "dramatically extending the operational lifespan and heat tolerances of rocket and turbine components",
+   "topic": "Service life and heat tolerance",
+   "kind": "claim",
+   "verdict": "not_modelled",
+   "finding": "Fatigue life and service temperature are not computed here. The benefit of removing porosity is real and is already collected: cast turbine blades are hot isostatically pressed as a matter of course (state of the art in this model). Heat tolerance is set by the alloy, not by its porosity.",
+   "evidence": [
+    "standard cycle for cast gamma TiAl: 172 MPa, 1260 C, 4 h (F. Appel, J. D. H. Paul and M. Oehring, Gamma Titanium Aluminide Alloys: Science and Technology, Wiley-VCH, Weinheim (2011).)",
+    "fatigue life and service temperature: not modelled"
+   ],
+   "models": [
+    "magform.porosity.HIP_PRACTICE",
+    "magform.porosity.assess_pore_closure"
+   ],
+   "chapter": "/story/porosity.html"
+  },
+  "C26": {
+   "id": "C26",
+   "section": "Rail and launch systems",
+   "section_key": "containment",
+   "quote": "Structural structural housing for hyper-velocity kinetic mass drivers, coilguns, or containment rings for compact fusion reactors.",
+   "topic": "The loads to be contained",
+   "kind": "claim",
+   "verdict": "state_of_the_art",
+   "finding": "These loads are real, and steel already carries them. A railgun at 4 MA puts 1.6 GPa on its bore, which a compound maraging-steel wall holds. The coils of a 20 T fusion magnet feel 159 MPa, held by a plain thick steel case. Neither needs a new material.",
+   "evidence": [
+    "rail launcher, 4 MA, 50 mm bore: 1.6 GPa (63.4 T equivalent); maraging steel wall, b/a = 2.39: state of the art",
+    "fusion magnet, 20 T on the coil: 159 MPa; steel wall, b/a = 1.45: state of the art"
+   ],
+   "models": [
+    "magform.containment.rail_launcher_load",
+    "magform.containment.fusion_magnet_load",
+    "magform.containment.assess_containment"
+   ],
+   "chapter": "/story/containment.html"
+  },
+  "C27": {
+   "id": "C27",
+   "section": "Rail and launch systems",
+   "section_key": "containment",
+   "quote": "The exact same self-supporting carbon nanosheet + HTS tape architecture can be inverted.",
+   "topic": "Inverting the architecture",
+   "kind": "claim",
+   "verdict": "aspirational",
+   "finding": "At 4 GPa no real material makes a simple wall: the strength needed is 10.4 GPa, three times the strongest steel. A carbon-nanosheet laminate with the properties the note assumes would do it on paper, but no such material exists in bulk. Carbon laminates also have a specific weakness here. The bore presses on the wall sideways to the fibres, where a laminate carries about 0.25 GPa, so a metal liner has to take the load anyway. The superconducting tape adds nothing to a housing.",
+   "evidence": [
+    "strength for any finite elastic wall at 4 GPa with a 1.5 safety factor: 10.4 GPa",
+    "steel 4340: infeasible; maraging steel: extrapolation (compound wall, b/a = 8.8)",
+    "T1100G carbon fibre: extrapolation, transverse compression ok: False",
+    "carbon-nanosheet target: aspirational; intrinsic graphene: aspirational"
+   ],
+   "models": [
+    "magform.containment.containment_survey",
+    "magform.containment.required_monolithic_strength"
+   ],
+   "chapter": "/story/containment.html"
+  },
+  "C28": {
+   "id": "C28",
+   "section": "Rail and launch systems",
+   "section_key": "containment",
+   "quote": "it serves as the ultimate containment housing for high-energy physics applications, preventing plasma-containment fields or hyper-velocity projectile tracks from structurally tearing themselves apart under extreme internal electromagnetic stresses",
+   "topic": "Whether the applications need it",
+   "kind": "claim",
+   "verdict": "contradicted",
+   "finding": "The applications named do not need it. A fusion plasma pushes on its magnet with 2.96 MPa, 54 times less than the magnet pushes on itself, and the magnet's own load is within reach of steel. A mass driver is limited by what the payload survives: an aluminium payload takes 184 MPa at its base, which sets a 42 m launcher for lunar escape. A bore able to hold 4 GPa would change neither number.",
+   "evidence": [
+    "fusion: coil 159 MPa, plasma 2.96 MPa, ratio 54",
+    "mass driver to 2.4 km/s: limited by payload strength at 184 MPa; length 42.3 m; 6949 g",
+    "the 4 GPa bore capability is 14 times the payload's strength"
+   ],
+   "models": [
+    "magform.containment.fusion_magnet_load",
+    "magform.containment.mass_driver"
+   ],
+   "chapter": "/story/containment.html"
+  },
+  "Q1": {
+   "id": "Q1",
+   "section": "The note's two questions",
+   "section_key": "questions",
+   "quote": "Should we map out the pulse-discharge electrical network (like homopolar generators or capacitor banks) required to drive these pressures?",
+   "topic": "The pulse network",
+   "kind": "question",
+   "verdict": "extrapolation",
+   "finding": "Yes, and it is mapped. The answer turns on how fast the field must rise. The energy is fixed by the field and the bore, 99 MJ for the reference press, and voltage times current is that energy over the rise time. A thick billet tolerates a 10 ms rise, which a 25 kV capacitor bank twice the size of the largest magnet bank can supply (extrapolation). A thin wall needs 25 microseconds, which means 6 TW and is out of reach. Homopolar generators hold the energy but release it in tens of milliseconds at about a hundred volts: right for a slow outer coil, 2280 times too slow for a fast pulse.",
+   "evidence": [
+    "field energy of the reference press at 4 GPa: 99.5 MJ",
+    "25 us rise: voltage x current = 1.3e13 V A whatever the turn count (267 kV, 46.7 MA, 6.3 TW): infeasible",
+    "10 ms rise: 38 turns, 24.9 kV, 1.23 MA, 15.5 GW, 102 MJ bank: extrapolation",
+    "homopolar generator of the same energy: 117 V, fastest rise 57 ms into a single turn"
+   ],
+   "models": [
+    "magform.pulse.assess_pulse_network",
+    "magform.pulse.voltage_current_product",
+    "magform.pulse.homopolar_for_energy",
+    "magform.press.design_press"
+   ],
+   "chapter": "/story/power.html"
+  },
+  "Q2": {
+   "id": "Q2",
+   "section": "The note's two questions",
+   "section_key": "questions",
+   "quote": "Are you interested in the specifics of how room-temperature solid-state forging affects a specific alloy's crystalline microstructure?",
+   "topic": "Microstructure after cold forging",
+   "kind": "question",
+   "verdict": "extrapolation",
+   "finding": "Yes. For tungsten strained by 0.3 in 30 microseconds, the model gives a dislocation density up 37-fold arranged in cells about 1.7 micrometres across, a yield strength up 15 %, and a temperature rise of 189 K, far too little to recrystallise. The original grains are flattened and kept. The risk is localisation: tungsten at these rates concentrates strain into shear bands almost at once. Copper under the same strain is ordinary cold work (state of the art).",
+   "evidence": [
+    "tungsten: dislocation density 3.7e13 per m^2, cells 1.65 um, stored energy 220 kJ/m^3",
+    "yield 1.23 GPa -> 1.42 GPa; hardness 4.21 GPa -> 4.26 GPa",
+    "bulk heating +189 K; regime: cold; recrystallised fraction 4e-89",
+    "shear localisation from strain 0.004; status extrapolation",
+    "copper: 6.3e14 per m^2, cells 0.40 um, yield x 3.2, state of the art"
+   ],
+   "models": [
+    "magform.microstructure.assess_microstructure"
+   ],
+   "chapter": "/story/refractory.html"
+  }
+ },
+ "order": [
+  "C01",
+  "C02",
+  "C03",
+  "C04",
+  "C05",
+  "C06",
+  "C07",
+  "C08",
+  "C09",
+  "C10",
+  "C11",
+  "C12",
+  "C13",
+  "C14",
+  "C15",
+  "C16",
+  "C17",
+  "C18",
+  "C19",
+  "C20",
+  "C21",
+  "C22",
+  "C23",
+  "C24",
+  "C25",
+  "C26",
+  "C27",
+  "C28",
+  "Q1",
+  "Q2"
+ ],
+ "sections": [
+  {
+   "key": "premise",
+   "title": "The premise",
+   "ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05"
+   ]
+  },
+  {
+   "key": "forging",
+   "title": "Dynamic magneto-hydrodynamic forging",
+   "ids": [
+    "C06",
+    "C07",
+    "C08",
+    "C09"
+   ]
+  },
+  {
+   "key": "refractory",
+   "title": "Refractory metals",
+   "ids": [
+    "C10",
+    "C11",
+    "C12",
+    "C13"
+   ]
+  },
+  {
+   "key": "welding",
+   "title": "Cold welding of dissimilar alloys",
+   "ids": [
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18"
+   ]
+  },
+  {
+   "key": "synthesis",
+   "title": "Quantum and superhard materials",
+   "ids": [
+    "C19",
+    "C20",
+    "C21",
+    "C22"
+   ]
+  },
+  {
+   "key": "porosity",
+   "title": "Zero-porosity aerospace components",
+   "ids": [
+    "C23",
+    "C24",
+    "C25"
+   ]
+  },
+  {
+   "key": "containment",
+   "title": "Rail and launch systems",
+   "ids": [
+    "C26",
+    "C27",
+    "C28"
+   ]
+  },
+  {
+   "key": "questions",
+   "title": "The note's two questions",
+   "ids": [
+    "Q1",
+    "Q2"
+   ]
+  }
+ ],
+ "total": 30,
+ "counts": [
+  {
+   "verdict": "state_of_the_art",
+   "count": 6,
+   "share": 20.0,
+   "meaning": "True of today's technology, under the conditions stated."
+  },
+  {
+   "verdict": "extrapolation",
+   "count": 6,
+   "share": 20.0,
+   "meaning": "Beyond what has been shown, with no known barrier: a matter of scaling."
+  },
+  {
+   "verdict": "aspirational",
+   "count": 1,
+   "share": 3.33,
+   "meaning": "Needs a material or technology that does not exist."
+  },
+  {
+   "verdict": "infeasible",
+   "count": 5,
+   "share": 16.67,
+   "meaning": "Conflicts with physics as modelled."
+  },
+  {
+   "verdict": "contradicted",
+   "count": 10,
+   "share": 33.33,
+   "meaning": "A statement of fact that the numbers show to be false."
+  },
+  {
+   "verdict": "not_modelled",
+   "count": 2,
+   "share": 6.67,
+   "meaning": "Outside what the package computes."
+  }
+ ]
+}

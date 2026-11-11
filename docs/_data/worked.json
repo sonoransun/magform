@@ -1,0 +1,37 @@
+{
+ "spec": {
+  "key": "spec",
+  "code": "from magform.press import PressSpec, design_press\n\nspec = PressSpec(pressure=4e9, bore_diameter=0.10, length=0.50, winding_thickness=0.20)\ndesign = design_press(spec)\n\nprint(f\"field             {design.field:.2f} T\")\nprint(f\"current density   {design.current_density / 1e6:.0f} A/mm2\")\nprint(f\"stored energy     {design.stored_energy / 1e6:.1f} MJ\")\nprint(f\"peak hoop stress  {design.peak_hoop_stress / 1e9:.2f} GPa\")",
+  "output": "field             100.27 T\ncurrent density   467 A/mm2\nstored energy     99.5 MJ\npeak hoop stress  3.66 GPa"
+ },
+ "workpiece": {
+  "key": "workpiece",
+  "code": "w = design.workpiece\nprint(f\"rise time             {design.rise_time * 1e3:.1f} ms\")\nprint(f\"skin depth            {w.skin_depth * 1e3:.1f} mm\")\nprint(f\"pressure, mid-face    {w.surface_mid_ratio:.2f} x nominal\")\nprint(f\"pressure, corners     {w.surface_peak_ratio:.1f} x nominal\")\nprint(f\"skin heating          +{w.skin_temperature_rise:.0f} K, melts: {w.skin_melts}\")",
+  "output": "rise time             10.3 ms\nskin depth            13.3 mm\npressure, mid-face    1.06 x nominal\npressure, corners     5.7 x nominal\nskin heating          +1160 K, melts: True"
+ },
+ "magnet": {
+  "key": "magnet",
+  "code": "parts = {\"conductor\": design.conductor, \"structure\": design.structure,\n         \"pulsed operation\": design.pulsed_operation}\nfor name, part in parts.items():\n    print(f\"{name:18s} {part.status.label}\")\nprint(f\"{'concept magnet':18s} {design.status.label}\")\nfor line in design.warnings[:3]:\n    print(\" !\", line)",
+  "output": "conductor          aspirational\nstructure          infeasible\npulsed operation   infeasible\nconcept magnet     infeasible\n ! conductor: winding current density 4.67e+08 A/m^2 exceeds f_hts*Je (2.33e+08 A/m^2): needs a conductor that does not exist\n ! structure: no existing or hypothetical reinforcement meets the strain limit at this fraction\n ! pulsed operation: quenches every pulse: loss/margin = inf (> 1)"
+ },
+ "architectures": {
+  "key": "architectures",
+  "code": "for a in design.architectures:\n    print(f\"{a.name:42s} {a.status.label:17s} limited by {a.limiting}\")\nprint(\"best:\", design.best_architecture, \"->\", design.best_status.label)",
+  "output": "Concept magnet, pulsed                     infeasible        limited by structure\nConcept magnet, steady                     infeasible        limited by pressure on the workpiece\nResistive pulsed magnet                    extrapolation     limited by field and bore\nHybrid: steady background plus pulsed insert aspirational      limited by insert field and bore\nSingle-turn destructive coil               aspirational      limited by bank voltage\nIndustrial forming coil                    extrapolation     limited by power supply and coil\nbest: pulsed_resistive -> extrapolation"
+ },
+ "network": {
+  "key": "network",
+  "code": "n = design.network\nprint(f\"{n.turns} turns, {n.charge_voltage / 1e3:.1f} kV, {n.peak_current / 1e6:.2f} MA\")\nprint(f\"bank {n.bank_energy / 1e6:.0f} MJ, peak power {n.peak_power / 1e9:.1f} GW\")\nprint(f\"coil ends the shot at {n.conductor_final_temperature:.0f} K\")\nprint(\"status:\", n.status.label)",
+  "output": "38 turns, 24.9 kV, 1.23 MA\nbank 102 MJ, peak power 15.5 GW\ncoil ends the shot at 743 K\nstatus: extrapolation"
+ },
+ "thin": {
+  "key": "thin",
+  "code": "from dataclasses import replace\n\ntube = design_press(replace(spec, workpiece_wall=0.002))\nprint(f\"rise time {tube.rise_time * 1e6:.0f} us\")\nfor a in tube.architectures:\n    print(f\"{a.name:42s} {a.status.label}\")\nprint(\"best:\", tube.best_architecture, \"->\", tube.best_status.label)",
+  "output": "rise time 26 us\nConcept magnet, pulsed                     infeasible\nConcept magnet, steady                     infeasible\nResistive pulsed magnet                    infeasible\nHybrid: steady background plus pulsed insert infeasible\nSingle-turn destructive coil               aspirational\nIndustrial forming coil                    extrapolation\nbest: single_turn -> aspirational"
+ },
+ "report": {
+  "key": "report",
+  "code": "print(design.workpiece.text())",
+  "output": "WorkpieceLoad\n-------------\nmaterial = copper_ofhc\nradius [m] = 0.04\nlength [m] = 0.3\nwall [m] = 0.04\nsolid = yes\nrise_time [s] = 0.01026\nfrequency [Hz] = 24.36\nskin_depth [m] = 0.01333\nregime = thick\npressure_transfer = 0.9975\nsurface_mid_ratio = 1.064\nsurface_uniformity = 0.97\nsurface_peak_ratio = 5.696\ndelivered_pressure [Pa] = 4.247e+09\nskin_temperature_rise [K] = 1160\nskin_melting_field [T] = 95.99\nskin_melts = yes\nelastic_volumetric_strain = 0.03282"
+ }
+}

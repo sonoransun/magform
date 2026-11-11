@@ -1,0 +1,12 @@
+<nav class="rail" id="rail" aria-label="Contents">
+  {% for group in site.data.nav %}
+  <div class="rail__group">
+    <p class="label rail__title">{{ group.title }}</p>
+    <ol>
+      {% for item in group.pages %}
+      <li><a href="{{ item.url | relative_url }}"{% if item.url == page.url %} aria-current="page"{% endif %}><span class="rail__n">{{ item.n }}</span><span>{{ item.title }}</span></a></li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+</nav>

@@ -1,0 +1,351 @@
+{
+ "constants": {
+  "mu0": 1.25663706212e-06,
+  "c": 299792458.0,
+  "megaton": 4184000000000000.0,
+  "tnt_per_kg": 4184000.0,
+  "depth_ratio": 3.0
+ },
+ "window": {
+  "p_lo": 1600000000.0,
+  "p_hi": 4000000000.0
+ },
+ "reference": {
+  "bore": 0.1,
+  "build": 0.2,
+  "length": 0.5
+ },
+ "thresholds": {
+  "sc_record": 35.6,
+  "sc_conductor": 48.7,
+  "pulsed_record": 100.75,
+  "pulsed_bore": 0.01,
+  "pulsed_routine_field": 60.0,
+  "pulsed_routine_bore": 0.025,
+  "energy_sota": 50000000.0,
+  "energy_record": 1200000000.0,
+  "power_sota": 1000000000000.0,
+  "power_record": 80000000000000.0,
+  "voltage_sota": 25000.0,
+  "voltage_extrapolation": 100000.0,
+  "current_sota": 5000000.0,
+  "current_record": 26000000.0,
+  "max_voltage": 25000.0,
+  "coil_skin_melting_field": 89.24
+ },
+ "materials": [
+  {
+   "key": "copper_ofhc",
+   "name": "Copper",
+   "resistivity": 1.71e-08,
+   "density": 8960,
+   "specific_heat": 385.0,
+   "melting_point": 1356.0,
+   "skin_melting_field": 95.99
+  },
+  {
+   "key": "aluminum_6061",
+   "name": "Aluminium 6061",
+   "resistivity": 3.99e-08,
+   "density": 2700,
+   "specific_heat": 896.0,
+   "melting_point": 855.0,
+   "skin_melting_field": 58.45
+  },
+  {
+   "key": "steel_1018",
+   "name": "Mild steel",
+   "resistivity": 1.59e-07,
+   "density": 7870,
+   "specific_heat": 486.0,
+   "melting_point": 1723.0,
+   "skin_melting_field": 117.2
+  },
+  {
+   "key": "ti6al4v",
+   "name": "Titanium Ti-6Al-4V",
+   "resistivity": 1.78e-06,
+   "density": 4430,
+   "specific_heat": 526.0,
+   "melting_point": 1878.0,
+   "skin_melting_field": 96.34
+  },
+  {
+   "key": "tungsten",
+   "name": "Tungsten",
+   "resistivity": 5.28e-08,
+   "density": 19250,
+   "specific_heat": 134.0,
+   "melting_point": 3695.0,
+   "skin_melting_field": 148.5
+  },
+  {
+   "key": "gamma_tial",
+   "name": "Titanium aluminide",
+   "resistivity": 7.0e-07,
+   "density": 3970,
+   "specific_heat": 610.0,
+   "melting_point": 1733.0,
+   "skin_melting_field": 93.61
+  }
+ ],
+ "pressures": [
+  {
+   "key": "hip",
+   "name": "hot isostatic pressing",
+   "value": 200000000.0
+  },
+  {
+   "key": "mpw_typical",
+   "name": "magnetic pulse welding",
+   "value": 500000000.0
+  },
+  {
+   "key": "emf_50t",
+   "name": "a 50 T forming coil",
+   "value": 994718393.7828454
+  },
+  {
+   "key": "cold_forging_die",
+   "name": "cold-forging dies",
+   "value": 2500000000.0
+  },
+  {
+   "key": "lanl_100t_pressure",
+   "name": "the 100.75 T pulsed record",
+   "value": 4038780490.396953
+  },
+  {
+   "key": "hpht_cubic",
+   "name": "industrial diamond presses",
+   "value": 6000000000.0
+  },
+  {
+   "key": "npd_multianvil",
+   "name": "multi-anvil diamond synthesis",
+   "value": 15000000000.0
+  },
+  {
+   "key": "dupont_shock",
+   "name": "shock synthesis of diamond",
+   "value": 30000000000.0
+  },
+  {
+   "key": "carbon_nitride_dac",
+   "name": "carbon nitride synthesis",
+   "value": 124000000000.0
+  },
+  {
+   "key": "dac_static",
+   "name": "diamond anvil cells",
+   "value": 400000000000.0
+  }
+ ],
+ "magnetar": {
+  "atomic_field": 235051.7571874522,
+  "qed_field": 4414005221.399419,
+  "thresholds": [
+   {
+    "key": "plastic_flow",
+    "field": 20.97195679334668,
+    "label": "pressure reaches the static yield strength",
+    "state": "solid, flowing plastically wherever the load is uneven (the regime of the rest of magform)"
+   },
+   {
+    "key": "skin_melting",
+    "field": 116.23260746470939,
+    "label": "eddy-current skin starts to melt",
+    "state": "solid inside a molten eddy-current skin: the driven surface is a conducting liquid"
+   },
+   {
+    "key": "skin_boiling",
+    "field": 159.0148575746709,
+    "label": "skin reaches its boiling point",
+    "state": "the skin reaches its boiling point within the pulse and starts to blow off as vapour"
+   },
+   {
+    "key": "skin_vaporised",
+    "field": 388.10850232334997,
+    "label": "skin completely vaporised",
+    "state": "the whole skin depth is vaporised and expands as a conducting plasma"
+   },
+   {
+    "key": "bulk_modulus",
+    "field": 648.7477805048983,
+    "label": "pressure equals the bulk modulus",
+    "state": "compressed to a fraction of its volume (megabar dynamic compression) and released as hot liquid or vapour"
+   },
+   {
+    "key": "pressure_ionisation",
+    "field": 8599.016075047648,
+    "label": "pressure equals the atomic unit E_h/a0^3",
+    "state": "pressure-ionised: electron shells are crushed and the workpiece is a dense plasma, degenerate like the outer layers of a white dwarf as the pressure rises"
+   },
+   {
+    "key": "atomic_field",
+    "field": 235051.7571874522,
+    "label": "field equals the atomic unit B0",
+    "state": "where the field threads the matter, atoms are squeezed into needles along it and ordinary chemistry stops"
+   },
+   {
+    "key": "relativistic_degeneracy",
+    "field": 136212233.77873826,
+    "label": "degenerate electrons turn relativistic (x = 1)",
+    "state": "white-dwarf matter: a relativistically degenerate electron gas denser than 1e9 kg/m^3"
+   },
+   {
+    "key": "qed_critical",
+    "field": 4414005221.399419,
+    "label": "field equals the QED critical field",
+    "state": "the field is beyond the quantum-electrodynamic critical value: an electron's cyclotron energy exceeds its rest energy and the vacuum itself is birefringent"
+   },
+   {
+    "key": "electron_capture",
+    "field": 11274990278.787987,
+    "label": "degenerate electrons reach the capture threshold",
+    "state": "degenerate electrons are forced into nuclei: 56Fe starts turning into 56Mn and the workpiece is being transmuted"
+   },
+   {
+    "key": "neutron_drip",
+    "field": 442758830166.8528,
+    "label": "pressure equals the neutron-drip pressure",
+    "state": "neutrons drip out of the nuclei: the matter of a neutron star's inner crust"
+   }
+  ],
+  "tier_bounds": [
+   {
+    "tier": "solid",
+    "from": 0.0
+   },
+   {
+    "tier": "liquid_skin",
+    "from": 116.233
+   },
+   {
+    "tier": "megabar",
+    "from": 648.748
+   },
+   {
+    "tier": "plasma",
+    "from": 8599.02
+   },
+   {
+    "tier": "landau",
+    "from": 235052.0
+   },
+   {
+    "tier": "degenerate",
+    "from": 136212000.0
+   }
+  ],
+  "tiers": {
+   "solid": {
+    "name": "solid metal",
+    "processes": {
+     "forging": "Electromagnetic forming as modelled in magform.eddy: the workpiece stays solid and flows where the pressure exceeds its flow stress.",
+     "refractory_forming": "Flow stress decides (magform.plasticity): tungsten needs roughly 2.5-3 GPa at room temperature.",
+     "welding": "Impact welding needs only 10-40 T (magform.welding); more field overshoots the weld window.",
+     "synthesis": "Below every static route to diamond or cubic boron nitride; a flyer-driven shock is marginal (magform.synthesis).",
+     "densification": "Pores collapse only above (2/3) sigma ln(1/f) and never bond cold (magform.porosity).",
+     "containment": "Compound steel walls hold about 2.5 GPa; no monolithic wall holds 4 GPa (magform.containment)."
+    }
+   },
+   "liquid_skin": {
+    "name": "molten or boiling skin",
+    "processes": {
+     "forging": "The driven surface melts or boils within the pulse, so the part is shaped through a liquid-metal skin and a shock: 'magnetohydrodynamic' finally describes it, and surface finish and dimensions are lost.",
+     "refractory_forming": "Strength stops mattering: the pressure is several to hundreds of times any flow stress, and tungsten fails the same way copper does, by losing its skin.",
+     "welding": "Flyers leave at several to tens of kilometres per second, far beyond any weld window: the joint is a hypervelocity impact crater.",
+     "synthesis": "Shock and ramp compression to tens and hundreds of gigapascals: diamond, lonsdaleite and other dense phases form in nanoseconds, as in flux-compression and Z-pinch experiments today. Recovering the product is the hard part.",
+     "densification": "Every pore is crushed, together with the surface of the part.",
+     "containment": "No structure contains the field statically: the pressure exceeds every material strength, so the source is destroyed each shot, as single-turn coils and flux-compression generators are."
+    }
+   },
+   "megabar": {
+    "name": "megabar compression",
+    "processes": {
+     "forging": "The pressure exceeds the bulk modulus: the metal is shock-compressed to a fraction of its volume and comes back as hot liquid or vapour. No forged shape survives.",
+     "refractory_forming": "Refractory and soft metals behave alike: neither strength nor melting point registers against megabar pressure.",
+     "welding": "Flyers reach tens of kilometres per second and both parts vaporise on impact. Nothing is joined.",
+     "synthesis": "Planetary-core pressures, megabars and up: metallic hydrogen and other dense phases exist while the pulse lasts and not after.",
+     "densification": "Every pore is crushed, and so is the part.",
+     "containment": "No structure contains the field: it is held only by the inertia of an imploding liner, for microseconds."
+    }
+   },
+   "plasma": {
+    "name": "dense plasma",
+    "processes": {
+     "forging": "The workpiece is a pressure-ionised plasma for the length of the pulse. There is no solid to forge.",
+     "refractory_forming": "No property of the solid survives; only density and atomic number distinguish one target from another.",
+     "welding": "Both parts are plasma before they meet.",
+     "synthesis": "Warm dense matter: every chemical bond is broken and whatever is recovered is quenched debris.",
+     "densification": "Porosity has no meaning in a plasma.",
+     "containment": "Inertial confinement only, for nanoseconds or less."
+    }
+   },
+   "landau": {
+    "name": "needle atoms",
+    "processes": {
+     "forging": "The piston pressure makes degenerate matter and the field, where it gets in, squeezes atoms into needles. Forging has no meaning.",
+     "refractory_forming": "Only nuclear charge and mass number distinguish materials.",
+     "welding": "Both parts are plasma before they meet.",
+     "synthesis": "'Magnetic chemistry': where the field threads matter, atoms bind into chains along it with tens to hundreds of electronvolts per atom, but only while the field is on. As a piston it makes degenerate matter.",
+     "densification": "Porosity has no meaning in degenerate matter.",
+     "containment": "Nothing material holds the field; unheld it disperses in the light-crossing time. Nature's only static holder is a neutron star."
+    }
+   },
+   "degenerate": {
+    "name": "white-dwarf matter",
+    "processes": {
+     "forging": "The sample becomes white-dwarf matter and explodes when the field lets go. Forging has no meaning.",
+     "refractory_forming": "Only nuclear charge and mass number distinguish materials, and above the capture threshold not even the charge is conserved.",
+     "welding": "Both parts are degenerate plasma before they meet.",
+     "synthesis": "Nuclear, not chemical, synthesis: degenerate electrons are forced into nuclei above each capture threshold and light elements fuse. The product is neutron-rich isotopes and a thermonuclear yield.",
+     "densification": "Porosity has no meaning in degenerate matter.",
+     "containment": "Nothing material holds the field; unheld it disperses in the light-crossing time. Nature's only static holder is a neutron star."
+    }
+   }
+  },
+  "process_names": {
+   "forging": "Forging",
+   "refractory_forming": "Refractory metals",
+   "welding": "Welding",
+   "synthesis": "Synthesis",
+   "densification": "Densification",
+   "containment": "Containment"
+  },
+  "standoff": [
+   {
+    "key": "earth_field",
+    "field": 5.0e-05,
+    "label": "Comparable to the Earth's surface field (25-65 uT): compasses and magnetometers are disturbed"
+   },
+   {
+    "key": "pacemaker_line",
+    "field": 0.0005,
+    "label": "0.5 mT ('5 gauss') line for implanted electronic medical devices"
+   },
+   {
+    "key": "public_limit",
+    "field": 0.4,
+    "label": "Static-field exposure limit for the general public (400 mT)"
+   },
+   {
+    "key": "occupational_limit",
+    "field": 2.0,
+    "label": "Occupational static-field limit for head and trunk (2 T)"
+   },
+   {
+    "key": "limb_limit",
+    "field": 8.0,
+    "label": "Occupational static-field limit for limbs (8 T)"
+   },
+   {
+    "key": "atomic_field",
+    "field": 235051.7571874522,
+    "label": "Atomic unit of field (2.35e5 T): atoms are reshaped and ordinary chemistry stops"
+   }
+  ],
+  "destructive_record": 2800.0
+ }
+}

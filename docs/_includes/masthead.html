@@ -1,0 +1,20 @@
+<header class="masthead">
+  <a class="wordmark" href="{{ '/' | relative_url }}">
+    <span class="wordmark__name">magform</span>
+    <span class="wordmark__sub">feasibility ledger &middot; v{{ site.data.meta.version }}</span>
+  </a>
+  <nav class="masthead__nav" aria-label="Sections">
+    <a href="{{ '/story/' | relative_url }}"{% if page.section == 'story' %} aria-current="true"{% endif %}>The case</a>
+    <a href="{{ '/ledger.html' | relative_url }}"{% if page.url == '/ledger.html' %} aria-current="true"{% endif %}>Ledger</a>
+    <a href="{{ '/explorer.html' | relative_url }}"{% if page.url == '/explorer.html' %} aria-current="true"{% endif %}>Explorer</a>
+    <a href="{{ '/guide/getting-started.html' | relative_url }}"{% if page.section == 'guide' %} aria-current="true"{% endif %}>Guide</a>
+    <a href="{{ '/reference/methods.html' | relative_url }}"{% if page.section == 'reference' %} aria-current="true"{% endif %}>Reference</a>
+    <button class="iconbtn theme-toggle" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+      <svg class="i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      <svg class="i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+    </button>
+    <button class="iconbtn menu-toggle" type="button" id="menu-toggle" aria-label="Open contents" aria-expanded="false" aria-controls="rail">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+  </nav>
+</header>

@@ -1,0 +1,7 @@
+{% assign cl = site.data.claims %}
+<div class="segbar" role="img" aria-label="Verdicts on {{ cl.total }} statements: {% for c in cl.counts %}{{ c.count }} {{ c.verdict | replace: '_', ' ' }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+  {% for c in cl.counts %}{% if c.count > 0 %}<span class="segbar__part segbar__part--{{ c.verdict }}" style="flex: {{ c.count }} 1 0" title="{{ c.verdict | replace: '_', ' ' }}: {{ c.count }} of {{ cl.total }}">{{ c.count }}</span>{% endif %}{% endfor %}
+</div>
+<ul class="seglegend">
+  {% for c in cl.counts %}<li>{% include stamp.html v=c.verdict %} <span class="seglegend__n">{{ c.count }}</span></li>{% endfor %}
+</ul>

@@ -1,0 +1,130 @@
+{
+ "networks": [
+  {
+   "field": "100",
+   "rise": "25 µs",
+   "turns": 1,
+   "kv": "267",
+   "ma": "46.75",
+   "power": "6,250",
+   "bank": "99",
+   "status": "infeasible",
+   "thermal": "infeasible"
+  },
+  {
+   "field": "100",
+   "rise": "1 ms",
+   "turns": 3,
+   "kv": "20",
+   "ma": "15.58",
+   "power": "156",
+   "bank": "100",
+   "status": "infeasible",
+   "thermal": "infeasible"
+  },
+  {
+   "field": "100",
+   "rise": "10 ms",
+   "turns": 37,
+   "kv": "25",
+   "ma": "1.26",
+   "power": "15.9",
+   "bank": "102",
+   "status": "extrapolation",
+   "thermal": "extrapolation"
+  },
+  {
+   "field": "63",
+   "rise": "25 µs",
+   "turns": 1,
+   "kv": "169",
+   "ma": "29.57",
+   "power": "2,500",
+   "bank": "40",
+   "status": "aspirational",
+   "thermal": "extrapolation"
+  },
+  {
+   "field": "63",
+   "rise": "1 ms",
+   "turns": 5,
+   "kv": "21",
+   "ma": "5.91",
+   "power": "62.6",
+   "bank": "40",
+   "status": "extrapolation",
+   "thermal": "extrapolation"
+  },
+  {
+   "field": "63",
+   "rise": "10 ms",
+   "turns": 58,
+   "kv": "25",
+   "ma": "0.51",
+   "power": "6.34",
+   "bank": "41",
+   "status": "state_of_the_art",
+   "thermal": "state_of_the_art"
+  }
+ ],
+ "sources_fast": [
+  {
+   "name": "capacitor bank",
+   "status": "extrapolation",
+   "reusable": true,
+   "reason": "capacitors discharge on any time scale; 99.5 MJ in 25 us is 6.25 TW peak (largest magnet-driver bank 50 MJ; TW-class power stays state of the art down to a 156 us rise at this energy)",
+   "fastest": "156 µs"
+  },
+  {
+   "name": "motor-generator (flywheel and rectifier)",
+   "status": "infeasible",
+   "reusable": true,
+   "reason": "a rectified alternator cannot rise in less than about a half-cycle of its output (10 ms); the request is 400x faster",
+   "fastest": "112 ms"
+  },
+  {
+   "name": "homopolar generator",
+   "status": "infeasible",
+   "reusable": true,
+   "reason": "at <= 600 V a rotor storing 99.5 MJ is a 553 F capacitor: even into its own ~500 nH it needs 26.1 ms to peak, 1.04e+03x slower than asked; an inductive store with an opening switch shortens the pulse but passes at most 25% of the energy to a load inductor",
+   "fastest": "26.1 ms"
+  },
+  {
+   "name": "explosive flux-compression generator",
+   "status": "extrapolation",
+   "reusable": false,
+   "reason": "delivers tens of MA in microseconds (99.5 MJ against ~30 MJ demonstrated: extrapolation) but is consumed by every shot, usually with its load: an experiment, not a production source",
+   "fastest": "1 µs"
+  }
+ ],
+ "sources_slow": [
+  {
+   "name": "capacitor bank",
+   "status": "extrapolation",
+   "reusable": true,
+   "reason": "capacitors discharge on any time scale; 99.5 MJ in 10 ms is 15.6 GW peak (largest magnet-driver bank 50 MJ; TW-class power stays state of the art down to a 156 us rise at this energy)",
+   "fastest": "156 µs"
+  },
+  {
+   "name": "motor-generator (flywheel and rectifier)",
+   "status": "aspirational",
+   "reusable": true,
+   "reason": "needs 15.6 GW and 99.5 MJ per pulse against the 1.4 GW, ~600 MJ-per-pulse motor-generator at Los Alamos: aspirational; right for a slow outer platform coil, not for an eddy-current pulse",
+   "fastest": "112 ms"
+  },
+  {
+   "name": "homopolar generator",
+   "status": "infeasible",
+   "reusable": true,
+   "reason": "at <= 600 V a rotor storing 99.5 MJ is a 553 F capacitor: even into its own ~500 nH it needs 26.1 ms to peak, 2.61x slower than asked; an inductive store with an opening switch shortens the pulse but passes at most 25% of the energy to a load inductor",
+   "fastest": "26.1 ms"
+  },
+  {
+   "name": "explosive flux-compression generator",
+   "status": "infeasible",
+   "reusable": false,
+   "reason": "an explosive generator is swept by its detonation in <~ 1 ms; it cannot stretch its pulse to 10 ms",
+   "fastest": "1 µs"
+  }
+ ]
+}

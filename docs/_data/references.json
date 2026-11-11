@@ -1,0 +1,3662 @@
+{
+ "count": 234,
+ "unique": 175,
+ "module_count": 15,
+ "entries": [
+  {
+   "module": "magnetics",
+   "key": "jackson1999",
+   "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999): sec. 5.6 (magnetic dipole field) and sec. 6.7 (Maxwell stress tensor)."
+  },
+  {
+   "module": "magnetics",
+   "key": "knoepfel2000",
+   "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000)."
+  },
+  {
+   "module": "magnetics",
+   "key": "psyk2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "magnetics",
+   "key": "montgomery1969",
+   "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+  },
+  {
+   "module": "magnetics",
+   "key": "wilson1983",
+   "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983)."
+  },
+  {
+   "module": "magnetics",
+   "key": "iwasa2009",
+   "text": "Y. Iwasa, Case Studies in Superconducting Magnets: Design and Operational Issues, 2nd ed., Springer, New York (2009)."
+  },
+  {
+   "module": "magnetics",
+   "key": "wheeler1928",
+   "text": "H. A. Wheeler, 'Simple inductance formulas for radio coils', Proc. IRE 16 (1928) 1398-1400."
+  },
+  {
+   "module": "magnetics",
+   "key": "moon1982",
+   "text": "F. C. Moon, 'The virial theorem and scaling laws for superconducting magnet systems', J. Appl. Phys. 53 (1982) 9112-9121."
+  },
+  {
+   "module": "magnetics",
+   "key": "moon1984",
+   "text": "F. C. Moon, Magneto-Solid Mechanics, Wiley, New York (1984)."
+  },
+  {
+   "module": "magnetics",
+   "key": "herlach2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "smythe1968",
+   "text": "W. R. Smythe, Static and Dynamic Electricity, 3rd ed., McGraw-Hill, New York (1968), sec. 7.10 (vector potential and field of a circular loop)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "jackson1999",
+   "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.5 (circular current loop) and sec. 5.13 (perfectly conducting sphere in a uniform field: surface field (3/2) B0 sin(theta))."
+  },
+  {
+   "module": "fieldmap",
+   "key": "abramowitz1964",
+   "text": "M. Abramowitz and I. A. Stegun (eds.), Handbook of Mathematical Functions, National Bureau of Standards, Washington (1964), sec. 17.6 (elliptic integrals by the arithmetic-geometric mean)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "montgomery1969",
+   "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "grover1946",
+   "text": "F. W. Grover, Inductance Calculations: Working Formulas and Tables, Van Nostrand, New York (1946) (flux of a circular filament near itself; geometric mean distances)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "harrington1968",
+   "text": "R. F. Harrington, Field Computation by Moment Methods, Macmillan, New York (1968)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "knoepfel2000",
+   "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000) (flux exclusion by conductors, field concentration at edges)."
+  },
+  {
+   "module": "fieldmap",
+   "key": "wilson1983",
+   "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983) (peak and radial fields in solenoid windings)."
+  },
+  {
+   "module": "conductor",
+   "key": "tsuchiya2021",
+   "text": "K. Tsuchiya et al., 'Superconducting properties of commercial REBCO-coated conductors with artificial pinning centers', Supercond. Sci. Technol. 34 (2021) 105005."
+  },
+  {
+   "module": "conductor",
+   "key": "braccini2011",
+   "text": "V. Braccini et al., 'Properties of recent IBAD-MOCVD coated conductors relevant to their high field, low temperature magnet use', Supercond. Sci. Technol. 24 (2011) 035001."
+  },
+  {
+   "module": "conductor",
+   "key": "xu2014",
+   "text": "A. Xu, J. J. Jaroszynski, F. Kametani, Z. Chen, D. C. Larbalestier et al., 'Strongly enhanced vortex pinning from 4 to 77 K in magnetic fields up to 31 T in 15 mol.% Zr-added (Gd, Y)-Ba-Cu-O superconducting tapes', APL Mater. 2 (2014) 046111."
+  },
+  {
+   "module": "conductor",
+   "key": "senatore2016",
+   "text": "C. Senatore, C. Barth, M. Bonura, M. Kulich and G. Mondonico, 'Field and temperature scaling of the critical current density in commercial REBCO coated conductors', Supercond. Sci. Technol. 29 (2016) 014002."
+  },
+  {
+   "module": "conductor",
+   "key": "barth2015",
+   "text": "C. Barth, G. Mondonico and C. Senatore, 'Electro-mechanical properties of REBCO coated conductors from various industrial manufacturers at 77 K, self-field and 4.2 K, 19 T', Supercond. Sci. Technol. 28 (2015) 045011."
+  },
+  {
+   "module": "conductor",
+   "key": "hahn2019",
+   "text": "S. Hahn et al., '45.5-tesla direct-current magnetic field generated with a high-temperature superconducting magnet', Nature 570 (2019) 496-499."
+  },
+  {
+   "module": "conductor",
+   "key": "maglab2025",
+   "text": "National High Magnetic Field Laboratory, news release of 11 Sep 2025 and research highlight of Jan 2026: REBCO test coil 'Little Big Coil 9', 48.7 T inside a 31 T resistive magnet (August 2025)."
+  },
+  {
+   "module": "conductor",
+   "key": "kim1962",
+   "text": "Y. B. Kim, C. F. Hempstead and A. R. Strnad, 'Critical persistent currents in hard superconductors', Phys. Rev. Lett. 9 (1962) 306-309."
+  },
+  {
+   "module": "conductor",
+   "key": "bean1964",
+   "text": "C. P. Bean, 'Magnetization of high-field superconductors', Rev. Mod. Phys. 36 (1964) 31-39."
+  },
+  {
+   "module": "conductor",
+   "key": "norris1970",
+   "text": "W. T. Norris, 'Calculation of hysteresis losses in hard superconductors carrying ac: isolated conductors and edges of thin sheets', J. Phys. D: Appl. Phys. 3 (1970) 489-507."
+  },
+  {
+   "module": "conductor",
+   "key": "brandt1993",
+   "text": "E. H. Brandt and M. Indenbom, 'Type-II-superconductor strip with current in a perpendicular magnetic field', Phys. Rev. B 48 (1993) 12893-12906."
+  },
+  {
+   "module": "conductor",
+   "key": "wilson1983",
+   "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983), ch. 8 (AC losses)."
+  },
+  {
+   "module": "conductor",
+   "key": "iwasa2009",
+   "text": "Y. Iwasa, Case Studies in Superconducting Magnets: Design and Operational Issues, 2nd ed., Springer, New York (2009) (stability, enthalpy margin, current sharing)."
+  },
+  {
+   "module": "conductor",
+   "key": "ekin2006",
+   "text": "J. W. Ekin, Experimental Techniques for Low-Temperature Measurements, Oxford University Press (2006), appendix A6 (specific heat of technical materials)."
+  },
+  {
+   "module": "conductor",
+   "key": "nist_cu",
+   "text": "NIST Cryogenic Technologies Group, Material Properties: OFHC Copper (UNS C10100/C10200), specific heat and resistivity fits (trc.nist.gov/cryogenics)."
+  },
+  {
+   "module": "conductor",
+   "key": "lu2008",
+   "text": "J. Lu, E. S. Choi and H. D. Zhou, 'Physical properties of Hastelloy C-276 at cryogenic temperatures', J. Appl. Phys. 103 (2008) 064908."
+  },
+  {
+   "module": "conductor",
+   "key": "toray",
+   "text": "Toray Industries, TORAYCA M60J and T1100G technical data sheets."
+  },
+  {
+   "module": "conductor",
+   "key": "lee2008",
+   "text": "C. Lee, X. Wei, J. W. Kysar and J. Hone, 'Measurement of the elastic properties and intrinsic strength of monolayer graphene', Science 321 (2008) 385-388."
+  },
+  {
+   "module": "conductor",
+   "key": "lee2022",
+   "text": "D. Lee et al., 'Ultrahigh strength, modulus, and conductivity of graphitic fibers by macromolecular coalescence', Sci. Adv. 8 (2022) eabn0939."
+  },
+  {
+   "module": "conductor",
+   "key": "knoepfel2000",
+   "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000) (skin depth, eddy-current losses)."
+  },
+  {
+   "module": "conductor",
+   "key": "herlach2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003) (all >60 T non-destructive magnets are resistive)."
+  },
+  {
+   "module": "pulse",
+   "key": "knoepfel1970",
+   "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970): capacitor-bank discharge circuits, inductive energy storage and transfer, action integral of conductors, explosive flux compression."
+  },
+  {
+   "module": "pulse",
+   "key": "knoepfel2000",
+   "text": "H. E. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000): field diffusion, skin heating, energy transfer between circuits."
+  },
+  {
+   "module": "pulse",
+   "key": "herlach_miura2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003): pulsed-magnet power supplies, coil heating from a liquid-nitrogen start, destructive single-turn coils."
+  },
+  {
+   "module": "pulse",
+   "key": "psyk2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829: capacitor-bank forming machines and their damped-sine discharge."
+  },
+  {
+   "module": "pulse",
+   "key": "montgomery1969",
+   "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+  },
+  {
+   "module": "pulse",
+   "key": "wheeler1928",
+   "text": "H. A. Wheeler, 'Simple inductance formulas for radio coils', Proc. IRE 16 (1928) 1398-1400."
+  },
+  {
+   "module": "pulse",
+   "key": "woodson_melcher1968",
+   "text": "H. H. Woodson and J. R. Melcher, Electromechanical Dynamics, Part I: Discrete Systems, Wiley, New York (1968): homopolar machines, V = k omega and torque = k I."
+  },
+  {
+   "module": "pulse",
+   "key": "timoshenko_goodier1970",
+   "text": "S. P. Timoshenko and J. N. Goodier, Theory of Elasticity, 3rd ed., McGraw-Hill, New York (1970): stresses in rotating disks."
+  },
+  {
+   "module": "pulse",
+   "key": "fowler1960",
+   "text": "C. M. Fowler, W. B. Garn and R. S. Caird, 'Production of very high magnetic fields by implosion', J. Appl. Phys. 31 (1960) 588-594: explosive flux compression."
+  },
+  {
+   "module": "pulse",
+   "key": "benchmark_ladders",
+   "text": "magform.benchmarks ENERGY_LADDER, CURRENT_LADDER and the pulsed voltage/power thresholds: HZDR 50 MJ capacitor bank, UT-CEM Balcones 60 MJ homopolar supply, ANU 500 MJ homopolar generator, LANL 1.4 GW motor-generator, Sandia Z (citations there)."
+  },
+  {
+   "module": "eddy",
+   "key": "psyk_2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, Electromagnetic forming - A review, J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "eddy",
+   "key": "knoepfel_1970",
+   "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970)."
+  },
+  {
+   "module": "eddy",
+   "key": "knoepfel_2000",
+   "text": "H. E. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000), ch. 4 (magnetic diffusion into conductors, surface heating)."
+  },
+  {
+   "module": "eddy",
+   "key": "herlach_1986",
+   "text": "F. Herlach, Europhysics News 17(2) (1986) 29: under adiabatic skin-effect conditions copper warms by about 1200 K per (100 T)^2 and boils near 150 T."
+  },
+  {
+   "module": "eddy",
+   "key": "herlach_miura_2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003)."
+  },
+  {
+   "module": "eddy",
+   "key": "jackson_1999",
+   "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.18 (skin depth)."
+  },
+  {
+   "module": "eddy",
+   "key": "landau_lifshitz_1984",
+   "text": "L. D. Landau, E. M. Lifshitz and L. P. Pitaevskii, Electrodynamics of Continuous Media, 2nd ed., Pergamon, Oxford (1984) (skin effect, field penetration into conductors)."
+  },
+  {
+   "module": "eddy",
+   "key": "carslaw_jaeger_1959",
+   "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959) (erfc solution of the step-boundary diffusion problem)."
+  },
+  {
+   "module": "eddy",
+   "key": "crank_nicolson_1947",
+   "text": "J. Crank and P. Nicolson, A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type, Proc. Cambridge Philos. Soc. 43 (1947) 50-67."
+  },
+  {
+   "module": "eddy",
+   "key": "fowler_1960",
+   "text": "C. M. Fowler, W. B. Garn and R. S. Caird, Production of very high magnetic fields by implosion, J. Appl. Phys. 31 (1960) 588-594 (flux compression)."
+  },
+  {
+   "module": "eddy",
+   "key": "johnson_1972",
+   "text": "W. Johnson, Impact Strength of Materials, Edward Arnold, London (1972) (rigid-plastic ring and tube dynamics)."
+  },
+  {
+   "module": "eddy",
+   "key": "taylor_quinney_1934",
+   "text": "G. I. Taylor and H. Quinney, The latent energy remaining in a metal after cold working, Proc. R. Soc. Lond. A 143 (1934) 307-326."
+  },
+  {
+   "module": "eddy",
+   "key": "wheeler_1928",
+   "text": "H. A. Wheeler, Simple inductance formulas for radio coils, Proc. IRE 16 (1928) 1398-1400."
+  },
+  {
+   "module": "plasticity",
+   "key": "johnson1983",
+   "text": "G. R. Johnson and W. H. Cook, 'A constitutive model and data for metals subjected to large strains, high strain rates and high temperatures', Proc. 7th Int. Symp. Ballistics, The Hague (1983) 541-547."
+  },
+  {
+   "module": "plasticity",
+   "key": "zerilli1987",
+   "text": "F. J. Zerilli and R. W. Armstrong, 'Dislocation-mechanics-based constitutive relations for material dynamics calculations', J. Appl. Phys. 61 (1987) 1816-1825."
+  },
+  {
+   "module": "plasticity",
+   "key": "hollomon1945",
+   "text": "J. H. Hollomon, 'Tensile deformation', Trans. AIME 162 (1945) 268-290."
+  },
+  {
+   "module": "plasticity",
+   "key": "taylor1934",
+   "text": "G. I. Taylor and H. Quinney, 'The latent energy remaining in a metal after cold working', Proc. R. Soc. Lond. A 143 (1934) 307-326."
+  },
+  {
+   "module": "plasticity",
+   "key": "culver1973",
+   "text": "R. S. Culver, 'Thermal instability strain in dynamic plastic deformation', in R. W. Rohde, B. M. Butcher, J. R. Holland and C. H. Karnes (eds.), Metallurgical Effects at High Strain Rates, Plenum, New York (1973)."
+  },
+  {
+   "module": "plasticity",
+   "key": "bai1992",
+   "text": "Y. Bai and B. Dodd, Adiabatic Shearing: Theory and Applications, Pergamon, Oxford (1992)."
+  },
+  {
+   "module": "plasticity",
+   "key": "wright2002",
+   "text": "T. W. Wright, The Physics and Mathematics of Adiabatic Shear Bands, Cambridge University Press (2002)."
+  },
+  {
+   "module": "plasticity",
+   "key": "meyers1994",
+   "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994)."
+  },
+  {
+   "module": "plasticity",
+   "key": "bridgman1952",
+   "text": "P. W. Bridgman, Studies in Large Plastic Flow and Fracture with Special Emphasis on the Effects of Hydrostatic Pressure, McGraw-Hill, New York (1952)."
+  },
+  {
+   "module": "plasticity",
+   "key": "duemmer1998",
+   "text": "T. Duemmer, J. C. LaSalvia, G. Ravichandran and M. A. Meyers, 'Effect of strain rate on plastic flow and failure in polycrystalline tungsten', Acta Mater. 46 (1998) 6267-6290."
+  },
+  {
+   "module": "plasticity",
+   "key": "wei2006",
+   "text": "Q. Wei, T. Jiao, K. T. Ramesh, E. Ma et al., 'Mechanical behavior and dynamic failure of high-strength ultrafine grained tungsten under uniaxial compression', Acta Mater. 54 (2006) 77-87."
+  },
+  {
+   "module": "plasticity",
+   "key": "chen1996",
+   "text": "S. R. Chen and G. T. Gray III, 'Constitutive behavior of tantalum and tantalum-tungsten alloys', Metall. Mater. Trans. A 27 (1996) 2994-3006."
+  },
+  {
+   "module": "plasticity",
+   "key": "hill1950",
+   "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950)."
+  },
+  {
+   "module": "plasticity",
+   "key": "tabor1951",
+   "text": "D. Tabor, The Hardness of Metals, Clarendon Press, Oxford (1951)."
+  },
+  {
+   "module": "plasticity",
+   "key": "hosford2011",
+   "text": "W. F. Hosford and R. M. Caddell, Metal Forming: Mechanics and Metallurgy, 4th ed., Cambridge University Press (2011)."
+  },
+  {
+   "module": "plasticity",
+   "key": "carslaw1959",
+   "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959)."
+  },
+  {
+   "module": "plasticity",
+   "key": "psyk2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "plasticity",
+   "key": "lassner1999",
+   "text": "E. Lassner and W.-D. Schubert, Tungsten: Properties, Chemistry, Technology of the Element, Alloys, and Chemical Compounds, Kluwer Academic/Plenum, New York (1999)."
+  },
+  {
+   "module": "plasticity",
+   "key": "asm14a",
+   "text": "ASM Handbook Vol. 14A, Metalworking: Bulk Forming, ASM International, Materials Park OH (2005): forging of refractory metals."
+  },
+  {
+   "module": "plasticity",
+   "key": "astm_e8",
+   "text": "ASTM E8/E8M, Standard Test Methods for Tension Testing of Metallic Materials, ASTM International: 'room temperature' is 10-38 C."
+  },
+  {
+   "module": "microstructure",
+   "key": "taylor1934",
+   "text": "G. I. Taylor, 'The mechanism of plastic deformation of crystals. Part I. Theoretical', Proc. R. Soc. Lond. A 145 (1934) 362-387 (flow stress proportional to the square root of the dislocation density)."
+  },
+  {
+   "module": "microstructure",
+   "key": "taylor1938",
+   "text": "G. I. Taylor, 'Plastic strain in metals', J. Inst. Metals 62 (1938) 307-324 (Taylor factor M = 3.06 of a random fcc polycrystal)."
+  },
+  {
+   "module": "microstructure",
+   "key": "kocks1970",
+   "text": "U. F. Kocks, 'The relation between polycrystal deformation and single-crystal deformation', Metall. Trans. 1 (1970) 1121-1143 (Taylor factors, including bcc pencil glide)."
+  },
+  {
+   "module": "microstructure",
+   "key": "kocks_mecking2003",
+   "text": "U. F. Kocks and H. Mecking, 'Physics and phenomenology of strain hardening: the FCC case', Prog. Mater. Sci. 48 (2003) 171-273."
+  },
+  {
+   "module": "microstructure",
+   "key": "holt1970",
+   "text": "D. L. Holt, 'Dislocation cell formation in metals', J. Appl. Phys. 41 (1970) 3197-3201 (cell size proportional to the inverse square root of the dislocation density)."
+  },
+  {
+   "module": "microstructure",
+   "key": "hall1951",
+   "text": "E. O. Hall, 'The deformation and ageing of mild steel: III Discussion of results', Proc. Phys. Soc. B 64 (1951) 747-753."
+  },
+  {
+   "module": "microstructure",
+   "key": "petch1953",
+   "text": "N. J. Petch, 'The cleavage strength of polycrystals', J. Iron Steel Inst. 174 (1953) 25-28."
+  },
+  {
+   "module": "microstructure",
+   "key": "meyers2006",
+   "text": "M. A. Meyers, A. Mishra and D. J. Benson, 'Mechanical properties of nanocrystalline materials', Prog. Mater. Sci. 51 (2006) 427-556 (breakdown of Hall-Petch strengthening below about 10-20 nm)."
+  },
+  {
+   "module": "microstructure",
+   "key": "humphreys2004",
+   "text": "F. J. Humphreys and M. Hatherly, Recrystallization and Related Annealing Phenomena, 2nd ed., Elsevier, Oxford (2004): stored energy of cold work (ch. 2), JMAK kinetics and measured Avrami exponents (ch. 7), continuous recrystallisation at large strain (ch. 14)."
+  },
+  {
+   "module": "microstructure",
+   "key": "humphreys1999",
+   "text": "F. J. Humphreys, P. B. Prangnell, J. R. Bowen, A. Gholinia and C. Harris, 'Developing stable fine-grain microstructures by large strain deformation', Phil. Trans. R. Soc. Lond. A 357 (1999) 1663-1681 (high-angle boundary spacing reduced geometrically by strain until it reaches the subgrain size)."
+  },
+  {
+   "module": "microstructure",
+   "key": "hughes_hansen2000",
+   "text": "D. A. Hughes and N. Hansen, 'Microstructure and strength of nickel at large strains', Acta Mater. 48 (2000) 2985-3004."
+  },
+  {
+   "module": "microstructure",
+   "key": "valiev2000",
+   "text": "R. Z. Valiev, R. K. Islamgaliev and I. V. Alexandrov, 'Bulk nanostructured materials from severe plastic deformation', Prog. Mater. Sci. 45 (2000) 103-189."
+  },
+  {
+   "module": "microstructure",
+   "key": "pippan2010",
+   "text": "R. Pippan, S. Scheriau, A. Taylor, M. Hafok, A. Hohenwarter and A. Bachmaier, 'Saturation of fragmentation during severe plastic deformation', Annu. Rev. Mater. Res. 40 (2010) 319-343."
+  },
+  {
+   "module": "microstructure",
+   "key": "estrin_vinogradov2013",
+   "text": "Y. Estrin and A. Vinogradov, 'Extreme grain refinement by severe plastic deformation: a wealth of challenging science', Acta Mater. 61 (2013) 782-817."
+  },
+  {
+   "module": "microstructure",
+   "key": "avrami1939",
+   "text": "M. Avrami, 'Kinetics of phase change. I. General theory', J. Chem. Phys. 7 (1939) 1103-1112."
+  },
+  {
+   "module": "microstructure",
+   "key": "johnson_mehl1939",
+   "text": "W. A. Johnson and R. F. Mehl, 'Reaction kinetics in processes of nucleation and growth', Trans. AIME 135 (1939) 416-458."
+  },
+  {
+   "module": "microstructure",
+   "key": "dieter1986",
+   "text": "G. E. Dieter, Mechanical Metallurgy, 3rd ed., McGraw-Hill, New York (1986): recrystallisation temperature (complete in about one hour) of 0.3-0.5 T_m; cold, warm and hot working."
+  },
+  {
+   "module": "microstructure",
+   "key": "zener_hollomon1944",
+   "text": "C. Zener and J. H. Hollomon, 'Effect of strain rate upon plastic flow of steel', J. Appl. Phys. 15 (1944) 22-32 (temperature-compensated strain rate)."
+  },
+  {
+   "module": "microstructure",
+   "key": "derby1991",
+   "text": "B. Derby, 'The dependence of grain size on stress during dynamic recrystallisation', Acta Metall. Mater. 39 (1991) 955-962."
+  },
+  {
+   "module": "microstructure",
+   "key": "tabor1951",
+   "text": "D. Tabor, The Hardness of Metals, Clarendon Press, Oxford (1951) (H ~ 3 x flow stress at a representative strain of 8 %)."
+  },
+  {
+   "module": "microstructure",
+   "key": "culver1973",
+   "text": "R. S. Culver, 'Thermal instability strain in dynamic plastic deformation', in R. W. Rohde, B. M. Butcher, J. R. Holland and C. H. Karnes (eds.), Metallurgical Effects at High Strain Rates, Plenum, New York (1973)."
+  },
+  {
+   "module": "microstructure",
+   "key": "meyers1994",
+   "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994) (adiabatic shear bands and the fine recrystallised grains inside them)."
+  },
+  {
+   "module": "microstructure",
+   "key": "wei2006",
+   "text": "Q. Wei, T. Jiao, K. T. Ramesh, E. Ma et al., 'Mechanical behavior and dynamic failure of high-strength ultrafine grained tungsten under uniaxial compression', Acta Mater. 54 (2006) 77-87 (ultrafine-grained W made by severe plastic deformation, ~3 GPa dynamic strength)."
+  },
+  {
+   "module": "microstructure",
+   "key": "lassner1999",
+   "text": "E. Lassner and W.-D. Schubert, Tungsten: Properties, Chemistry, Technology of the Element, Alloys, and Chemical Compounds, Kluwer Academic/Plenum, New York (1999) (worked tungsten has a lower ductile-brittle transition temperature than recrystallised tungsten)."
+  },
+  {
+   "module": "microstructure",
+   "key": "knoepfel1970",
+   "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970) (skin heating B^2/(2 mu0 rho c_p))."
+  },
+  {
+   "module": "microstructure",
+   "key": "carslaw1959",
+   "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959) (cooling of an exponentially heated surface layer)."
+  },
+  {
+   "module": "shock",
+   "key": "marsh_1980",
+   "text": "Marsh, S. P. (ed.), LASL Shock Hugoniot Data, University of California Press, Berkeley (1980)."
+  },
+  {
+   "module": "shock",
+   "key": "mcqueen_1970",
+   "text": "McQueen, R. G., Marsh, S. P., Taylor, J. W., Fritz, J. N. & Carter, W. J., 'The equation of state of solids from shock wave studies', in Kinslow, R. (ed.), High-Velocity Impact Phenomena, Academic Press, New York (1970) 293-417."
+  },
+  {
+   "module": "shock",
+   "key": "meyers_1994",
+   "text": "Meyers, M. A., Dynamic Behavior of Materials, Wiley, New York (1994), chapters 4-7 (Rankine-Hugoniot relations, impedance matching, pulse duration)."
+  },
+  {
+   "module": "shock",
+   "key": "bancroft_1956",
+   "text": "Bancroft, D., Peterson, E. L. & Minshall, S., 'Polymorphism of iron at high pressure', J. Appl. Phys. 27 (1956) 291-298."
+  },
+  {
+   "module": "shock",
+   "key": "duvall_graham_1977",
+   "text": "Duvall, G. E. & Graham, R. A., 'Phase transitions under shock-wave loading', Rev. Mod. Phys. 49 (1977) 523-579."
+  },
+  {
+   "module": "shock",
+   "key": "zeldovich_raizer_1967",
+   "text": "Zel'dovich, Ya. B. & Raizer, Yu. P., Physics of Shock Waves and High-Temperature Hydrodynamic Phenomena, Academic Press, New York (1967), vol. II, ch. XI (shock compression of solids)."
+  },
+  {
+   "module": "shock",
+   "key": "psyk_2011",
+   "text": "Psyk, V., Risch, D., Kinsey, B. L., Tekkaya, A. E. & Kleiner, M., 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "welding",
+   "key": "crossland_1982",
+   "text": "B. Crossland, Explosive Welding of Metals and its Application, Clarendon Press, Oxford (1982)."
+  },
+  {
+   "module": "welding",
+   "key": "deribas_zakharenko_1974",
+   "text": "A. A. Deribas and I. D. Zakharenko, 'Surface effects with oblique collisions between metallic plates', Combust. Explos. Shock Waves 10 (1974) 358-367."
+  },
+  {
+   "module": "welding",
+   "key": "wittman_1973",
+   "text": "R. H. Wittman, 'The influence of collision parameters on the strength and microstructure of an explosion welded aluminium alloy', Proc. 2nd Int. Symp. on Use of Explosive Energy in Manufacturing Metallic Materials, Marianske Lazne (1973) 153-168."
+  },
+  {
+   "module": "welding",
+   "key": "de_rosset_2006",
+   "text": "W. S. de Rosset, 'Analysis of explosive bonding parameters', Mater. Manuf. Process. 21 (2006) 634-638."
+  },
+  {
+   "module": "welding",
+   "key": "cowan_1971",
+   "text": "G. R. Cowan, O. R. Bergmann and A. H. Holtzman, 'Mechanism of bond zone wave formation in explosion-clad metals', Metall. Trans. 2 (1971) 3145-3155."
+  },
+  {
+   "module": "welding",
+   "key": "walsh_1953",
+   "text": "J. M. Walsh, R. G. Shreffler and F. J. Willig, 'Limiting conditions for jet formation in high velocity collisions', J. Appl. Phys. 24 (1953) 349-359."
+  },
+  {
+   "module": "welding",
+   "key": "ribeiro_2014",
+   "text": "J. B. Ribeiro, R. Mendes and A. Loureiro, 'Review of the weldability window concept and equations for explosive welding', J. Phys.: Conf. Ser. 500 (2014) 052038."
+  },
+  {
+   "module": "welding",
+   "key": "lysak_kuzmin_2012",
+   "text": "V. I. Lysak and S. V. Kuzmin, 'Lower boundary in metal explosive welding. Evolution of ideas', J. Mater. Process. Technol. 212 (2012) 150-156."
+  },
+  {
+   "module": "welding",
+   "key": "findik_2011",
+   "text": "F. Findik, 'Recent developments in explosive welding', Mater. Des. 32 (2011) 1081-1093."
+  },
+  {
+   "module": "welding",
+   "key": "kapil_sharma_2015",
+   "text": "A. Kapil and A. Sharma, 'Magnetic pulse welding: an efficient and environmentally friendly multi-material joining technique', J. Clean. Prod. 100 (2015) 35-58."
+  },
+  {
+   "module": "welding",
+   "key": "psyk_2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "welding",
+   "key": "aizawa_2007",
+   "text": "T. Aizawa, M. Kashani and K. Okagawa, 'Application of magnetic pulse welding for aluminum alloys and SPCC steel sheet joints', Weld. J. 86 (2007) 119s-124s."
+  },
+  {
+   "module": "welding",
+   "key": "zhang_2011",
+   "text": "Y. Zhang, S. S. Babu, C. Prothe, M. Blakely, J. Kwasegroch, M. LaHa and G. S. Daehn, 'Application of high velocity impact welding at varied different length scales', J. Mater. Process. Technol. 211 (2011) 944-952."
+  },
+  {
+   "module": "welding",
+   "key": "zhang_2010",
+   "text": "Y. Zhang, S. S. Babu and G. S. Daehn, 'Interfacial ultrafine-grained structures on aluminum alloy 6061 joint and copper alloy 110 joint fabricated by magnetic pulse welding', J. Mater. Sci. 45 (2010) 4645-4651."
+  },
+  {
+   "module": "welding",
+   "key": "kore_2008",
+   "text": "S. D. Kore, P. P. Date and S. V. Kulkarni, 'Electromagnetic impact welding of aluminum to stainless steel sheets', J. Mater. Process. Technol. 208 (2008) 486-493."
+  },
+  {
+   "module": "welding",
+   "key": "kore_2009",
+   "text": "S. D. Kore, J. Imbert, M. J. Worswick and Y. Zhou, 'Electromagnetic impact welding of Mg to Al sheets', Sci. Technol. Weld. Join. 14 (2009) 549-553."
+  },
+  {
+   "module": "welding",
+   "key": "raoelison_2014",
+   "text": "R. N. Raoelison, D. Racine, Z. Zhang, N. Buiron, D. Marceau and M. Rachik, 'Magnetic pulse welding: interface of Al/Cu joint and investigation of intermetallic formation effect on the weld features', J. Manuf. Process. 16 (2014) 427-434."
+  },
+  {
+   "module": "welding",
+   "key": "kahraman_2005",
+   "text": "N. Kahraman and B. Gulenc, 'Microstructural and mechanical properties of Cu-Ti plates bonded through explosive welding process', J. Mater. Process. Technol. 169 (2005) 67-71."
+  },
+  {
+   "module": "welding",
+   "key": "brown_ashby_1980",
+   "text": "A. M. Brown and M. F. Ashby, 'Correlations for diffusion constants', Acta Metall. 28 (1980) 1085-1101."
+  },
+  {
+   "module": "welding",
+   "key": "iida_guthrie_1988",
+   "text": "T. Iida and R. I. L. Guthrie, The Physical Properties of Liquid Metals, Clarendon Press, Oxford (1988) (liquid-metal diffusivities of order 1e-9 m^2/s)."
+  },
+  {
+   "module": "welding",
+   "key": "carslaw_jaeger_1959",
+   "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959)."
+  },
+  {
+   "module": "welding",
+   "key": "meyers_1994",
+   "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994), ch. 17 (explosive welding, jetting, wave formation)."
+  },
+  {
+   "module": "welding",
+   "key": "herlach_miura_2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003) (single-turn coils: megagauss fields with microsecond rise times)."
+  },
+  {
+   "module": "synthesis",
+   "key": "kennedy_1976",
+   "text": "Kennedy, C. S. & Kennedy, G. C., 'The equilibrium boundary between graphite and diamond', J. Geophys. Res. 81 (1976) 2467-2470."
+  },
+  {
+   "module": "synthesis",
+   "key": "berman_simon_1955",
+   "text": "Berman, R. & Simon, F., 'On the graphite-diamond equilibrium', Z. Elektrochem. 59 (1955) 333-338."
+  },
+  {
+   "module": "synthesis",
+   "key": "solozhenko_1999",
+   "text": "Solozhenko, V. L., Turkevich, V. Z. & Holzapfel, W. B., 'Refined phase diagram of boron nitride', J. Phys. Chem. B 103 (1999) 2903-2905."
+  },
+  {
+   "module": "synthesis",
+   "key": "corrigan_bundy_1975",
+   "text": "Corrigan, F. R. & Bundy, F. P., 'Direct transitions among the allotropic forms of boron nitride at high pressures and temperatures', J. Chem. Phys. 63 (1975) 3812-3820."
+  },
+  {
+   "module": "synthesis",
+   "key": "bundy_1955",
+   "text": "Bundy, F. P., Hall, H. T., Strong, H. M. & Wentorf, R. H., 'Man-made diamonds', Nature 176 (1955) 51-55."
+  },
+  {
+   "module": "synthesis",
+   "key": "strong_wentorf_1972",
+   "text": "Strong, H. M. & Wentorf, R. H., 'The growth of large diamond crystals', Naturwissenschaften 59 (1972) 1-7."
+  },
+  {
+   "module": "synthesis",
+   "key": "hall_1970",
+   "text": "Hall, H. T., 'Sintered diamond: a synthetic carbonado', Science 169 (1970) 868-869."
+  },
+  {
+   "module": "synthesis",
+   "key": "irifune_2003",
+   "text": "Irifune, T., Kurio, A., Sakamoto, S., Inoue, T. & Sumiya, H., 'Ultrahard polycrystalline diamond from graphite', Nature 421 (2003) 599-600."
+  },
+  {
+   "module": "synthesis",
+   "key": "irifune_2019",
+   "text": "Irifune, T. et al., C. R. Geoscience (2019), doi:10.1016/j.crte.2018.07.005: nano-polycrystalline diamond rods up to 1 cm in diameter and length; routine 9 mm x 8 mm rods at 15 GPa and 2600 K for 20 min."
+  },
+  {
+   "module": "synthesis",
+   "key": "wentorf_1957",
+   "text": "Wentorf, R. H., 'Cubic form of boron nitride', J. Chem. Phys. 26 (1957) 956."
+  },
+  {
+   "module": "synthesis",
+   "key": "bundy_wentorf_1963",
+   "text": "Bundy, F. P. & Wentorf, R. H., 'Direct transformation of hexagonal boron nitride to denser forms', J. Chem. Phys. 38 (1963) 1144-1149."
+  },
+  {
+   "module": "synthesis",
+   "key": "hanneman_1967",
+   "text": "Hanneman, R. E., Strong, H. M. & Bundy, F. P., 'Hexagonal diamonds in meteorites: implications', Science 155 (1967) 995-997."
+  },
+  {
+   "module": "synthesis",
+   "key": "erskine_nellis_1991",
+   "text": "Erskine, D. J. & Nellis, W. J., 'Shock-induced martensitic phase transformation of oriented graphite to diamond', Nature 349 (1991) 317-319."
+  },
+  {
+   "module": "synthesis",
+   "key": "decarli_jamieson_1961",
+   "text": "DeCarli, P. S. & Jamieson, J. C., 'Formation of diamond by explosive shock', Science 133 (1961) 1821-1822."
+  },
+  {
+   "module": "synthesis",
+   "key": "kraus_2016",
+   "text": "Kraus, D. et al., 'Nanosecond formation of diamond and lonsdaleite by shock compression of graphite', Nat. Commun. 7 (2016) 10970."
+  },
+  {
+   "module": "synthesis",
+   "key": "laniel_2024",
+   "text": "Laniel, D. et al., Adv. Mater. 36 (2024) 2308030: carbon nitrides synthesised at 72-134 GPa and ~2500 K in laser-heated diamond anvil cells, recoverable to ambient."
+  },
+  {
+   "module": "synthesis",
+   "key": "drozdov_2015",
+   "text": "Drozdov, A. P., Eremets, M. I., Troyan, I. A., Ksenofontov, V. & Shylin, S. I., 'Conventional superconductivity at 203 kelvin at high pressures in the sulfur hydride system', Nature 525 (2015) 73-76."
+  },
+  {
+   "module": "synthesis",
+   "key": "drozdov_2019",
+   "text": "Drozdov, A. P. et al., 'Superconductivity at 250 K in lanthanum hydride under high pressures', Nature 569 (2019) 528-531."
+  },
+  {
+   "module": "synthesis",
+   "key": "balasubramanian_2009",
+   "text": "Balasubramanian, G. et al., 'Ultralong spin coherence time in isotopically engineered diamond', Nat. Mater. 8 (2009) 383-387."
+  },
+  {
+   "module": "synthesis",
+   "key": "static_press_ladder",
+   "text": "magform.benchmarks.STATIC_PRESS_LADDER: Hall, Rev. Sci. Instrum. 31 (1960) 125; Ito, Treatise on Geophysics 2 (2007); Yamazaki et al., Phys. Earth Planet. Inter. 228 (2014) 262; Dubrovinsky et al., Nat. Commun. 3 (2012) 1163."
+  },
+  {
+   "module": "porosity",
+   "key": "torre_1948",
+   "text": "C. Torre, 'Theorie und Verhalten der zusammengepressten Pulver', Berg- und Huettenmaennische Monatshefte 93 (1948) 62-67."
+  },
+  {
+   "module": "porosity",
+   "key": "carroll_holt_1972",
+   "text": "M. M. Carroll and A. C. Holt, 'Static and dynamic pore-collapse relations for ductile porous materials', J. Appl. Phys. 43 (1972) 1626-1636."
+  },
+  {
+   "module": "porosity",
+   "key": "gurson_1977",
+   "text": "A. L. Gurson, 'Continuum theory of ductile rupture by void nucleation and growth: Part I - Yield criteria and flow rules for porous ductile media', J. Eng. Mater. Technol. 99 (1977) 2-15."
+  },
+  {
+   "module": "porosity",
+   "key": "hill_1950",
+   "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950), ch. V (expansion of a thick spherical shell)."
+  },
+  {
+   "module": "porosity",
+   "key": "rayleigh_1917",
+   "text": "Lord Rayleigh, 'On the pressure developed in a liquid during the collapse of a spherical cavity', Philos. Mag. 34 (1917) 94-98."
+  },
+  {
+   "module": "porosity",
+   "key": "helle_1985",
+   "text": "A. S. Helle, K. E. Easterling and M. F. Ashby, 'Hot-isostatic pressing diagrams: new developments', Acta Metall. 33 (1985) 2163-2174."
+  },
+  {
+   "module": "porosity",
+   "key": "arzt_1983",
+   "text": "E. Arzt, M. F. Ashby and K. E. Easterling, 'Practical applications of hot-isostatic pressing diagrams: four case studies', Metall. Trans. A 14 (1983) 211-221."
+  },
+  {
+   "module": "porosity",
+   "key": "atkinson_davies_2000",
+   "text": "H. V. Atkinson and S. Davies, 'Fundamental aspects of hot isostatic pressing: an overview', Metall. Mater. Trans. A 31 (2000) 2981-3000."
+  },
+  {
+   "module": "porosity",
+   "key": "derby_wallach_1982",
+   "text": "B. Derby and E. R. Wallach, 'Theoretical model for diffusion bonding', Metal Science 16 (1982) 49-56."
+  },
+  {
+   "module": "porosity",
+   "key": "brown_ashby_1980",
+   "text": "A. M. Brown and M. F. Ashby, 'Correlations for diffusion constants', Acta Metall. 28 (1980) 1085-1101."
+  },
+  {
+   "module": "porosity",
+   "key": "appel_2011",
+   "text": "F. Appel, J. D. H. Paul and M. Oehring, Gamma Titanium Aluminide Alloys: Science and Technology, Wiley-VCH, Weinheim (2011)."
+  },
+  {
+   "module": "porosity",
+   "key": "astm_f2924",
+   "text": "ASTM F2924, Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 895-955 C for 180 +/- 60 min."
+  },
+  {
+   "module": "porosity",
+   "key": "astm_f3055",
+   "text": "ASTM F3055, Standard Specification for Additive Manufacturing Nickel Alloy (UNS N07718) with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 1120-1185 C for 240 +/- 60 min."
+  },
+  {
+   "module": "porosity",
+   "key": "bridgman_1952",
+   "text": "P. W. Bridgman, Studies in Large Plastic Flow and Fracture with Special Emphasis on the Effects of Hydrostatic Pressure, McGraw-Hill, New York (1952)."
+  },
+  {
+   "module": "porosity",
+   "key": "chelluri_barber_1999",
+   "text": "B. Chelluri and J. P. Barber, 'Full-density, net-shape powder consolidation using dynamic magnetic pulse pressures', JOM 51(7) (1999) 36-37."
+  },
+  {
+   "module": "porosity",
+   "key": "chelluri_knoth_2010",
+   "text": "B. Chelluri and E. Knoth, 4th International Conference on High Speed Forming (2010), hdl.handle.net/2003/27201: pulse pressures in the GPa range applied for under a millisecond; green densities above 95 % in most steels."
+  },
+  {
+   "module": "porosity",
+   "key": "kaygorodov_2006",
+   "text": "A. S. Kaygorodov et al. (2006), koreascience.kr/article/CFKO200617317788902: radial magnetic pulsed press, pulses up to 0.3 GPa lasting about 100 microseconds."
+  },
+  {
+   "module": "porosity",
+   "key": "ge_ep2641984",
+   "text": "General Electric Co., European patent application EP 2 641 984 A2: existing practice for cast Ti-48Al-2Cr-2Nb is hot isostatic pressing at 25 ksi (about 172 MPa) or more and about 1185 C for about 3 h."
+  },
+  {
+   "module": "porosity",
+   "key": "yu_2021",
+   "text": "W. Yu et al., Metals 11 (2021) 1156, doi:10.3390/met11081156: 1260 C / 172 MPa / 4 h described as the most commonly performed HIP cycle for cast TiAl (as summarised; full text not checked)."
+  },
+  {
+   "module": "porosity",
+   "key": "psyk_2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829 (driver sheets for poorly conducting workpieces)."
+  },
+  {
+   "module": "containment",
+   "key": "lame_1852",
+   "text": "G. Lame, Lecons sur la theorie mathematique de l'elasticite des corps solides, Bachelier, Paris (1852)."
+  },
+  {
+   "module": "containment",
+   "key": "timoshenko_1970",
+   "text": "S. P. Timoshenko & J. N. Goodier, Theory of Elasticity, 3rd ed., McGraw-Hill, New York (1970), sec. 33 (thick-walled cylinder)."
+  },
+  {
+   "module": "containment",
+   "key": "hill_1950",
+   "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950), ch. V (plastic expansion of a thick-walled tube; autofrettage)."
+  },
+  {
+   "module": "containment",
+   "key": "chakrabarty_2006",
+   "text": "J. Chakrabarty, Theory of Plasticity, 3rd ed., Elsevier Butterworth-Heinemann, Oxford (2006): thick-walled tubes, residual stresses and shakedown."
+  },
+  {
+   "module": "containment",
+   "key": "harvey_1985",
+   "text": "J. F. Harvey, Theory and Design of Pressure Vessels, Van Nostrand Reinhold, New York (1985)."
+  },
+  {
+   "module": "containment",
+   "key": "asme_viii_3",
+   "text": "ASME Boiler and Pressure Vessel Code, Section VIII, Division 3: Alternative Rules for Construction of High Pressure Vessels, ASME, New York (2023)."
+  },
+  {
+   "module": "containment",
+   "key": "lange_1985",
+   "text": "K. Lange (ed.), Handbook of Metal Forming, McGraw-Hill, New York (1985): shrink-ring (compound) cold-forging dies, contact pressures up to ~2.5 GPa."
+  },
+  {
+   "module": "containment",
+   "key": "daniel_ishai_2006",
+   "text": "I. M. Daniel & O. Ishai, Engineering Mechanics of Composite Materials, 2nd ed., Oxford University Press (2006): transverse compressive strength of unidirectional carbon/epoxy ~0.15-0.3 GPa."
+  },
+  {
+   "module": "containment",
+   "key": "graff_1975",
+   "text": "K. F. Graff, Wave Motion in Elastic Solids, Ohio State University Press (1975): breathing mode of a ring, period 2 pi a / c."
+  },
+  {
+   "module": "containment",
+   "key": "biggs_1964",
+   "text": "J. M. Biggs, Introduction to Structural Dynamics, McGraw-Hill, New York (1964): dynamic load factors for ramp and step loads."
+  },
+  {
+   "module": "containment",
+   "key": "marshall_wang_2004",
+   "text": "R. A. Marshall & Y. Wang, Railguns: Their Science and Technology, China Machine Press, Beijing (2004): F = L'I^2/2, practical L' = 0.4-0.6 uH/m."
+  },
+  {
+   "module": "containment",
+   "key": "kolm_mongeau_1984",
+   "text": "H. Kolm & P. Mongeau, 'Basic principles of coaxial launch technology', IEEE Trans. Magn. 20 (1984) 227-230."
+  },
+  {
+   "module": "containment",
+   "key": "mcnab_2003",
+   "text": "I. R. McNab, 'Launch to space with an electromagnetic railgun', IEEE Trans. Magn. 39 (2003) 295-304."
+  },
+  {
+   "module": "containment",
+   "key": "oneill_1974",
+   "text": "G. K. O'Neill, 'The colonization of space', Physics Today 27(9) (1974) 32-40 (lunar mass driver)."
+  },
+  {
+   "module": "containment",
+   "key": "moon_1984",
+   "text": "F. C. Moon, Magneto-Solid Mechanics, Wiley, New York (1984)."
+  },
+  {
+   "module": "containment",
+   "key": "freidberg_2007",
+   "text": "J. P. Freidberg, Plasma Physics and Fusion Energy, Cambridge University Press (2007): plasma beta and magnetic pressure."
+  },
+  {
+   "module": "containment",
+   "key": "mitchell_2008",
+   "text": "N. Mitchell et al., 'The ITER magnet system', IEEE Trans. Appl. Supercond. 18 (2008) 435-440."
+  },
+  {
+   "module": "containment",
+   "key": "creely_2020",
+   "text": "A. J. Creely et al., 'Overview of the SPARC tokamak', J. Plasma Phys. 86 (2020) 865860502."
+  },
+  {
+   "module": "containment",
+   "key": "nhmfl_100t",
+   "text": "NHMFL Pulsed Field Facility, Los Alamos, 100.75 T multi-shot magnet (22 March 2012); about 10 mm bore as operated (magform.benchmarks.FIELD_LADDER)."
+  },
+  {
+   "module": "press",
+   "key": "herlach2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003): pulsed, single-turn and flux-compression magnets."
+  },
+  {
+   "module": "press",
+   "key": "psyk2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+  },
+  {
+   "module": "press",
+   "key": "miller2003",
+   "text": "J. R. Miller, 'The NHMFL 45-T hybrid magnet system: past, present, and future', IEEE Trans. Appl. Supercond. 13 (2003) 1385-1390 (11.5 T superconducting outsert, 616 mm bore)."
+  },
+  {
+   "module": "press",
+   "key": "hahn2019",
+   "text": "S. Hahn et al., '45.5-tesla direct-current magnetic field generated with a high-temperature superconducting magnet', Nature 570 (2019) 496-499."
+  },
+  {
+   "module": "press",
+   "key": "maglab2025",
+   "text": "National High Magnetic Field Laboratory, news release of 11 Sep 2025 and research highlight of Jan 2026: REBCO test coil 'Little Big Coil 9', 48.7 T inside a 31 T resistive magnet (August 2025)."
+  },
+  {
+   "module": "press",
+   "key": "wilson1983",
+   "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983): flux conservation in coupled windings; AC loss and stability."
+  },
+  {
+   "module": "press",
+   "key": "iwasa2009",
+   "text": "Y. Iwasa, Case Studies in Superconducting Magnets, 2nd ed., Springer, New York (2009)."
+  },
+  {
+   "module": "press",
+   "key": "montgomery1969",
+   "text": "D. B. Montgomery, Solenoid Magnet Design, Wiley-Interscience, New York (1969)."
+  },
+  {
+   "module": "press",
+   "key": "knoepfel2000",
+   "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000)."
+  },
+  {
+   "module": "press",
+   "key": "benchmarks",
+   "text": "magform.benchmarks: cited record ladders for field, energy, current, voltage and power."
+  },
+  {
+   "module": "magnetar",
+   "key": "lai2001",
+   "text": "D. Lai, 'Matter in strong magnetic fields', Rev. Mod. Phys. 73 (2001) 629-662."
+  },
+  {
+   "module": "magnetar",
+   "key": "harding_lai2006",
+   "text": "A. K. Harding and D. Lai, 'Physics of strongly magnetized neutron stars', Rep. Prog. Phys. 69 (2006) 2631-2708."
+  },
+  {
+   "module": "magnetar",
+   "key": "duncan_thompson1992",
+   "text": "R. C. Duncan and C. Thompson, 'Formation of very strongly magnetized neutron stars: implications for gamma-ray bursts', Astrophys. J. 392 (1992) L9-L13."
+  },
+  {
+   "module": "magnetar",
+   "key": "kaspi_beloborodov2017",
+   "text": "V. M. Kaspi and A. M. Beloborodov, 'Magnetars', Annu. Rev. Astron. Astrophys. 55 (2017) 261-301."
+  },
+  {
+   "module": "magnetar",
+   "key": "schwinger1951",
+   "text": "J. Schwinger, 'On gauge invariance and vacuum polarization', Phys. Rev. 82 (1951) 664-679."
+  },
+  {
+   "module": "magnetar",
+   "key": "heisenberg_euler1936",
+   "text": "W. Heisenberg and H. Euler, 'Folgerungen aus der Diracschen Theorie des Positrons', Z. Phys. 98 (1936) 714-732."
+  },
+  {
+   "module": "magnetar",
+   "key": "chandrasekhar1939",
+   "text": "S. Chandrasekhar, An Introduction to the Study of Stellar Structure, University of Chicago Press (1939) (degenerate electron gas)."
+  },
+  {
+   "module": "magnetar",
+   "key": "shapiro_teukolsky1983",
+   "text": "S. L. Shapiro and S. A. Teukolsky, Black Holes, White Dwarfs, and Neutron Stars: The Physics of Compact Objects, Wiley, New York (1983), ch. 2 (cold equation of state below neutron drip: degenerate electrons, lattice correction, inverse beta decay)."
+  },
+  {
+   "module": "magnetar",
+   "key": "bps1971",
+   "text": "G. Baym, C. Pethick and P. Sutherland, 'The ground state of matter at high densities: equation of state and stellar models', Astrophys. J. 170 (1971) 299-317."
+  },
+  {
+   "module": "magnetar",
+   "key": "chandrasekhar_fermi1953",
+   "text": "S. Chandrasekhar and E. Fermi, 'Problems of gravitational stability in the presence of a magnetic field', Astrophys. J. 118 (1953) 116-141."
+  },
+  {
+   "module": "magnetar",
+   "key": "tatarakis2002",
+   "text": "M. Tatarakis et al., 'Measuring huge magnetic fields', Nature 415 (2002) 280."
+  },
+  {
+   "module": "magnetar",
+   "key": "wagner2004",
+   "text": "U. Wagner et al., 'Laboratory measurements of 0.7 GG magnetic fields generated during high-intensity laser interactions with dense plasmas', Phys. Rev. E 70 (2004) 026401."
+  },
+  {
+   "module": "magnetar",
+   "key": "skokov2009",
+   "text": "V. Skokov, A. Yu. Illarionov and V. Toneev, 'Estimate of the magnetic field strength in heavy-ion collisions', Int. J. Mod. Phys. A 24 (2009) 5925-5932."
+  },
+  {
+   "module": "magnetar",
+   "key": "yoon2021",
+   "text": "J. W. Yoon et al., 'Realization of laser intensity over 10^23 W/cm^2', Optica 8 (2021) 630-635."
+  },
+  {
+   "module": "magnetar",
+   "key": "hurley2005",
+   "text": "K. Hurley et al., 'An exceptionally bright flare from SGR 1806-20 and the origins of short-duration gamma-ray bursts', Nature 434 (2005) 1098-1103."
+  },
+  {
+   "module": "magnetar",
+   "key": "horowitz_kadau2009",
+   "text": "C. J. Horowitz and K. Kadau, 'Breaking strain of neutron star crust and gravitational waves', Phys. Rev. Lett. 102 (2009) 191102."
+  },
+  {
+   "module": "magnetar",
+   "key": "berry_geim1997",
+   "text": "M. V. Berry and A. K. Geim, 'Of flying frogs and levitrons', Eur. J. Phys. 18 (1997) 307-313."
+  },
+  {
+   "module": "magnetar",
+   "key": "icnirp2009",
+   "text": "International Commission on Non-Ionizing Radiation Protection, 'Guidelines on limits of exposure to static magnetic fields', Health Phys. 96 (2009) 504-514."
+  },
+  {
+   "module": "magnetar",
+   "key": "fowler1960",
+   "text": "C. M. Fowler, W. B. Garn and R. S. Caird, 'Production of very high magnetic fields by implosion', J. Appl. Phys. 31 (1960) 588-594."
+  },
+  {
+   "module": "magnetar",
+   "key": "nakamura2018",
+   "text": "D. Nakamura, A. Ikeda, H. Sawabe, Y. H. Matsuda and S. Takeyama, 'Record indoor magnetic field of 1200 T generated by electromagnetic flux-compression', Rev. Sci. Instrum. 89 (2018) 095106."
+  },
+  {
+   "module": "magnetar",
+   "key": "herlach1986",
+   "text": "F. Herlach, Europhysics News 17(2) (1986) 29: under adiabatic skin-effect conditions copper boils near 150 T."
+  },
+  {
+   "module": "magnetar",
+   "key": "jackson1999",
+   "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.6 (magnetic dipole), 5.10 (uniformly magnetised sphere) and ch. 14 (synchrotron radiation)."
+  },
+  {
+   "module": "magnetar",
+   "key": "moon1982",
+   "text": "F. C. Moon, 'The virial theorem and scaling laws for superconducting magnet systems', J. Appl. Phys. 53 (1982) 9112-9121."
+  },
+  {
+   "module": "magnetar",
+   "key": "field_ladder",
+   "text": "magform.benchmarks.FIELD_LADDER (laboratory records up to 2800 T, each with its citation)."
+  },
+  {
+   "module": "claims",
+   "key": "concept_note",
+   "text": "The original concept note, archived verbatim at docs/archive/original-README.md."
+  },
+  {
+   "module": "claims",
+   "key": "kittel2005",
+   "text": "C. Kittel, Introduction to Solid State Physics, 8th ed., Wiley, Hoboken (2005), table of cohesive energies (Cu 3.49, W 8.90, Fe 4.28, Al 3.39 eV per atom)."
+  },
+  {
+   "module": "claims",
+   "key": "models",
+   "text": "Every number in the ledger comes from the magform module named in ClaimResult.models; the citations for each model are in that module's REFERENCES."
+  }
+ ],
+ "modules": [
+  {
+   "module": "magnetics",
+   "count": 10,
+   "entries": [
+    {
+     "key": "jackson1999",
+     "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999): sec. 5.6 (magnetic dipole field) and sec. 6.7 (Maxwell stress tensor)."
+    },
+    {
+     "key": "knoepfel2000",
+     "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000)."
+    },
+    {
+     "key": "psyk2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+    },
+    {
+     "key": "montgomery1969",
+     "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+    },
+    {
+     "key": "wilson1983",
+     "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983)."
+    },
+    {
+     "key": "iwasa2009",
+     "text": "Y. Iwasa, Case Studies in Superconducting Magnets: Design and Operational Issues, 2nd ed., Springer, New York (2009)."
+    },
+    {
+     "key": "wheeler1928",
+     "text": "H. A. Wheeler, 'Simple inductance formulas for radio coils', Proc. IRE 16 (1928) 1398-1400."
+    },
+    {
+     "key": "moon1982",
+     "text": "F. C. Moon, 'The virial theorem and scaling laws for superconducting magnet systems', J. Appl. Phys. 53 (1982) 9112-9121."
+    },
+    {
+     "key": "moon1984",
+     "text": "F. C. Moon, Magneto-Solid Mechanics, Wiley, New York (1984)."
+    },
+    {
+     "key": "herlach2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003)."
+    }
+   ]
+  },
+  {
+   "module": "fieldmap",
+   "count": 8,
+   "entries": [
+    {
+     "key": "smythe1968",
+     "text": "W. R. Smythe, Static and Dynamic Electricity, 3rd ed., McGraw-Hill, New York (1968), sec. 7.10 (vector potential and field of a circular loop)."
+    },
+    {
+     "key": "jackson1999",
+     "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.5 (circular current loop) and sec. 5.13 (perfectly conducting sphere in a uniform field: surface field (3/2) B0 sin(theta))."
+    },
+    {
+     "key": "abramowitz1964",
+     "text": "M. Abramowitz and I. A. Stegun (eds.), Handbook of Mathematical Functions, National Bureau of Standards, Washington (1964), sec. 17.6 (elliptic integrals by the arithmetic-geometric mean)."
+    },
+    {
+     "key": "montgomery1969",
+     "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+    },
+    {
+     "key": "grover1946",
+     "text": "F. W. Grover, Inductance Calculations: Working Formulas and Tables, Van Nostrand, New York (1946) (flux of a circular filament near itself; geometric mean distances)."
+    },
+    {
+     "key": "harrington1968",
+     "text": "R. F. Harrington, Field Computation by Moment Methods, Macmillan, New York (1968)."
+    },
+    {
+     "key": "knoepfel2000",
+     "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000) (flux exclusion by conductors, field concentration at edges)."
+    },
+    {
+     "key": "wilson1983",
+     "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983) (peak and radial fields in solenoid windings)."
+    }
+   ]
+  },
+  {
+   "module": "conductor",
+   "count": 21,
+   "entries": [
+    {
+     "key": "tsuchiya2021",
+     "text": "K. Tsuchiya et al., 'Superconducting properties of commercial REBCO-coated conductors with artificial pinning centers', Supercond. Sci. Technol. 34 (2021) 105005."
+    },
+    {
+     "key": "braccini2011",
+     "text": "V. Braccini et al., 'Properties of recent IBAD-MOCVD coated conductors relevant to their high field, low temperature magnet use', Supercond. Sci. Technol. 24 (2011) 035001."
+    },
+    {
+     "key": "xu2014",
+     "text": "A. Xu, J. J. Jaroszynski, F. Kametani, Z. Chen, D. C. Larbalestier et al., 'Strongly enhanced vortex pinning from 4 to 77 K in magnetic fields up to 31 T in 15 mol.% Zr-added (Gd, Y)-Ba-Cu-O superconducting tapes', APL Mater. 2 (2014) 046111."
+    },
+    {
+     "key": "senatore2016",
+     "text": "C. Senatore, C. Barth, M. Bonura, M. Kulich and G. Mondonico, 'Field and temperature scaling of the critical current density in commercial REBCO coated conductors', Supercond. Sci. Technol. 29 (2016) 014002."
+    },
+    {
+     "key": "barth2015",
+     "text": "C. Barth, G. Mondonico and C. Senatore, 'Electro-mechanical properties of REBCO coated conductors from various industrial manufacturers at 77 K, self-field and 4.2 K, 19 T', Supercond. Sci. Technol. 28 (2015) 045011."
+    },
+    {
+     "key": "hahn2019",
+     "text": "S. Hahn et al., '45.5-tesla direct-current magnetic field generated with a high-temperature superconducting magnet', Nature 570 (2019) 496-499."
+    },
+    {
+     "key": "maglab2025",
+     "text": "National High Magnetic Field Laboratory, news release of 11 Sep 2025 and research highlight of Jan 2026: REBCO test coil 'Little Big Coil 9', 48.7 T inside a 31 T resistive magnet (August 2025)."
+    },
+    {
+     "key": "kim1962",
+     "text": "Y. B. Kim, C. F. Hempstead and A. R. Strnad, 'Critical persistent currents in hard superconductors', Phys. Rev. Lett. 9 (1962) 306-309."
+    },
+    {
+     "key": "bean1964",
+     "text": "C. P. Bean, 'Magnetization of high-field superconductors', Rev. Mod. Phys. 36 (1964) 31-39."
+    },
+    {
+     "key": "norris1970",
+     "text": "W. T. Norris, 'Calculation of hysteresis losses in hard superconductors carrying ac: isolated conductors and edges of thin sheets', J. Phys. D: Appl. Phys. 3 (1970) 489-507."
+    },
+    {
+     "key": "brandt1993",
+     "text": "E. H. Brandt and M. Indenbom, 'Type-II-superconductor strip with current in a perpendicular magnetic field', Phys. Rev. B 48 (1993) 12893-12906."
+    },
+    {
+     "key": "wilson1983",
+     "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983), ch. 8 (AC losses)."
+    },
+    {
+     "key": "iwasa2009",
+     "text": "Y. Iwasa, Case Studies in Superconducting Magnets: Design and Operational Issues, 2nd ed., Springer, New York (2009) (stability, enthalpy margin, current sharing)."
+    },
+    {
+     "key": "ekin2006",
+     "text": "J. W. Ekin, Experimental Techniques for Low-Temperature Measurements, Oxford University Press (2006), appendix A6 (specific heat of technical materials)."
+    },
+    {
+     "key": "nist_cu",
+     "text": "NIST Cryogenic Technologies Group, Material Properties: OFHC Copper (UNS C10100/C10200), specific heat and resistivity fits (trc.nist.gov/cryogenics)."
+    },
+    {
+     "key": "lu2008",
+     "text": "J. Lu, E. S. Choi and H. D. Zhou, 'Physical properties of Hastelloy C-276 at cryogenic temperatures', J. Appl. Phys. 103 (2008) 064908."
+    },
+    {
+     "key": "toray",
+     "text": "Toray Industries, TORAYCA M60J and T1100G technical data sheets."
+    },
+    {
+     "key": "lee2008",
+     "text": "C. Lee, X. Wei, J. W. Kysar and J. Hone, 'Measurement of the elastic properties and intrinsic strength of monolayer graphene', Science 321 (2008) 385-388."
+    },
+    {
+     "key": "lee2022",
+     "text": "D. Lee et al., 'Ultrahigh strength, modulus, and conductivity of graphitic fibers by macromolecular coalescence', Sci. Adv. 8 (2022) eabn0939."
+    },
+    {
+     "key": "knoepfel2000",
+     "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000) (skin depth, eddy-current losses)."
+    },
+    {
+     "key": "herlach2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003) (all >60 T non-destructive magnets are resistive)."
+    }
+   ]
+  },
+  {
+   "module": "pulse",
+   "count": 10,
+   "entries": [
+    {
+     "key": "knoepfel1970",
+     "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970): capacitor-bank discharge circuits, inductive energy storage and transfer, action integral of conductors, explosive flux compression."
+    },
+    {
+     "key": "knoepfel2000",
+     "text": "H. E. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000): field diffusion, skin heating, energy transfer between circuits."
+    },
+    {
+     "key": "herlach_miura2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003): pulsed-magnet power supplies, coil heating from a liquid-nitrogen start, destructive single-turn coils."
+    },
+    {
+     "key": "psyk2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829: capacitor-bank forming machines and their damped-sine discharge."
+    },
+    {
+     "key": "montgomery1969",
+     "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969)."
+    },
+    {
+     "key": "wheeler1928",
+     "text": "H. A. Wheeler, 'Simple inductance formulas for radio coils', Proc. IRE 16 (1928) 1398-1400."
+    },
+    {
+     "key": "woodson_melcher1968",
+     "text": "H. H. Woodson and J. R. Melcher, Electromechanical Dynamics, Part I: Discrete Systems, Wiley, New York (1968): homopolar machines, V = k omega and torque = k I."
+    },
+    {
+     "key": "timoshenko_goodier1970",
+     "text": "S. P. Timoshenko and J. N. Goodier, Theory of Elasticity, 3rd ed., McGraw-Hill, New York (1970): stresses in rotating disks."
+    },
+    {
+     "key": "fowler1960",
+     "text": "C. M. Fowler, W. B. Garn and R. S. Caird, 'Production of very high magnetic fields by implosion', J. Appl. Phys. 31 (1960) 588-594: explosive flux compression."
+    },
+    {
+     "key": "benchmark_ladders",
+     "text": "magform.benchmarks ENERGY_LADDER, CURRENT_LADDER and the pulsed voltage/power thresholds: HZDR 50 MJ capacitor bank, UT-CEM Balcones 60 MJ homopolar supply, ANU 500 MJ homopolar generator, LANL 1.4 GW motor-generator, Sandia Z (citations there)."
+    }
+   ]
+  },
+  {
+   "module": "eddy",
+   "count": 13,
+   "entries": [
+    {
+     "key": "psyk_2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, Electromagnetic forming - A review, J. Mater. Process. Technol. 211 (2011) 787-829."
+    },
+    {
+     "key": "knoepfel_1970",
+     "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970)."
+    },
+    {
+     "key": "knoepfel_2000",
+     "text": "H. E. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000), ch. 4 (magnetic diffusion into conductors, surface heating)."
+    },
+    {
+     "key": "herlach_1986",
+     "text": "F. Herlach, Europhysics News 17(2) (1986) 29: under adiabatic skin-effect conditions copper warms by about 1200 K per (100 T)^2 and boils near 150 T."
+    },
+    {
+     "key": "herlach_miura_2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003)."
+    },
+    {
+     "key": "jackson_1999",
+     "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.18 (skin depth)."
+    },
+    {
+     "key": "landau_lifshitz_1984",
+     "text": "L. D. Landau, E. M. Lifshitz and L. P. Pitaevskii, Electrodynamics of Continuous Media, 2nd ed., Pergamon, Oxford (1984) (skin effect, field penetration into conductors)."
+    },
+    {
+     "key": "carslaw_jaeger_1959",
+     "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959) (erfc solution of the step-boundary diffusion problem)."
+    },
+    {
+     "key": "crank_nicolson_1947",
+     "text": "J. Crank and P. Nicolson, A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type, Proc. Cambridge Philos. Soc. 43 (1947) 50-67."
+    },
+    {
+     "key": "fowler_1960",
+     "text": "C. M. Fowler, W. B. Garn and R. S. Caird, Production of very high magnetic fields by implosion, J. Appl. Phys. 31 (1960) 588-594 (flux compression)."
+    },
+    {
+     "key": "johnson_1972",
+     "text": "W. Johnson, Impact Strength of Materials, Edward Arnold, London (1972) (rigid-plastic ring and tube dynamics)."
+    },
+    {
+     "key": "taylor_quinney_1934",
+     "text": "G. I. Taylor and H. Quinney, The latent energy remaining in a metal after cold working, Proc. R. Soc. Lond. A 143 (1934) 307-326."
+    },
+    {
+     "key": "wheeler_1928",
+     "text": "H. A. Wheeler, Simple inductance formulas for radio coils, Proc. IRE 16 (1928) 1398-1400."
+    }
+   ]
+  },
+  {
+   "module": "plasticity",
+   "count": 20,
+   "entries": [
+    {
+     "key": "johnson1983",
+     "text": "G. R. Johnson and W. H. Cook, 'A constitutive model and data for metals subjected to large strains, high strain rates and high temperatures', Proc. 7th Int. Symp. Ballistics, The Hague (1983) 541-547."
+    },
+    {
+     "key": "zerilli1987",
+     "text": "F. J. Zerilli and R. W. Armstrong, 'Dislocation-mechanics-based constitutive relations for material dynamics calculations', J. Appl. Phys. 61 (1987) 1816-1825."
+    },
+    {
+     "key": "hollomon1945",
+     "text": "J. H. Hollomon, 'Tensile deformation', Trans. AIME 162 (1945) 268-290."
+    },
+    {
+     "key": "taylor1934",
+     "text": "G. I. Taylor and H. Quinney, 'The latent energy remaining in a metal after cold working', Proc. R. Soc. Lond. A 143 (1934) 307-326."
+    },
+    {
+     "key": "culver1973",
+     "text": "R. S. Culver, 'Thermal instability strain in dynamic plastic deformation', in R. W. Rohde, B. M. Butcher, J. R. Holland and C. H. Karnes (eds.), Metallurgical Effects at High Strain Rates, Plenum, New York (1973)."
+    },
+    {
+     "key": "bai1992",
+     "text": "Y. Bai and B. Dodd, Adiabatic Shearing: Theory and Applications, Pergamon, Oxford (1992)."
+    },
+    {
+     "key": "wright2002",
+     "text": "T. W. Wright, The Physics and Mathematics of Adiabatic Shear Bands, Cambridge University Press (2002)."
+    },
+    {
+     "key": "meyers1994",
+     "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994)."
+    },
+    {
+     "key": "bridgman1952",
+     "text": "P. W. Bridgman, Studies in Large Plastic Flow and Fracture with Special Emphasis on the Effects of Hydrostatic Pressure, McGraw-Hill, New York (1952)."
+    },
+    {
+     "key": "duemmer1998",
+     "text": "T. Duemmer, J. C. LaSalvia, G. Ravichandran and M. A. Meyers, 'Effect of strain rate on plastic flow and failure in polycrystalline tungsten', Acta Mater. 46 (1998) 6267-6290."
+    },
+    {
+     "key": "wei2006",
+     "text": "Q. Wei, T. Jiao, K. T. Ramesh, E. Ma et al., 'Mechanical behavior and dynamic failure of high-strength ultrafine grained tungsten under uniaxial compression', Acta Mater. 54 (2006) 77-87."
+    },
+    {
+     "key": "chen1996",
+     "text": "S. R. Chen and G. T. Gray III, 'Constitutive behavior of tantalum and tantalum-tungsten alloys', Metall. Mater. Trans. A 27 (1996) 2994-3006."
+    },
+    {
+     "key": "hill1950",
+     "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950)."
+    },
+    {
+     "key": "tabor1951",
+     "text": "D. Tabor, The Hardness of Metals, Clarendon Press, Oxford (1951)."
+    },
+    {
+     "key": "hosford2011",
+     "text": "W. F. Hosford and R. M. Caddell, Metal Forming: Mechanics and Metallurgy, 4th ed., Cambridge University Press (2011)."
+    },
+    {
+     "key": "carslaw1959",
+     "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959)."
+    },
+    {
+     "key": "psyk2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+    },
+    {
+     "key": "lassner1999",
+     "text": "E. Lassner and W.-D. Schubert, Tungsten: Properties, Chemistry, Technology of the Element, Alloys, and Chemical Compounds, Kluwer Academic/Plenum, New York (1999)."
+    },
+    {
+     "key": "asm14a",
+     "text": "ASM Handbook Vol. 14A, Metalworking: Bulk Forming, ASM International, Materials Park OH (2005): forging of refractory metals."
+    },
+    {
+     "key": "astm_e8",
+     "text": "ASTM E8/E8M, Standard Test Methods for Tension Testing of Metallic Materials, ASTM International: 'room temperature' is 10-38 C."
+    }
+   ]
+  },
+  {
+   "module": "microstructure",
+   "count": 26,
+   "entries": [
+    {
+     "key": "taylor1934",
+     "text": "G. I. Taylor, 'The mechanism of plastic deformation of crystals. Part I. Theoretical', Proc. R. Soc. Lond. A 145 (1934) 362-387 (flow stress proportional to the square root of the dislocation density)."
+    },
+    {
+     "key": "taylor1938",
+     "text": "G. I. Taylor, 'Plastic strain in metals', J. Inst. Metals 62 (1938) 307-324 (Taylor factor M = 3.06 of a random fcc polycrystal)."
+    },
+    {
+     "key": "kocks1970",
+     "text": "U. F. Kocks, 'The relation between polycrystal deformation and single-crystal deformation', Metall. Trans. 1 (1970) 1121-1143 (Taylor factors, including bcc pencil glide)."
+    },
+    {
+     "key": "kocks_mecking2003",
+     "text": "U. F. Kocks and H. Mecking, 'Physics and phenomenology of strain hardening: the FCC case', Prog. Mater. Sci. 48 (2003) 171-273."
+    },
+    {
+     "key": "holt1970",
+     "text": "D. L. Holt, 'Dislocation cell formation in metals', J. Appl. Phys. 41 (1970) 3197-3201 (cell size proportional to the inverse square root of the dislocation density)."
+    },
+    {
+     "key": "hall1951",
+     "text": "E. O. Hall, 'The deformation and ageing of mild steel: III Discussion of results', Proc. Phys. Soc. B 64 (1951) 747-753."
+    },
+    {
+     "key": "petch1953",
+     "text": "N. J. Petch, 'The cleavage strength of polycrystals', J. Iron Steel Inst. 174 (1953) 25-28."
+    },
+    {
+     "key": "meyers2006",
+     "text": "M. A. Meyers, A. Mishra and D. J. Benson, 'Mechanical properties of nanocrystalline materials', Prog. Mater. Sci. 51 (2006) 427-556 (breakdown of Hall-Petch strengthening below about 10-20 nm)."
+    },
+    {
+     "key": "humphreys2004",
+     "text": "F. J. Humphreys and M. Hatherly, Recrystallization and Related Annealing Phenomena, 2nd ed., Elsevier, Oxford (2004): stored energy of cold work (ch. 2), JMAK kinetics and measured Avrami exponents (ch. 7), continuous recrystallisation at large strain (ch. 14)."
+    },
+    {
+     "key": "humphreys1999",
+     "text": "F. J. Humphreys, P. B. Prangnell, J. R. Bowen, A. Gholinia and C. Harris, 'Developing stable fine-grain microstructures by large strain deformation', Phil. Trans. R. Soc. Lond. A 357 (1999) 1663-1681 (high-angle boundary spacing reduced geometrically by strain until it reaches the subgrain size)."
+    },
+    {
+     "key": "hughes_hansen2000",
+     "text": "D. A. Hughes and N. Hansen, 'Microstructure and strength of nickel at large strains', Acta Mater. 48 (2000) 2985-3004."
+    },
+    {
+     "key": "valiev2000",
+     "text": "R. Z. Valiev, R. K. Islamgaliev and I. V. Alexandrov, 'Bulk nanostructured materials from severe plastic deformation', Prog. Mater. Sci. 45 (2000) 103-189."
+    },
+    {
+     "key": "pippan2010",
+     "text": "R. Pippan, S. Scheriau, A. Taylor, M. Hafok, A. Hohenwarter and A. Bachmaier, 'Saturation of fragmentation during severe plastic deformation', Annu. Rev. Mater. Res. 40 (2010) 319-343."
+    },
+    {
+     "key": "estrin_vinogradov2013",
+     "text": "Y. Estrin and A. Vinogradov, 'Extreme grain refinement by severe plastic deformation: a wealth of challenging science', Acta Mater. 61 (2013) 782-817."
+    },
+    {
+     "key": "avrami1939",
+     "text": "M. Avrami, 'Kinetics of phase change. I. General theory', J. Chem. Phys. 7 (1939) 1103-1112."
+    },
+    {
+     "key": "johnson_mehl1939",
+     "text": "W. A. Johnson and R. F. Mehl, 'Reaction kinetics in processes of nucleation and growth', Trans. AIME 135 (1939) 416-458."
+    },
+    {
+     "key": "dieter1986",
+     "text": "G. E. Dieter, Mechanical Metallurgy, 3rd ed., McGraw-Hill, New York (1986): recrystallisation temperature (complete in about one hour) of 0.3-0.5 T_m; cold, warm and hot working."
+    },
+    {
+     "key": "zener_hollomon1944",
+     "text": "C. Zener and J. H. Hollomon, 'Effect of strain rate upon plastic flow of steel', J. Appl. Phys. 15 (1944) 22-32 (temperature-compensated strain rate)."
+    },
+    {
+     "key": "derby1991",
+     "text": "B. Derby, 'The dependence of grain size on stress during dynamic recrystallisation', Acta Metall. Mater. 39 (1991) 955-962."
+    },
+    {
+     "key": "tabor1951",
+     "text": "D. Tabor, The Hardness of Metals, Clarendon Press, Oxford (1951) (H ~ 3 x flow stress at a representative strain of 8 %)."
+    },
+    {
+     "key": "culver1973",
+     "text": "R. S. Culver, 'Thermal instability strain in dynamic plastic deformation', in R. W. Rohde, B. M. Butcher, J. R. Holland and C. H. Karnes (eds.), Metallurgical Effects at High Strain Rates, Plenum, New York (1973)."
+    },
+    {
+     "key": "meyers1994",
+     "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994) (adiabatic shear bands and the fine recrystallised grains inside them)."
+    },
+    {
+     "key": "wei2006",
+     "text": "Q. Wei, T. Jiao, K. T. Ramesh, E. Ma et al., 'Mechanical behavior and dynamic failure of high-strength ultrafine grained tungsten under uniaxial compression', Acta Mater. 54 (2006) 77-87 (ultrafine-grained W made by severe plastic deformation, ~3 GPa dynamic strength)."
+    },
+    {
+     "key": "lassner1999",
+     "text": "E. Lassner and W.-D. Schubert, Tungsten: Properties, Chemistry, Technology of the Element, Alloys, and Chemical Compounds, Kluwer Academic/Plenum, New York (1999) (worked tungsten has a lower ductile-brittle transition temperature than recrystallised tungsten)."
+    },
+    {
+     "key": "knoepfel1970",
+     "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970) (skin heating B^2/(2 mu0 rho c_p))."
+    },
+    {
+     "key": "carslaw1959",
+     "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959) (cooling of an exponentially heated surface layer)."
+    }
+   ]
+  },
+  {
+   "module": "shock",
+   "count": 7,
+   "entries": [
+    {
+     "key": "marsh_1980",
+     "text": "Marsh, S. P. (ed.), LASL Shock Hugoniot Data, University of California Press, Berkeley (1980)."
+    },
+    {
+     "key": "mcqueen_1970",
+     "text": "McQueen, R. G., Marsh, S. P., Taylor, J. W., Fritz, J. N. & Carter, W. J., 'The equation of state of solids from shock wave studies', in Kinslow, R. (ed.), High-Velocity Impact Phenomena, Academic Press, New York (1970) 293-417."
+    },
+    {
+     "key": "meyers_1994",
+     "text": "Meyers, M. A., Dynamic Behavior of Materials, Wiley, New York (1994), chapters 4-7 (Rankine-Hugoniot relations, impedance matching, pulse duration)."
+    },
+    {
+     "key": "bancroft_1956",
+     "text": "Bancroft, D., Peterson, E. L. & Minshall, S., 'Polymorphism of iron at high pressure', J. Appl. Phys. 27 (1956) 291-298."
+    },
+    {
+     "key": "duvall_graham_1977",
+     "text": "Duvall, G. E. & Graham, R. A., 'Phase transitions under shock-wave loading', Rev. Mod. Phys. 49 (1977) 523-579."
+    },
+    {
+     "key": "zeldovich_raizer_1967",
+     "text": "Zel'dovich, Ya. B. & Raizer, Yu. P., Physics of Shock Waves and High-Temperature Hydrodynamic Phenomena, Academic Press, New York (1967), vol. II, ch. XI (shock compression of solids)."
+    },
+    {
+     "key": "psyk_2011",
+     "text": "Psyk, V., Risch, D., Kinsey, B. L., Tekkaya, A. E. & Kleiner, M., 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+    }
+   ]
+  },
+  {
+   "module": "welding",
+   "count": 23,
+   "entries": [
+    {
+     "key": "crossland_1982",
+     "text": "B. Crossland, Explosive Welding of Metals and its Application, Clarendon Press, Oxford (1982)."
+    },
+    {
+     "key": "deribas_zakharenko_1974",
+     "text": "A. A. Deribas and I. D. Zakharenko, 'Surface effects with oblique collisions between metallic plates', Combust. Explos. Shock Waves 10 (1974) 358-367."
+    },
+    {
+     "key": "wittman_1973",
+     "text": "R. H. Wittman, 'The influence of collision parameters on the strength and microstructure of an explosion welded aluminium alloy', Proc. 2nd Int. Symp. on Use of Explosive Energy in Manufacturing Metallic Materials, Marianske Lazne (1973) 153-168."
+    },
+    {
+     "key": "de_rosset_2006",
+     "text": "W. S. de Rosset, 'Analysis of explosive bonding parameters', Mater. Manuf. Process. 21 (2006) 634-638."
+    },
+    {
+     "key": "cowan_1971",
+     "text": "G. R. Cowan, O. R. Bergmann and A. H. Holtzman, 'Mechanism of bond zone wave formation in explosion-clad metals', Metall. Trans. 2 (1971) 3145-3155."
+    },
+    {
+     "key": "walsh_1953",
+     "text": "J. M. Walsh, R. G. Shreffler and F. J. Willig, 'Limiting conditions for jet formation in high velocity collisions', J. Appl. Phys. 24 (1953) 349-359."
+    },
+    {
+     "key": "ribeiro_2014",
+     "text": "J. B. Ribeiro, R. Mendes and A. Loureiro, 'Review of the weldability window concept and equations for explosive welding', J. Phys.: Conf. Ser. 500 (2014) 052038."
+    },
+    {
+     "key": "lysak_kuzmin_2012",
+     "text": "V. I. Lysak and S. V. Kuzmin, 'Lower boundary in metal explosive welding. Evolution of ideas', J. Mater. Process. Technol. 212 (2012) 150-156."
+    },
+    {
+     "key": "findik_2011",
+     "text": "F. Findik, 'Recent developments in explosive welding', Mater. Des. 32 (2011) 1081-1093."
+    },
+    {
+     "key": "kapil_sharma_2015",
+     "text": "A. Kapil and A. Sharma, 'Magnetic pulse welding: an efficient and environmentally friendly multi-material joining technique', J. Clean. Prod. 100 (2015) 35-58."
+    },
+    {
+     "key": "psyk_2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+    },
+    {
+     "key": "aizawa_2007",
+     "text": "T. Aizawa, M. Kashani and K. Okagawa, 'Application of magnetic pulse welding for aluminum alloys and SPCC steel sheet joints', Weld. J. 86 (2007) 119s-124s."
+    },
+    {
+     "key": "zhang_2011",
+     "text": "Y. Zhang, S. S. Babu, C. Prothe, M. Blakely, J. Kwasegroch, M. LaHa and G. S. Daehn, 'Application of high velocity impact welding at varied different length scales', J. Mater. Process. Technol. 211 (2011) 944-952."
+    },
+    {
+     "key": "zhang_2010",
+     "text": "Y. Zhang, S. S. Babu and G. S. Daehn, 'Interfacial ultrafine-grained structures on aluminum alloy 6061 joint and copper alloy 110 joint fabricated by magnetic pulse welding', J. Mater. Sci. 45 (2010) 4645-4651."
+    },
+    {
+     "key": "kore_2008",
+     "text": "S. D. Kore, P. P. Date and S. V. Kulkarni, 'Electromagnetic impact welding of aluminum to stainless steel sheets', J. Mater. Process. Technol. 208 (2008) 486-493."
+    },
+    {
+     "key": "kore_2009",
+     "text": "S. D. Kore, J. Imbert, M. J. Worswick and Y. Zhou, 'Electromagnetic impact welding of Mg to Al sheets', Sci. Technol. Weld. Join. 14 (2009) 549-553."
+    },
+    {
+     "key": "raoelison_2014",
+     "text": "R. N. Raoelison, D. Racine, Z. Zhang, N. Buiron, D. Marceau and M. Rachik, 'Magnetic pulse welding: interface of Al/Cu joint and investigation of intermetallic formation effect on the weld features', J. Manuf. Process. 16 (2014) 427-434."
+    },
+    {
+     "key": "kahraman_2005",
+     "text": "N. Kahraman and B. Gulenc, 'Microstructural and mechanical properties of Cu-Ti plates bonded through explosive welding process', J. Mater. Process. Technol. 169 (2005) 67-71."
+    },
+    {
+     "key": "brown_ashby_1980",
+     "text": "A. M. Brown and M. F. Ashby, 'Correlations for diffusion constants', Acta Metall. 28 (1980) 1085-1101."
+    },
+    {
+     "key": "iida_guthrie_1988",
+     "text": "T. Iida and R. I. L. Guthrie, The Physical Properties of Liquid Metals, Clarendon Press, Oxford (1988) (liquid-metal diffusivities of order 1e-9 m^2/s)."
+    },
+    {
+     "key": "carslaw_jaeger_1959",
+     "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959)."
+    },
+    {
+     "key": "meyers_1994",
+     "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994), ch. 17 (explosive welding, jetting, wave formation)."
+    },
+    {
+     "key": "herlach_miura_2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003) (single-turn coils: megagauss fields with microsecond rise times)."
+    }
+   ]
+  },
+  {
+   "module": "synthesis",
+   "count": 20,
+   "entries": [
+    {
+     "key": "kennedy_1976",
+     "text": "Kennedy, C. S. & Kennedy, G. C., 'The equilibrium boundary between graphite and diamond', J. Geophys. Res. 81 (1976) 2467-2470."
+    },
+    {
+     "key": "berman_simon_1955",
+     "text": "Berman, R. & Simon, F., 'On the graphite-diamond equilibrium', Z. Elektrochem. 59 (1955) 333-338."
+    },
+    {
+     "key": "solozhenko_1999",
+     "text": "Solozhenko, V. L., Turkevich, V. Z. & Holzapfel, W. B., 'Refined phase diagram of boron nitride', J. Phys. Chem. B 103 (1999) 2903-2905."
+    },
+    {
+     "key": "corrigan_bundy_1975",
+     "text": "Corrigan, F. R. & Bundy, F. P., 'Direct transitions among the allotropic forms of boron nitride at high pressures and temperatures', J. Chem. Phys. 63 (1975) 3812-3820."
+    },
+    {
+     "key": "bundy_1955",
+     "text": "Bundy, F. P., Hall, H. T., Strong, H. M. & Wentorf, R. H., 'Man-made diamonds', Nature 176 (1955) 51-55."
+    },
+    {
+     "key": "strong_wentorf_1972",
+     "text": "Strong, H. M. & Wentorf, R. H., 'The growth of large diamond crystals', Naturwissenschaften 59 (1972) 1-7."
+    },
+    {
+     "key": "hall_1970",
+     "text": "Hall, H. T., 'Sintered diamond: a synthetic carbonado', Science 169 (1970) 868-869."
+    },
+    {
+     "key": "irifune_2003",
+     "text": "Irifune, T., Kurio, A., Sakamoto, S., Inoue, T. & Sumiya, H., 'Ultrahard polycrystalline diamond from graphite', Nature 421 (2003) 599-600."
+    },
+    {
+     "key": "irifune_2019",
+     "text": "Irifune, T. et al., C. R. Geoscience (2019), doi:10.1016/j.crte.2018.07.005: nano-polycrystalline diamond rods up to 1 cm in diameter and length; routine 9 mm x 8 mm rods at 15 GPa and 2600 K for 20 min."
+    },
+    {
+     "key": "wentorf_1957",
+     "text": "Wentorf, R. H., 'Cubic form of boron nitride', J. Chem. Phys. 26 (1957) 956."
+    },
+    {
+     "key": "bundy_wentorf_1963",
+     "text": "Bundy, F. P. & Wentorf, R. H., 'Direct transformation of hexagonal boron nitride to denser forms', J. Chem. Phys. 38 (1963) 1144-1149."
+    },
+    {
+     "key": "hanneman_1967",
+     "text": "Hanneman, R. E., Strong, H. M. & Bundy, F. P., 'Hexagonal diamonds in meteorites: implications', Science 155 (1967) 995-997."
+    },
+    {
+     "key": "erskine_nellis_1991",
+     "text": "Erskine, D. J. & Nellis, W. J., 'Shock-induced martensitic phase transformation of oriented graphite to diamond', Nature 349 (1991) 317-319."
+    },
+    {
+     "key": "decarli_jamieson_1961",
+     "text": "DeCarli, P. S. & Jamieson, J. C., 'Formation of diamond by explosive shock', Science 133 (1961) 1821-1822."
+    },
+    {
+     "key": "kraus_2016",
+     "text": "Kraus, D. et al., 'Nanosecond formation of diamond and lonsdaleite by shock compression of graphite', Nat. Commun. 7 (2016) 10970."
+    },
+    {
+     "key": "laniel_2024",
+     "text": "Laniel, D. et al., Adv. Mater. 36 (2024) 2308030: carbon nitrides synthesised at 72-134 GPa and ~2500 K in laser-heated diamond anvil cells, recoverable to ambient."
+    },
+    {
+     "key": "drozdov_2015",
+     "text": "Drozdov, A. P., Eremets, M. I., Troyan, I. A., Ksenofontov, V. & Shylin, S. I., 'Conventional superconductivity at 203 kelvin at high pressures in the sulfur hydride system', Nature 525 (2015) 73-76."
+    },
+    {
+     "key": "drozdov_2019",
+     "text": "Drozdov, A. P. et al., 'Superconductivity at 250 K in lanthanum hydride under high pressures', Nature 569 (2019) 528-531."
+    },
+    {
+     "key": "balasubramanian_2009",
+     "text": "Balasubramanian, G. et al., 'Ultralong spin coherence time in isotopically engineered diamond', Nat. Mater. 8 (2009) 383-387."
+    },
+    {
+     "key": "static_press_ladder",
+     "text": "magform.benchmarks.STATIC_PRESS_LADDER: Hall, Rev. Sci. Instrum. 31 (1960) 125; Ito, Treatise on Geophysics 2 (2007); Yamazaki et al., Phys. Earth Planet. Inter. 228 (2014) 262; Dubrovinsky et al., Nat. Commun. 3 (2012) 1163."
+    }
+   ]
+  },
+  {
+   "module": "porosity",
+   "count": 20,
+   "entries": [
+    {
+     "key": "torre_1948",
+     "text": "C. Torre, 'Theorie und Verhalten der zusammengepressten Pulver', Berg- und Huettenmaennische Monatshefte 93 (1948) 62-67."
+    },
+    {
+     "key": "carroll_holt_1972",
+     "text": "M. M. Carroll and A. C. Holt, 'Static and dynamic pore-collapse relations for ductile porous materials', J. Appl. Phys. 43 (1972) 1626-1636."
+    },
+    {
+     "key": "gurson_1977",
+     "text": "A. L. Gurson, 'Continuum theory of ductile rupture by void nucleation and growth: Part I - Yield criteria and flow rules for porous ductile media', J. Eng. Mater. Technol. 99 (1977) 2-15."
+    },
+    {
+     "key": "hill_1950",
+     "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950), ch. V (expansion of a thick spherical shell)."
+    },
+    {
+     "key": "rayleigh_1917",
+     "text": "Lord Rayleigh, 'On the pressure developed in a liquid during the collapse of a spherical cavity', Philos. Mag. 34 (1917) 94-98."
+    },
+    {
+     "key": "helle_1985",
+     "text": "A. S. Helle, K. E. Easterling and M. F. Ashby, 'Hot-isostatic pressing diagrams: new developments', Acta Metall. 33 (1985) 2163-2174."
+    },
+    {
+     "key": "arzt_1983",
+     "text": "E. Arzt, M. F. Ashby and K. E. Easterling, 'Practical applications of hot-isostatic pressing diagrams: four case studies', Metall. Trans. A 14 (1983) 211-221."
+    },
+    {
+     "key": "atkinson_davies_2000",
+     "text": "H. V. Atkinson and S. Davies, 'Fundamental aspects of hot isostatic pressing: an overview', Metall. Mater. Trans. A 31 (2000) 2981-3000."
+    },
+    {
+     "key": "derby_wallach_1982",
+     "text": "B. Derby and E. R. Wallach, 'Theoretical model for diffusion bonding', Metal Science 16 (1982) 49-56."
+    },
+    {
+     "key": "brown_ashby_1980",
+     "text": "A. M. Brown and M. F. Ashby, 'Correlations for diffusion constants', Acta Metall. 28 (1980) 1085-1101."
+    },
+    {
+     "key": "appel_2011",
+     "text": "F. Appel, J. D. H. Paul and M. Oehring, Gamma Titanium Aluminide Alloys: Science and Technology, Wiley-VCH, Weinheim (2011)."
+    },
+    {
+     "key": "astm_f2924",
+     "text": "ASTM F2924, Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 895-955 C for 180 +/- 60 min."
+    },
+    {
+     "key": "astm_f3055",
+     "text": "ASTM F3055, Standard Specification for Additive Manufacturing Nickel Alloy (UNS N07718) with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 1120-1185 C for 240 +/- 60 min."
+    },
+    {
+     "key": "bridgman_1952",
+     "text": "P. W. Bridgman, Studies in Large Plastic Flow and Fracture with Special Emphasis on the Effects of Hydrostatic Pressure, McGraw-Hill, New York (1952)."
+    },
+    {
+     "key": "chelluri_barber_1999",
+     "text": "B. Chelluri and J. P. Barber, 'Full-density, net-shape powder consolidation using dynamic magnetic pulse pressures', JOM 51(7) (1999) 36-37."
+    },
+    {
+     "key": "chelluri_knoth_2010",
+     "text": "B. Chelluri and E. Knoth, 4th International Conference on High Speed Forming (2010), hdl.handle.net/2003/27201: pulse pressures in the GPa range applied for under a millisecond; green densities above 95 % in most steels."
+    },
+    {
+     "key": "kaygorodov_2006",
+     "text": "A. S. Kaygorodov et al. (2006), koreascience.kr/article/CFKO200617317788902: radial magnetic pulsed press, pulses up to 0.3 GPa lasting about 100 microseconds."
+    },
+    {
+     "key": "ge_ep2641984",
+     "text": "General Electric Co., European patent application EP 2 641 984 A2: existing practice for cast Ti-48Al-2Cr-2Nb is hot isostatic pressing at 25 ksi (about 172 MPa) or more and about 1185 C for about 3 h."
+    },
+    {
+     "key": "yu_2021",
+     "text": "W. Yu et al., Metals 11 (2021) 1156, doi:10.3390/met11081156: 1260 C / 172 MPa / 4 h described as the most commonly performed HIP cycle for cast TiAl (as summarised; full text not checked)."
+    },
+    {
+     "key": "psyk_2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829 (driver sheets for poorly conducting workpieces)."
+    }
+   ]
+  },
+  {
+   "module": "containment",
+   "count": 19,
+   "entries": [
+    {
+     "key": "lame_1852",
+     "text": "G. Lame, Lecons sur la theorie mathematique de l'elasticite des corps solides, Bachelier, Paris (1852)."
+    },
+    {
+     "key": "timoshenko_1970",
+     "text": "S. P. Timoshenko & J. N. Goodier, Theory of Elasticity, 3rd ed., McGraw-Hill, New York (1970), sec. 33 (thick-walled cylinder)."
+    },
+    {
+     "key": "hill_1950",
+     "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950), ch. V (plastic expansion of a thick-walled tube; autofrettage)."
+    },
+    {
+     "key": "chakrabarty_2006",
+     "text": "J. Chakrabarty, Theory of Plasticity, 3rd ed., Elsevier Butterworth-Heinemann, Oxford (2006): thick-walled tubes, residual stresses and shakedown."
+    },
+    {
+     "key": "harvey_1985",
+     "text": "J. F. Harvey, Theory and Design of Pressure Vessels, Van Nostrand Reinhold, New York (1985)."
+    },
+    {
+     "key": "asme_viii_3",
+     "text": "ASME Boiler and Pressure Vessel Code, Section VIII, Division 3: Alternative Rules for Construction of High Pressure Vessels, ASME, New York (2023)."
+    },
+    {
+     "key": "lange_1985",
+     "text": "K. Lange (ed.), Handbook of Metal Forming, McGraw-Hill, New York (1985): shrink-ring (compound) cold-forging dies, contact pressures up to ~2.5 GPa."
+    },
+    {
+     "key": "daniel_ishai_2006",
+     "text": "I. M. Daniel & O. Ishai, Engineering Mechanics of Composite Materials, 2nd ed., Oxford University Press (2006): transverse compressive strength of unidirectional carbon/epoxy ~0.15-0.3 GPa."
+    },
+    {
+     "key": "graff_1975",
+     "text": "K. F. Graff, Wave Motion in Elastic Solids, Ohio State University Press (1975): breathing mode of a ring, period 2 pi a / c."
+    },
+    {
+     "key": "biggs_1964",
+     "text": "J. M. Biggs, Introduction to Structural Dynamics, McGraw-Hill, New York (1964): dynamic load factors for ramp and step loads."
+    },
+    {
+     "key": "marshall_wang_2004",
+     "text": "R. A. Marshall & Y. Wang, Railguns: Their Science and Technology, China Machine Press, Beijing (2004): F = L'I^2/2, practical L' = 0.4-0.6 uH/m."
+    },
+    {
+     "key": "kolm_mongeau_1984",
+     "text": "H. Kolm & P. Mongeau, 'Basic principles of coaxial launch technology', IEEE Trans. Magn. 20 (1984) 227-230."
+    },
+    {
+     "key": "mcnab_2003",
+     "text": "I. R. McNab, 'Launch to space with an electromagnetic railgun', IEEE Trans. Magn. 39 (2003) 295-304."
+    },
+    {
+     "key": "oneill_1974",
+     "text": "G. K. O'Neill, 'The colonization of space', Physics Today 27(9) (1974) 32-40 (lunar mass driver)."
+    },
+    {
+     "key": "moon_1984",
+     "text": "F. C. Moon, Magneto-Solid Mechanics, Wiley, New York (1984)."
+    },
+    {
+     "key": "freidberg_2007",
+     "text": "J. P. Freidberg, Plasma Physics and Fusion Energy, Cambridge University Press (2007): plasma beta and magnetic pressure."
+    },
+    {
+     "key": "mitchell_2008",
+     "text": "N. Mitchell et al., 'The ITER magnet system', IEEE Trans. Appl. Supercond. 18 (2008) 435-440."
+    },
+    {
+     "key": "creely_2020",
+     "text": "A. J. Creely et al., 'Overview of the SPARC tokamak', J. Plasma Phys. 86 (2020) 865860502."
+    },
+    {
+     "key": "nhmfl_100t",
+     "text": "NHMFL Pulsed Field Facility, Los Alamos, 100.75 T multi-shot magnet (22 March 2012); about 10 mm bore as operated (magform.benchmarks.FIELD_LADDER)."
+    }
+   ]
+  },
+  {
+   "module": "press",
+   "count": 10,
+   "entries": [
+    {
+     "key": "herlach2003",
+     "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003): pulsed, single-turn and flux-compression magnets."
+    },
+    {
+     "key": "psyk2011",
+     "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829."
+    },
+    {
+     "key": "miller2003",
+     "text": "J. R. Miller, 'The NHMFL 45-T hybrid magnet system: past, present, and future', IEEE Trans. Appl. Supercond. 13 (2003) 1385-1390 (11.5 T superconducting outsert, 616 mm bore)."
+    },
+    {
+     "key": "hahn2019",
+     "text": "S. Hahn et al., '45.5-tesla direct-current magnetic field generated with a high-temperature superconducting magnet', Nature 570 (2019) 496-499."
+    },
+    {
+     "key": "maglab2025",
+     "text": "National High Magnetic Field Laboratory, news release of 11 Sep 2025 and research highlight of Jan 2026: REBCO test coil 'Little Big Coil 9', 48.7 T inside a 31 T resistive magnet (August 2025)."
+    },
+    {
+     "key": "wilson1983",
+     "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983): flux conservation in coupled windings; AC loss and stability."
+    },
+    {
+     "key": "iwasa2009",
+     "text": "Y. Iwasa, Case Studies in Superconducting Magnets, 2nd ed., Springer, New York (2009)."
+    },
+    {
+     "key": "montgomery1969",
+     "text": "D. B. Montgomery, Solenoid Magnet Design, Wiley-Interscience, New York (1969)."
+    },
+    {
+     "key": "knoepfel2000",
+     "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000)."
+    },
+    {
+     "key": "benchmarks",
+     "text": "magform.benchmarks: cited record ladders for field, energy, current, voltage and power."
+    }
+   ]
+  },
+  {
+   "module": "magnetar",
+   "count": 24,
+   "entries": [
+    {
+     "key": "lai2001",
+     "text": "D. Lai, 'Matter in strong magnetic fields', Rev. Mod. Phys. 73 (2001) 629-662."
+    },
+    {
+     "key": "harding_lai2006",
+     "text": "A. K. Harding and D. Lai, 'Physics of strongly magnetized neutron stars', Rep. Prog. Phys. 69 (2006) 2631-2708."
+    },
+    {
+     "key": "duncan_thompson1992",
+     "text": "R. C. Duncan and C. Thompson, 'Formation of very strongly magnetized neutron stars: implications for gamma-ray bursts', Astrophys. J. 392 (1992) L9-L13."
+    },
+    {
+     "key": "kaspi_beloborodov2017",
+     "text": "V. M. Kaspi and A. M. Beloborodov, 'Magnetars', Annu. Rev. Astron. Astrophys. 55 (2017) 261-301."
+    },
+    {
+     "key": "schwinger1951",
+     "text": "J. Schwinger, 'On gauge invariance and vacuum polarization', Phys. Rev. 82 (1951) 664-679."
+    },
+    {
+     "key": "heisenberg_euler1936",
+     "text": "W. Heisenberg and H. Euler, 'Folgerungen aus der Diracschen Theorie des Positrons', Z. Phys. 98 (1936) 714-732."
+    },
+    {
+     "key": "chandrasekhar1939",
+     "text": "S. Chandrasekhar, An Introduction to the Study of Stellar Structure, University of Chicago Press (1939) (degenerate electron gas)."
+    },
+    {
+     "key": "shapiro_teukolsky1983",
+     "text": "S. L. Shapiro and S. A. Teukolsky, Black Holes, White Dwarfs, and Neutron Stars: The Physics of Compact Objects, Wiley, New York (1983), ch. 2 (cold equation of state below neutron drip: degenerate electrons, lattice correction, inverse beta decay)."
+    },
+    {
+     "key": "bps1971",
+     "text": "G. Baym, C. Pethick and P. Sutherland, 'The ground state of matter at high densities: equation of state and stellar models', Astrophys. J. 170 (1971) 299-317."
+    },
+    {
+     "key": "chandrasekhar_fermi1953",
+     "text": "S. Chandrasekhar and E. Fermi, 'Problems of gravitational stability in the presence of a magnetic field', Astrophys. J. 118 (1953) 116-141."
+    },
+    {
+     "key": "tatarakis2002",
+     "text": "M. Tatarakis et al., 'Measuring huge magnetic fields', Nature 415 (2002) 280."
+    },
+    {
+     "key": "wagner2004",
+     "text": "U. Wagner et al., 'Laboratory measurements of 0.7 GG magnetic fields generated during high-intensity laser interactions with dense plasmas', Phys. Rev. E 70 (2004) 026401."
+    },
+    {
+     "key": "skokov2009",
+     "text": "V. Skokov, A. Yu. Illarionov and V. Toneev, 'Estimate of the magnetic field strength in heavy-ion collisions', Int. J. Mod. Phys. A 24 (2009) 5925-5932."
+    },
+    {
+     "key": "yoon2021",
+     "text": "J. W. Yoon et al., 'Realization of laser intensity over 10^23 W/cm^2', Optica 8 (2021) 630-635."
+    },
+    {
+     "key": "hurley2005",
+     "text": "K. Hurley et al., 'An exceptionally bright flare from SGR 1806-20 and the origins of short-duration gamma-ray bursts', Nature 434 (2005) 1098-1103."
+    },
+    {
+     "key": "horowitz_kadau2009",
+     "text": "C. J. Horowitz and K. Kadau, 'Breaking strain of neutron star crust and gravitational waves', Phys. Rev. Lett. 102 (2009) 191102."
+    },
+    {
+     "key": "berry_geim1997",
+     "text": "M. V. Berry and A. K. Geim, 'Of flying frogs and levitrons', Eur. J. Phys. 18 (1997) 307-313."
+    },
+    {
+     "key": "icnirp2009",
+     "text": "International Commission on Non-Ionizing Radiation Protection, 'Guidelines on limits of exposure to static magnetic fields', Health Phys. 96 (2009) 504-514."
+    },
+    {
+     "key": "fowler1960",
+     "text": "C. M. Fowler, W. B. Garn and R. S. Caird, 'Production of very high magnetic fields by implosion', J. Appl. Phys. 31 (1960) 588-594."
+    },
+    {
+     "key": "nakamura2018",
+     "text": "D. Nakamura, A. Ikeda, H. Sawabe, Y. H. Matsuda and S. Takeyama, 'Record indoor magnetic field of 1200 T generated by electromagnetic flux-compression', Rev. Sci. Instrum. 89 (2018) 095106."
+    },
+    {
+     "key": "herlach1986",
+     "text": "F. Herlach, Europhysics News 17(2) (1986) 29: under adiabatic skin-effect conditions copper boils near 150 T."
+    },
+    {
+     "key": "jackson1999",
+     "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999), sec. 5.6 (magnetic dipole), 5.10 (uniformly magnetised sphere) and ch. 14 (synchrotron radiation)."
+    },
+    {
+     "key": "moon1982",
+     "text": "F. C. Moon, 'The virial theorem and scaling laws for superconducting magnet systems', J. Appl. Phys. 53 (1982) 9112-9121."
+    },
+    {
+     "key": "field_ladder",
+     "text": "magform.benchmarks.FIELD_LADDER (laboratory records up to 2800 T, each with its citation)."
+    }
+   ]
+  },
+  {
+   "module": "claims",
+   "count": 3,
+   "entries": [
+    {
+     "key": "concept_note",
+     "text": "The original concept note, archived verbatim at docs/archive/original-README.md."
+    },
+    {
+     "key": "kittel2005",
+     "text": "C. Kittel, Introduction to Solid State Physics, 8th ed., Wiley, Hoboken (2005), table of cohesive energies (Cu 3.49, W 8.90, Fe 4.28, Al 3.39 eV per atom)."
+    },
+    {
+     "key": "models",
+     "text": "Every number in the ledger comes from the magform module named in ClaimResult.models; the citations for each model are in that module's REFERENCES."
+    }
+   ]
+  }
+ ],
+ "bibliography": [
+  {
+   "label": "Abramowitz 1964",
+   "text": "M. Abramowitz and I. A. Stegun (eds.), Handbook of Mathematical Functions, National Bureau of Standards, Washington (1964).",
+   "year": 1964,
+   "modules": [
+    "fieldmap"
+   ]
+  },
+  {
+   "label": "Aizawa 2007",
+   "text": "T. Aizawa, M. Kashani and K. Okagawa, 'Application of magnetic pulse welding for aluminum alloys and SPCC steel sheet joints', Weld. J. 86 (2007) 119s-124s.",
+   "year": 2007,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Appel 2011",
+   "text": "F. Appel, J. D. H. Paul and M. Oehring, Gamma Titanium Aluminide Alloys: Science and Technology, Wiley-VCH, Weinheim (2011).",
+   "year": 2011,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Arzt 1983",
+   "text": "E. Arzt, M. F. Ashby and K. E. Easterling, 'Practical applications of hot-isostatic pressing diagrams: four case studies', Metall. Trans. A 14 (1983) 211-221.",
+   "year": 1983,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "ASM 2005",
+   "text": "ASM Handbook Vol. 14A, Metalworking: Bulk Forming, ASM International, Materials Park OH (2005).",
+   "year": 2005,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "ASME 2023",
+   "text": "ASME Boiler and Pressure Vessel Code, Section VIII, Division 3: Alternative Rules for Construction of High Pressure Vessels, ASME, New York (2023).",
+   "year": 2023,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "ASTM E8/E8M",
+   "text": "ASTM E8/E8M, Standard Test Methods for Tension Testing of Metallic Materials, ASTM International: 'room temperature' is 10-38 C.",
+   "year": null,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "ASTM F2924",
+   "text": "ASTM F2924, Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 895-955 C for 180 +/- 60 min.",
+   "year": null,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "ASTM F3055",
+   "text": "ASTM F3055, Standard Specification for Additive Manufacturing Nickel Alloy (UNS N07718) with Powder Bed Fusion, ASTM International: hot isostatic pressing at not less than 100 MPa within 1120-1185 C for 240 +/- 60 min.",
+   "year": null,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Atkinson 2000",
+   "text": "H. V. Atkinson and S. Davies, 'Fundamental aspects of hot isostatic pressing: an overview', Metall. Mater. Trans. A 31 (2000) 2981-3000.",
+   "year": 2000,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Avrami 1939",
+   "text": "M. Avrami, 'Kinetics of phase change. I. General theory', J. Chem. Phys. 7 (1939) 1103-1112.",
+   "year": 1939,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Bai 1992",
+   "text": "Y. Bai and B. Dodd, Adiabatic Shearing: Theory and Applications, Pergamon, Oxford (1992).",
+   "year": 1992,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Balasubramanian 2009",
+   "text": "Balasubramanian, G. et al., 'Ultralong spin coherence time in isotopically engineered diamond', Nat. Mater. 8 (2009) 383-387.",
+   "year": 2009,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Bancroft 1956",
+   "text": "Bancroft, D., Peterson, E. L. & Minshall, S., 'Polymorphism of iron at high pressure', J. Appl. Phys. 27 (1956) 291-298.",
+   "year": 1956,
+   "modules": [
+    "shock"
+   ]
+  },
+  {
+   "label": "Barth 2015",
+   "text": "C. Barth, G. Mondonico and C. Senatore, 'Electro-mechanical properties of REBCO coated conductors from various industrial manufacturers at 77 K, self-field and 4.2 K, 19 T', Supercond. Sci. Technol. 28 (2015) 045011.",
+   "year": 2015,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Baym 1971",
+   "text": "G. Baym, C. Pethick and P. Sutherland, 'The ground state of matter at high densities: equation of state and stellar models', Astrophys. J. 170 (1971) 299-317.",
+   "year": 1971,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Bean 1964",
+   "text": "C. P. Bean, 'Magnetization of high-field superconductors', Rev. Mod. Phys. 36 (1964) 31-39.",
+   "year": 1964,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Berman 1955",
+   "text": "Berman, R. & Simon, F., 'On the graphite-diamond equilibrium', Z. Elektrochem. 59 (1955) 333-338.",
+   "year": 1955,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Berry 1997",
+   "text": "M. V. Berry and A. K. Geim, 'Of flying frogs and levitrons', Eur. J. Phys. 18 (1997) 307-313.",
+   "year": 1997,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Biggs 1964",
+   "text": "J. M. Biggs, Introduction to Structural Dynamics, McGraw-Hill, New York (1964).",
+   "year": 1964,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Braccini 2011",
+   "text": "V. Braccini et al., 'Properties of recent IBAD-MOCVD coated conductors relevant to their high field, low temperature magnet use', Supercond. Sci. Technol. 24 (2011) 035001.",
+   "year": 2011,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Brandt 1993",
+   "text": "E. H. Brandt and M. Indenbom, 'Type-II-superconductor strip with current in a perpendicular magnetic field', Phys. Rev. B 48 (1993) 12893-12906.",
+   "year": 1993,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Bridgman 1952",
+   "text": "P. W. Bridgman, Studies in Large Plastic Flow and Fracture with Special Emphasis on the Effects of Hydrostatic Pressure, McGraw-Hill, New York (1952).",
+   "year": 1952,
+   "modules": [
+    "plasticity",
+    "porosity"
+   ]
+  },
+  {
+   "label": "Brown 1980",
+   "text": "A. M. Brown and M. F. Ashby, 'Correlations for diffusion constants', Acta Metall. 28 (1980) 1085-1101.",
+   "year": 1980,
+   "modules": [
+    "welding",
+    "porosity"
+   ]
+  },
+  {
+   "label": "Bundy 1955",
+   "text": "Bundy, F. P., Hall, H. T., Strong, H. M. & Wentorf, R. H., 'Man-made diamonds', Nature 176 (1955) 51-55.",
+   "year": 1955,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Bundy 1963",
+   "text": "Bundy, F. P. & Wentorf, R. H., 'Direct transformation of hexagonal boron nitride to denser forms', J. Chem. Phys. 38 (1963) 1144-1149.",
+   "year": 1963,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Carroll 1972",
+   "text": "M. M. Carroll and A. C. Holt, 'Static and dynamic pore-collapse relations for ductile porous materials', J. Appl. Phys. 43 (1972) 1626-1636.",
+   "year": 1972,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Carslaw 1959",
+   "text": "H. S. Carslaw and J. C. Jaeger, Conduction of Heat in Solids, 2nd ed., Oxford University Press (1959).",
+   "year": 1959,
+   "modules": [
+    "eddy",
+    "plasticity",
+    "microstructure",
+    "welding"
+   ]
+  },
+  {
+   "label": "Chakrabarty 2006",
+   "text": "J. Chakrabarty, Theory of Plasticity, 3rd ed., Elsevier Butterworth-Heinemann, Oxford (2006).",
+   "year": 2006,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Chandrasekhar 1939",
+   "text": "S. Chandrasekhar, An Introduction to the Study of Stellar Structure, University of Chicago Press (1939).",
+   "year": 1939,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Chandrasekhar 1953",
+   "text": "S. Chandrasekhar and E. Fermi, 'Problems of gravitational stability in the presence of a magnetic field', Astrophys. J. 118 (1953) 116-141.",
+   "year": 1953,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Chelluri 1999",
+   "text": "B. Chelluri and J. P. Barber, 'Full-density, net-shape powder consolidation using dynamic magnetic pulse pressures', JOM 51(7) (1999) 36-37.",
+   "year": 1999,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Chelluri 2010",
+   "text": "B. Chelluri and E. Knoth, 4th International Conference on High Speed Forming (2010).",
+   "year": 2010,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Chen 1996",
+   "text": "S. R. Chen and G. T. Gray III, 'Constitutive behavior of tantalum and tantalum-tungsten alloys', Metall. Mater. Trans. A 27 (1996) 2994-3006.",
+   "year": 1996,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Corrigan 1975",
+   "text": "Corrigan, F. R. & Bundy, F. P., 'Direct transitions among the allotropic forms of boron nitride at high pressures and temperatures', J. Chem. Phys. 63 (1975) 3812-3820.",
+   "year": 1975,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Cowan 1971",
+   "text": "G. R. Cowan, O. R. Bergmann and A. H. Holtzman, 'Mechanism of bond zone wave formation in explosion-clad metals', Metall. Trans. 2 (1971) 3145-3155.",
+   "year": 1971,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Crank 1947",
+   "text": "J. Crank and P. Nicolson, A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type, Proc. Cambridge Philos. Soc. 43 (1947) 50-67.",
+   "year": 1947,
+   "modules": [
+    "eddy"
+   ]
+  },
+  {
+   "label": "Creely 2020",
+   "text": "A. J. Creely et al., 'Overview of the SPARC tokamak', J. Plasma Phys. 86 (2020) 865860502.",
+   "year": 2020,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Crossland 1982",
+   "text": "B. Crossland, Explosive Welding of Metals and its Application, Clarendon Press, Oxford (1982).",
+   "year": 1982,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Culver 1973",
+   "text": "R. S. Culver, 'Thermal instability strain in dynamic plastic deformation', in R. W. Rohde, B. M. Butcher, J. R. Holland and C. H. Karnes (eds.), Metallurgical Effects at High Strain Rates, Plenum, New York (1973).",
+   "year": 1973,
+   "modules": [
+    "plasticity",
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Daniel 2006",
+   "text": "I. M. Daniel & O. Ishai, Engineering Mechanics of Composite Materials, 2nd ed., Oxford University Press (2006).",
+   "year": 2006,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "DeCarli 1961",
+   "text": "DeCarli, P. S. & Jamieson, J. C., 'Formation of diamond by explosive shock', Science 133 (1961) 1821-1822.",
+   "year": 1961,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Derby 1982",
+   "text": "B. Derby and E. R. Wallach, 'Theoretical model for diffusion bonding', Metal Science 16 (1982) 49-56.",
+   "year": 1982,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Derby 1991",
+   "text": "B. Derby, 'The dependence of grain size on stress during dynamic recrystallisation', Acta Metall. Mater. 39 (1991) 955-962.",
+   "year": 1991,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Deribas 1974",
+   "text": "A. A. Deribas and I. D. Zakharenko, 'Surface effects with oblique collisions between metallic plates', Combust. Explos. Shock Waves 10 (1974) 358-367.",
+   "year": 1974,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Dieter 1986",
+   "text": "G. E. Dieter, Mechanical Metallurgy, 3rd ed., McGraw-Hill, New York (1986).",
+   "year": 1986,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Drozdov 2015",
+   "text": "Drozdov, A. P., Eremets, M. I., Troyan, I. A., Ksenofontov, V. & Shylin, S. I., 'Conventional superconductivity at 203 kelvin at high pressures in the sulfur hydride system', Nature 525 (2015) 73-76.",
+   "year": 2015,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Drozdov 2019",
+   "text": "Drozdov, A. P. et al., 'Superconductivity at 250 K in lanthanum hydride under high pressures', Nature 569 (2019) 528-531.",
+   "year": 2019,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Duemmer 1998",
+   "text": "T. Duemmer, J. C. LaSalvia, G. Ravichandran and M. A. Meyers, 'Effect of strain rate on plastic flow and failure in polycrystalline tungsten', Acta Mater. 46 (1998) 6267-6290.",
+   "year": 1998,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Duncan 1992",
+   "text": "R. C. Duncan and C. Thompson, 'Formation of very strongly magnetized neutron stars: implications for gamma-ray bursts', Astrophys. J. 392 (1992) L9-L13.",
+   "year": 1992,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Duvall 1977",
+   "text": "Duvall, G. E. & Graham, R. A., 'Phase transitions under shock-wave loading', Rev. Mod. Phys. 49 (1977) 523-579.",
+   "year": 1977,
+   "modules": [
+    "shock"
+   ]
+  },
+  {
+   "label": "Ekin 2006",
+   "text": "J. W. Ekin, Experimental Techniques for Low-Temperature Measurements, Oxford University Press (2006).",
+   "year": 2006,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Erskine 1991",
+   "text": "Erskine, D. J. & Nellis, W. J., 'Shock-induced martensitic phase transformation of oriented graphite to diamond', Nature 349 (1991) 317-319.",
+   "year": 1991,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Estrin 2013",
+   "text": "Y. Estrin and A. Vinogradov, 'Extreme grain refinement by severe plastic deformation: a wealth of challenging science', Acta Mater. 61 (2013) 782-817.",
+   "year": 2013,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Every",
+   "text": "Every number in the ledger comes from the magform module named in ClaimResult.models; the citations for each model are in that module's REFERENCES.",
+   "year": null,
+   "modules": [
+    "claims"
+   ]
+  },
+  {
+   "label": "Findik 2011",
+   "text": "F. Findik, 'Recent developments in explosive welding', Mater. Des. 32 (2011) 1081-1093.",
+   "year": 2011,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Fowler 1960",
+   "text": "C. M. Fowler, W. B. Garn and R. S. Caird, 'Production of very high magnetic fields by implosion', J. Appl. Phys. 31 (1960) 588-594.",
+   "year": 1960,
+   "modules": [
+    "pulse",
+    "eddy",
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Freidberg 2007",
+   "text": "J. P. Freidberg, Plasma Physics and Fusion Energy, Cambridge University Press (2007).",
+   "year": 2007,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "General",
+   "text": "General Electric Co., European patent application EP 2 641 984 A2: existing practice for cast Ti-48Al-2Cr-2Nb is hot isostatic pressing at 25 ksi (about 172 MPa) or more and about 1185 C for about 3 h.",
+   "year": null,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Graff 1975",
+   "text": "K. F. Graff, Wave Motion in Elastic Solids, Ohio State University Press (1975).",
+   "year": 1975,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Grover 1946",
+   "text": "F. W. Grover, Inductance Calculations: Working Formulas and Tables, Van Nostrand, New York (1946).",
+   "year": 1946,
+   "modules": [
+    "fieldmap"
+   ]
+  },
+  {
+   "label": "Gurson 1977",
+   "text": "A. L. Gurson, 'Continuum theory of ductile rupture by void nucleation and growth: Part I - Yield criteria and flow rules for porous ductile media', J. Eng. Mater. Technol. 99 (1977) 2-15.",
+   "year": 1977,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Hahn 2019",
+   "text": "S. Hahn et al., '45.5-tesla direct-current magnetic field generated with a high-temperature superconducting magnet', Nature 570 (2019) 496-499.",
+   "year": 2019,
+   "modules": [
+    "conductor",
+    "press"
+   ]
+  },
+  {
+   "label": "Hall 1951",
+   "text": "E. O. Hall, 'The deformation and ageing of mild steel: III Discussion of results', Proc. Phys. Soc. B 64 (1951) 747-753.",
+   "year": 1951,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Hall 1970",
+   "text": "Hall, H. T., 'Sintered diamond: a synthetic carbonado', Science 169 (1970) 868-869.",
+   "year": 1970,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Hanneman 1967",
+   "text": "Hanneman, R. E., Strong, H. M. & Bundy, F. P., 'Hexagonal diamonds in meteorites: implications', Science 155 (1967) 995-997.",
+   "year": 1967,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Harding 2006",
+   "text": "A. K. Harding and D. Lai, 'Physics of strongly magnetized neutron stars', Rep. Prog. Phys. 69 (2006) 2631-2708.",
+   "year": 2006,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Harrington 1968",
+   "text": "R. F. Harrington, Field Computation by Moment Methods, Macmillan, New York (1968).",
+   "year": 1968,
+   "modules": [
+    "fieldmap"
+   ]
+  },
+  {
+   "label": "Harvey 1985",
+   "text": "J. F. Harvey, Theory and Design of Pressure Vessels, Van Nostrand Reinhold, New York (1985).",
+   "year": 1985,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Heisenberg 1936",
+   "text": "W. Heisenberg and H. Euler, 'Folgerungen aus der Diracschen Theorie des Positrons', Z. Phys. 98 (1936) 714-732.",
+   "year": 1936,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Helle 1985",
+   "text": "A. S. Helle, K. E. Easterling and M. F. Ashby, 'Hot-isostatic pressing diagrams: new developments', Acta Metall. 33 (1985) 2163-2174.",
+   "year": 1985,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Herlach 1986",
+   "text": "F. Herlach, Europhysics News 17(2) (1986) 29.",
+   "year": 1986,
+   "modules": [
+    "eddy",
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Herlach 2003",
+   "text": "F. Herlach and N. Miura (eds.), High Magnetic Fields: Science and Technology, Vol. 1, World Scientific, Singapore (2003).",
+   "year": 2003,
+   "modules": [
+    "magnetics",
+    "conductor",
+    "pulse",
+    "eddy",
+    "welding",
+    "press"
+   ]
+  },
+  {
+   "label": "Hill 1950",
+   "text": "R. Hill, The Mathematical Theory of Plasticity, Clarendon Press, Oxford (1950).",
+   "year": 1950,
+   "modules": [
+    "plasticity",
+    "porosity",
+    "containment"
+   ]
+  },
+  {
+   "label": "Hollomon 1945",
+   "text": "J. H. Hollomon, 'Tensile deformation', Trans. AIME 162 (1945) 268-290.",
+   "year": 1945,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Holt 1970",
+   "text": "D. L. Holt, 'Dislocation cell formation in metals', J. Appl. Phys. 41 (1970) 3197-3201.",
+   "year": 1970,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Horowitz 2009",
+   "text": "C. J. Horowitz and K. Kadau, 'Breaking strain of neutron star crust and gravitational waves', Phys. Rev. Lett. 102 (2009) 191102.",
+   "year": 2009,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Hosford 2011",
+   "text": "W. F. Hosford and R. M. Caddell, Metal Forming: Mechanics and Metallurgy, 4th ed., Cambridge University Press (2011).",
+   "year": 2011,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Hughes 2000",
+   "text": "D. A. Hughes and N. Hansen, 'Microstructure and strength of nickel at large strains', Acta Mater. 48 (2000) 2985-3004.",
+   "year": 2000,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Humphreys 1999",
+   "text": "F. J. Humphreys, P. B. Prangnell, J. R. Bowen, A. Gholinia and C. Harris, 'Developing stable fine-grain microstructures by large strain deformation', Phil. Trans. R. Soc. Lond. A 357 (1999) 1663-1681.",
+   "year": 1999,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Humphreys 2004",
+   "text": "F. J. Humphreys and M. Hatherly, Recrystallization and Related Annealing Phenomena, 2nd ed., Elsevier, Oxford (2004).",
+   "year": 2004,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Hurley 2005",
+   "text": "K. Hurley et al., 'An exceptionally bright flare from SGR 1806-20 and the origins of short-duration gamma-ray bursts', Nature 434 (2005) 1098-1103.",
+   "year": 2005,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Iida 1988",
+   "text": "T. Iida and R. I. L. Guthrie, The Physical Properties of Liquid Metals, Clarendon Press, Oxford (1988).",
+   "year": 1988,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "International 2009",
+   "text": "International Commission on Non-Ionizing Radiation Protection, 'Guidelines on limits of exposure to static magnetic fields', Health Phys. 96 (2009) 504-514.",
+   "year": 2009,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Irifune 2003",
+   "text": "Irifune, T., Kurio, A., Sakamoto, S., Inoue, T. & Sumiya, H., 'Ultrahard polycrystalline diamond from graphite', Nature 421 (2003) 599-600.",
+   "year": 2003,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Irifune 2019",
+   "text": "Irifune, T. et al., C. R. Geoscience (2019).",
+   "year": 2019,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Iwasa 2009",
+   "text": "Y. Iwasa, Case Studies in Superconducting Magnets: Design and Operational Issues, 2nd ed., Springer, New York (2009).",
+   "year": 2009,
+   "modules": [
+    "magnetics",
+    "conductor",
+    "press"
+   ]
+  },
+  {
+   "label": "Jackson 1999",
+   "text": "J. D. Jackson, Classical Electrodynamics, 3rd ed., Wiley, New York (1999).",
+   "year": 1999,
+   "modules": [
+    "magnetics",
+    "fieldmap",
+    "eddy",
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Johnson 1939",
+   "text": "W. A. Johnson and R. F. Mehl, 'Reaction kinetics in processes of nucleation and growth', Trans. AIME 135 (1939) 416-458.",
+   "year": 1939,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Johnson 1972",
+   "text": "W. Johnson, Impact Strength of Materials, Edward Arnold, London (1972).",
+   "year": 1972,
+   "modules": [
+    "eddy"
+   ]
+  },
+  {
+   "label": "Johnson 1983",
+   "text": "G. R. Johnson and W. H. Cook, 'A constitutive model and data for metals subjected to large strains, high strain rates and high temperatures', Proc. 7th Int. Symp. Ballistics, The Hague (1983) 541-547.",
+   "year": 1983,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Kahraman 2005",
+   "text": "N. Kahraman and B. Gulenc, 'Microstructural and mechanical properties of Cu-Ti plates bonded through explosive welding process', J. Mater. Process. Technol. 169 (2005) 67-71.",
+   "year": 2005,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Kapil 2015",
+   "text": "A. Kapil and A. Sharma, 'Magnetic pulse welding: an efficient and environmentally friendly multi-material joining technique', J. Clean. Prod. 100 (2015) 35-58.",
+   "year": 2015,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Kaspi 2017",
+   "text": "V. M. Kaspi and A. M. Beloborodov, 'Magnetars', Annu. Rev. Astron. Astrophys. 55 (2017) 261-301.",
+   "year": 2017,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Kaygorodov 2006",
+   "text": "A. S. Kaygorodov et al. (2006).",
+   "year": 2006,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Kennedy 1976",
+   "text": "Kennedy, C. S. & Kennedy, G. C., 'The equilibrium boundary between graphite and diamond', J. Geophys. Res. 81 (1976) 2467-2470.",
+   "year": 1976,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Kim 1962",
+   "text": "Y. B. Kim, C. F. Hempstead and A. R. Strnad, 'Critical persistent currents in hard superconductors', Phys. Rev. Lett. 9 (1962) 306-309.",
+   "year": 1962,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Kittel 2005",
+   "text": "C. Kittel, Introduction to Solid State Physics, 8th ed., Wiley, Hoboken (2005).",
+   "year": 2005,
+   "modules": [
+    "claims"
+   ]
+  },
+  {
+   "label": "Knoepfel 1970",
+   "text": "H. Knoepfel, Pulsed High Magnetic Fields, North-Holland, Amsterdam (1970).",
+   "year": 1970,
+   "modules": [
+    "pulse",
+    "eddy",
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Knoepfel 2000",
+   "text": "H. Knoepfel, Magnetic Fields: A Comprehensive Theoretical Treatise for Practical Use, Wiley, New York (2000).",
+   "year": 2000,
+   "modules": [
+    "magnetics",
+    "fieldmap",
+    "conductor",
+    "pulse",
+    "eddy",
+    "press"
+   ]
+  },
+  {
+   "label": "Kocks 1970",
+   "text": "U. F. Kocks, 'The relation between polycrystal deformation and single-crystal deformation', Metall. Trans. 1 (1970) 1121-1143.",
+   "year": 1970,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Kocks 2003",
+   "text": "U. F. Kocks and H. Mecking, 'Physics and phenomenology of strain hardening: the FCC case', Prog. Mater. Sci. 48 (2003) 171-273.",
+   "year": 2003,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Kolm 1984",
+   "text": "H. Kolm & P. Mongeau, 'Basic principles of coaxial launch technology', IEEE Trans. Magn. 20 (1984) 227-230.",
+   "year": 1984,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Kore 2008",
+   "text": "S. D. Kore, P. P. Date and S. V. Kulkarni, 'Electromagnetic impact welding of aluminum to stainless steel sheets', J. Mater. Process. Technol. 208 (2008) 486-493.",
+   "year": 2008,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Kore 2009",
+   "text": "S. D. Kore, J. Imbert, M. J. Worswick and Y. Zhou, 'Electromagnetic impact welding of Mg to Al sheets', Sci. Technol. Weld. Join. 14 (2009) 549-553.",
+   "year": 2009,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Kraus 2016",
+   "text": "Kraus, D. et al., 'Nanosecond formation of diamond and lonsdaleite by shock compression of graphite', Nat. Commun. 7 (2016) 10970.",
+   "year": 2016,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Lai 2001",
+   "text": "D. Lai, 'Matter in strong magnetic fields', Rev. Mod. Phys. 73 (2001) 629-662.",
+   "year": 2001,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Lame 1852",
+   "text": "G. Lame, Lecons sur la theorie mathematique de l'elasticite des corps solides, Bachelier, Paris (1852).",
+   "year": 1852,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Landau 1984",
+   "text": "L. D. Landau, E. M. Lifshitz and L. P. Pitaevskii, Electrodynamics of Continuous Media, 2nd ed., Pergamon, Oxford (1984).",
+   "year": 1984,
+   "modules": [
+    "eddy"
+   ]
+  },
+  {
+   "label": "Lange 1985",
+   "text": "K. Lange (ed.), Handbook of Metal Forming, McGraw-Hill, New York (1985).",
+   "year": 1985,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Laniel 2024",
+   "text": "Laniel, D. et al., Adv. Mater. 36 (2024) 2308030.",
+   "year": 2024,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Lassner 1999",
+   "text": "E. Lassner and W.-D. Schubert, Tungsten: Properties, Chemistry, Technology of the Element, Alloys, and Chemical Compounds, Kluwer Academic/Plenum, New York (1999).",
+   "year": 1999,
+   "modules": [
+    "plasticity",
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Lee 2008",
+   "text": "C. Lee, X. Wei, J. W. Kysar and J. Hone, 'Measurement of the elastic properties and intrinsic strength of monolayer graphene', Science 321 (2008) 385-388.",
+   "year": 2008,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Lee 2022",
+   "text": "D. Lee et al., 'Ultrahigh strength, modulus, and conductivity of graphitic fibers by macromolecular coalescence', Sci. Adv. 8 (2022) eabn0939.",
+   "year": 2022,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Lu 2008",
+   "text": "J. Lu, E. S. Choi and H. D. Zhou, 'Physical properties of Hastelloy C-276 at cryogenic temperatures', J. Appl. Phys. 103 (2008) 064908.",
+   "year": 2008,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Lysak 2012",
+   "text": "V. I. Lysak and S. V. Kuzmin, 'Lower boundary in metal explosive welding. Evolution of ideas', J. Mater. Process. Technol. 212 (2012) 150-156.",
+   "year": 2012,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Marsh 1980",
+   "text": "Marsh, S. P. (ed.), LASL Shock Hugoniot Data, University of California Press, Berkeley (1980).",
+   "year": 1980,
+   "modules": [
+    "shock"
+   ]
+  },
+  {
+   "label": "Marshall 2004",
+   "text": "R. A. Marshall & Y. Wang, Railguns: Their Science and Technology, China Machine Press, Beijing (2004).",
+   "year": 2004,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "McNab 2003",
+   "text": "I. R. McNab, 'Launch to space with an electromagnetic railgun', IEEE Trans. Magn. 39 (2003) 295-304.",
+   "year": 2003,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "McQueen 1970",
+   "text": "McQueen, R. G., Marsh, S. P., Taylor, J. W., Fritz, J. N. & Carter, W. J., 'The equation of state of solids from shock wave studies', in Kinslow, R. (ed.), High-Velocity Impact Phenomena, Academic Press, New York (1970) 293-417.",
+   "year": 1970,
+   "modules": [
+    "shock"
+   ]
+  },
+  {
+   "label": "Meyers 1994",
+   "text": "M. A. Meyers, Dynamic Behavior of Materials, Wiley, New York (1994).",
+   "year": 1994,
+   "modules": [
+    "plasticity",
+    "microstructure",
+    "shock",
+    "welding"
+   ]
+  },
+  {
+   "label": "Meyers 2006",
+   "text": "M. A. Meyers, A. Mishra and D. J. Benson, 'Mechanical properties of nanocrystalline materials', Prog. Mater. Sci. 51 (2006) 427-556.",
+   "year": 2006,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Miller 2003",
+   "text": "J. R. Miller, 'The NHMFL 45-T hybrid magnet system: past, present, and future', IEEE Trans. Appl. Supercond. 13 (2003) 1385-1390.",
+   "year": 2003,
+   "modules": [
+    "press"
+   ]
+  },
+  {
+   "label": "Mitchell 2008",
+   "text": "N. Mitchell et al., 'The ITER magnet system', IEEE Trans. Appl. Supercond. 18 (2008) 435-440.",
+   "year": 2008,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Montgomery 1969",
+   "text": "D. B. Montgomery, Solenoid Magnet Design: The Magnetic and Mechanical Aspects of Resistive and Superconducting Systems, Wiley-Interscience, New York (1969).",
+   "year": 1969,
+   "modules": [
+    "magnetics",
+    "fieldmap",
+    "pulse",
+    "press"
+   ]
+  },
+  {
+   "label": "Moon 1982",
+   "text": "F. C. Moon, 'The virial theorem and scaling laws for superconducting magnet systems', J. Appl. Phys. 53 (1982) 9112-9121.",
+   "year": 1982,
+   "modules": [
+    "magnetics",
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Moon 1984",
+   "text": "F. C. Moon, Magneto-Solid Mechanics, Wiley, New York (1984).",
+   "year": 1984,
+   "modules": [
+    "magnetics",
+    "containment"
+   ]
+  },
+  {
+   "label": "Nakamura 2018",
+   "text": "D. Nakamura, A. Ikeda, H. Sawabe, Y. H. Matsuda and S. Takeyama, 'Record indoor magnetic field of 1200 T generated by electromagnetic flux-compression', Rev. Sci. Instrum. 89 (2018) 095106.",
+   "year": 2018,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "National 2025",
+   "text": "National High Magnetic Field Laboratory, news release of 11 Sep 2025 and research highlight of Jan 2026: REBCO test coil 'Little Big Coil 9', 48.7 T inside a 31 T resistive magnet (August 2025).",
+   "year": 2025,
+   "modules": [
+    "conductor",
+    "press"
+   ]
+  },
+  {
+   "label": "NHMFL",
+   "text": "NHMFL Pulsed Field Facility, Los Alamos, 100.75 T multi-shot magnet (22 March 2012); about 10 mm bore as operated (magform.benchmarks.FIELD_LADDER).",
+   "year": null,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "NIST",
+   "text": "NIST Cryogenic Technologies Group, Material Properties: OFHC Copper (UNS C10100/C10200), specific heat and resistivity fits (trc.nist.gov/cryogenics).",
+   "year": null,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Norris 1970",
+   "text": "W. T. Norris, 'Calculation of hysteresis losses in hard superconductors carrying ac: isolated conductors and edges of thin sheets', J. Phys. D: Appl. Phys. 3 (1970) 489-507.",
+   "year": 1970,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "O'Neill 1974",
+   "text": "G. K. O'Neill, 'The colonization of space', Physics Today 27(9) (1974) 32-40.",
+   "year": 1974,
+   "modules": [
+    "containment"
+   ]
+  },
+  {
+   "label": "Petch 1953",
+   "text": "N. J. Petch, 'The cleavage strength of polycrystals', J. Iron Steel Inst. 174 (1953) 25-28.",
+   "year": 1953,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Pippan 2010",
+   "text": "R. Pippan, S. Scheriau, A. Taylor, M. Hafok, A. Hohenwarter and A. Bachmaier, 'Saturation of fragmentation during severe plastic deformation', Annu. Rev. Mater. Res. 40 (2010) 319-343.",
+   "year": 2010,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Psyk 2011",
+   "text": "V. Psyk, D. Risch, B. L. Kinsey, A. E. Tekkaya and M. Kleiner, 'Electromagnetic forming - a review', J. Mater. Process. Technol. 211 (2011) 787-829.",
+   "year": 2011,
+   "modules": [
+    "magnetics",
+    "pulse",
+    "eddy",
+    "plasticity",
+    "shock",
+    "welding",
+    "porosity",
+    "press"
+   ]
+  },
+  {
+   "label": "Raoelison 2014",
+   "text": "R. N. Raoelison, D. Racine, Z. Zhang, N. Buiron, D. Marceau and M. Rachik, 'Magnetic pulse welding: interface of Al/Cu joint and investigation of intermetallic formation effect on the weld features', J. Manuf. Process. 16 (2014) 427-434.",
+   "year": 2014,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Rayleigh 1917",
+   "text": "Lord Rayleigh, 'On the pressure developed in a liquid during the collapse of a spherical cavity', Philos. Mag. 34 (1917) 94-98.",
+   "year": 1917,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Ribeiro 2014",
+   "text": "J. B. Ribeiro, R. Mendes and A. Loureiro, 'Review of the weldability window concept and equations for explosive welding', J. Phys.: Conf. Ser. 500 (2014) 052038.",
+   "year": 2014,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Rosset 2006",
+   "text": "W. S. de Rosset, 'Analysis of explosive bonding parameters', Mater. Manuf. Process. 21 (2006) 634-638.",
+   "year": 2006,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Schwinger 1951",
+   "text": "J. Schwinger, 'On gauge invariance and vacuum polarization', Phys. Rev. 82 (1951) 664-679.",
+   "year": 1951,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Senatore 2016",
+   "text": "C. Senatore, C. Barth, M. Bonura, M. Kulich and G. Mondonico, 'Field and temperature scaling of the critical current density in commercial REBCO coated conductors', Supercond. Sci. Technol. 29 (2016) 014002.",
+   "year": 2016,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Shapiro 1983",
+   "text": "S. L. Shapiro and S. A. Teukolsky, Black Holes, White Dwarfs, and Neutron Stars: The Physics of Compact Objects, Wiley, New York (1983).",
+   "year": 1983,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Skokov 2009",
+   "text": "V. Skokov, A. Yu. Illarionov and V. Toneev, 'Estimate of the magnetic field strength in heavy-ion collisions', Int. J. Mod. Phys. A 24 (2009) 5925-5932.",
+   "year": 2009,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Smythe 1968",
+   "text": "W. R. Smythe, Static and Dynamic Electricity, 3rd ed., McGraw-Hill, New York (1968).",
+   "year": 1968,
+   "modules": [
+    "fieldmap"
+   ]
+  },
+  {
+   "label": "Solozhenko 1999",
+   "text": "Solozhenko, V. L., Turkevich, V. Z. & Holzapfel, W. B., 'Refined phase diagram of boron nitride', J. Phys. Chem. B 103 (1999) 2903-2905.",
+   "year": 1999,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Strong 1972",
+   "text": "Strong, H. M. & Wentorf, R. H., 'The growth of large diamond crystals', Naturwissenschaften 59 (1972) 1-7.",
+   "year": 1972,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Tabor 1951",
+   "text": "D. Tabor, The Hardness of Metals, Clarendon Press, Oxford (1951).",
+   "year": 1951,
+   "modules": [
+    "plasticity",
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Tatarakis 2002",
+   "text": "M. Tatarakis et al., 'Measuring huge magnetic fields', Nature 415 (2002) 280.",
+   "year": 2002,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Taylor 1934",
+   "text": "G. I. Taylor and H. Quinney, 'The latent energy remaining in a metal after cold working', Proc. R. Soc. Lond. A 143 (1934) 307-326.",
+   "year": 1934,
+   "modules": [
+    "eddy",
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Taylor 1934",
+   "text": "G. I. Taylor, 'The mechanism of plastic deformation of crystals. Part I. Theoretical', Proc. R. Soc. Lond. A 145 (1934) 362-387.",
+   "year": 1934,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Taylor 1938",
+   "text": "G. I. Taylor, 'Plastic strain in metals', J. Inst. Metals 62 (1938) 307-324.",
+   "year": 1938,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "The",
+   "text": "The original concept note, archived verbatim at docs/archive/original-README.md.",
+   "year": null,
+   "modules": [
+    "claims"
+   ]
+  },
+  {
+   "label": "Timoshenko 1970",
+   "text": "S. P. Timoshenko and J. N. Goodier, Theory of Elasticity, 3rd ed., McGraw-Hill, New York (1970).",
+   "year": 1970,
+   "modules": [
+    "pulse",
+    "containment"
+   ]
+  },
+  {
+   "label": "Toray",
+   "text": "Toray Industries, TORAYCA M60J and T1100G technical data sheets.",
+   "year": null,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Torre 1948",
+   "text": "C. Torre, 'Theorie und Verhalten der zusammengepressten Pulver', Berg- und Huettenmaennische Monatshefte 93 (1948) 62-67.",
+   "year": 1948,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Tsuchiya 2021",
+   "text": "K. Tsuchiya et al., 'Superconducting properties of commercial REBCO-coated conductors with artificial pinning centers', Supercond. Sci. Technol. 34 (2021) 105005.",
+   "year": 2021,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Valiev 2000",
+   "text": "R. Z. Valiev, R. K. Islamgaliev and I. V. Alexandrov, 'Bulk nanostructured materials from severe plastic deformation', Prog. Mater. Sci. 45 (2000) 103-189.",
+   "year": 2000,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Wagner 2004",
+   "text": "U. Wagner et al., 'Laboratory measurements of 0.7 GG magnetic fields generated during high-intensity laser interactions with dense plasmas', Phys. Rev. E 70 (2004) 026401.",
+   "year": 2004,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Walsh 1953",
+   "text": "J. M. Walsh, R. G. Shreffler and F. J. Willig, 'Limiting conditions for jet formation in high velocity collisions', J. Appl. Phys. 24 (1953) 349-359.",
+   "year": 1953,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Wei 2006",
+   "text": "Q. Wei, T. Jiao, K. T. Ramesh, E. Ma et al., 'Mechanical behavior and dynamic failure of high-strength ultrafine grained tungsten under uniaxial compression', Acta Mater. 54 (2006) 77-87.",
+   "year": 2006,
+   "modules": [
+    "plasticity",
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Wentorf 1957",
+   "text": "Wentorf, R. H., 'Cubic form of boron nitride', J. Chem. Phys. 26 (1957) 956.",
+   "year": 1957,
+   "modules": [
+    "synthesis"
+   ]
+  },
+  {
+   "label": "Wheeler 1928",
+   "text": "H. A. Wheeler, 'Simple inductance formulas for radio coils', Proc. IRE 16 (1928) 1398-1400.",
+   "year": 1928,
+   "modules": [
+    "magnetics",
+    "pulse",
+    "eddy"
+   ]
+  },
+  {
+   "label": "Wilson 1983",
+   "text": "M. N. Wilson, Superconducting Magnets, Clarendon Press, Oxford (1983).",
+   "year": 1983,
+   "modules": [
+    "magnetics",
+    "fieldmap",
+    "conductor",
+    "press"
+   ]
+  },
+  {
+   "label": "Wittman 1973",
+   "text": "R. H. Wittman, 'The influence of collision parameters on the strength and microstructure of an explosion welded aluminium alloy', Proc. 2nd Int. Symp. on Use of Explosive Energy in Manufacturing Metallic Materials, Marianske Lazne (1973) 153-168.",
+   "year": 1973,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Woodson 1968",
+   "text": "H. H. Woodson and J. R. Melcher, Electromechanical Dynamics, Part I: Discrete Systems, Wiley, New York (1968).",
+   "year": 1968,
+   "modules": [
+    "pulse"
+   ]
+  },
+  {
+   "label": "Wright 2002",
+   "text": "T. W. Wright, The Physics and Mathematics of Adiabatic Shear Bands, Cambridge University Press (2002).",
+   "year": 2002,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Xu 2014",
+   "text": "A. Xu, J. J. Jaroszynski, F. Kametani, Z. Chen, D. C. Larbalestier et al., 'Strongly enhanced vortex pinning from 4 to 77 K in magnetic fields up to 31 T in 15 mol.% Zr-added (Gd, Y)-Ba-Cu-O superconducting tapes', APL Mater. 2 (2014) 046111.",
+   "year": 2014,
+   "modules": [
+    "conductor"
+   ]
+  },
+  {
+   "label": "Yoon 2021",
+   "text": "J. W. Yoon et al., 'Realization of laser intensity over 10^23 W/cm^2', Optica 8 (2021) 630-635.",
+   "year": 2021,
+   "modules": [
+    "magnetar"
+   ]
+  },
+  {
+   "label": "Yu 2021",
+   "text": "W. Yu et al., Metals 11 (2021) 1156.",
+   "year": 2021,
+   "modules": [
+    "porosity"
+   ]
+  },
+  {
+   "label": "Zel'dovich 1967",
+   "text": "Zel'dovich, Ya. B. & Raizer, Yu. P., Physics of Shock Waves and High-Temperature Hydrodynamic Phenomena, Academic Press, New York (1967).",
+   "year": 1967,
+   "modules": [
+    "shock"
+   ]
+  },
+  {
+   "label": "Zener 1944",
+   "text": "C. Zener and J. H. Hollomon, 'Effect of strain rate upon plastic flow of steel', J. Appl. Phys. 15 (1944) 22-32.",
+   "year": 1944,
+   "modules": [
+    "microstructure"
+   ]
+  },
+  {
+   "label": "Zerilli 1987",
+   "text": "F. J. Zerilli and R. W. Armstrong, 'Dislocation-mechanics-based constitutive relations for material dynamics calculations', J. Appl. Phys. 61 (1987) 1816-1825.",
+   "year": 1987,
+   "modules": [
+    "plasticity"
+   ]
+  },
+  {
+   "label": "Zhang 2010",
+   "text": "Y. Zhang, S. S. Babu and G. S. Daehn, 'Interfacial ultrafine-grained structures on aluminum alloy 6061 joint and copper alloy 110 joint fabricated by magnetic pulse welding', J. Mater. Sci. 45 (2010) 4645-4651.",
+   "year": 2010,
+   "modules": [
+    "welding"
+   ]
+  },
+  {
+   "label": "Zhang 2011",
+   "text": "Y. Zhang, S. S. Babu, C. Prothe, M. Blakely, J. Kwasegroch, M. LaHa and G. S. Daehn, 'Application of high velocity impact welding at varied different length scales', J. Mater. Process. Technol. 211 (2011) 944-952.",
+   "year": 2011,
+   "modules": [
+    "welding"
+   ]
+  }
+ ]
+}

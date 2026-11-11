@@ -1,0 +1,917 @@
+{
+ "billet_4": [
+  {
+   "key": "hts_pulsed",
+   "name": "Concept magnet, pulsed",
+   "blurb": "The note's own magnet, swung to full field on every shot.",
+   "status": "infeasible",
+   "field": "100.3",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "structure",
+   "energy": "99.5",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "aspirational"
+    },
+    {
+     "name": "structure",
+     "status": "infeasible"
+    },
+    {
+     "name": "pulsed operation",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "the winding quenches every pulse: the tape cannot carry the current at this field even before it is pulsed (no enthalpy margin)",
+    "no reinforcement keeps the REBCO within its strain limit at 3.66 GPa of hoop stress"
+   ],
+   "notes": [
+    "needs 100.3 T from a superconducting winding: the all-superconducting record is 35.6 T and no superconductor has carried current above 48.7 T",
+    "peak hoop stress 3.66 GPa needs a composite modulus of 1373 GPa at the 0.4 % strain limit",
+    "field must rise in 10.3 ms for this workpiece: 9.77e+03 T/s"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hts_dc",
+   "name": "Concept magnet, steady",
+   "blurb": "The same magnet held at constant field.",
+   "status": "infeasible",
+   "field": "100.3",
+   "rise": "steady",
+   "delivered": "0",
+   "reusable": true,
+   "limiting": "pressure on the workpiece",
+   "energy": "99.5",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "aspirational"
+    },
+    {
+     "name": "structure",
+     "status": "infeasible"
+    },
+    {
+     "name": "pressure on the workpiece",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "a steady field exerts no pressure on a stationary, non-magnetic workpiece"
+   ],
+   "notes": [
+    "a steady field has diffused into the workpiece: (B_out^2 - B_in^2)/(2 mu0) = 0, so the magnet exerts no forming pressure however strong it is",
+    "as a magnet alone it would still be infeasible (conductor and structure)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "pulsed_resistive",
+   "name": "Resistive pulsed magnet",
+   "blurb": "A reinforced copper-alloy coil fired from a capacitor bank: the technology of the 100 T record.",
+   "status": "extrapolation",
+   "field": "100.3",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "field and bore",
+   "energy": "101.9",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "extrapolation"
+    }
+   ],
+   "warnings": [],
+   "notes": [
+    "100.3 T in a 100 mm bore: extrapolation (the 100.75 T record is in a 10 mm bore; stored energy grows with bore volume)",
+    "at the 10.3 ms rise the workpiece needs: 38 turn(s), 24.94 kV, 1.23 MA, 15.46 GW, 102 MJ bank (extrapolation)",
+    "the supply could go as fast as 2.15 ms within demonstrated practice: it keeps up with this workpiece"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hybrid_dc_pulsed",
+   "name": "Hybrid: steady background plus pulsed insert",
+   "blurb": "A steady superconducting outsert with a pulsed copper insert inside it.",
+   "status": "aspirational",
+   "field": "100.9",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "insert field and bore",
+   "energy": "81.1",
+   "components": [
+    {
+     "name": "insert field and bore",
+     "status": "aspirational"
+    },
+    {
+     "name": "insert power supply and coil",
+     "status": "extrapolation"
+    },
+    {
+     "name": "background magnet",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "background coupling",
+     "status": "aspirational"
+    }
+   ],
+   "warnings": [
+    "the insert's pulsed flux is 2.66x the background's own: a shorted background would be driven through zero and reversed (30.5 T swing at 2.98e+03 T/s) unless the insert is flux-compensated"
+   ],
+   "notes": [
+    "11.5 T steady background plus a 89.42 T pulse: total 100.9 T at the insert (more than the 100.3 T of an unbiased pulse) for the same pressure",
+    "the bias cuts the insert's own field energy by 20%; the peak field and stress on the insert are not relieved",
+    "background magnet: 11.5 T in a 550 mm bore (state of the art)",
+    "open-circuit, the pulse induces 707 V on every background turn"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "single_turn",
+   "name": "Single-turn destructive coil",
+   "blurb": "A copper strip and a very fast bank. Reaches these fields for microseconds and is destroyed doing it.",
+   "status": "aspirational",
+   "field": "100.3",
+   "rise": "2.5 µs",
+   "delivered": "100",
+   "reusable": false,
+   "limiting": "bank voltage",
+   "energy": "3.1",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank voltage",
+     "status": "aspirational"
+    },
+    {
+     "name": "peak current",
+     "status": "extrapolation"
+    },
+    {
+     "name": "peak power",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank energy",
+     "status": "state_of_the_art"
+    }
+   ],
+   "warnings": [
+    "the coil is consumed by every shot"
+   ],
+   "notes": [
+    "one turn, 100 mm long: 7.979 MA in 2.5 us, 494.8 kV, 3.14 MJ in the bore field",
+    "the coil is destroyed by every shot (it explodes outward); samples in existing 20 mm systems usually survive",
+    "the field lasts microseconds: the load on the workpiece is a shock, not a press stroke"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "industrial_emf",
+   "name": "Industrial forming coil",
+   "blurb": "Today's forming coil, run at its field limit over the same bore.",
+   "status": "extrapolation",
+   "field": "50.0",
+   "rise": "50 µs",
+   "delivered": "26",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "5.1",
+   "components": [
+    {
+     "name": "field",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "extrapolation"
+    }
+   ],
+   "warnings": [
+    "capped at 50 T: delivers 0.995 GPa of the 4 GPa asked for",
+    "not an industrial machine at this size: peak current extrapolation, coil heating extrapolation"
+   ],
+   "notes": [
+    "industrial electromagnetic forming works at 20-50 T on areas of square centimetres with 10-100 kJ machines (Psyk et al. 2011)",
+    "over this bore and length at a 50 us rise: 5.07 MJ, 15.52 kV, 20.46 MA (extrapolation)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  }
+ ],
+ "billet_16": [
+  {
+   "key": "hts_pulsed",
+   "name": "Concept magnet, pulsed",
+   "blurb": "The note's own magnet, swung to full field on every shot.",
+   "status": "infeasible",
+   "field": "63.4",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "pulsed operation",
+   "energy": "39.8",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "extrapolation"
+    },
+    {
+     "name": "structure",
+     "status": "aspirational"
+    },
+    {
+     "name": "pulsed operation",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "the winding quenches every pulse: per-pulse loss is 99.3x its enthalpy margin"
+   ],
+   "notes": [
+    "needs 63.41 T from a superconducting winding: the all-superconducting record is 35.6 T and no superconductor has carried current above 48.7 T",
+    "peak hoop stress 1.46 GPa needs a composite modulus of 549.3 GPa at the 0.4 % strain limit",
+    "field must rise in 10.3 ms for this workpiece: 6.18e+03 T/s"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hts_dc",
+   "name": "Concept magnet, steady",
+   "blurb": "The same magnet held at constant field.",
+   "status": "infeasible",
+   "field": "63.4",
+   "rise": "steady",
+   "delivered": "0",
+   "reusable": true,
+   "limiting": "pressure on the workpiece",
+   "energy": "39.8",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "extrapolation"
+    },
+    {
+     "name": "structure",
+     "status": "aspirational"
+    },
+    {
+     "name": "pressure on the workpiece",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "a steady field exerts no pressure on a stationary, non-magnetic workpiece"
+   ],
+   "notes": [
+    "a steady field has diffused into the workpiece: (B_out^2 - B_in^2)/(2 mu0) = 0, so the magnet exerts no forming pressure however strong it is",
+    "as a magnet alone it would still be aspirational (conductor and structure)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "pulsed_resistive",
+   "name": "Resistive pulsed magnet",
+   "blurb": "A reinforced copper-alloy coil fired from a capacitor bank: the technology of the 100 T record.",
+   "status": "extrapolation",
+   "field": "63.4",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "field and bore",
+   "energy": "40.8",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "state_of_the_art"
+    }
+   ],
+   "warnings": [],
+   "notes": [
+    "63.41 T in a 100 mm bore: extrapolation (the 100.75 T record is in a 10 mm bore; stored energy grows with bore volume)",
+    "at the 10.3 ms rise the workpiece needs: 60 turn(s), 24.9 kV, 0.4928 MA, 6.183 GW, 40.8 MJ bank (state of the art)",
+    "the supply could go as fast as 464 us within demonstrated practice: it keeps up with this workpiece"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hybrid_dc_pulsed",
+   "name": "Hybrid: steady background plus pulsed insert",
+   "blurb": "A steady superconducting outsert with a pulsed copper insert inside it.",
+   "status": "aspirational",
+   "field": "64.4",
+   "rise": "10.3 ms",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "background coupling",
+   "energy": "28.4",
+   "components": [
+    {
+     "name": "insert field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "insert power supply and coil",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "background magnet",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "background coupling",
+     "status": "aspirational"
+    }
+   ],
+   "warnings": [
+    "the insert's pulsed flux is 1.57x the background's own: a shorted background would be driven through zero and reversed (18.1 T swing at 1.76e+03 T/s) unless the insert is flux-compensated"
+   ],
+   "notes": [
+    "11.5 T steady background plus a 52.95 T pulse: total 64.45 T at the insert (more than the 63.41 T of an unbiased pulse) for the same pressure",
+    "the bias cuts the insert's own field energy by 30%; the peak field and stress on the insert are not relieved",
+    "background magnet: 11.5 T in a 550 mm bore (state of the art)",
+    "open-circuit, the pulse induces 419 V on every background turn"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "single_turn",
+   "name": "Single-turn destructive coil",
+   "blurb": "A copper strip and a very fast bank. Reaches these fields for microseconds and is destroyed doing it.",
+   "status": "aspirational",
+   "field": "63.4",
+   "rise": "2.5 µs",
+   "delivered": "100",
+   "reusable": false,
+   "limiting": "bank voltage",
+   "energy": "1.3",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank voltage",
+     "status": "aspirational"
+    },
+    {
+     "name": "peak current",
+     "status": "extrapolation"
+    },
+    {
+     "name": "peak power",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "bank energy",
+     "status": "state_of_the_art"
+    }
+   ],
+   "warnings": [
+    "the coil is consumed by every shot"
+   ],
+   "notes": [
+    "one turn, 100 mm long: 5.046 MA in 2.5 us, 312.9 kV, 1.26 MJ in the bore field",
+    "the coil is destroyed by every shot (it explodes outward); samples in existing 20 mm systems usually survive",
+    "the field lasts microseconds: the load on the workpiece is a shock, not a press stroke"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "industrial_emf",
+   "name": "Industrial forming coil",
+   "blurb": "Today's forming coil, run at its field limit over the same bore.",
+   "status": "extrapolation",
+   "field": "50.0",
+   "rise": "50 µs",
+   "delivered": "66",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "5.1",
+   "components": [
+    {
+     "name": "field",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "extrapolation"
+    }
+   ],
+   "warnings": [
+    "capped at 50 T: delivers 0.995 GPa of the 1.6 GPa asked for",
+    "not an industrial machine at this size: peak current extrapolation, coil heating extrapolation"
+   ],
+   "notes": [
+    "industrial electromagnetic forming works at 20-50 T on areas of square centimetres with 10-100 kJ machines (Psyk et al. 2011)",
+    "over this bore and length at a 50 us rise: 5.07 MJ, 15.52 kV, 20.46 MA (extrapolation)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  }
+ ],
+ "tube_4": [
+  {
+   "key": "hts_pulsed",
+   "name": "Concept magnet, pulsed",
+   "blurb": "The note's own magnet, swung to full field on every shot.",
+   "status": "infeasible",
+   "field": "100.3",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "structure",
+   "energy": "99.5",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "aspirational"
+    },
+    {
+     "name": "structure",
+     "status": "infeasible"
+    },
+    {
+     "name": "pulsed operation",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "the winding quenches every pulse: the tape cannot carry the current at this field even before it is pulsed (no enthalpy margin)",
+    "no reinforcement keeps the REBCO within its strain limit at 3.66 GPa of hoop stress"
+   ],
+   "notes": [
+    "needs 100.3 T from a superconducting winding: the all-superconducting record is 35.6 T and no superconductor has carried current above 48.7 T",
+    "peak hoop stress 3.66 GPa needs a composite modulus of 1373 GPa at the 0.4 % strain limit",
+    "field must rise in 25.7 us for this workpiece: 3.91e+06 T/s"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hts_dc",
+   "name": "Concept magnet, steady",
+   "blurb": "The same magnet held at constant field.",
+   "status": "infeasible",
+   "field": "100.3",
+   "rise": "steady",
+   "delivered": "0",
+   "reusable": true,
+   "limiting": "pressure on the workpiece",
+   "energy": "99.5",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "aspirational"
+    },
+    {
+     "name": "structure",
+     "status": "infeasible"
+    },
+    {
+     "name": "pressure on the workpiece",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "a steady field exerts no pressure on a stationary, non-magnetic workpiece"
+   ],
+   "notes": [
+    "a steady field has diffused into the workpiece: (B_out^2 - B_in^2)/(2 mu0) = 0, so the magnet exerts no forming pressure however strong it is",
+    "as a magnet alone it would still be infeasible (conductor and structure)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "pulsed_resistive",
+   "name": "Resistive pulsed magnet",
+   "blurb": "A reinforced copper-alloy coil fired from a capacitor bank: the technology of the 100 T record.",
+   "status": "infeasible",
+   "field": "100.3",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "99.5",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "at the rise time the workpiece needs, the supply or the coil fails (coil heating infeasible, charge voltage aspirational, peak current aspirational, bank energy extrapolation, peak power extrapolation)",
+    "time conflict: the workpiece needs a 25.7 us rise, the supply's fastest within demonstrated practice is 2.15 ms, and at that rise the wall passes only 51% of the pressure"
+   ],
+   "notes": [
+    "100.3 T in a 100 mm bore: extrapolation (the 100.75 T record is in a 10 mm bore; stored energy grows with bore volume)",
+    "at the 25.7 us rise the workpiece needs: 1 turn(s), 260.6 kV, 46.75 MA, 6092 GW, 99.5 MJ bank (infeasible)"
+   ],
+   "relaxed_rise": "2.15 ms",
+   "relaxed_delivered": "51",
+   "relaxed_status": "extrapolation"
+  },
+  {
+   "key": "hybrid_dc_pulsed",
+   "name": "Hybrid: steady background plus pulsed insert",
+   "blurb": "A steady superconducting outsert with a pulsed copper insert inside it.",
+   "status": "infeasible",
+   "field": "100.9",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "insert power supply and coil",
+   "energy": "79.1",
+   "components": [
+    {
+     "name": "insert field and bore",
+     "status": "aspirational"
+    },
+    {
+     "name": "insert power supply and coil",
+     "status": "infeasible"
+    },
+    {
+     "name": "background magnet",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "background coupling",
+     "status": "aspirational"
+    }
+   ],
+   "warnings": [
+    "the insert's pulsed flux is 2.66x the background's own: a shorted background would be driven through zero and reversed (30.5 T swing at 1.19e+06 T/s) unless the insert is flux-compensated"
+   ],
+   "notes": [
+    "11.5 T steady background plus a 89.42 T pulse: total 100.9 T at the insert (more than the 100.3 T of an unbiased pulse) for the same pressure",
+    "the bias cuts the insert's own field energy by 20%; the peak field and stress on the insert are not relieved",
+    "background magnet: 11.5 T in a 550 mm bore (state of the art)",
+    "open-circuit, the pulse induces 2.83e+05 V on every background turn"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "single_turn",
+   "name": "Single-turn destructive coil",
+   "blurb": "A copper strip and a very fast bank. Reaches these fields for microseconds and is destroyed doing it.",
+   "status": "aspirational",
+   "field": "100.3",
+   "rise": "2.5 µs",
+   "delivered": "100",
+   "reusable": false,
+   "limiting": "bank voltage",
+   "energy": "3.1",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank voltage",
+     "status": "aspirational"
+    },
+    {
+     "name": "peak current",
+     "status": "extrapolation"
+    },
+    {
+     "name": "peak power",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank energy",
+     "status": "state_of_the_art"
+    }
+   ],
+   "warnings": [
+    "the coil is consumed by every shot"
+   ],
+   "notes": [
+    "one turn, 100 mm long: 7.979 MA in 2.5 us, 494.8 kV, 3.14 MJ in the bore field",
+    "the coil is destroyed by every shot (it explodes outward); samples in existing 20 mm systems usually survive",
+    "the field lasts microseconds: the load on the workpiece is a shock, not a press stroke"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "industrial_emf",
+   "name": "Industrial forming coil",
+   "blurb": "Today's forming coil, run at its field limit over the same bore.",
+   "status": "extrapolation",
+   "field": "50.0",
+   "rise": "25.7 µs",
+   "delivered": "26",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "5.1",
+   "components": [
+    {
+     "name": "field",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "extrapolation"
+    }
+   ],
+   "warnings": [
+    "capped at 50 T: delivers 0.995 GPa of the 4 GPa asked for",
+    "not an industrial machine at this size: charge voltage extrapolation, peak current extrapolation, coil heating extrapolation"
+   ],
+   "notes": [
+    "industrial electromagnetic forming works at 20-50 T on areas of square centimetres with 10-100 kJ machines (Psyk et al. 2011)",
+    "over this bore and length at a 25.7 us rise: 5.06 MJ, 30.25 kV, 20.46 MA (extrapolation)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  }
+ ],
+ "tube_16": [
+  {
+   "key": "hts_pulsed",
+   "name": "Concept magnet, pulsed",
+   "blurb": "The note's own magnet, swung to full field on every shot.",
+   "status": "infeasible",
+   "field": "63.4",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "pulsed operation",
+   "energy": "39.8",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "extrapolation"
+    },
+    {
+     "name": "structure",
+     "status": "aspirational"
+    },
+    {
+     "name": "pulsed operation",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "the winding quenches every pulse: per-pulse loss is 117x its enthalpy margin"
+   ],
+   "notes": [
+    "needs 63.41 T from a superconducting winding: the all-superconducting record is 35.6 T and no superconductor has carried current above 48.7 T",
+    "peak hoop stress 1.46 GPa needs a composite modulus of 549.3 GPa at the 0.4 % strain limit",
+    "field must rise in 25.7 us for this workpiece: 2.47e+06 T/s"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "hts_dc",
+   "name": "Concept magnet, steady",
+   "blurb": "The same magnet held at constant field.",
+   "status": "infeasible",
+   "field": "63.4",
+   "rise": "steady",
+   "delivered": "0",
+   "reusable": true,
+   "limiting": "pressure on the workpiece",
+   "energy": "39.8",
+   "components": [
+    {
+     "name": "conductor",
+     "status": "extrapolation"
+    },
+    {
+     "name": "structure",
+     "status": "aspirational"
+    },
+    {
+     "name": "pressure on the workpiece",
+     "status": "infeasible"
+    }
+   ],
+   "warnings": [
+    "a steady field exerts no pressure on a stationary, non-magnetic workpiece"
+   ],
+   "notes": [
+    "a steady field has diffused into the workpiece: (B_out^2 - B_in^2)/(2 mu0) = 0, so the magnet exerts no forming pressure however strong it is",
+    "as a magnet alone it would still be aspirational (conductor and structure)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "pulsed_resistive",
+   "name": "Resistive pulsed magnet",
+   "blurb": "A reinforced copper-alloy coil fired from a capacitor bank: the technology of the 100 T record.",
+   "status": "aspirational",
+   "field": "63.4",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "39.8",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "aspirational"
+    }
+   ],
+   "warnings": [
+    "time conflict: the workpiece needs a 25.7 us rise, the supply's fastest within demonstrated practice is 464 us, and at that rise the wall passes only 80% of the pressure"
+   ],
+   "notes": [
+    "63.41 T in a 100 mm bore: extrapolation (the 100.75 T record is in a 10 mm bore; stored energy grows with bore volume)",
+    "at the 25.7 us rise the workpiece needs: 1 turn(s), 164.8 kV, 29.57 MA, 2437 GW, 39.8 MJ bank (aspirational)"
+   ],
+   "relaxed_rise": "464 µs",
+   "relaxed_delivered": "80",
+   "relaxed_status": "extrapolation"
+  },
+  {
+   "key": "hybrid_dc_pulsed",
+   "name": "Hybrid: steady background plus pulsed insert",
+   "blurb": "A steady superconducting outsert with a pulsed copper insert inside it.",
+   "status": "aspirational",
+   "field": "64.4",
+   "rise": "25.7 µs",
+   "delivered": "106",
+   "reusable": true,
+   "limiting": "insert power supply and coil",
+   "energy": "27.7",
+   "components": [
+    {
+     "name": "insert field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "insert power supply and coil",
+     "status": "aspirational"
+    },
+    {
+     "name": "background magnet",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "background coupling",
+     "status": "aspirational"
+    }
+   ],
+   "warnings": [
+    "the insert's pulsed flux is 1.57x the background's own: a shorted background would be driven through zero and reversed (18.1 T swing at 7.05e+05 T/s) unless the insert is flux-compensated"
+   ],
+   "notes": [
+    "11.5 T steady background plus a 52.95 T pulse: total 64.45 T at the insert (more than the 63.41 T of an unbiased pulse) for the same pressure",
+    "the bias cuts the insert's own field energy by 30%; the peak field and stress on the insert are not relieved",
+    "background magnet: 11.5 T in a 550 mm bore (state of the art)",
+    "open-circuit, the pulse induces 1.68e+05 V on every background turn"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "single_turn",
+   "name": "Single-turn destructive coil",
+   "blurb": "A copper strip and a very fast bank. Reaches these fields for microseconds and is destroyed doing it.",
+   "status": "aspirational",
+   "field": "63.4",
+   "rise": "2.5 µs",
+   "delivered": "100",
+   "reusable": false,
+   "limiting": "bank voltage",
+   "energy": "1.3",
+   "components": [
+    {
+     "name": "field and bore",
+     "status": "extrapolation"
+    },
+    {
+     "name": "bank voltage",
+     "status": "aspirational"
+    },
+    {
+     "name": "peak current",
+     "status": "extrapolation"
+    },
+    {
+     "name": "peak power",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "bank energy",
+     "status": "state_of_the_art"
+    }
+   ],
+   "warnings": [
+    "the coil is consumed by every shot"
+   ],
+   "notes": [
+    "one turn, 100 mm long: 5.046 MA in 2.5 us, 312.9 kV, 1.26 MJ in the bore field",
+    "the coil is destroyed by every shot (it explodes outward); samples in existing 20 mm systems usually survive",
+    "the field lasts microseconds: the load on the workpiece is a shock, not a press stroke"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  },
+  {
+   "key": "industrial_emf",
+   "name": "Industrial forming coil",
+   "blurb": "Today's forming coil, run at its field limit over the same bore.",
+   "status": "extrapolation",
+   "field": "50.0",
+   "rise": "25.7 µs",
+   "delivered": "66",
+   "reusable": true,
+   "limiting": "power supply and coil",
+   "energy": "5.1",
+   "components": [
+    {
+     "name": "field",
+     "status": "state_of_the_art"
+    },
+    {
+     "name": "power supply and coil",
+     "status": "extrapolation"
+    }
+   ],
+   "warnings": [
+    "capped at 50 T: delivers 0.995 GPa of the 1.6 GPa asked for",
+    "not an industrial machine at this size: charge voltage extrapolation, peak current extrapolation, coil heating extrapolation"
+   ],
+   "notes": [
+    "industrial electromagnetic forming works at 20-50 T on areas of square centimetres with 10-100 kJ machines (Psyk et al. 2011)",
+    "over this bore and length at a 25.7 us rise: 5.06 MJ, 30.25 kV, 20.46 MA (extrapolation)"
+   ],
+   "relaxed_rise": null,
+   "relaxed_delivered": null,
+   "relaxed_status": null
+  }
+ ],
+ "best": {
+  "billet_4": "pulsed_resistive",
+  "billet_16": "pulsed_resistive",
+  "tube_4": "single_turn",
+  "tube_16": "pulsed_resistive"
+ }
+}

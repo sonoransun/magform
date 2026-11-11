@@ -1,0 +1,10 @@
+<ul class="stats{% if include.wide %} wide{% endif %}">
+  {% for s in include.items %}
+  <li class="stat">
+    <div class="stat__label">{{ s.label }}</div>
+    <div class="stat__value">{{ s.value }}{% if s.unit %}<span class="stat__unit">{{ s.unit }}</span>{% endif %}</div>
+    {% if s.status %}<div style="margin-top:0.4rem">{% include stamp.html v=s.status %}</div>{% endif %}
+    {% if s.note %}<div class="stat__note">{{ s.note }}</div>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+<header class="titleblock">
+  <div>
+    {% if page.kicker %}<p class="eyebrow">{{ page.kicker }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  </div>
+  {% if page.doc or page.verdict or page.models %}
+  <dl class="tb" aria-label="Document data">
+    {% if page.doc %}<div><dt>Doc</dt><dd>{{ page.doc }}</dd></div>{% endif %}
+    {% if page.verdict %}<div><dt>Verdict</dt><dd>{% include stamp.html v=page.verdict %}</dd></div>{% endif %}
+    {% if page.models %}<div><dt>Models</dt><dd>{{ page.models | join: " &middot; " }}</dd></div>{% endif %}
+    <div><dt>Rev</dt><dd>v{{ site.data.meta.version }}</dd></div>
+  </dl>
+  {% endif %}
+</header>

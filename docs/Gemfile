@@ -1,0 +1,14 @@
+# Local preview only. GitHub Pages ignores this file and builds with its own pinned gem set.
+#   cd docs && bundle config set --local path vendor/bundle && bundle install && bundle exec jekyll serve
+source "https://rubygems.org"
+
+gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "webrick"
+
+# Former default gems that newer Rubies no longer bundle (needed by Jekyll 3.x on Ruby >= 3.4)
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+gem "ostruct"
+gem "observer"

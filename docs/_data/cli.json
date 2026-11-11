@@ -1,0 +1,537 @@
+{
+ "commands": [
+  {
+   "name": "field",
+   "help": "Convert between magnetic pressure and field and place the pressure among benchmarks.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "pressure, MPa"
+    },
+    {
+     "flag": "--field",
+     "help": "field, T"
+    }
+   ]
+  },
+  {
+   "name": "press",
+   "help": "Size a press and grade the concept note's superconducting magnet for it.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "magnetic pressure to deliver, MPa (the note: 1600-4000)"
+    },
+    {
+     "flag": "--bore",
+     "help": "winding inner diameter, m (default 0.1, the reference press)"
+    },
+    {
+     "flag": "--length",
+     "help": "coil length, m (default 0.5)"
+    },
+    {
+     "flag": "--winding",
+     "help": "radial build of the winding, m (default 0.2)"
+    },
+    {
+     "flag": "--workpiece",
+     "help": "workpiece material key or alias (default copper_ofhc)"
+    },
+    {
+     "flag": "--wall",
+     "help": "workpiece wall, m (default: solid billet)"
+    },
+    {
+     "flag": "--workpiece-radius",
+     "help": "workpiece radius, m (default 0.8 x bore radius)"
+    },
+    {
+     "flag": "--workpiece-length",
+     "help": "workpiece length, m (default 0.6 x coil length)"
+    },
+    {
+     "flag": "--rise",
+     "help": "field rise time, s (default: matched to the workpiece wall)"
+    },
+    {
+     "flag": "--temperature",
+     "help": "superconducting winding temperature, K (default 4.2)"
+    },
+    {
+     "flag": "--safety-factor",
+     "help": "safety factor on strain and critical current (default 1.5)"
+    },
+    {
+     "flag": "--background",
+     "help": "DC background field of the hybrid option, T (default 11.5)"
+    }
+   ]
+  },
+  {
+   "name": "architectures",
+   "help": "Compare six ways of building the press.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "magnetic pressure to deliver, MPa (the note: 1600-4000)"
+    },
+    {
+     "flag": "--bore",
+     "help": "winding inner diameter, m (default 0.1, the reference press)"
+    },
+    {
+     "flag": "--length",
+     "help": "coil length, m (default 0.5)"
+    },
+    {
+     "flag": "--winding",
+     "help": "radial build of the winding, m (default 0.2)"
+    },
+    {
+     "flag": "--workpiece",
+     "help": "workpiece material key or alias (default copper_ofhc)"
+    },
+    {
+     "flag": "--wall",
+     "help": "workpiece wall, m (default: solid billet)"
+    },
+    {
+     "flag": "--workpiece-radius",
+     "help": "workpiece radius, m (default 0.8 x bore radius)"
+    },
+    {
+     "flag": "--workpiece-length",
+     "help": "workpiece length, m (default 0.6 x coil length)"
+    },
+    {
+     "flag": "--rise",
+     "help": "field rise time, s (default: matched to the workpiece wall)"
+    },
+    {
+     "flag": "--temperature",
+     "help": "superconducting winding temperature, K (default 4.2)"
+    },
+    {
+     "flag": "--safety-factor",
+     "help": "safety factor on strain and critical current (default 1.5)"
+    },
+    {
+     "flag": "--background",
+     "help": "DC background field of the hybrid option, T (default 11.5)"
+    }
+   ]
+  },
+  {
+   "name": "pulse",
+   "help": "Capacitor-bank network that drives a coil to a field in a given rise time.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "magnetic pressure, MPa"
+    },
+    {
+     "flag": "--field",
+     "help": "central field, T"
+    },
+    {
+     "flag": "--bore",
+     "help": "winding inner diameter, m"
+    },
+    {
+     "flag": "--length",
+     "help": "coil length, m"
+    },
+    {
+     "flag": "--winding",
+     "help": "radial build, m"
+    },
+    {
+     "flag": "--rise",
+     "help": "field rise time, s"
+    },
+    {
+     "flag": "--turns",
+     "help": "number of turns (default: most that a --max-voltage bank can drive)"
+    },
+    {
+     "flag": "--max-voltage",
+     "help": "charge-voltage ceiling, kV (default 25)"
+    }
+   ]
+  },
+  {
+   "name": "forge",
+   "help": "Can a delivered pressure forge this metal?",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "material",
+     "help": ""
+    },
+    {
+     "flag": "--pressure",
+     "help": "delivered pressure, MPa"
+    },
+    {
+     "flag": "--strain",
+     "help": "target strain (default 0.3)"
+    },
+    {
+     "flag": "--rate",
+     "help": "strain rate, 1/s (default 1e4)"
+    },
+    {
+     "flag": "--temperature",
+     "help": "workpiece temperature, K (default 293.15)"
+    },
+    {
+     "flag": "--constraint",
+     "help": "constraint factor Q (default 1.2)"
+    }
+   ]
+  },
+  {
+   "name": "micro",
+   "help": "What a cold forming pulse does to the grain and dislocation structure.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "material",
+     "help": ""
+    },
+    {
+     "flag": "--strain",
+     "help": "strain (default 0.3)"
+    },
+    {
+     "flag": "--rate",
+     "help": "strain rate, 1/s (default 1e4)"
+    },
+    {
+     "flag": "--temperature",
+     "help": "initial temperature, K"
+    },
+    {
+     "flag": "--field",
+     "help": "peak surface field, T (adds the eddy-current skin)"
+    },
+    {
+     "flag": "--frequency",
+     "help": "pulse frequency 1/(4 t_rise), Hz (default 1e4)"
+    }
+   ]
+  },
+  {
+   "name": "weld",
+   "help": "Impact-weld assessment; without --pressure, the drive window that welds.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "flyer",
+     "help": ""
+    },
+    {
+     "flag": "target",
+     "help": ""
+    },
+    {
+     "flag": "--pressure",
+     "help": "drive (magnetic) pressure, MPa"
+    },
+    {
+     "flag": "--thickness",
+     "help": "flyer thickness, m (default 0.001)"
+    },
+    {
+     "flag": "--gap",
+     "help": "standoff gap, m (default 0.002)"
+    },
+    {
+     "flag": "--angle",
+     "help": "collision angle, degrees (default 10)"
+    }
+   ]
+  },
+  {
+   "name": "synth",
+   "help": "Can a pressure pulse run each superhard-material synthesis route?",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "magnetic drive pressure, MPa"
+    },
+    {
+     "flag": "--temperature",
+     "help": "sample temperature, K"
+    },
+    {
+     "flag": "--pulse",
+     "help": "pulse duration, s (default 1e-4)"
+    },
+    {
+     "flag": "--intensification",
+     "help": "anvil area ratio (default 1: no anvils)"
+    },
+    {
+     "flag": "--flyer",
+     "help": "flyer material for the shock routes (e.g. copper_ofhc)"
+    },
+    {
+     "flag": "--thickness",
+     "help": "flyer thickness, m (default 0.002)"
+    },
+    {
+     "flag": "--gap",
+     "help": "flyer standoff, m (default 0.01)"
+    },
+    {
+     "flag": "--sample",
+     "help": "shocked sample material (default graphite_crystal)"
+    }
+   ]
+  },
+  {
+   "name": "pores",
+   "help": "Pore closure and healing under a pressure pulse.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "material",
+     "help": ""
+    },
+    {
+     "flag": "--pressure",
+     "help": "delivered pressure, MPa"
+    },
+    {
+     "flag": "--porosity",
+     "help": "initial porosity as a fraction (default 0.01)"
+    },
+    {
+     "flag": "--pore-radius",
+     "help": "pore radius, m (default 5e-5)"
+    },
+    {
+     "flag": "--temperature",
+     "help": "temperature, K"
+    },
+    {
+     "flag": "--pulse",
+     "help": "time at pressure, s (default 1e-4)"
+    },
+    {
+     "flag": "--section",
+     "help": "section thickness, m (adds the skin-depth check)"
+    },
+    {
+     "flag": "--frequency",
+     "help": "drive frequency, Hz (with --section)"
+    }
+   ]
+  },
+  {
+   "name": "contain",
+   "help": "Wall needed to contain a pressure, for one material or a survey.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--pressure",
+     "help": "internal pressure, MPa"
+    },
+    {
+     "flag": "--bore",
+     "help": "bore diameter, m"
+    },
+    {
+     "flag": "--material",
+     "help": "wall material (default: survey steel to graphene)"
+    },
+    {
+     "flag": "--safety-factor",
+     "help": ""
+    },
+    {
+     "flag": "--criterion",
+     "help": ""
+    },
+    {
+     "flag": "--pulse",
+     "help": "pulse duration, s (adds the dynamic check)"
+    }
+   ]
+  },
+  {
+   "name": "magnetar",
+   "help": "Thought experiment: a magnetar-class field applied on demand in space.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "--field",
+     "help": "field at the surface of the source, T (default 1e10)"
+    },
+    {
+     "flag": "--radius",
+     "help": "radius of the source, m (default 0.001)"
+    },
+    {
+     "flag": "--material",
+     "help": "workpiece material (default iron_armco)"
+    }
+   ]
+  },
+  {
+   "name": "claims",
+   "help": "The ledger: every claim of the concept note with its verdict and evidence.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "id",
+     "help": "claim ids to show in full (C01-C28, Q1, Q2)"
+    },
+    {
+     "flag": "--verdict",
+     "help": "only this verdict (e.g. contradicted)"
+    },
+    {
+     "flag": "--full",
+     "help": "findings and evidence for every claim"
+    },
+    {
+     "flag": "--markdown",
+     "help": "a Markdown table"
+    }
+   ]
+  },
+  {
+   "name": "materials",
+   "help": "List the materials registry or show one record.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "key",
+     "help": "material key or alias"
+    },
+    {
+     "flag": "--category",
+     "help": "filter the list by category"
+    }
+   ]
+  },
+  {
+   "name": "benchmarks",
+   "help": "The cited record ladders behind every status.",
+   "options": [
+    {
+     "flag": "--json",
+     "help": "print strict JSON instead of text"
+    },
+    {
+     "flag": "ladder",
+     "help": "field, current, ramp_rate, energy, pressure or static_press"
+    }
+   ]
+  }
+ ],
+ "examples": {
+  "field": {
+   "command": "magform field --pressure 4000",
+   "output": "pressure          4000 MPa  (4 GPa)\nfield             100.2651 T          (P = B^2 / 2 mu0)\nenergy density    4 GJ/m^3  (58% of TNT)\nfrom a superconducting magnet:      [*] aspirational\nfrom a pulsed magnet, 10 mm bore:   [ok] state of the art\nfrom a pulsed magnet, 100 mm bore:  [~] extrapolation\n\namong cited working pressures:\npressure   process\n---------  ----------------------------------------------------------------------  -------\n0.2 GPa    Hot isostatic pressing (industrial, gas)                                <= this\n0.5 GPa    Magnetic pulse welding/forming, typical interface/working pressures     <= this\n0.995 GPa  Magnetic pressure of a 50 T forming coil (upper end of industrial EMF)  <= this\n2.5 GPa    Contact pressure on cold-forging dies (steels)                          <= this\n4.04 GPa   Magnetic pressure at 100.75 T (LANL record)\n6 GPa      Industrial HPHT diamond/cBN synthesis (cubic and belt presses)\n15 GPa     Nano-polycrystalline diamond, Kawai multi-anvil (15 GPa)\n30 GPa     Shock synthesis of diamond powder (DuPont process)\n124 GPa    Carbon nitride synthesis, laser-heated diamond anvil cell\n400 GPa    Static diamond-anvil-cell pressures (routine upper range)\n\nnote: a steady field exerts no pressure on a stationary workpiece; the field must be pulsed.",
+   "truncated": 0
+  },
+  "press": {
+   "command": "magform press --pressure 4000",
+   "output": "Press: 4 GPa in a 100 mm bore, 0.5 m long, 200 mm build\n  field                   100.27 T   (field factor 0.853)\n  winding current density 467.5 A/mm^2\n  stored energy           99.48 MJ   (58% of TNT energy density)\n  peak hoop stress        3.66 GPa  (0.92 x pressure)\n  coil-end radial field   0.282 x B0;  peak field on conductor 100.76 T\n  field rise time         10.3 ms  (set by the workpiece)\n\nWorkpiece: copper_ofhc, solid billet, radius 40 mm, length 300 mm\n  pressure passed by wall 100%   (skin depth 13.3 mm)\n  surface pressure        1.064 x nominal at mid-plane; min/max 0.970 over the central 80 %; 5.7 x at the corners\n  delivered pressure      4.25 GPa\n  skin temperature rise   +1160 K  (melts; melting field 96 T)\n\nConcept magnet (carbon-nanosheet REBCO, pulsed): [x] infeasible\n  conductor         [*] aspirational   margin 0.498\n  structure         [x] infeasible   needs composite modulus 1373 GPa\n  pulsed operation  [x] infeasible   no enthalpy margin at this field\n\nCapacitor bank for a resistive coil in the same envelope: [~] extrapolation\n  38 turns, 24.94 kV, 1.23 MA, 15.46 GW peak, 101.9 MJ bank\n\nWays of building it:\narchitecture                                  status             field    rise     pressure delivered  coil reusable  limited by\n--------------------------------------------  -----------------  -------  -------  ------------------  -------------  -------------------------\nConcept magnet, pulsed                        [x] infeasible     100.3 T  10.3 ms  106%                yes            structure\nConcept magnet, steady                        [x] infeasible     100.3 T  steady   0%                  yes            pressure on the workpiece\nResistive pulsed magnet                       [~] extrapolation  100.3 T  10.3 ms  106%                yes            field and bore\nHybrid: steady background plus pulsed insert  [*] aspirational   100.9 T  10.3 ms  106%                yes            insert field and bore\nSingle-turn destructive coil                  [*] aspirational   100.3 T  2.5 us   100%                no             bank voltage\nIndustrial forming coil                       [~] extrapolation  50 T     50 us    26%                 yes            power supply and coil\n\nBest option: Resistive pulsed magnet ([~] extrapolation)\n  ! conductor: winding current density 4.67e+08 A/m^2 exceeds f_hts*Je (2.33e+08 A/m^2): needs a\n  conductor that does not exist\n  ! structure: no existing or hypothetical reinforcement meets the strain limit at this fraction\n  ! pulsed operation: quenches every pulse: loss/margin = inf (> 1)\n  ! workpiece skin: copper_ofhc melts at the surface above 96 T (this press runs at 100.3 T)\n  - 4 GPa needs 100.3 T; the coil stores 99.5 MJ (58% of the energy density of TNT in the bore)\n  - peak hoop stress 3.66 GPa = 0.916 x the magnetic pressure; no winding thickness brings it below\n  half\n  - radial field at the coil ends is 0.282 of the central field for this shape (computed; the\n  package default is 0.4)\n  - concept architecture: infeasible; best alternative: resistive pulsed magnet (extrapolation; 106%\n  of the nominal pressure at the workpiece mid-plane)\n  - a steady field exerts no pressure: every option that works is pulsed",
+   "truncated": 0
+  },
+  "architectures": {
+   "command": "magform architectures --pressure 4000 --wall 0.002",
+   "output": "architecture                                  status             field    rise     pressure delivered  coil reusable  limited by\n--------------------------------------------  -----------------  -------  -------  ------------------  -------------  ----------------------------\nConcept magnet, pulsed                        [x] infeasible     100.3 T  25.7 us  106%                yes            structure\nConcept magnet, steady                        [x] infeasible     100.3 T  steady   0%                  yes            pressure on the workpiece\nResistive pulsed magnet                       [x] infeasible     100.3 T  25.7 us  106%                yes            power supply and coil\nHybrid: steady background plus pulsed insert  [x] infeasible     100.9 T  25.7 us  106%                yes            insert power supply and coil\nSingle-turn destructive coil                  [*] aspirational   100.3 T  2.5 us   100%                no             bank voltage\nIndustrial forming coil                       [~] extrapolation  50 T     25.7 us  26%                 yes            power supply and coil\n",
+   "truncated": 57
+  },
+  "pulse": {
+   "command": "magform pulse --pressure 4000 --bore 0.1 --length 0.5 --winding 0.2 --rise 0.01",
+   "output": "Coil: 100 mm bore, 0.5 m long, 200 mm build; 100.27 T in 10 ms\n  status           [~] extrapolation\n  turns            37   (4 layers)\n  inductance       0.0001246 H   resistance 0.0002939 ohm   L/R 424 ms\n  charge voltage   24.91 kV   [ok] state of the art\n  peak current     1.264 MA   [ok] state of the art\n  peak power       15.85 GW   [ok] state of the art\n  bank energy      101.9 MJ   [~] extrapolation   (field energy 99.48 MJ)\n  conductor        +666 K to 743 K   [~] extrapolation\n  fastest rise a 25 kV bank allows (one turn): 267 us\n  homopolar generator of the same energy, fastest rise: 57 ms\n\nSources for this energy and rise time:\nsource                                    status             fastest rise  reusable",
+   "truncated": 27
+  },
+  "forge": {
+   "command": "magform forge tungsten --pressure 2000",
+   "output": "tungsten at 2 GPa, strain 0.3, 10000 1/s, 293 K: [x] infeasible\n  flow stress         2.05-2.57 GPa  (Lennon & Ramesh, Acta Mater. 48 (2000) / tabulated in Skoro et al., arXiv:1105.5514 (2011))\n  required pressure   3.09 GPa   margin 0.65 (strongest fit) to 0.81\n  reachable strain    0\n  bulk heating        +189 K\n  ductile-brittle     573 K (below); confinement ratio 0.98\n  shear localisation  from strain 0.004\n  warm forming from   460 K\n  ! pressure insufficient at this temperature: 2 GPa < Q x sigma_min = 2.46 GPa (margin_optimistic\n  0.81)\n  ! fractures unless confined: 293 K is below the DBTT (573 K), the target strain 0.3 exceeds the\n  failure strain 0.07 and P_hydro/sigma = 0.98 < 1",
+   "truncated": 17
+  },
+  "weld": {
+   "command": "magform weld al steel --pressure 100",
+   "output": "aluminum_6061 onto steel_1018 at 100 MPa drive (15.9 T): [ok] state of the art\n  impact velocity     385 m/s   (window 374-649 m/s)\n  collision point     2217 m/s  (sonic limit 4547 m/s)\n  interface           wavy\n  impact pressure     4.1 GPa  (41 x the drive)\n  flyer skin          +41 K (solid)\n  interdiffusion      0.649 nm solid, against 44.7 um in a fusion weld\n  - aluminum_6061 flyer 1 mm over 2 mm at 0.1 GPa peak drive (15.9 T) -> 385 m/s in 10.4 us;\n  collision point 2217 m/s at beta = 10 deg\n  - weldability window at beta = 10 deg: 374-649 m/s (lower limit k = 0.6 x sqrt(HV/rho) of\n  aluminum_6061; upper limit: Wittman's interface-melting limit, evaluated for aluminum_6061);\n  collision point must stay below 4547 m/s\n  - impact pressure 4.1 GPa at the interface = 41x the drive pressure: the standoff gap stores the\n  impulse as momentum, so the interface pressure is set by the impact velocity, not by the field",
+   "truncated": 13
+  },
+  "synth": {
+   "command": "magform synth --pressure 4000",
+   "output": "product                                     route             status              sample pressure  pressure margin  dwell met\n------------------------------------------  ----------------  ------------------  ---------------  ---------------  ---------\ndiamond (grit and single crystals)          static catalytic  [x] infeasible      4 GPa            0.80             no\ndiamond (large single crystals)             static catalytic  [x] infeasible      4 GPa            0.80             no\npolycrystalline diamond (PCD) compacts      static sintering  [x] infeasible      4 GPa            0.73             no\nnano-polycrystalline diamond (NPD)          static direct     [x] infeasible      4 GPa            0.27             no\ncubic boron nitride (cBN)                   static catalytic  [x] infeasible      4 GPa            0.89             no\ncubic boron nitride (cBN), binderless       static direct     [x] infeasible      4 GPa            0.52             no\nlonsdaleite (hexagonal diamond)             shock             [ ] not applicable  4 GPa            0.27             yes\ndiamond (shock-synthesised powder)          shock             [ ] not applicable  4 GPa            0.20             yes\ncarbon nitrides (C3N4, CN, CN2 polymorphs)  laser heated dac  [x] infeasible      4 GPa            0.06             no",
+   "truncated": 60
+  },
+  "pores": {
+   "command": "magform pores gamma_tial --pressure 4000 --porosity 0.005",
+   "output": "gamma_tial, 0.50% porosity at 4 GPa, 293 K, 100 us: [x] infeasible\n  closure             [~] extrapolation\n  healing             [x] infeasible\n  pores start to collapse at 1.94 GPa (slow), 4.95 GPa (at this rate)\n  residual porosity   1.83e-05 (slow), 5.00e-03 (at this rate)\n  collapse time       0.0635 us;  diffusion bonding time 2.85e+43 s\n  HIP comparator      172 MPa, 1533 K, 4.0 h\n  ! closure only at the quasi-static strength (strength band straddles the pressure): at the dynamic\n  strength the pores never yield (threshold 4.95 GPa)\n  ! below the DBTT (973 K): the pore wall must strain by 2.61, 174 x the failure strain 0.015;",
+   "truncated": 21
+  },
+  "contain": {
+   "command": "magform contain --pressure 4000 --bore 0.05",
+   "output": "Containing 4 GPa in a 50 mm bore (safety factor 1.5, von_mises):\nwall material           status             route               elastic b/a  compound b/a  strength\n----------------------  -----------------  ------------------  -----------  ------------  ---------\nsteel_4340              [x] infeasible     none                inf          707           0.792 GPa\nmaraging_c350           [~] extrapolation  compound            inf          8.79          2.39 GPa\nmp35n                   [x] infeasible     none                inf          15.4          1.9 GPa\ncarbon_fibre_t1100g     [~] extrapolation  compound            inf          2.1           7 GPa\ncnt_fibre_record        [*] aspirational   compound            inf          2.21          6.57 GPa\ncns_engineering_target  [*] aspirational   compound            inf          1.68          10 GPa\ngraphene_intrinsic      [*] aspirational   elastic monolithic  1.04         1.04          130 GPa\n\nstrength needed for any finite elastic wall: 10.4 GPa",
+   "truncated": 0
+  },
+  "magnetar": {
+   "command": "magform magnetar --field 1e10 --radius 0.01",
+   "output": "Thought experiment: the source is assumed, not assessed.\n\nMagnetar-mode thought experiment\n--------------------------------\nstatus = assumed\nmargin = n/a\nwarnings:\n  - the field is 3.57e+06 times the strongest macroscopic laboratory field (2800 T) and 9.93e+07 times the non-destructive record\n  - no workpiece survives as a solid: white-dwarf matter: a relativistically degenerate electron gas denser than 1e9 kg/m^3; the field is beyond the quantum-electrodynamic critical value: an electron's cyclotron energy exceeds its rest energy and the vacuum itself is birefringent\n  - assembling the field before it disperses takes 7.49e+30 W, 9.37e+16 times the largest pulsed-power machine\n  - each shot releases 5.98e+04 Mt unless the field energy is recovered: unshielded hardware inside about 4.46e+06 m is damaged (estimated fluence 1e6 J/m^2), which is why the mode has to be space-based\n  - stray field: the 0.5 mT line is at 271 m and water is pushed away harder than Earth gravity inside 5.78 m",
+   "truncated": 176
+  },
+  "claims": {
+   "command": "magform claims C15",
+   "output": "C15  [!=] contradicted  How the bond forms\n    \"Driving two completely dissimilar metals (e.g., Titanium to Copper, or Steel to Aluminum)\n    together with such extreme, instantaneous pressure that their atomic lattices are forced to\n    interlock.\"\n    Pressure does not make the bond; an oblique collision does. The plates must meet at an angle so\n    that a jet strips the surfaces clean, and the impact speed has to fall in a window. For\n    aluminium on steel that window is 374 to 649 m/s, reached with 94.5 MPa to 284 MPa of magnetic\n    pressure. Driven at the note's 1.6 GPa to 4 GPa the sheet arrives at 1540 to 2434 m/s, the\n    collision point outruns sound in both metals, no jet forms and nothing welds. The gap does the\n    amplifying: the working joint sees 4.1 GPa at impact from a 100 MPa drive.\n      - weld window at 10 degrees: 374-649 m/s; drive 94.5 MPa-284 MPa (15.4-26.7 T)\n      - at 1.6 GPa: 1540 m/s, collision point 8866 m/s against a 4547 m/s sonic limit: infeasible\n      - at 4 GPa: 2434 m/s, collision point 14019 m/s: infeasible\n      - impact pressure in the working joint: 4.1 GPa, 41 times the drive\n      - below a collision angle of 5.0 degrees at 400 m/s there is no jet: a flat-on impact does not\n      weld\n      models: magform.welding.assess_weld, magform.welding.drive_pressure_window,\n      magform.welding.critical_collision_angle, magform.shock.impedance_match",
+   "truncated": 0
+  }
+ }
+}

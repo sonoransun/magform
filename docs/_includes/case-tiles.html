@@ -1,0 +1,16 @@
+{% comment %} Tiles for the story chapters whose number lies in [include.from, include.to]: what the note says, what was found. {% endcomment %}
+{% assign story = site.data.nav | where: "id", "story" | first %}
+<ul class="cases">
+{% for p in story.pages %}{% assign num = p.n | plus: 0 %}{% if num >= include.from and num <= include.to %}
+{% assign pg = site.pages | where: "url", p.url | first %}
+<li class="case"><a href="{{ p.url | relative_url }}">
+  <span class="case__n">Chapter {{ p.n }}</span>
+  <h3 class="case__title">{{ p.title }}</h3>
+  <div>
+    {% if pg.pitch %}<p class="case__claim">The note: {{ pg.pitch }}</p>{% endif %}
+    <p class="case__finding">{{ pg.brief }}</p>
+  </div>
+  <div>{% if pg.verdict %}{% include stamp.html v=pg.verdict %}{% endif %}</div>
+</a></li>
+{% endif %}{% endfor %}
+</ul>

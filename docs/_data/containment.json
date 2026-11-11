@@ -1,0 +1,72 @@
+[
+ {
+  "key": "steel_4340",
+  "name": "Alloy steel 4340",
+  "status": "infeasible",
+  "route": "none",
+  "strength": "0.8",
+  "elastic": null,
+  "compound": "706.8",
+  "transverse": null
+ },
+ {
+  "key": "maraging_c350",
+  "name": "Maraging steel C350",
+  "status": "extrapolation",
+  "route": "compound",
+  "strength": "2.4",
+  "elastic": null,
+  "compound": "8.8",
+  "transverse": null
+ },
+ {
+  "key": "mp35n",
+  "name": "MP35N",
+  "status": "infeasible",
+  "route": "none",
+  "strength": "1.9",
+  "elastic": null,
+  "compound": "15.4",
+  "transverse": null
+ },
+ {
+  "key": "carbon_fibre_t1100g",
+  "name": "T1100G carbon fibre",
+  "status": "extrapolation",
+  "route": "compound",
+  "strength": "7.0",
+  "elastic": null,
+  "compound": "2.1",
+  "transverse": false
+ },
+ {
+  "key": "cnt_fibre_record",
+  "name": "Record nanotube fibre",
+  "status": "aspirational",
+  "route": "compound",
+  "strength": "6.6",
+  "elastic": null,
+  "compound": "2.2",
+  "transverse": false
+ },
+ {
+  "key": "cns_engineering_target",
+  "name": "Nanosheet target (hypothetical)",
+  "status": "aspirational",
+  "route": "compound",
+  "strength": "10.0",
+  "elastic": null,
+  "compound": "1.7",
+  "transverse": false
+ },
+ {
+  "key": "graphene_intrinsic",
+  "name": "Perfect graphene (ceiling)",
+  "status": "aspirational",
+  "route": "elastic monolithic",
+  "strength": "130.0",
+  "elastic": "1.04",
+  "compound": "1.0",
+  "transverse": null
+ }
+]

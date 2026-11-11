@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% if page.claims %}
+<section class="claims-under-test" aria-label="Claims under test">
+  <p class="label">Under test &middot; from the concept note</p>
+  {% for id in page.claims %}{% include claim.html id=id compact=true %}{% endfor %}
+</section>
+{% endif %}
+<div class="chapter">
+  <article class="prose prose--story">
+{{ content }}
+  </article>
+</div>

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magform"
+dynamic = ["version"]
+description = "Engineering models that grade the claims made for 1.6-4 GPa magnetic forging: pulsed magnets and their power supplies, forming, impact welding, synthesis, densification and containment, each with a feasibility verdict"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "magform contributors" }]
+keywords = ["magnetic pulse forming", "electromagnetic forming", "pulsed power", "HTS magnets", "high pressure", "impact welding", "materials science"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+magform = "magform.cli:main"
+
+[tool.setuptools]
+packages = ["magform"]
+
+[tool.setuptools.dynamic]
+version = { attr = "magform.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

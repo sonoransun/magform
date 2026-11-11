@@ -1,0 +1,14 @@
+{% assign spec = site.data.figures[include.id] %}
+<figure class="figure{% if include.wide %} figure--wide{% endif %}" id="fig-{{ include.id }}">
+  {% if spec %}
+  <div class="chart" data-chart>
+    <script type="application/json">{{ spec | jsonify }}</script>
+    <p class="chart__title">{{ spec.title }}</p>
+    {% if spec.subtitle %}<p class="chart__sub">{{ spec.subtitle }}</p>{% endif %}
+    <noscript><p class="chart__note">This chart is drawn with JavaScript. Its data are in <code>docs/_data/figures.json</code> under <code>{{ include.id }}</code>.</p></noscript>
+  </div>
+  {% else %}
+  <p class="note" data-label="Missing">Figure data <code>{{ include.id }}</code> not found; run <code>python tools/build_docs.py</code>.</p>
+  {% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

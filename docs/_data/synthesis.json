@@ -1,0 +1,110 @@
+[
+ {
+  "key": "diamond_hpht_catalytic",
+  "name": "Diamond grit (metal catalyst)",
+  "product": "diamond (grit and single crystals)",
+  "kind": "static catalytic",
+  "pressure": "5–6.5",
+  "temperature": "1573–1873",
+  "dwell": "600",
+  "scale": "industrial, tonnes per year (cubic/belt presses)",
+  "form": "grit and single crystals",
+  "status": "infeasible"
+ },
+ {
+  "key": "hpht_single_crystal",
+  "name": "Large diamond crystals",
+  "product": "diamond (large single crystals)",
+  "kind": "static catalytic",
+  "pressure": "5–6",
+  "temperature": "1573–1773",
+  "dwell": "100,000",
+  "scale": "industrial",
+  "form": "single crystals up to ~15 mm",
+  "status": "infeasible"
+ },
+ {
+  "key": "pcd_sintering",
+  "name": "Polycrystalline diamond compacts",
+  "product": "polycrystalline diamond (PCD) compacts",
+  "kind": "static sintering",
+  "pressure": "5.5–7",
+  "temperature": "1673–2073",
+  "dwell": "60",
+  "scale": "industrial",
+  "form": "Co-bonded compacts (cutting tools)",
+  "status": "infeasible"
+ },
+ {
+  "key": "diamond_direct_npd",
+  "name": "Nano-polycrystalline diamond",
+  "product": "nano-polycrystalline diamond (NPD)",
+  "kind": "static direct",
+  "pressure": "15–25",
+  "temperature": "2573–2773",
+  "dwell": "60",
+  "scale": "laboratory/pilot (Kawai multi-anvil; Irifune 2003, 2019)",
+  "form": "nano-polycrystalline rods up to about 1 cm",
+  "status": "infeasible"
+ },
+ {
+  "key": "cbn_catalytic",
+  "name": "Cubic boron nitride (catalyst)",
+  "product": "cubic boron nitride (cBN)",
+  "kind": "static catalytic",
+  "pressure": "4.5–6",
+  "temperature": "1500–2000",
+  "dwell": "300",
+  "scale": "industrial",
+  "form": "grit",
+  "status": "infeasible"
+ },
+ {
+  "key": "cbn_direct",
+  "name": "Cubic boron nitride (direct)",
+  "product": "cubic boron nitride (cBN), binderless",
+  "kind": "static direct",
+  "pressure": "7.7–10",
+  "temperature": "2000–3000",
+  "dwell": "1.0",
+  "scale": "laboratory",
+  "form": "compacts",
+  "status": "infeasible"
+ },
+ {
+  "key": "lonsdaleite_shock",
+  "name": "Lonsdaleite (shock)",
+  "product": "lonsdaleite (hexagonal diamond)",
+  "kind": "shock",
+  "pressure": "≥ 15",
+  "temperature": "shock-heated",
+  "dwell": "10^-7",
+  "scale": "laboratory (shock recovery)",
+  "form": "micrometre-scale grains in shocked graphite",
+  "status": "extrapolation"
+ },
+ {
+  "key": "diamond_shock_dupont",
+  "name": "Diamond powder (shock)",
+  "product": "diamond (shock-synthesised powder)",
+  "kind": "shock",
+  "pressure": "≥ 20",
+  "temperature": "shock-heated",
+  "dwell": "10^-7",
+  "scale": "industrial historically (explosive, DuPont, DeCarli & Jamieson 1961)",
+  "form": "nm-to-micrometre diamond powder",
+  "status": "extrapolation"
+ },
+ {
+  "key": "c3n4_dac",
+  "name": "Carbon nitrides",
+  "product": "carbon nitrides (C3N4, CN, CN2 polymorphs)",
+  "kind": "laser heated dac",
+  "pressure": "72–134",
+  "temperature": "2000–3000",
+  "dwell": "60",
+  "scale": "laboratory (Laniel et al., Adv. Mater. 36 (2024) 2308030)",
+  "form": "microgram single crystals",
+  "status": "infeasible"
+ }
+]

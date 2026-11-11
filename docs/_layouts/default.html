@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* apply a saved theme choice before first paint (system setting otherwise) */
+    try { var t = localStorage.getItem("magform-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+  {% seo %}
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-condensed-latin-600-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.data.meta.version | default: '0' }}-{{ site.time | date: '%Y%m%d%H%M' }}">
+  {% if page.math %}
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], tags: 'none' },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] },
+      chtml: { scale: 0.96 }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+  {% endif %}
+</head>
+<body class="{% if page.layout == 'home' %}home{% endif %}{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  <a class="skip" href="#content">Skip to content</a>
+  {% include icons.html %}
+  {% include masthead.html %}
+  <div class="shell">
+    {% include rail.html %}
+    <main class="main" id="content">
+      {% unless page.titleblock == false %}{% include titleblock.html %}{% endunless %}
+      {{ content }}
+      {% unless page.pager == false %}{% include pager.html %}{% endunless %}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>magform {{ site.data.meta.version }} &middot; engineering estimates, not design guarantees. Every number on this site is computed by the package; see <a href="{{ '/reference/methods.html' | relative_url }}">models and validity</a>.</span>
+      <span>{% if site.repo_url and site.repo_url != "" %}<a href="{{ site.repo_url }}">Source</a> &middot; {% endif %}<a href="{{ '/reference/references.html' | relative_url }}">References</a> &middot; <a href="{{ '/original-concept.html' | relative_url }}">Original concept note</a></span>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.data.meta.version | default: '0' }}-{{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+  <script src="{{ '/assets/js/charts.js' | relative_url }}?v={{ site.data.meta.version | default: '0' }}-{{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+  {% for s in page.scripts %}<script src="{{ '/assets/js/' | append: s | relative_url }}?v={{ site.data.meta.version | default: '0' }}-{{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+  {% endfor %}
+</body>
+</html>
