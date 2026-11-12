@@ -2,6 +2,8 @@
 
 An engineering review of "magnetic forging", written as a Python package and a documentation site.
 
+Explore the site: <a href="https://sonoransun.github.io/magform/"><b>https://sonoransun.github.io/magform/</b></a>
+
 A concept note proposed squeezing metal with 1,600 to 4,000 MPa of magnetic pressure from a
 carbon-nanosheet-reinforced superconducting magnet, and listed six things that would follow:
 die-less forging, cold forming of refractory metals, cold welding of dissimilar alloys, bulk
